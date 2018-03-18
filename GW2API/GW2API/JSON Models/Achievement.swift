@@ -1,5 +1,5 @@
 //
-//  Achievements.swift
+//  Achievement.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 3/17/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Achievements: Decodable {
+public struct Achievement: Decodable {
     let id: Int
     let current: Int?
     let max: Int?

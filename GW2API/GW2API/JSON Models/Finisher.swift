@@ -11,5 +11,5 @@ import Foundation
 public struct Finisher: Decodable {
     let id: Int
     let permanent: Bool
-    let quantity: Int
+    let quantity: Int?
 }

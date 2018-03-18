@@ -12,6 +12,40 @@ public class APIV2Object: APIBaseObject {
     override init(type: String) {
         super.init(type: type)
     }
+    
+    func getIntArr() -> [Int]? {
+        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
+        if error != nil {
+            print(error!.localizedDescription)
+        }
+        if data != nil {
+            do {
+                let json = try JSONDecoder().decode([Int].self, from: data!)
+                return json
+            } catch let jsonErr{
+                print("JSON Error: ", jsonErr)
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    public func getStringArr() -> [String]? {
+        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
+        if error != nil {
+            print(error!.localizedDescription)
+        }
+        if data != nil {
+            do {
+                let json = try JSONDecoder().decode([String].self, from: data!)
+                return json
+            } catch let jsonErr{
+                print("JSON Error: ", jsonErr)
+                return nil
+            }
+        }
+        return nil
+    }
 }
 
 public class V2Build: APIV2Object {
@@ -35,18 +69,25 @@ public class V2Build: APIV2Object {
 
 public class V2Account: APIV2Object {
     
-    public let achievements = V2Achievements(type: "account/achievements")
-    public let bank = V2Bank(type: "account/bank")
-    public let dungeons = V2Dungeons(type: "account/dungeons")
-    public let dyes = V2Dyes(type: "account/dyes")
-    public let finishers = V2Finishers(type: "account/finishers")
-    public let gliders = V2Gliders(type: "account/gliders")
-    public let home = V2Home()
-    public let inventory = V2Inventory(type: "account/inventory")
-    public let mailCarriers = V2MailCarriers(type: "account/mailcarriers")
-    public let masteries = V2Masteries(type: "account/masteries")
-    public let masteryPoints = V2MasteryPoints(type: "account/mastery/points")
-    public let materials = V2Materials(type: "account/materials")
+    public let achievements = V2AccountAchievements(type: "account/achievements")
+    public let bank = V2AccountBank(type: "account/bank")
+    public let dungeons = V2AccountDungeons(type: "account/dungeons")
+    public let dyes = V2AccountDyes(type: "account/dyes")
+    public let finishers = V2AccountFinishers(type: "account/finishers")
+    public let gliders = V2AccountGliders(type: "account/gliders")
+    public let home = V2AccountHome()
+    public let inventory = V2AccountInventory(type: "account/inventory")
+    public let mailCarriers = V2AccountMailCarriers(type: "account/mailcarriers")
+    public let masteries = V2AccountMasteries(type: "account/masteries")
+    public let masteryPoints = V2AccountMasteryPoints(type: "account/mastery/points")
+    public let materials = V2AccountMaterials(type: "account/materials")
+    public let minis = V2AccountMinis(type: "account/minis")
+    public let outfits = V2AccountOutfits(type: "account/outfits")
+    public let pvpHeroes = V2AccountPVPHeroes(type: "account/pvp/heroes")
+    public let raids = V2AccountRaids(type: "account/raids")
+    public let recipes = V2AccountRecipes(type: "account/recipes")
+    public let skins = V2AccountSkins(type: "account/skins")
+    public let titles = V2AccountTitles(type: "account/titles")
     
     public func get() -> Account? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
@@ -66,15 +107,15 @@ public class V2Account: APIV2Object {
     }
 }
 
-public class V2Achievements: APIV2Object {
-    public func get() -> Achievements? {
+public class V2AccountAchievements: APIV2Object {
+    public func get() -> [Achievement]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
             print(error!.localizedDescription)
         }
         if data != nil {
             do {
-                let json = try JSONDecoder().decode(Achievements.self, from: data!)
+                let json = try JSONDecoder().decode([Achievement].self, from: data!)
                 return json
             } catch let jsonErr{
                 print("JSON Error: ", jsonErr)
@@ -85,7 +126,7 @@ public class V2Achievements: APIV2Object {
     }
 }
 
-public class V2Bank: APIV2Object {
+public class V2AccountBank: APIV2Object {
     public func get() -> [BankItem?]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
@@ -104,45 +145,19 @@ public class V2Bank: APIV2Object {
     }
 }
 
-public class V2Dungeons: APIV2Object {
+public class V2AccountDungeons: APIV2Object {
     public func get() -> [String]? {
-        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
-        if error != nil {
-            print(error!.localizedDescription)
-        }
-        if data != nil {
-            do {
-                let json = try JSONDecoder().decode([String].self, from: data!)
-                return json
-            } catch let jsonErr{
-                print("JSON Error: ", jsonErr)
-                return nil
-            }
-        }
-        return nil
+        return super.getStringArr()
     }
 }
 
-public class V2Dyes: APIV2Object {
+public class V2AccountDyes: APIV2Object {
     public func get() -> [Int]? {
-        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
-        if error != nil {
-            print(error!.localizedDescription)
-        }
-        if data != nil {
-            do {
-                let json = try JSONDecoder().decode([Int].self, from: data!)
-                return json
-            } catch let jsonErr{
-                print("JSON Error: ", jsonErr)
-                return nil
-            }
-        }
-        return nil
+        return super.getIntArr()
     }
 }
 
-public class V2Finishers: APIV2Object {
+public class V2AccountFinishers: APIV2Object {
     public func get() -> [Finisher]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
@@ -161,31 +176,18 @@ public class V2Finishers: APIV2Object {
     }
 }
 
-public class V2Gliders: APIV2Object {
+public class V2AccountGliders: APIV2Object {
     public func get() -> [Int]? {
-        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
-        if error != nil {
-            print(error!.localizedDescription)
-        }
-        if data != nil {
-            do {
-                let json = try JSONDecoder().decode([Int].self, from: data!)
-                return json
-            } catch let jsonErr{
-                print("JSON Error: ", jsonErr)
-                return nil
-            }
-        }
-        return nil
+        return super.getIntArr()
     }
 }
 
-public class V2Home {
-    public let cats = V2Cats(type: "account/home/cats")
-    public let nodes = V2Nodes(type: "account/home/nodes")
+public class V2AccountHome {
+    public let cats = V2AccountCats(type: "account/home/cats")
+    public let nodes = V2AccountNodes(type: "account/home/nodes")
 }
 
-public class V2Cats: APIV2Object {
+public class V2AccountCats: APIV2Object {
     public func get() -> [Cat]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
@@ -204,15 +206,21 @@ public class V2Cats: APIV2Object {
     }
 }
 
-public class V2Nodes: APIV2Object {
+public class V2AccountNodes: APIV2Object {
     public func get() -> [String]? {
+        return super.getStringArr()
+    }
+}
+
+public class V2AccountInventory: APIV2Object {
+    public func get() -> [InventoryItem?]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
             print(error!.localizedDescription)
         }
         if data != nil {
             do {
-                let json = try JSONDecoder().decode([String].self, from: data!)
+                let json = try JSONDecoder().decode([InventoryItem?].self, from: data!)
                 return json
             } catch let jsonErr{
                 print("JSON Error: ", jsonErr)
@@ -223,45 +231,13 @@ public class V2Nodes: APIV2Object {
     }
 }
 
-public class V2Inventory: APIV2Object {
-    public func get() -> [InventoryItem]? {
-        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
-        if error != nil {
-            print(error!.localizedDescription)
-        }
-        if data != nil {
-            do {
-                let json = try JSONDecoder().decode([InventoryItem].self, from: data!)
-                return json
-            } catch let jsonErr{
-                print("JSON Error: ", jsonErr)
-                return nil
-            }
-        }
-        return nil
-    }
-}
-
-public class V2MailCarriers: APIV2Object {
+public class V2AccountMailCarriers: APIV2Object {
     public func get() -> [Int]? {
-        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
-        if error != nil {
-            print(error!.localizedDescription)
-        }
-        if data != nil {
-            do {
-                let json = try JSONDecoder().decode([Int].self, from: data!)
-                return json
-            } catch let jsonErr{
-                print("JSON Error: ", jsonErr)
-                return nil
-            }
-        }
-        return nil
+        return super.getIntArr()
     }
 }
 
-public class V2Masteries: APIV2Object {
+public class V2AccountMasteries: APIV2Object {
     public func get() -> [Mastery]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
@@ -280,7 +256,7 @@ public class V2Masteries: APIV2Object {
     }
 }
 
-public class V2MasteryPoints: APIV2Object {
+public class V2AccountMasteryPoints: APIV2Object {
     public func get() -> MasteryPoints? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
@@ -299,7 +275,7 @@ public class V2MasteryPoints: APIV2Object {
     }
 }
 
-public class V2Materials: APIV2Object {
+public class V2AccountMaterials: APIV2Object {
     public func get() -> [Material]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
         if error != nil {
@@ -318,6 +294,49 @@ public class V2Materials: APIV2Object {
     }
 }
 
+public class V2AccountMinis: APIV2Object {
+    public func get() -> [Int]? {
+        return super.getIntArr()
+    }
+}
+
+public class V2AccountOutfits: APIV2Object {
+    public func get() -> [Int]? {
+        return super.getIntArr()
+    }
+}
+
+public class V2AccountPVPHeroes: APIV2Object {
+    public func get() -> [Int]? {
+        return super.getIntArr()
+    }
+}
+
+public class V2AccountRaids: APIV2Object {
+    public func get() -> [String]? {
+        return super.getStringArr()
+    }
+}
+
+public class V2AccountRecipes: APIV2Object {
+    public func get() -> [Int]? {
+        return super.getIntArr()
+    }
+}
+
+public class V2AccountSkins: APIV2Object {
+    public func get() -> [Int]? {
+        return super.getIntArr()
+    }
+}
+
+public class V2AccountTitles: APIV2Object {
+    public func get() -> [Int]? {
+        return super.getIntArr()
+    }
+}
+
+
 
 
 
@@ -326,20 +345,7 @@ public class V2Materials: APIV2Object {
 
 public class V2Colors: APIV2Object {
     public func get() -> [Int]? {
-        let (data, _, error) = super.getJSON(url: nil, kwargs: [:])
-        if error != nil {
-            print(error!.localizedDescription)
-        }
-        if data != nil {
-            do {
-                let json = try JSONDecoder().decode([Int].self, from: data!)
-                return json
-            } catch let jsonErr{
-                print("JSON Error: ", jsonErr)
-                return nil
-            }
-        }
-        return nil
+        return super.getIntArr()
     }
     public func get(kwargs:[String:String]) -> [Colors]? {
         let (data, _, error) = super.getJSON(url: nil, kwargs: kwargs)

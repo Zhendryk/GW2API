@@ -10,7 +10,7 @@
 		FCB6509D205DAF2F00814EF8 /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB6509B205DAF2F00814EF8 /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A3205DAF7700814EF8 /* RequestSession.swift */; };
 		FCB650A6205DAF7800814EF8 /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A4205DAF7700814EF8 /* GW2Client.swift */; };
-		FCB650B4205DAF9900814EF8 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A9205DAF9800814EF8 /* Achievements.swift */; };
+		FCB650B4205DAF9900814EF8 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A9205DAF9800814EF8 /* Achievement.swift */; };
 		FCB650B5205DAF9900814EF8 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AA205DAF9800814EF8 /* Material.swift */; };
 		FCB650B6205DAF9900814EF8 /* BankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AB205DAF9800814EF8 /* BankItem.swift */; };
 		FCB650B7205DAF9900814EF8 /* MasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */; };
@@ -31,7 +31,7 @@
 		FCB6509C205DAF2F00814EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCB650A3205DAF7700814EF8 /* RequestSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSession.swift; sourceTree = "<group>"; };
 		FCB650A4205DAF7700814EF8 /* GW2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
-		FCB650A9205DAF9800814EF8 /* Achievements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		FCB650A9205DAF9800814EF8 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		FCB650AA205DAF9800814EF8 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		FCB650AB205DAF9800814EF8 /* BankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankItem.swift; sourceTree = "<group>"; };
 		FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasteryPoints.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB650AD205DAF9800814EF8 /* Account.swift */,
-				FCB650A9205DAF9800814EF8 /* Achievements.swift */,
+				FCB650A9205DAF9800814EF8 /* Achievement.swift */,
 				FCB650AB205DAF9800814EF8 /* BankItem.swift */,
 				FCB650AF205DAF9800814EF8 /* Build.swift */,
 				FCB650AE205DAF9800814EF8 /* Cat.swift */,
@@ -199,7 +199,7 @@
 				FCB650B5205DAF9900814EF8 /* Material.swift in Sources */,
 				FCB650BD205DAF9900814EF8 /* InventoryItem.swift in Sources */,
 				FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */,
-				FCB650B4205DAF9900814EF8 /* Achievements.swift in Sources */,
+				FCB650B4205DAF9900814EF8 /* Achievement.swift in Sources */,
 				FCB650B9205DAF9900814EF8 /* Cat.swift in Sources */,
 				FCB650BE205DAF9900814EF8 /* Mastery.swift in Sources */,
 				FCB650BA205DAF9900814EF8 /* Build.swift in Sources */,

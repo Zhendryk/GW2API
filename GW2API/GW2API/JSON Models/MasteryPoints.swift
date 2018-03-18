@@ -9,11 +9,11 @@
 import Foundation
 
 public struct MasteryPoints: Decodable {
-    let totals: totals
+    let totals: [total]
     let unlocked: [Int]
 }
 
-struct totals: Decodable {
+struct total: Decodable {
     let region: String
     let spent: Int
     let earned: Int

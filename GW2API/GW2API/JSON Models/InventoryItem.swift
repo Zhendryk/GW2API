@@ -11,5 +11,5 @@ import Foundation
 public struct InventoryItem: Decodable {
     let id: Int
     let count: Int
-    let binding: String
+    let binding: String?
 }
