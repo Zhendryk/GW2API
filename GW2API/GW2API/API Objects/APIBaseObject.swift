@@ -25,7 +25,10 @@ public class APIBaseObject {
     
     func getJSON(url: URL? = nil, kwargs:[String:String] = [:]) -> (Data?, URLResponse?, Error?) {
         var requestURL: URL? = url
-        print("KWARGS: \(kwargs)")
+        //print("KWARGS: \(kwargs)")
+        
+        //TODO(Jon): Add functionality for "name" kwarg
+        
         if requestURL == nil {
             requestURL = buildAPIEndpointURL()
         }

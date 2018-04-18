@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC73E6332066EB350045C29F /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73E6322066EB350045C29F /* CommerceListing.swift */; };
+		FC73E6352066EB460045C29F /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73E6342066EB460045C29F /* CommerceExchange.swift */; };
+		FC73E6372066EBAA0045C29F /* CommercePrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73E6362066EBAA0045C29F /* CommercePrices.swift */; };
+		FC91872620879F5F00092F3B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91872520879F5F00092F3B /* Currency.swift */; };
+		FC9187282087A27A00092F3B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9187272087A27A00092F3B /* Transaction.swift */; };
+		FC91873D2087BB4100092F3B /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91873C2087BB4100092F3B /* Permissions.swift */; };
+		FC91873F2087BBE600092F3B /* GuildUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91873E2087BBE600092F3B /* GuildUpgrade.swift */; };
 		FCB6509D205DAF2F00814EF8 /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB6509B205DAF2F00814EF8 /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A3205DAF7700814EF8 /* RequestSession.swift */; };
 		FCB650A6205DAF7800814EF8 /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A4205DAF7700814EF8 /* GW2Client.swift */; };
@@ -26,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC73E6322066EB350045C29F /* CommerceListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
+		FC73E6342066EB460045C29F /* CommerceExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
+		FC73E6362066EBAA0045C29F /* CommercePrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercePrices.swift; sourceTree = "<group>"; };
+		FC91872520879F5F00092F3B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		FC9187272087A27A00092F3B /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		FC91873C2087BB4100092F3B /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
+		FC91873E2087BBE600092F3B /* GuildUpgrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildUpgrade.swift; sourceTree = "<group>"; };
 		FCB65098205DAF2F00814EF8 /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB6509B205DAF2F00814EF8 /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
 		FCB6509C205DAF2F00814EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +114,13 @@
 				FCB650B3205DAF9800814EF8 /* Mastery.swift */,
 				FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */,
 				FCB650AA205DAF9800814EF8 /* Material.swift */,
+				FC73E6322066EB350045C29F /* CommerceListing.swift */,
+				FC73E6342066EB460045C29F /* CommerceExchange.swift */,
+				FC73E6362066EBAA0045C29F /* CommercePrices.swift */,
+				FC91872520879F5F00092F3B /* Currency.swift */,
+				FC9187272087A27A00092F3B /* Transaction.swift */,
+				FC91873C2087BB4100092F3B /* Permissions.swift */,
+				FC91873E2087BBE600092F3B /* GuildUpgrade.swift */,
 			);
 			path = "JSON Models";
 			sourceTree = "<group>";
@@ -196,15 +217,22 @@
 				FCB650C1205DAFA100814EF8 /* APIBaseObject.swift in Sources */,
 				FCB650B7205DAF9900814EF8 /* MasteryPoints.swift in Sources */,
 				FCB650BB205DAF9900814EF8 /* Colors.swift in Sources */,
+				FC73E6352066EB460045C29F /* CommerceExchange.swift in Sources */,
 				FCB650B5205DAF9900814EF8 /* Material.swift in Sources */,
 				FCB650BD205DAF9900814EF8 /* InventoryItem.swift in Sources */,
+				FC73E6332066EB350045C29F /* CommerceListing.swift in Sources */,
+				FC91873D2087BB4100092F3B /* Permissions.swift in Sources */,
 				FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */,
 				FCB650B4205DAF9900814EF8 /* Achievement.swift in Sources */,
 				FCB650B9205DAF9900814EF8 /* Cat.swift in Sources */,
+				FC91872620879F5F00092F3B /* Currency.swift in Sources */,
 				FCB650BE205DAF9900814EF8 /* Mastery.swift in Sources */,
 				FCB650BA205DAF9900814EF8 /* Build.swift in Sources */,
+				FC91873F2087BBE600092F3B /* GuildUpgrade.swift in Sources */,
 				FCB650BC205DAF9900814EF8 /* Finisher.swift in Sources */,
+				FC9187282087A27A00092F3B /* Transaction.swift in Sources */,
 				FCB650C2205DAFA100814EF8 /* APIV2Object.swift in Sources */,
+				FC73E6372066EBAA0045C29F /* CommercePrices.swift in Sources */,
 				FCB650A6205DAF7800814EF8 /* GW2Client.swift in Sources */,
 				FCB650B6205DAF9900814EF8 /* BankItem.swift in Sources */,
 				FCB650B8205DAF9900814EF8 /* Account.swift in Sources */,

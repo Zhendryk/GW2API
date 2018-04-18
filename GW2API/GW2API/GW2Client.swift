@@ -19,6 +19,7 @@ public class GW2Client {
     public let build = V2Build(type: "build")
     public let account = V2Account(type: "account")
     public let colors = V2Colors(type: "colors")
+    public let commerce = V2Commerce()
     
     public init(lang: String = lang, version: String = version, baseURL: URL = baseURL, apiKey: String? = nil) {
         assert(["en", "es", "de", "fr", "ko", "zh"].contains(lang), "Invalid language")
