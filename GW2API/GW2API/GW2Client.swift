@@ -16,10 +16,17 @@ public class GW2Client {
     var apiKey: String?
     
     //********** API V2 Objects **********//
-    public let build = V2Build(type: "build")
-    public let account = V2Account(type: "account")
-    public let colors = V2Colors(type: "colors")
-    public let commerce = V2Commerce()
+    public let achievements = V2Achievements(type: "achievements")
+    public let authenticated = V2Authenticated()
+    public let gamemechanics = V2GameMechanics()
+    public let guild = V2Guild()
+    public let items = V2Items()
+    public let mapinformation = V2MapInformation()
+    public let misc = V2Misc()
+    public let story = V2Story()
+    public let structuredpvp = V2StructuredPVP(type: "pvp")
+    public let tradingpost = V2TradingPost()
+    public let wvw = V2WVW(type: "wvw")
     
     public init(lang: String = lang, version: String = version, baseURL: URL = baseURL, apiKey: String? = nil) {
         assert(["en", "es", "de", "fr", "ko", "zh"].contains(lang), "Invalid language")

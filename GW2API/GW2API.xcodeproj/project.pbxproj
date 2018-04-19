@@ -10,6 +10,26 @@
 		FC73E6332066EB350045C29F /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73E6322066EB350045C29F /* CommerceListing.swift */; };
 		FC73E6352066EB460045C29F /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73E6342066EB460045C29F /* CommerceExchange.swift */; };
 		FC73E6372066EBAA0045C29F /* CommercePrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73E6362066EBAA0045C29F /* CommercePrices.swift */; };
+		FC74523C2088F4AC00BB34C3 /* GuildDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74523B2088F4AC00BB34C3 /* GuildDetails.swift */; };
+		FC74523E208905CC00BB34C3 /* GuildLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74523D208905CC00BB34C3 /* GuildLog.swift */; };
+		FC7452402089099600BB34C3 /* GuildMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74523F2089099600BB34C3 /* GuildMember.swift */; };
+		FC74524220890A4600BB34C3 /* GuildRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524120890A4600BB34C3 /* GuildRank.swift */; };
+		FC74524420890ACC00BB34C3 /* GuildStash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524320890ACC00BB34C3 /* GuildStash.swift */; };
+		FC74524620890BA500BB34C3 /* GuildTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524520890BA500BB34C3 /* GuildTreasury.swift */; };
+		FC74524820890CAD00BB34C3 /* GuildTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524720890CAD00BB34C3 /* GuildTeam.swift */; };
+		FC74524A208910CE00BB34C3 /* GuildEmblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745249208910CE00BB34C3 /* GuildEmblem.swift */; };
+		FC74524F208921B100BB34C3 /* V2Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524E208921B100BB34C3 /* V2Achievements.swift */; };
+		FC745251208921EF00BB34C3 /* V2Authenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745250208921EF00BB34C3 /* V2Authenticated.swift */; };
+		FC7452532089221C00BB34C3 /* V2GameMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452522089221C00BB34C3 /* V2GameMechanics.swift */; };
+		FC7452552089225300BB34C3 /* V2Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452542089225300BB34C3 /* V2Items.swift */; };
+		FC7452572089226000BB34C3 /* V2MapInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452562089226000BB34C3 /* V2MapInformation.swift */; };
+		FC7452592089229000BB34C3 /* V2Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452582089229000BB34C3 /* V2Misc.swift */; };
+		FC74525B208922B500BB34C3 /* V2Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74525A208922B500BB34C3 /* V2Story.swift */; };
+		FC74525D208922C400BB34C3 /* V2StructuredPVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74525C208922C400BB34C3 /* V2StructuredPVP.swift */; };
+		FC74525F208922CE00BB34C3 /* V2WVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74525E208922CE00BB34C3 /* V2WVW.swift */; };
+		FC7452612089230500BB34C3 /* V2TradingPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452602089230500BB34C3 /* V2TradingPost.swift */; };
+		FC7452632089232B00BB34C3 /* V2Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452622089232B00BB34C3 /* V2Guild.swift */; };
+		FC7452652089235A00BB34C3 /* V2Emblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452642089235A00BB34C3 /* V2Emblem.swift */; };
 		FC91872620879F5F00092F3B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91872520879F5F00092F3B /* Currency.swift */; };
 		FC9187282087A27A00092F3B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9187272087A27A00092F3B /* Transaction.swift */; };
 		FC91873D2087BB4100092F3B /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91873C2087BB4100092F3B /* Permissions.swift */; };
@@ -36,6 +56,26 @@
 		FC73E6322066EB350045C29F /* CommerceListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
 		FC73E6342066EB460045C29F /* CommerceExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
 		FC73E6362066EBAA0045C29F /* CommercePrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercePrices.swift; sourceTree = "<group>"; };
+		FC74523B2088F4AC00BB34C3 /* GuildDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildDetails.swift; sourceTree = "<group>"; };
+		FC74523D208905CC00BB34C3 /* GuildLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildLog.swift; sourceTree = "<group>"; };
+		FC74523F2089099600BB34C3 /* GuildMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildMember.swift; sourceTree = "<group>"; };
+		FC74524120890A4600BB34C3 /* GuildRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildRank.swift; sourceTree = "<group>"; };
+		FC74524320890ACC00BB34C3 /* GuildStash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildStash.swift; sourceTree = "<group>"; };
+		FC74524520890BA500BB34C3 /* GuildTreasury.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTreasury.swift; sourceTree = "<group>"; };
+		FC74524720890CAD00BB34C3 /* GuildTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTeam.swift; sourceTree = "<group>"; };
+		FC745249208910CE00BB34C3 /* GuildEmblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildEmblem.swift; sourceTree = "<group>"; };
+		FC74524E208921B100BB34C3 /* V2Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Achievements.swift; sourceTree = "<group>"; };
+		FC745250208921EF00BB34C3 /* V2Authenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Authenticated.swift; sourceTree = "<group>"; };
+		FC7452522089221C00BB34C3 /* V2GameMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2GameMechanics.swift; sourceTree = "<group>"; };
+		FC7452542089225300BB34C3 /* V2Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Items.swift; sourceTree = "<group>"; };
+		FC7452562089226000BB34C3 /* V2MapInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2MapInformation.swift; sourceTree = "<group>"; };
+		FC7452582089229000BB34C3 /* V2Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Misc.swift; sourceTree = "<group>"; };
+		FC74525A208922B500BB34C3 /* V2Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Story.swift; sourceTree = "<group>"; };
+		FC74525C208922C400BB34C3 /* V2StructuredPVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2StructuredPVP.swift; sourceTree = "<group>"; };
+		FC74525E208922CE00BB34C3 /* V2WVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2WVW.swift; sourceTree = "<group>"; };
+		FC7452602089230500BB34C3 /* V2TradingPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2TradingPost.swift; sourceTree = "<group>"; };
+		FC7452622089232B00BB34C3 /* V2Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Guild.swift; sourceTree = "<group>"; };
+		FC7452642089235A00BB34C3 /* V2Emblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Emblem.swift; sourceTree = "<group>"; };
 		FC91872520879F5F00092F3B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FC9187272087A27A00092F3B /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		FC91873C2087BB4100092F3B /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
@@ -71,6 +111,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC74524B208911A100BB34C3 /* Guild */ = {
+			isa = PBXGroup;
+			children = (
+				FC91873C2087BB4100092F3B /* Permissions.swift */,
+				FC91873E2087BBE600092F3B /* GuildUpgrade.swift */,
+				FC74523B2088F4AC00BB34C3 /* GuildDetails.swift */,
+				FC74523D208905CC00BB34C3 /* GuildLog.swift */,
+				FC74523F2089099600BB34C3 /* GuildMember.swift */,
+				FC74524120890A4600BB34C3 /* GuildRank.swift */,
+				FC74524320890ACC00BB34C3 /* GuildStash.swift */,
+				FC74524520890BA500BB34C3 /* GuildTreasury.swift */,
+				FC74524720890CAD00BB34C3 /* GuildTeam.swift */,
+				FC745249208910CE00BB34C3 /* GuildEmblem.swift */,
+			);
+			path = Guild;
+			sourceTree = "<group>";
+		};
+		FC74524C208911BE00BB34C3 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FCB650AD205DAF9800814EF8 /* Account.swift */,
+				FCB650A9205DAF9800814EF8 /* Achievement.swift */,
+				FCB650AB205DAF9800814EF8 /* BankItem.swift */,
+				FCB650AE205DAF9800814EF8 /* Cat.swift */,
+				FCB650B1205DAF9800814EF8 /* Finisher.swift */,
+				FCB650B2205DAF9800814EF8 /* InventoryItem.swift */,
+				FCB650B3205DAF9800814EF8 /* Mastery.swift */,
+				FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */,
+				FCB650AA205DAF9800814EF8 /* Material.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		FC74524D2089120500BB34C3 /* Trading Post */ = {
+			isa = PBXGroup;
+			children = (
+				FC73E6322066EB350045C29F /* CommerceListing.swift */,
+				FC73E6342066EB460045C29F /* CommerceExchange.swift */,
+				FC73E6362066EBAA0045C29F /* CommercePrices.swift */,
+				FC91872520879F5F00092F3B /* Currency.swift */,
+				FC9187272087A27A00092F3B /* Transaction.swift */,
+			);
+			path = "Trading Post";
+			sourceTree = "<group>";
+		};
+		FC7452662089238700BB34C3 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				FC74524E208921B100BB34C3 /* V2Achievements.swift */,
+				FC745250208921EF00BB34C3 /* V2Authenticated.swift */,
+				FC7452522089221C00BB34C3 /* V2GameMechanics.swift */,
+				FC7452542089225300BB34C3 /* V2Items.swift */,
+				FC7452562089226000BB34C3 /* V2MapInformation.swift */,
+				FC7452582089229000BB34C3 /* V2Misc.swift */,
+				FC74525A208922B500BB34C3 /* V2Story.swift */,
+				FC74525C208922C400BB34C3 /* V2StructuredPVP.swift */,
+				FC74525E208922CE00BB34C3 /* V2WVW.swift */,
+				FC7452602089230500BB34C3 /* V2TradingPost.swift */,
+				FC7452622089232B00BB34C3 /* V2Guild.swift */,
+				FC7452642089235A00BB34C3 /* V2Emblem.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		FC745267208923B600BB34C3 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FCB650AF205DAF9800814EF8 /* Build.swift */,
+				FCB650B0205DAF9800814EF8 /* Colors.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		FC7452682089260400BB34C3 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
 		FCB6508E205DAF2F00814EF8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,24 +223,11 @@
 		FCB650A7205DAF8300814EF8 /* JSON Models */ = {
 			isa = PBXGroup;
 			children = (
-				FCB650AD205DAF9800814EF8 /* Account.swift */,
-				FCB650A9205DAF9800814EF8 /* Achievement.swift */,
-				FCB650AB205DAF9800814EF8 /* BankItem.swift */,
-				FCB650AF205DAF9800814EF8 /* Build.swift */,
-				FCB650AE205DAF9800814EF8 /* Cat.swift */,
-				FCB650B0205DAF9800814EF8 /* Colors.swift */,
-				FCB650B1205DAF9800814EF8 /* Finisher.swift */,
-				FCB650B2205DAF9800814EF8 /* InventoryItem.swift */,
-				FCB650B3205DAF9800814EF8 /* Mastery.swift */,
-				FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */,
-				FCB650AA205DAF9800814EF8 /* Material.swift */,
-				FC73E6322066EB350045C29F /* CommerceListing.swift */,
-				FC73E6342066EB460045C29F /* CommerceExchange.swift */,
-				FC73E6362066EBAA0045C29F /* CommercePrices.swift */,
-				FC91872520879F5F00092F3B /* Currency.swift */,
-				FC9187272087A27A00092F3B /* Transaction.swift */,
-				FC91873C2087BB4100092F3B /* Permissions.swift */,
-				FC91873E2087BBE600092F3B /* GuildUpgrade.swift */,
+				FC7452682089260400BB34C3 /* Achievements */,
+				FC745267208923B600BB34C3 /* Misc */,
+				FC74524D2089120500BB34C3 /* Trading Post */,
+				FC74524C208911BE00BB34C3 /* Account */,
+				FC74524B208911A100BB34C3 /* Guild */,
 			);
 			path = "JSON Models";
 			sourceTree = "<group>";
@@ -130,6 +237,7 @@
 			children = (
 				FCB650BF205DAFA100814EF8 /* APIBaseObject.swift */,
 				FCB650C0205DAFA100814EF8 /* APIV2Object.swift */,
+				FC7452662089238700BB34C3 /* Endpoints */,
 			);
 			path = "API Objects";
 			sourceTree = "<group>";
@@ -214,13 +322,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7452572089226000BB34C3 /* V2MapInformation.swift in Sources */,
+				FC74523E208905CC00BB34C3 /* GuildLog.swift in Sources */,
 				FCB650C1205DAFA100814EF8 /* APIBaseObject.swift in Sources */,
 				FCB650B7205DAF9900814EF8 /* MasteryPoints.swift in Sources */,
+				FC7452532089221C00BB34C3 /* V2GameMechanics.swift in Sources */,
 				FCB650BB205DAF9900814EF8 /* Colors.swift in Sources */,
+				FC74524F208921B100BB34C3 /* V2Achievements.swift in Sources */,
 				FC73E6352066EB460045C29F /* CommerceExchange.swift in Sources */,
+				FC74524A208910CE00BB34C3 /* GuildEmblem.swift in Sources */,
+				FC74525F208922CE00BB34C3 /* V2WVW.swift in Sources */,
 				FCB650B5205DAF9900814EF8 /* Material.swift in Sources */,
+				FC74523C2088F4AC00BB34C3 /* GuildDetails.swift in Sources */,
 				FCB650BD205DAF9900814EF8 /* InventoryItem.swift in Sources */,
 				FC73E6332066EB350045C29F /* CommerceListing.swift in Sources */,
+				FC74524420890ACC00BB34C3 /* GuildStash.swift in Sources */,
+				FC74524220890A4600BB34C3 /* GuildRank.swift in Sources */,
+				FC7452552089225300BB34C3 /* V2Items.swift in Sources */,
 				FC91873D2087BB4100092F3B /* Permissions.swift in Sources */,
 				FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */,
 				FCB650B4205DAF9900814EF8 /* Achievement.swift in Sources */,
@@ -228,14 +346,24 @@
 				FC91872620879F5F00092F3B /* Currency.swift in Sources */,
 				FCB650BE205DAF9900814EF8 /* Mastery.swift in Sources */,
 				FCB650BA205DAF9900814EF8 /* Build.swift in Sources */,
+				FC7452402089099600BB34C3 /* GuildMember.swift in Sources */,
 				FC91873F2087BBE600092F3B /* GuildUpgrade.swift in Sources */,
 				FCB650BC205DAF9900814EF8 /* Finisher.swift in Sources */,
 				FC9187282087A27A00092F3B /* Transaction.swift in Sources */,
 				FCB650C2205DAFA100814EF8 /* APIV2Object.swift in Sources */,
 				FC73E6372066EBAA0045C29F /* CommercePrices.swift in Sources */,
+				FC7452632089232B00BB34C3 /* V2Guild.swift in Sources */,
+				FC74525D208922C400BB34C3 /* V2StructuredPVP.swift in Sources */,
 				FCB650A6205DAF7800814EF8 /* GW2Client.swift in Sources */,
+				FC7452652089235A00BB34C3 /* V2Emblem.swift in Sources */,
+				FC74525B208922B500BB34C3 /* V2Story.swift in Sources */,
+				FC745251208921EF00BB34C3 /* V2Authenticated.swift in Sources */,
+				FC74524820890CAD00BB34C3 /* GuildTeam.swift in Sources */,
 				FCB650B6205DAF9900814EF8 /* BankItem.swift in Sources */,
+				FC74524620890BA500BB34C3 /* GuildTreasury.swift in Sources */,
+				FC7452612089230500BB34C3 /* V2TradingPost.swift in Sources */,
 				FCB650B8205DAF9900814EF8 /* Account.swift in Sources */,
+				FC7452592089229000BB34C3 /* V2Misc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
