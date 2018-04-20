@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildDetails: Decodable {
+struct GuildDetails: Decodable {
     let level: Int
     let motd: String
     let influence: Int

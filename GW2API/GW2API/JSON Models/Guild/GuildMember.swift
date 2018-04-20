@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildMember: Decodable {
+struct GuildMember: Decodable {
     let name: String
     let rank: String
     let joined: String

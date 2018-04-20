@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Permissions: Decodable {
+struct Permissions: Decodable {
     let id: String
     let name: String
     let description: String

@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildRank: Decodable {
+struct GuildRank: Decodable {
     let id: String
     let order: Int
     let permissions: [String]

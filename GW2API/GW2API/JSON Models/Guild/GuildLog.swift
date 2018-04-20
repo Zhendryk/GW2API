@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildLog: Decodable {
+struct GuildLog: Decodable {
     let id: Int
     let time: String
     let user: String

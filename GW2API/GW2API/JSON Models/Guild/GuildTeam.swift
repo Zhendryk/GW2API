@@ -6,10 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-
-public struct GuildTeam: Decodable {
+struct GuildTeam: Decodable {
     let id: Int
     let members: [member]
     let name: String

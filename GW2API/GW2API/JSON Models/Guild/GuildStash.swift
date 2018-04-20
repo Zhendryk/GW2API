@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildStash: Decodable {
+struct GuildStash: Decodable {
     let upgrade_id: Int
     let size: Int
     let coins: Int

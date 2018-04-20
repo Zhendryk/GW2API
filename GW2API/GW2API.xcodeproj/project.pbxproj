@@ -18,18 +18,13 @@
 		FC74524620890BA500BB34C3 /* GuildTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524520890BA500BB34C3 /* GuildTreasury.swift */; };
 		FC74524820890CAD00BB34C3 /* GuildTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524720890CAD00BB34C3 /* GuildTeam.swift */; };
 		FC74524A208910CE00BB34C3 /* GuildEmblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745249208910CE00BB34C3 /* GuildEmblem.swift */; };
-		FC74524F208921B100BB34C3 /* V2Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74524E208921B100BB34C3 /* V2Achievements.swift */; };
-		FC745251208921EF00BB34C3 /* V2Authenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745250208921EF00BB34C3 /* V2Authenticated.swift */; };
-		FC7452532089221C00BB34C3 /* V2GameMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452522089221C00BB34C3 /* V2GameMechanics.swift */; };
-		FC7452552089225300BB34C3 /* V2Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452542089225300BB34C3 /* V2Items.swift */; };
-		FC7452572089226000BB34C3 /* V2MapInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452562089226000BB34C3 /* V2MapInformation.swift */; };
-		FC7452592089229000BB34C3 /* V2Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452582089229000BB34C3 /* V2Misc.swift */; };
-		FC74525B208922B500BB34C3 /* V2Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74525A208922B500BB34C3 /* V2Story.swift */; };
-		FC74525D208922C400BB34C3 /* V2StructuredPVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74525C208922C400BB34C3 /* V2StructuredPVP.swift */; };
-		FC74525F208922CE00BB34C3 /* V2WVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74525E208922CE00BB34C3 /* V2WVW.swift */; };
-		FC7452612089230500BB34C3 /* V2TradingPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452602089230500BB34C3 /* V2TradingPost.swift */; };
-		FC7452632089232B00BB34C3 /* V2Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452622089232B00BB34C3 /* V2Guild.swift */; };
-		FC7452652089235A00BB34C3 /* V2Emblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452642089235A00BB34C3 /* V2Emblem.swift */; };
+		FC74526A208A3D6B00BB34C3 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745269208A3D6B00BB34C3 /* Achievement.swift */; };
+		FC745270208A432800BB34C3 /* DailyAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74526F208A432800BB34C3 /* DailyAchievement.swift */; };
+		FC745272208A45E800BB34C3 /* AchievementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745271208A45E800BB34C3 /* AchievementGroup.swift */; };
+		FC745274208A464700BB34C3 /* AchievementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745273208A464700BB34C3 /* AchievementCategory.swift */; };
+		FC745277208A49F600BB34C3 /* AccountCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745276208A49F600BB34C3 /* AccountCharacter.swift */; };
+		FC7452BB208A59CF00BB34C3 /* GW2APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452BA208A59CF00BB34C3 /* GW2APITests.swift */; };
+		FC7452BD208A59CF00BB34C3 /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB65098205DAF2F00814EF8 /* GW2API.framework */; };
 		FC91872620879F5F00092F3B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91872520879F5F00092F3B /* Currency.swift */; };
 		FC9187282087A27A00092F3B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9187272087A27A00092F3B /* Transaction.swift */; };
 		FC91873D2087BB4100092F3B /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91873C2087BB4100092F3B /* Permissions.swift */; };
@@ -37,20 +32,29 @@
 		FCB6509D205DAF2F00814EF8 /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB6509B205DAF2F00814EF8 /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A3205DAF7700814EF8 /* RequestSession.swift */; };
 		FCB650A6205DAF7800814EF8 /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A4205DAF7700814EF8 /* GW2Client.swift */; };
-		FCB650B4205DAF9900814EF8 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A9205DAF9800814EF8 /* Achievement.swift */; };
-		FCB650B5205DAF9900814EF8 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AA205DAF9800814EF8 /* Material.swift */; };
-		FCB650B6205DAF9900814EF8 /* BankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AB205DAF9800814EF8 /* BankItem.swift */; };
-		FCB650B7205DAF9900814EF8 /* MasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */; };
+		FCB650B4205DAF9900814EF8 /* AccountAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650A9205DAF9800814EF8 /* AccountAchievement.swift */; };
+		FCB650B5205DAF9900814EF8 /* AccountMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AA205DAF9800814EF8 /* AccountMaterial.swift */; };
+		FCB650B6205DAF9900814EF8 /* AccountBankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AB205DAF9800814EF8 /* AccountBankItem.swift */; };
+		FCB650B7205DAF9900814EF8 /* AccountMasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AC205DAF9800814EF8 /* AccountMasteryPoints.swift */; };
 		FCB650B8205DAF9900814EF8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AD205DAF9800814EF8 /* Account.swift */; };
-		FCB650B9205DAF9900814EF8 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AE205DAF9800814EF8 /* Cat.swift */; };
+		FCB650B9205DAF9900814EF8 /* AccountCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AE205DAF9800814EF8 /* AccountCat.swift */; };
 		FCB650BA205DAF9900814EF8 /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650AF205DAF9800814EF8 /* Build.swift */; };
 		FCB650BB205DAF9900814EF8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B0205DAF9800814EF8 /* Colors.swift */; };
-		FCB650BC205DAF9900814EF8 /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B1205DAF9800814EF8 /* Finisher.swift */; };
-		FCB650BD205DAF9900814EF8 /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B2205DAF9800814EF8 /* InventoryItem.swift */; };
-		FCB650BE205DAF9900814EF8 /* Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B3205DAF9800814EF8 /* Mastery.swift */; };
-		FCB650C1205DAFA100814EF8 /* APIBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650BF205DAFA100814EF8 /* APIBaseObject.swift */; };
-		FCB650C2205DAFA100814EF8 /* APIV2Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650C0205DAFA100814EF8 /* APIV2Object.swift */; };
+		FCB650BC205DAF9900814EF8 /* AccountFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B1205DAF9800814EF8 /* AccountFinisher.swift */; };
+		FCB650BD205DAF9900814EF8 /* AccountInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B2205DAF9800814EF8 /* AccountInventoryItem.swift */; };
+		FCB650BE205DAF9900814EF8 /* AccountMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650B3205DAF9800814EF8 /* AccountMastery.swift */; };
+		FCB650C1205DAFA100814EF8 /* APIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB650BF205DAFA100814EF8 /* APIObject.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC7452BE208A59CF00BB34C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCB6508F205DAF2F00814EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCB65097205DAF2F00814EF8;
+			remoteInfo = GW2API;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FC73E6322066EB350045C29F /* CommerceListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
@@ -64,18 +68,14 @@
 		FC74524520890BA500BB34C3 /* GuildTreasury.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTreasury.swift; sourceTree = "<group>"; };
 		FC74524720890CAD00BB34C3 /* GuildTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTeam.swift; sourceTree = "<group>"; };
 		FC745249208910CE00BB34C3 /* GuildEmblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildEmblem.swift; sourceTree = "<group>"; };
-		FC74524E208921B100BB34C3 /* V2Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Achievements.swift; sourceTree = "<group>"; };
-		FC745250208921EF00BB34C3 /* V2Authenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Authenticated.swift; sourceTree = "<group>"; };
-		FC7452522089221C00BB34C3 /* V2GameMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2GameMechanics.swift; sourceTree = "<group>"; };
-		FC7452542089225300BB34C3 /* V2Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Items.swift; sourceTree = "<group>"; };
-		FC7452562089226000BB34C3 /* V2MapInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2MapInformation.swift; sourceTree = "<group>"; };
-		FC7452582089229000BB34C3 /* V2Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Misc.swift; sourceTree = "<group>"; };
-		FC74525A208922B500BB34C3 /* V2Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Story.swift; sourceTree = "<group>"; };
-		FC74525C208922C400BB34C3 /* V2StructuredPVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2StructuredPVP.swift; sourceTree = "<group>"; };
-		FC74525E208922CE00BB34C3 /* V2WVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2WVW.swift; sourceTree = "<group>"; };
-		FC7452602089230500BB34C3 /* V2TradingPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2TradingPost.swift; sourceTree = "<group>"; };
-		FC7452622089232B00BB34C3 /* V2Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Guild.swift; sourceTree = "<group>"; };
-		FC7452642089235A00BB34C3 /* V2Emblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Emblem.swift; sourceTree = "<group>"; };
+		FC745269208A3D6B00BB34C3 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		FC74526F208A432800BB34C3 /* DailyAchievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAchievement.swift; sourceTree = "<group>"; };
+		FC745271208A45E800BB34C3 /* AchievementGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementGroup.swift; sourceTree = "<group>"; };
+		FC745273208A464700BB34C3 /* AchievementCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCategory.swift; sourceTree = "<group>"; };
+		FC745276208A49F600BB34C3 /* AccountCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCharacter.swift; sourceTree = "<group>"; };
+		FC7452B8208A59CF00BB34C3 /* GW2APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC7452BA208A59CF00BB34C3 /* GW2APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APITests.swift; sourceTree = "<group>"; };
+		FC7452BC208A59CF00BB34C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC91872520879F5F00092F3B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FC9187272087A27A00092F3B /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		FC91873C2087BB4100092F3B /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
@@ -85,22 +85,29 @@
 		FCB6509C205DAF2F00814EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCB650A3205DAF7700814EF8 /* RequestSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSession.swift; sourceTree = "<group>"; };
 		FCB650A4205DAF7700814EF8 /* GW2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
-		FCB650A9205DAF9800814EF8 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		FCB650AA205DAF9800814EF8 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
-		FCB650AB205DAF9800814EF8 /* BankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankItem.swift; sourceTree = "<group>"; };
-		FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasteryPoints.swift; sourceTree = "<group>"; };
+		FCB650A9205DAF9800814EF8 /* AccountAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAchievement.swift; sourceTree = "<group>"; };
+		FCB650AA205DAF9800814EF8 /* AccountMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMaterial.swift; sourceTree = "<group>"; };
+		FCB650AB205DAF9800814EF8 /* AccountBankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBankItem.swift; sourceTree = "<group>"; };
+		FCB650AC205DAF9800814EF8 /* AccountMasteryPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMasteryPoints.swift; sourceTree = "<group>"; };
 		FCB650AD205DAF9800814EF8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		FCB650AE205DAF9800814EF8 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		FCB650AE205DAF9800814EF8 /* AccountCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCat.swift; sourceTree = "<group>"; };
 		FCB650AF205DAF9800814EF8 /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
 		FCB650B0205DAF9800814EF8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		FCB650B1205DAF9800814EF8 /* Finisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
-		FCB650B2205DAF9800814EF8 /* InventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
-		FCB650B3205DAF9800814EF8 /* Mastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mastery.swift; sourceTree = "<group>"; };
-		FCB650BF205DAFA100814EF8 /* APIBaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseObject.swift; sourceTree = "<group>"; };
-		FCB650C0205DAFA100814EF8 /* APIV2Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIV2Object.swift; sourceTree = "<group>"; };
+		FCB650B1205DAF9800814EF8 /* AccountFinisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountFinisher.swift; sourceTree = "<group>"; };
+		FCB650B2205DAF9800814EF8 /* AccountInventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInventoryItem.swift; sourceTree = "<group>"; };
+		FCB650B3205DAF9800814EF8 /* AccountMastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMastery.swift; sourceTree = "<group>"; };
+		FCB650BF205DAFA100814EF8 /* APIObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC7452B5208A59CF00BB34C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7452BD208A59CF00BB34C3 /* GW2API.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCB65094205DAF2F00814EF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,22 +135,6 @@
 			path = Guild;
 			sourceTree = "<group>";
 		};
-		FC74524C208911BE00BB34C3 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				FCB650AD205DAF9800814EF8 /* Account.swift */,
-				FCB650A9205DAF9800814EF8 /* Achievement.swift */,
-				FCB650AB205DAF9800814EF8 /* BankItem.swift */,
-				FCB650AE205DAF9800814EF8 /* Cat.swift */,
-				FCB650B1205DAF9800814EF8 /* Finisher.swift */,
-				FCB650B2205DAF9800814EF8 /* InventoryItem.swift */,
-				FCB650B3205DAF9800814EF8 /* Mastery.swift */,
-				FCB650AC205DAF9800814EF8 /* MasteryPoints.swift */,
-				FCB650AA205DAF9800814EF8 /* Material.swift */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		FC74524D2089120500BB34C3 /* Trading Post */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,25 +145,6 @@
 				FC9187272087A27A00092F3B /* Transaction.swift */,
 			);
 			path = "Trading Post";
-			sourceTree = "<group>";
-		};
-		FC7452662089238700BB34C3 /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				FC74524E208921B100BB34C3 /* V2Achievements.swift */,
-				FC745250208921EF00BB34C3 /* V2Authenticated.swift */,
-				FC7452522089221C00BB34C3 /* V2GameMechanics.swift */,
-				FC7452542089225300BB34C3 /* V2Items.swift */,
-				FC7452562089226000BB34C3 /* V2MapInformation.swift */,
-				FC7452582089229000BB34C3 /* V2Misc.swift */,
-				FC74525A208922B500BB34C3 /* V2Story.swift */,
-				FC74525C208922C400BB34C3 /* V2StructuredPVP.swift */,
-				FC74525E208922CE00BB34C3 /* V2WVW.swift */,
-				FC7452602089230500BB34C3 /* V2TradingPost.swift */,
-				FC7452622089232B00BB34C3 /* V2Guild.swift */,
-				FC7452642089235A00BB34C3 /* V2Emblem.swift */,
-			);
-			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		FC745267208923B600BB34C3 /* Misc */ = {
@@ -187,14 +159,45 @@
 		FC7452682089260400BB34C3 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
+				FC745269208A3D6B00BB34C3 /* Achievement.swift */,
+				FC74526F208A432800BB34C3 /* DailyAchievement.swift */,
+				FC745271208A45E800BB34C3 /* AchievementGroup.swift */,
+				FC745273208A464700BB34C3 /* AchievementCategory.swift */,
 			);
 			path = Achievements;
+			sourceTree = "<group>";
+		};
+		FC745275208A470E00BB34C3 /* Authenticated */ = {
+			isa = PBXGroup;
+			children = (
+				FCB650AD205DAF9800814EF8 /* Account.swift */,
+				FCB650A9205DAF9800814EF8 /* AccountAchievement.swift */,
+				FCB650AB205DAF9800814EF8 /* AccountBankItem.swift */,
+				FCB650AE205DAF9800814EF8 /* AccountCat.swift */,
+				FCB650B1205DAF9800814EF8 /* AccountFinisher.swift */,
+				FCB650B2205DAF9800814EF8 /* AccountInventoryItem.swift */,
+				FCB650B3205DAF9800814EF8 /* AccountMastery.swift */,
+				FCB650AC205DAF9800814EF8 /* AccountMasteryPoints.swift */,
+				FCB650AA205DAF9800814EF8 /* AccountMaterial.swift */,
+				FC745276208A49F600BB34C3 /* AccountCharacter.swift */,
+			);
+			path = Authenticated;
+			sourceTree = "<group>";
+		};
+		FC7452B9208A59CF00BB34C3 /* GW2APITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC7452BA208A59CF00BB34C3 /* GW2APITests.swift */,
+				FC7452BC208A59CF00BB34C3 /* Info.plist */,
+			);
+			path = GW2APITests;
 			sourceTree = "<group>";
 		};
 		FCB6508E205DAF2F00814EF8 = {
 			isa = PBXGroup;
 			children = (
 				FCB6509A205DAF2F00814EF8 /* GW2API */,
+				FC7452B9208A59CF00BB34C3 /* GW2APITests */,
 				FCB65099205DAF2F00814EF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB65098205DAF2F00814EF8 /* GW2API.framework */,
+				FC7452B8208A59CF00BB34C3 /* GW2APITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,9 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				FC7452682089260400BB34C3 /* Achievements */,
+				FC745275208A470E00BB34C3 /* Authenticated */,
 				FC745267208923B600BB34C3 /* Misc */,
 				FC74524D2089120500BB34C3 /* Trading Post */,
-				FC74524C208911BE00BB34C3 /* Account */,
 				FC74524B208911A100BB34C3 /* Guild */,
 			);
 			path = "JSON Models";
@@ -235,9 +239,7 @@
 		FCB650A8205DAF8A00814EF8 /* API Objects */ = {
 			isa = PBXGroup;
 			children = (
-				FCB650BF205DAFA100814EF8 /* APIBaseObject.swift */,
-				FCB650C0205DAFA100814EF8 /* APIV2Object.swift */,
-				FC7452662089238700BB34C3 /* Endpoints */,
+				FCB650BF205DAFA100814EF8 /* APIObject.swift */,
 			);
 			path = "API Objects";
 			sourceTree = "<group>";
@@ -256,6 +258,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FC7452B7208A59CF00BB34C3 /* GW2APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC7452C0208A59CF00BB34C3 /* Build configuration list for PBXNativeTarget "GW2APITests" */;
+			buildPhases = (
+				FC7452B4208A59CF00BB34C3 /* Sources */,
+				FC7452B5208A59CF00BB34C3 /* Frameworks */,
+				FC7452B6208A59CF00BB34C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC7452BF208A59CF00BB34C3 /* PBXTargetDependency */,
+			);
+			name = GW2APITests;
+			productName = GW2APITests;
+			productReference = FC7452B8208A59CF00BB34C3 /* GW2APITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FCB65097205DAF2F00814EF8 /* GW2API */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCB650A0205DAF2F00814EF8 /* Build configuration list for PBXNativeTarget "GW2API" */;
@@ -280,9 +300,14 @@
 		FCB6508F205DAF2F00814EF8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jonathan Bailey";
 				TargetAttributes = {
+					FC7452B7208A59CF00BB34C3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					FCB65097205DAF2F00814EF8 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -303,11 +328,19 @@
 			projectRoot = "";
 			targets = (
 				FCB65097205DAF2F00814EF8 /* GW2API */,
+				FC7452B7208A59CF00BB34C3 /* GW2APITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FC7452B6208A59CF00BB34C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCB65096205DAF2F00814EF8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,58 +351,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FC7452B4208A59CF00BB34C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7452BB208A59CF00BB34C3 /* GW2APITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCB65093205DAF2F00814EF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC7452572089226000BB34C3 /* V2MapInformation.swift in Sources */,
 				FC74523E208905CC00BB34C3 /* GuildLog.swift in Sources */,
-				FCB650C1205DAFA100814EF8 /* APIBaseObject.swift in Sources */,
-				FCB650B7205DAF9900814EF8 /* MasteryPoints.swift in Sources */,
-				FC7452532089221C00BB34C3 /* V2GameMechanics.swift in Sources */,
+				FCB650C1205DAFA100814EF8 /* APIObject.swift in Sources */,
+				FCB650B7205DAF9900814EF8 /* AccountMasteryPoints.swift in Sources */,
 				FCB650BB205DAF9900814EF8 /* Colors.swift in Sources */,
-				FC74524F208921B100BB34C3 /* V2Achievements.swift in Sources */,
 				FC73E6352066EB460045C29F /* CommerceExchange.swift in Sources */,
 				FC74524A208910CE00BB34C3 /* GuildEmblem.swift in Sources */,
-				FC74525F208922CE00BB34C3 /* V2WVW.swift in Sources */,
-				FCB650B5205DAF9900814EF8 /* Material.swift in Sources */,
+				FCB650B5205DAF9900814EF8 /* AccountMaterial.swift in Sources */,
 				FC74523C2088F4AC00BB34C3 /* GuildDetails.swift in Sources */,
-				FCB650BD205DAF9900814EF8 /* InventoryItem.swift in Sources */,
+				FCB650BD205DAF9900814EF8 /* AccountInventoryItem.swift in Sources */,
 				FC73E6332066EB350045C29F /* CommerceListing.swift in Sources */,
 				FC74524420890ACC00BB34C3 /* GuildStash.swift in Sources */,
 				FC74524220890A4600BB34C3 /* GuildRank.swift in Sources */,
-				FC7452552089225300BB34C3 /* V2Items.swift in Sources */,
 				FC91873D2087BB4100092F3B /* Permissions.swift in Sources */,
+				FC745272208A45E800BB34C3 /* AchievementGroup.swift in Sources */,
 				FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */,
-				FCB650B4205DAF9900814EF8 /* Achievement.swift in Sources */,
-				FCB650B9205DAF9900814EF8 /* Cat.swift in Sources */,
+				FCB650B4205DAF9900814EF8 /* AccountAchievement.swift in Sources */,
+				FCB650B9205DAF9900814EF8 /* AccountCat.swift in Sources */,
 				FC91872620879F5F00092F3B /* Currency.swift in Sources */,
-				FCB650BE205DAF9900814EF8 /* Mastery.swift in Sources */,
+				FC74526A208A3D6B00BB34C3 /* Achievement.swift in Sources */,
+				FCB650BE205DAF9900814EF8 /* AccountMastery.swift in Sources */,
 				FCB650BA205DAF9900814EF8 /* Build.swift in Sources */,
 				FC7452402089099600BB34C3 /* GuildMember.swift in Sources */,
 				FC91873F2087BBE600092F3B /* GuildUpgrade.swift in Sources */,
-				FCB650BC205DAF9900814EF8 /* Finisher.swift in Sources */,
+				FCB650BC205DAF9900814EF8 /* AccountFinisher.swift in Sources */,
 				FC9187282087A27A00092F3B /* Transaction.swift in Sources */,
-				FCB650C2205DAFA100814EF8 /* APIV2Object.swift in Sources */,
+				FC745270208A432800BB34C3 /* DailyAchievement.swift in Sources */,
+				FC745277208A49F600BB34C3 /* AccountCharacter.swift in Sources */,
 				FC73E6372066EBAA0045C29F /* CommercePrices.swift in Sources */,
-				FC7452632089232B00BB34C3 /* V2Guild.swift in Sources */,
-				FC74525D208922C400BB34C3 /* V2StructuredPVP.swift in Sources */,
 				FCB650A6205DAF7800814EF8 /* GW2Client.swift in Sources */,
-				FC7452652089235A00BB34C3 /* V2Emblem.swift in Sources */,
-				FC74525B208922B500BB34C3 /* V2Story.swift in Sources */,
-				FC745251208921EF00BB34C3 /* V2Authenticated.swift in Sources */,
+				FC745274208A464700BB34C3 /* AchievementCategory.swift in Sources */,
 				FC74524820890CAD00BB34C3 /* GuildTeam.swift in Sources */,
-				FCB650B6205DAF9900814EF8 /* BankItem.swift in Sources */,
+				FCB650B6205DAF9900814EF8 /* AccountBankItem.swift in Sources */,
 				FC74524620890BA500BB34C3 /* GuildTreasury.swift in Sources */,
-				FC7452612089230500BB34C3 /* V2TradingPost.swift in Sources */,
 				FCB650B8205DAF9900814EF8 /* Account.swift in Sources */,
-				FC7452592089229000BB34C3 /* V2Misc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FC7452BF208A59CF00BB34C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCB65097205DAF2F00814EF8 /* GW2API */;
+			targetProxy = FC7452BE208A59CF00BB34C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		FC7452C1208A59CF00BB34C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49J6GMFE89;
+				INFOPLIST_FILE = GW2APITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChimeraTech.GW2APITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC7452C2208A59CF00BB34C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49J6GMFE89;
+				INFOPLIST_FILE = GW2APITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChimeraTech.GW2APITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FCB6509E205DAF2F00814EF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -531,6 +600,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC7452C0208A59CF00BB34C3 /* Build configuration list for PBXNativeTarget "GW2APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7452C1208A59CF00BB34C3 /* Debug */,
+				FC7452C2208A59CF00BB34C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FCB65092205DAF2F00814EF8 /* Build configuration list for PBXProject "GW2API" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

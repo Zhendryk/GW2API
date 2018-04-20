@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Transaction: Decodable {
+struct Transaction: Decodable {
     let id: Int
     let item_id: Int
     let price: Int

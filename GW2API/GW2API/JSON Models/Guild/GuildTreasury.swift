@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildTreasury: Decodable {
+struct GuildTreasury: Decodable {
     let item_id: Int
     let count: Int
     let needed_by: [itemNeeded]

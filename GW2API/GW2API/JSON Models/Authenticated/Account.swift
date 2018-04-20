@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Account: Decodable {
+struct Account: Decodable {
     let id: String
     let age: Int
     let name: String

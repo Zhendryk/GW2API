@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct CommerceListing: Decodable {
+struct CommerceListing: Decodable {
     let id: Int
     let buys: [buy]
     let sells: [sell]

@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildEmblem: Decodable {
+struct GuildEmblem: Decodable {
     let id: Int
     let layers: [String]
 }

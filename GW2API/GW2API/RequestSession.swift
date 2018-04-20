@@ -17,9 +17,9 @@ internal class RequestSession {
     func get(url: URL) -> (Data?, URLResponse?, Error?) {
         var request = URLRequest(url: url)
         if apiKey != nil {
-            var newURLStr = url.absoluteString
-            newURLStr.append("?access_token=\(apiKey!)")
-            request = URLRequest(url: URL(string: newURLStr)!)
+            //var newURLStr = url.absoluteString
+            //newURLStr.append("?access_token=\(apiKey!)")
+            //request = URLRequest(url: URL(string: newURLStr)!)
             request.addValue("Bearer \(apiKey!)", forHTTPHeaderField: "Authorization")
         }
         return URLSession.shared.synchronousDataTask(with: request)

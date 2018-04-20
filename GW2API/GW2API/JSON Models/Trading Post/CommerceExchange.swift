@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct CommerceExchange: Decodable {
+struct CommerceExchange: Decodable {
     let coins_per_gem: Int
     let quantity: Int
 }

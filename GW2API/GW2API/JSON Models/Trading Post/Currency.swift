@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Currency: Decodable {
+struct Currency: Decodable {
     let id: Int
     let value: Int
 }

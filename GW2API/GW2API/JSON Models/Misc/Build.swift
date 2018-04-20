@@ -6,8 +6,6 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Build: Decodable {
+struct Build: Decodable {
     let id: Int
 }

@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct GuildUpgrade: Decodable {
+struct GuildUpgrade: Decodable {
     let id: Int
     let name: String
     let description: String

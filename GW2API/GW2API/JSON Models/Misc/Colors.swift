@@ -6,9 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Colors: Decodable {
+struct Colors: Decodable {
     let id: Int
     let name: String
     let base_rgb: [Int]

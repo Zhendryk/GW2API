@@ -1,14 +1,13 @@
 //
-//  Cat.swift
+//  AccountMaterial.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 3/17/18.
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Foundation
-
-public struct Cat: Decodable {
+struct AccountMaterial: Decodable {
     let id: Int
-    let hint: String?
+    let category: Int
+    let count: Int
 }
