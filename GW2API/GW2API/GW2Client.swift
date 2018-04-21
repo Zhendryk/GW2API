@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class GW2Client {
+open class GW2Client {
     public static var lang: String = "en"
     public static var baseURL: URL = URL(string: "https://api.guildwars2.com")!
     public static var version: String = "v2"
@@ -40,7 +40,7 @@ public class GW2Client {
         }
     }
     
-    public func getKey() -> String? {
+    open func getKey() -> String? {
         return self.apiKey
     }
 }

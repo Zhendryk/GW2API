@@ -35,6 +35,11 @@ class GW2APITests: XCTestCase {
         let account: Account? = client.authenticated.account.get()
         XCTAssertNotNil(account)
         XCTAssertEqual(account!.name, "jbthejoker.9725", "Account name did not match or was nil")
+        let acAchieve: [AccountAchievement]? = client.authenticated.account.achievements.get()
+        XCTAssertNotNil(acAchieve)
+        
+        let transactions: [AccountTransaction]? = client.authenticated.account.transactions.history.buys.get()
+        XCTAssertNotNil(transactions)
     }
     
     func testGuildEndpoint() {

@@ -25,6 +25,28 @@
 		FC745277208A49F600BB34C3 /* AccountCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC745276208A49F600BB34C3 /* AccountCharacter.swift */; };
 		FC7452BB208A59CF00BB34C3 /* GW2APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452BA208A59CF00BB34C3 /* GW2APITests.swift */; };
 		FC7452BD208A59CF00BB34C3 /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB65098205DAF2F00814EF8 /* GW2API.framework */; };
+		FC7452C8208B943100BB34C3 /* AccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452C7208B943100BB34C3 /* AccountTransaction.swift */; };
+		FC7452CC208B9E5500BB34C3 /* APIV2Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452CB208B9E5500BB34C3 /* APIV2Object.swift */; };
+		FC7452D1208BA45E00BB34C3 /* V2Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452D0208BA45E00BB34C3 /* V2Achievements.swift */; };
+		FC7452D3208BA59B00BB34C3 /* V2Authenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452D2208BA59B00BB34C3 /* V2Authenticated.swift */; };
+		FC7452D5208BA5A900BB34C3 /* V2GameMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452D4208BA5A900BB34C3 /* V2GameMechanics.swift */; };
+		FC7452D7208BA5B300BB34C3 /* V2Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452D6208BA5B300BB34C3 /* V2Guild.swift */; };
+		FC7452D9208BA5C100BB34C3 /* V2Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452D8208BA5C100BB34C3 /* V2Items.swift */; };
+		FC7452DB208BA5CE00BB34C3 /* V2MapInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452DA208BA5CE00BB34C3 /* V2MapInformation.swift */; };
+		FC7452DD208BA5E200BB34C3 /* V2Miscellaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452DC208BA5E200BB34C3 /* V2Miscellaneous.swift */; };
+		FC7452DF208BA5EC00BB34C3 /* V2Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452DE208BA5EC00BB34C3 /* V2Story.swift */; };
+		FC7452E1208BA5F800BB34C3 /* V2StructuredPVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452E0208BA5F800BB34C3 /* V2StructuredPVP.swift */; };
+		FC7452E3208BA60000BB34C3 /* V2TradingPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452E2208BA60000BB34C3 /* V2TradingPost.swift */; };
+		FC7452E5208BA61100BB34C3 /* V2WVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452E4208BA61100BB34C3 /* V2WVW.swift */; };
+		FC7452E7208BA7BA00BB34C3 /* AccountPVPStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452E6208BA7BA00BB34C3 /* AccountPVPStats.swift */; };
+		FC7452E9208BA97700BB34C3 /* AccountPVPGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452E8208BA97700BB34C3 /* AccountPVPGame.swift */; };
+		FC7452EB208BAA6900BB34C3 /* AccountPVPStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452EA208BAA6900BB34C3 /* AccountPVPStandings.swift */; };
+		FC7452ED208BAB7400BB34C3 /* AccountToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452EC208BAB7400BB34C3 /* AccountToken.swift */; };
+		FC7452F0208BAC5E00BB34C3 /* GMMasteries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452EF208BAC5E00BB34C3 /* GMMasteries.swift */; };
+		FC7452F2208BAD8700BB34C3 /* GMOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452F1208BAD8700BB34C3 /* GMOutfit.swift */; };
+		FC7452F4208BADDD00BB34C3 /* GMPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452F3208BADDD00BB34C3 /* GMPet.swift */; };
+		FC7452F6208BAE6400BB34C3 /* GMProfession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452F5208BAE6400BB34C3 /* GMProfession.swift */; };
+		FC7452F8208BAF8C00BB34C3 /* GMRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7452F7208BAF8C00BB34C3 /* GMRace.swift */; };
 		FC91872620879F5F00092F3B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91872520879F5F00092F3B /* Currency.swift */; };
 		FC9187282087A27A00092F3B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9187272087A27A00092F3B /* Transaction.swift */; };
 		FC91873D2087BB4100092F3B /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91873C2087BB4100092F3B /* Permissions.swift */; };
@@ -76,6 +98,28 @@
 		FC7452B8208A59CF00BB34C3 /* GW2APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7452BA208A59CF00BB34C3 /* GW2APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APITests.swift; sourceTree = "<group>"; };
 		FC7452BC208A59CF00BB34C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7452C7208B943100BB34C3 /* AccountTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTransaction.swift; sourceTree = "<group>"; };
+		FC7452CB208B9E5500BB34C3 /* APIV2Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIV2Object.swift; sourceTree = "<group>"; };
+		FC7452D0208BA45E00BB34C3 /* V2Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Achievements.swift; sourceTree = "<group>"; };
+		FC7452D2208BA59B00BB34C3 /* V2Authenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Authenticated.swift; sourceTree = "<group>"; };
+		FC7452D4208BA5A900BB34C3 /* V2GameMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2GameMechanics.swift; sourceTree = "<group>"; };
+		FC7452D6208BA5B300BB34C3 /* V2Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Guild.swift; sourceTree = "<group>"; };
+		FC7452D8208BA5C100BB34C3 /* V2Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Items.swift; sourceTree = "<group>"; };
+		FC7452DA208BA5CE00BB34C3 /* V2MapInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2MapInformation.swift; sourceTree = "<group>"; };
+		FC7452DC208BA5E200BB34C3 /* V2Miscellaneous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Miscellaneous.swift; sourceTree = "<group>"; };
+		FC7452DE208BA5EC00BB34C3 /* V2Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2Story.swift; sourceTree = "<group>"; };
+		FC7452E0208BA5F800BB34C3 /* V2StructuredPVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2StructuredPVP.swift; sourceTree = "<group>"; };
+		FC7452E2208BA60000BB34C3 /* V2TradingPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2TradingPost.swift; sourceTree = "<group>"; };
+		FC7452E4208BA61100BB34C3 /* V2WVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2WVW.swift; sourceTree = "<group>"; };
+		FC7452E6208BA7BA00BB34C3 /* AccountPVPStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPVPStats.swift; sourceTree = "<group>"; };
+		FC7452E8208BA97700BB34C3 /* AccountPVPGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPVPGame.swift; sourceTree = "<group>"; };
+		FC7452EA208BAA6900BB34C3 /* AccountPVPStandings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPVPStandings.swift; sourceTree = "<group>"; };
+		FC7452EC208BAB7400BB34C3 /* AccountToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountToken.swift; sourceTree = "<group>"; };
+		FC7452EF208BAC5E00BB34C3 /* GMMasteries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMMasteries.swift; sourceTree = "<group>"; };
+		FC7452F1208BAD8700BB34C3 /* GMOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMOutfit.swift; sourceTree = "<group>"; };
+		FC7452F3208BADDD00BB34C3 /* GMPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMPet.swift; sourceTree = "<group>"; };
+		FC7452F5208BAE6400BB34C3 /* GMProfession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMProfession.swift; sourceTree = "<group>"; };
+		FC7452F7208BAF8C00BB34C3 /* GMRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMRace.swift; sourceTree = "<group>"; };
 		FC91872520879F5F00092F3B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FC9187272087A27A00092F3B /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		FC91873C2087BB4100092F3B /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
@@ -180,6 +224,11 @@
 				FCB650AC205DAF9800814EF8 /* AccountMasteryPoints.swift */,
 				FCB650AA205DAF9800814EF8 /* AccountMaterial.swift */,
 				FC745276208A49F600BB34C3 /* AccountCharacter.swift */,
+				FC7452C7208B943100BB34C3 /* AccountTransaction.swift */,
+				FC7452E6208BA7BA00BB34C3 /* AccountPVPStats.swift */,
+				FC7452E8208BA97700BB34C3 /* AccountPVPGame.swift */,
+				FC7452EA208BAA6900BB34C3 /* AccountPVPStandings.swift */,
+				FC7452EC208BAB7400BB34C3 /* AccountToken.swift */,
 			);
 			path = Authenticated;
 			sourceTree = "<group>";
@@ -191,6 +240,37 @@
 				FC7452BC208A59CF00BB34C3 /* Info.plist */,
 			);
 			path = GW2APITests;
+			sourceTree = "<group>";
+		};
+		FC7452CF208BA43A00BB34C3 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				FC7452D0208BA45E00BB34C3 /* V2Achievements.swift */,
+				FC7452D2208BA59B00BB34C3 /* V2Authenticated.swift */,
+				FC7452D4208BA5A900BB34C3 /* V2GameMechanics.swift */,
+				FC7452D6208BA5B300BB34C3 /* V2Guild.swift */,
+				FC7452D8208BA5C100BB34C3 /* V2Items.swift */,
+				FC7452DA208BA5CE00BB34C3 /* V2MapInformation.swift */,
+				FC7452DC208BA5E200BB34C3 /* V2Miscellaneous.swift */,
+				FC7452DE208BA5EC00BB34C3 /* V2Story.swift */,
+				FC7452E0208BA5F800BB34C3 /* V2StructuredPVP.swift */,
+				FC7452E2208BA60000BB34C3 /* V2TradingPost.swift */,
+				FC7452E4208BA61100BB34C3 /* V2WVW.swift */,
+			);
+			name = Endpoints;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		FC7452EE208BAC4700BB34C3 /* Game Mechanics */ = {
+			isa = PBXGroup;
+			children = (
+				FC7452EF208BAC5E00BB34C3 /* GMMasteries.swift */,
+				FC7452F1208BAD8700BB34C3 /* GMOutfit.swift */,
+				FC7452F3208BADDD00BB34C3 /* GMPet.swift */,
+				FC7452F5208BAE6400BB34C3 /* GMProfession.swift */,
+				FC7452F7208BAF8C00BB34C3 /* GMRace.swift */,
+			);
+			path = "Game Mechanics";
 			sourceTree = "<group>";
 		};
 		FCB6508E205DAF2F00814EF8 = {
@@ -229,6 +309,7 @@
 			children = (
 				FC7452682089260400BB34C3 /* Achievements */,
 				FC745275208A470E00BB34C3 /* Authenticated */,
+				FC7452EE208BAC4700BB34C3 /* Game Mechanics */,
 				FC745267208923B600BB34C3 /* Misc */,
 				FC74524D2089120500BB34C3 /* Trading Post */,
 				FC74524B208911A100BB34C3 /* Guild */,
@@ -240,6 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				FCB650BF205DAFA100814EF8 /* APIObject.swift */,
+				FC7452CB208B9E5500BB34C3 /* APIV2Object.swift */,
+				FC7452CF208BA43A00BB34C3 /* Endpoints */,
 			);
 			path = "API Objects";
 			sourceTree = "<group>";
@@ -365,29 +448,50 @@
 			files = (
 				FC74523E208905CC00BB34C3 /* GuildLog.swift in Sources */,
 				FCB650C1205DAFA100814EF8 /* APIObject.swift in Sources */,
+				FC7452F2208BAD8700BB34C3 /* GMOutfit.swift in Sources */,
 				FCB650B7205DAF9900814EF8 /* AccountMasteryPoints.swift in Sources */,
+				FC7452D3208BA59B00BB34C3 /* V2Authenticated.swift in Sources */,
+				FC7452E9208BA97700BB34C3 /* AccountPVPGame.swift in Sources */,
 				FCB650BB205DAF9900814EF8 /* Colors.swift in Sources */,
 				FC73E6352066EB460045C29F /* CommerceExchange.swift in Sources */,
 				FC74524A208910CE00BB34C3 /* GuildEmblem.swift in Sources */,
+				FC7452D1208BA45E00BB34C3 /* V2Achievements.swift in Sources */,
 				FCB650B5205DAF9900814EF8 /* AccountMaterial.swift in Sources */,
+				FC7452EB208BAA6900BB34C3 /* AccountPVPStandings.swift in Sources */,
 				FC74523C2088F4AC00BB34C3 /* GuildDetails.swift in Sources */,
+				FC7452E1208BA5F800BB34C3 /* V2StructuredPVP.swift in Sources */,
 				FCB650BD205DAF9900814EF8 /* AccountInventoryItem.swift in Sources */,
 				FC73E6332066EB350045C29F /* CommerceListing.swift in Sources */,
 				FC74524420890ACC00BB34C3 /* GuildStash.swift in Sources */,
+				FC7452DF208BA5EC00BB34C3 /* V2Story.swift in Sources */,
+				FC7452F0208BAC5E00BB34C3 /* GMMasteries.swift in Sources */,
 				FC74524220890A4600BB34C3 /* GuildRank.swift in Sources */,
 				FC91873D2087BB4100092F3B /* Permissions.swift in Sources */,
+				FC7452F4208BADDD00BB34C3 /* GMPet.swift in Sources */,
 				FC745272208A45E800BB34C3 /* AchievementGroup.swift in Sources */,
 				FCB650A5205DAF7800814EF8 /* RequestSession.swift in Sources */,
 				FCB650B4205DAF9900814EF8 /* AccountAchievement.swift in Sources */,
 				FCB650B9205DAF9900814EF8 /* AccountCat.swift in Sources */,
+				FC7452E3208BA60000BB34C3 /* V2TradingPost.swift in Sources */,
 				FC91872620879F5F00092F3B /* Currency.swift in Sources */,
+				FC7452CC208B9E5500BB34C3 /* APIV2Object.swift in Sources */,
+				FC7452DB208BA5CE00BB34C3 /* V2MapInformation.swift in Sources */,
+				FC7452F8208BAF8C00BB34C3 /* GMRace.swift in Sources */,
+				FC7452D5208BA5A900BB34C3 /* V2GameMechanics.swift in Sources */,
 				FC74526A208A3D6B00BB34C3 /* Achievement.swift in Sources */,
 				FCB650BE205DAF9900814EF8 /* AccountMastery.swift in Sources */,
 				FCB650BA205DAF9900814EF8 /* Build.swift in Sources */,
+				FC7452E5208BA61100BB34C3 /* V2WVW.swift in Sources */,
+				FC7452E7208BA7BA00BB34C3 /* AccountPVPStats.swift in Sources */,
+				FC7452ED208BAB7400BB34C3 /* AccountToken.swift in Sources */,
 				FC7452402089099600BB34C3 /* GuildMember.swift in Sources */,
+				FC7452C8208B943100BB34C3 /* AccountTransaction.swift in Sources */,
 				FC91873F2087BBE600092F3B /* GuildUpgrade.swift in Sources */,
+				FC7452DD208BA5E200BB34C3 /* V2Miscellaneous.swift in Sources */,
 				FCB650BC205DAF9900814EF8 /* AccountFinisher.swift in Sources */,
+				FC7452D7208BA5B300BB34C3 /* V2Guild.swift in Sources */,
 				FC9187282087A27A00092F3B /* Transaction.swift in Sources */,
+				FC7452F6208BAE6400BB34C3 /* GMProfession.swift in Sources */,
 				FC745270208A432800BB34C3 /* DailyAchievement.swift in Sources */,
 				FC745277208A49F600BB34C3 /* AccountCharacter.swift in Sources */,
 				FC73E6372066EBAA0045C29F /* CommercePrices.swift in Sources */,
@@ -396,6 +500,7 @@
 				FC74524820890CAD00BB34C3 /* GuildTeam.swift in Sources */,
 				FCB650B6205DAF9900814EF8 /* AccountBankItem.swift in Sources */,
 				FC74524620890BA500BB34C3 /* GuildTreasury.swift in Sources */,
+				FC7452D9208BA5C100BB34C3 /* V2Items.swift in Sources */,
 				FCB650B8205DAF9900814EF8 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
