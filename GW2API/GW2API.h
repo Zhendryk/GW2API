@@ -2,7 +2,7 @@
 //  GW2API.h
 //  GW2API
 //
-//  Created by Jonathan Bailey on 3/17/18.
+//  Created by Jonathan Bailey on 6/30/18.
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
