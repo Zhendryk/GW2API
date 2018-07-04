@@ -43,8 +43,11 @@ class AuthenticatedClient : Client {
     
     class AccountAchievementsClient : Client {
         
-        func get(from endpoint: Authentication = .accountAchievements, completion: @escaping (Result<[AccountAchievement?], APIError>) -> Void) {
-
+        func get(from endpoint: Authentication = .accountAchievements, completion: @escaping (Result<[AccountAchievement]?, APIError>) -> Void) {
+            fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountAchievement]? in
+                guard let result = json as? [AccountAchievement] else { return nil }
+                return result
+            }, completion: completion)
         }
     }
 }

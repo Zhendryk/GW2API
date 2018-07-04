@@ -26,7 +26,7 @@ class GW2APITests: XCTestCase {
         let expectation = self.expectation(description: "Querying GW2API...")
         
         
-        GW2Client.instance.authenticated.account.get(completion: { result in
+        GW2Client.instance.authenticated.accountAchievements.get(completion: { result in
             switch result {
             case .success(let res):
                 guard let authres = res else { return }
