@@ -17,6 +17,7 @@ enum Authentication {
     case accountHomeNodes
     case accountInventory
     case accountMasteries
+    case accountMasteryPoints
     case accountMaterials
     case accountMinis
     case accountOutfits
@@ -46,6 +47,7 @@ extension Authentication : Endpoint {
         case .accountHomeNodes: return "account/home/nodes"
         case .accountInventory: return "account/inventory"
         case .accountMasteries: return "account/masteries"
+        case .accountMasteryPoints: return "account/mastery/points"
         case .accountMaterials: return "account/materials"
         case .accountMinis: return "account/minis"
         case .accountOutfits: return "account/outfits"

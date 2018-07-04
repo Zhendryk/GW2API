@@ -9,61 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GW2APITests/GW2APITests.swift"
-            timestampString = "552367298.507892"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "testEndpoint()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GW2APITests.GW2APITests.testEndpoint() -&gt; ()"
-                  moduleName = "GW2APITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jb1039876/Desktop/gw2-api/GW2APITests/GW2APITests.swift"
-                  timestampString = "552362878.436465"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "157">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;GW2API.Account&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.GW2APITests.testEndpoint() -&gt; ()"
-                  moduleName = "GW2APITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jb1039876/Desktop/gw2-api/GW2APITests/GW2APITests.swift"
-                  timestampString = "552362878.438679"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "25">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GW2API/Endpoints/client/Authenticated.swift"
-            timestampString = "552367298.508184"
+            timestampString = "552407834.870193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "get(from:completion:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "setAPIKey(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

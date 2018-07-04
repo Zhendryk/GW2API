@@ -19,23 +19,24 @@ protocol APIClient {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // @extension to APIClient:                                                                                                                                                    //
 // @typealias JSONTaskCompletionHandler: Alias for completion handler that returns a generic Decodable structure and APIError (Decodable?, APIError?).                         //
-// @func decodingTask<T: Decodable>: Creates asynchronous dataTask, checks for errors and upon recieving HTTP 200 OK, decodes the json data into an object.                    //
-// @func fetchAsync<T: Decodable>: Creates asynchronous decodingTask (above), fetches decoded json, completionHandler completes with either Result.success or Result.failure.  //
+//   //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 extension APIClient {
     typealias JSONTaskCompletionHandler = (Decodable?, APIError?) -> Void
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// @Class Client, conforms to APIClient protocol, base object for all endpoint client classes.                                                                            //
-// @var session: URLSession conformed from APIClient protocol, see above.                                                                                                 //
-// @var apiKey: String, default nil, contains the user's authentication key for the API.                                                                                  //
-// @init(configuration: URLSessionConfiguration): Initializes the client with the provided URLSessionConfiguration.                                                       //
-// @init(): Convenience init method that initializes the client with the default URLSessionConfiguration.                                                                 //
-// @func setAPIKey(_ key: String): Sets this client's API key to the given key.                                                                                           //
-// @func getAuthorizedRequest(from request: URLRequest): Takes the provided request, attaches the client's API key if available, and returns a new authorized request.    //
-// @func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]): Takes the query, attaches all of the given query parameters and returns a new URLRequest.  //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// @Class Client, conforms to APIClient protocol, base object for all endpoint client classes.                                                                                 //
+// @var session: URLSession conformed from APIClient protocol, see above.                                                                                                      //
+// @var apiKey: String, default nil, contains the user's authentication key for the API.                                                                                       //
+// @init(configuration: URLSessionConfiguration): Initializes the client with the provided URLSessionConfiguration.                                                            //
+// @init(): Convenience init method that initializes the client with the default URLSessionConfiguration.                                                                      //
+// @func setAPIKey(_ key: String): Sets this client's API key to the given key.                                                                                                //
+// @func fetchAsync<T: Decodable>: Creates asynchronous decodingTask (above), fetches decoded json, completionHandler completes with either Result.success or Result.failure.  //
+// @func getAuthorizedRequest(from request: URLRequest): Takes the provided request, attaches the client's API key if available, and returns a new authorized request.         //
+// @func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]): Takes the query, attaches all of the given query parameters and returns a new URLRequest.       //
+// @func decodingTask<T: Decodable>: Creates asynchronous dataTask, checks for errors and upon recieving HTTP 200 OK, decodes the json data into an object.                    //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Client : APIClient {
     var session: URLSession
     var apiKey: String? = nil
@@ -50,32 +51,6 @@ class Client : APIClient {
     
     func setAPIKey(_ key: String) {
         self.apiKey = key
-    }
-    
-    private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
-        let task = session.dataTask(with: request) { data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completion(nil, .requestFailed)
-                return
-            }
-            if httpResponse.statusCode == 200 {
-                if let data = data {
-                    do {
-                        let genericModel = try JSONDecoder().decode(decodingType, from: data)
-                        completion(genericModel, nil)
-                    } catch {
-                        completion(nil, .jsonConversionFailure)
-                    }
-                }
-                else {
-                    completion(nil, .invalidData)
-                }
-            }
-            else {
-                completion(nil, .responseUnsuccessful)
-            }
-        }
-        return task
     }
     
     func fetchAsync<T: Decodable>(with request: URLRequest, needsAuthorization: Bool = false, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
@@ -143,5 +118,31 @@ class Client : APIClient {
         queryString.removeLast()
         let formattedRequest = URL(string: str + queryString)!
         return Result.success(URLRequest(url: formattedRequest))
+    }
+    
+    private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
+        let task = session.dataTask(with: request) { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(nil, .requestFailed)
+                return
+            }
+            if httpResponse.statusCode == 200 {
+                if let data = data {
+                    do {
+                        let genericModel = try JSONDecoder().decode(decodingType, from: data)
+                        completion(genericModel, nil)
+                    } catch {
+                        completion(nil, .jsonConversionFailure)
+                    }
+                }
+                else {
+                    completion(nil, .invalidData)
+                }
+            }
+            else {
+                completion(nil, .responseUnsuccessful)
+            }
+        }
+        return task
     }
 }

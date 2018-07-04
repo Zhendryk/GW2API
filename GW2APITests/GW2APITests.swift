@@ -25,22 +25,21 @@ class GW2APITests: XCTestCase {
     func testEndpoint() {
         let expectation = self.expectation(description: "Querying GW2API...")
         
-        
-        GW2Client.instance.authenticated.accountAchievements.get(completion: { result in
+        GW2Client.instance.authenticated.account.achievements.get() { result in
             switch result {
             case .success(let res):
-                guard let authres = res else { return }
-                print("\n\n\n[*****RESULTS*****]\n")
-                print(authres)
+                guard let r = res else { return }
+                print("\n\n\n")
+                print(r)
                 print("\n\n\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n[*****ERROR*****]\n")
-                print("Error: \(error)")
+                print("\n\n\n")
+                print(error)
                 print("\n\n\n")
                 expectation.fulfill()
             }
-        })
+        }
         
         
         waitForExpectations(timeout: 5, handler: nil)
