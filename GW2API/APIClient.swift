@@ -13,7 +13,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 protocol APIClient {
     var session: URLSession { get }
-    func fetchAsync<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void)
+    func fetchAsync<T: Decodable>(with request: URLRequest, needsAuthorization: Bool, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23,55 +23,7 @@ protocol APIClient {
 // @func fetchAsync<T: Decodable>: Creates asynchronous decodingTask (above), fetches decoded json, completionHandler completes with either Result.success or Result.failure.  //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 extension APIClient {
-    
     typealias JSONTaskCompletionHandler = (Decodable?, APIError?) -> Void
-    
-    private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
-        let task = session.dataTask(with: request) { data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completion(nil, .requestFailed)
-                return
-            }
-            if httpResponse.statusCode == 200 {
-                if let data = data {
-                    do {
-                        let genericModel = try JSONDecoder().decode(decodingType, from: data)
-                        completion(genericModel, nil)
-                    } catch {
-                        completion(nil, .jsonConversionFailure)
-                    }
-                }
-                else {
-                    completion(nil, .invalidData)
-                }
-            }
-            else {
-                completion(nil, .responseUnsuccessful)
-            }
-        }
-        return task
-    }
-
-    func fetchAsync<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
-        let task = decodingTask(with: request, decodingType: T.self) { (json, error) in
-            DispatchQueue.main.async {
-                guard let json = json else {
-                    if let error = error {
-                        completion(Result.failure(error))
-                    } else {
-                        completion(Result.failure(.invalidData))
-                    }
-                    return
-                }
-                if let value = decode(json) {
-                    completion(.success(value))
-                } else {
-                    completion(.failure(.jsonParsingFailure))
-                }
-            }
-        }
-        task.resume()
-    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -100,35 +52,96 @@ class Client : APIClient {
         self.apiKey = key
     }
     
-    func getAuthorizedRequest(from request: URLRequest) -> (URLRequest?, APIError?) {
+    private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
+        let task = session.dataTask(with: request) { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(nil, .requestFailed)
+                return
+            }
+            if httpResponse.statusCode == 200 {
+                if let data = data {
+                    do {
+                        let genericModel = try JSONDecoder().decode(decodingType, from: data)
+                        completion(genericModel, nil)
+                    } catch {
+                        completion(nil, .jsonConversionFailure)
+                    }
+                }
+                else {
+                    completion(nil, .invalidData)
+                }
+            }
+            else {
+                completion(nil, .responseUnsuccessful)
+            }
+        }
+        return task
+    }
+    
+    func fetchAsync<T: Decodable>(with request: URLRequest, needsAuthorization: Bool = false, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
+        var query = request
+        if needsAuthorization {
+            let areq = getAuthorizedRequest(from: request)
+            switch areq {
+            case .success(let result):
+                query = result
+            case .failure(let error):
+                print(error)
+                return
+            }
+        }
+        let task = decodingTask(with: query, decodingType: T.self) { (json, error) in
+            DispatchQueue.main.async {
+                guard let json = json else {
+                    if let error = error {
+                        completion(Result.failure(error))
+                    } else {
+                        completion(Result.failure(.invalidData))
+                    }
+                    return
+                }
+                if let value = decode(json) {
+                    completion(.success(value))
+                } else {
+                    completion(.failure(.jsonParsingFailure))
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func getAuthorizedRequest(from request: URLRequest) -> Result<URLRequest, APIError> {
         if self.apiKey != nil {
             var authorizedRequest = request
-            guard let str = authorizedRequest.url?.absoluteString else { return (nil, .authorizationAttachmentFailure) }
+            guard let str = authorizedRequest.url?.absoluteString else { return Result.failure(.authorizationAttachmentFailure) }
             if str.contains("?"){
                 let components = str.components(separatedBy: "?")
                 authorizedRequest = URLRequest(url: URL(string: components[0] + "?access_token=\(self.apiKey!)&" + components[1])!)
-                return (authorizedRequest, nil)
+                return Result.success(authorizedRequest)
             }
             else {
-                guard let authorizedRequest = addQueryParameters(to: authorizedRequest, parameters: [URLQueryItem(name: "access_token", value: self.apiKey)]) else { return (nil, .authorizationAttachmentFailure) }
-                return (authorizedRequest, nil)
+                let res = addQueryParameters(to: authorizedRequest, parameters: [URLQueryItem(name: "access_token", value: self.apiKey)])
+                switch res {
+                case .success(let authReqSuccess):
+                    return Result.success(authReqSuccess)
+                case .failure(let error):
+                    return Result.failure(error)
+                }
             }
-            //authorizedRequest.addValue(self.apiKey!, forHTTPHeaderField: "Authorization")
-            //authorizedRequest.httpMethod = "GET"
-            //return (authorizedRequest, nil)
         }
-        return (nil, .authorizationAttachmentFailure)
+        return Result.failure(.authorizationAttachmentFailure)
     }
     
-    func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]) -> URLRequest? {
+    func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]) -> Result<URLRequest, APIError> {
         var newQuery = query
         var queryString = "?"
-        guard let str = newQuery.url?.absoluteString else { return nil }
+        guard let str = newQuery.url?.absoluteString else { return Result.failure(.queryParameterAttachmentFailure) }
         for parameter in parameters {
-            queryString += parameter.name + "=" + parameter.value! + "&" //Check this for nil
+            guard let value = parameter.value else { return Result.failure(.queryParameterAttachmentFailure) }
+            queryString += parameter.name + "=" + value + "&"
         }
         queryString.removeLast()
         let formattedRequest = URL(string: str + queryString)!
-        return URLRequest(url: formattedRequest)
+        return Result.success(URLRequest(url: formattedRequest))
     }
 }

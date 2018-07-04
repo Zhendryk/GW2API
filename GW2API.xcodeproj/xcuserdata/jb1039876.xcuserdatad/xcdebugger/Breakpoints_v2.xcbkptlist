@@ -10,43 +10,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GW2APITests/GW2APITests.swift"
-            timestampString = "552319461.549808"
+            timestampString = "552363143.29125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "testExample()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "testEndpoint()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GW2APITests.GW2APITests.testExample() -&gt; ()"
+                  symbolName = "GW2APITests.GW2APITests.testEndpoint() -&gt; ()"
                   moduleName = "GW2APITests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jb1039876/Desktop/GW2API/GW2API/GW2APITests/GW2APITests.swift"
-                  timestampString = "552319446.914861"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2-api/GW2APITests/GW2APITests.swift"
+                  timestampString = "552362878.436465"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "17">
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "157">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;GW2API.Account&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.GW2APITests.testExample() -&gt; ()"
+                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;GW2API.Account&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.GW2APITests.testEndpoint() -&gt; ()"
                   moduleName = "GW2APITests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jb1039876/Desktop/GW2API/GW2API/GW2APITests/GW2APITests.swift"
-                  timestampString = "552319446.9173"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2-api/GW2APITests/GW2APITests.swift"
+                  timestampString = "552362878.438679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "18">
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "25">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GW2APITests/GW2APITests.swift"
-            timestampString = "552319461.550168"
+            filePath = "GW2API/Endpoints/client/Authenticated.swift"
+            timestampString = "552363143.291593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "setUp()"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "get(from:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -22,9 +22,10 @@ class GW2APITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEndpoint() {
+        let expectation = self.expectation(description: "Querying GW2API...")
+        
+        
         GW2Client.instance.authenticated.account.get(completion: { result in
             switch result {
             case .success(let res):
@@ -32,44 +33,25 @@ class GW2APITests: XCTestCase {
                 print("\n\n\n[*****RESULTS*****]\n")
                 print(authres)
                 print("\n\n\n")
+                expectation.fulfill()
             case .failure(let error):
                 print("\n\n\n[*****ERROR*****]\n")
                 print("Error: \(error)")
                 print("\n\n\n")
+                expectation.fulfill()
             }
         })
-        /*
-        let qp = URLQueryItem(name: "id", value: "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2")
-        GW2Client.instance.achievements.groups.get(parameters: [qp], completion: { result in
-            switch result {
-            case .success(let achievementResult):
-                guard let achievementResults = achievementResult else { return }
-                print("\n\n\n[*****RESULTS*****]\n")
-                print(achievementResults)
-                print("\n\n\n")
-            case .failure(let error):
-                print("Error: \(error)")
-            }
-        })
-        GW2Client.instance.achievements.daily.get() { result in
-            switch result {
-            case .success(let achievementResult):
-                guard let achievementResults = achievementResult else { return }
-                print("\n\n\n[*****RESULTS*****]\n")
-                print(achievementResults)
-                print("\n\n\n")
-            case .failure(let error):
-                print("Error: \(error)")
-            }
-        }
-         */
+        
+        
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
+    /*
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-    
+ */
 }

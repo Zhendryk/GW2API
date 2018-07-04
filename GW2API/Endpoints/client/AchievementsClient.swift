@@ -11,8 +11,6 @@ class AchievementsClient: Client {
     let categories: AchievementCategoryClient = AchievementCategoryClient()
     let groups: AchievementGroupClient = AchievementGroupClient()
     
-    //let (request, error) = super.getAuthorizedRequest(from: endpoint.request)
-    
     func get(from endpoint: Achievements = .achievements, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
         fetchAsync(with: endpoint.request, decode: { json -> [Int]? in
             guard let result = json as? [Int] else { return nil }
@@ -60,20 +58,31 @@ class AchievementsClient: Client {
         }
         
         func get(parameters: [URLQueryItem], from endpoint: Achievements = .groups, completion: @escaping (Result<AchievementGroup?, APIError>) -> Void) {
-            guard let request = super.addQueryParameters(to: endpoint.request, parameters: parameters) else { return }
-            fetchAsync(with: request, decode: { json -> AchievementGroup? in
-                guard let result = json as? AchievementGroup else { return nil }
-                return result
-            }, completion: completion)
+            let request = super.addQueryParameters(to: endpoint.request, parameters: parameters)
+            switch request {
+            case .success(let result):
+                fetchAsync(with: result, decode: { json -> AchievementGroup? in
+                    guard let result = json as? AchievementGroup else { return nil }
+                    return result
+                }, completion: completion)
+            case .failure(let error):
+                print(error)
+                return
+            }
         }
         
         func get(parameter: URLQueryItem, from endpoint: Achievements = .groups, completion: @escaping (Result<AchievementGroup?, APIError>) -> Void) {
-            guard let request = super.addQueryParameters(to: endpoint.request, parameters: [parameter]) else { return }
-            fetchAsync(with: request, decode: { json -> AchievementGroup? in
-                guard let result = json as? AchievementGroup else { return nil }
-                return result
-            }, completion: completion)
+            let request = super.addQueryParameters(to: endpoint.request, parameters: [parameter])
+            switch request {
+            case .success(let result):
+                fetchAsync(with: result, decode: { json -> AchievementGroup? in
+                    guard let result = json as? AchievementGroup else { return nil }
+                    return result
+                }, completion: completion)
+            case .failure(let error):
+                print(error)
+                return
+            }
         }
     }
-    
 }
