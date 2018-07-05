@@ -27,7 +27,10 @@ enum Authentication {
     case accountTitles
     case accountWallet
     case characters
-    case commerceTransactions
+    case commerceTransactionsCurrentBuys
+    case commerceTransactionsCurrentSells
+    case commerceTransactionsHistoryBuys
+    case commerceTransactionsHistorySells
     case pvpStats
     case pvpGames
     case pvpStandings
@@ -57,7 +60,10 @@ extension Authentication : Endpoint {
         case .accountTitles: return "account/titles"
         case .accountWallet: return "account/wallet"
         case .characters: return "characters"
-        case .commerceTransactions: return "commerce/transactions"
+        case .commerceTransactionsCurrentBuys: return "commerce/transactions/current/buys"
+        case .commerceTransactionsCurrentSells: return "commerce/transactions/current/sells"
+        case .commerceTransactionsHistoryBuys: return "commerce/transactions/history/buys"
+        case .commerceTransactionsHistorySells: return "commerce/transactions/history/sells"
         case .pvpStats: return "pvp/stats"
         case .pvpGames: return "pvp/games"
         case .pvpStandings: return "pvp/standings"

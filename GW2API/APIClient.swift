@@ -110,13 +110,15 @@ class Client : APIClient {
     func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]) -> Result<URLRequest, APIError> {
         var newQuery = query
         var queryString = "?"
-        guard let str = newQuery.url?.absoluteString else { return Result.failure(.queryParameterAttachmentFailure) }
+        guard var str = newQuery.url?.absoluteString else { return Result.failure(.queryParameterAttachmentFailure) }
         for parameter in parameters {
             guard let value = parameter.value else { return Result.failure(.queryParameterAttachmentFailure) }
             queryString += parameter.name + "=" + value + "&"
         }
         queryString.removeLast()
-        let formattedRequest = URL(string: str + queryString)!
+        str.append(queryString)
+        guard let qStr = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return Result.failure(.queryParameterAttachmentFailure) }
+        let formattedRequest = URL(string: qStr)!
         return Result.success(URLRequest(url: formattedRequest))
     }
     

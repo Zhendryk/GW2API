@@ -25,7 +25,9 @@ class GW2APITests: XCTestCase {
     func testEndpoint() {
         let expectation = self.expectation(description: "Querying GW2API...")
         
-        GW2Client.instance.authenticated.account.achievements.get() { result in
+        //let qi = URLQueryItem(name: "ids", value: "067FDA8C-11B9-4E73-B18C-601FEA26A501, 0D7345FF-1E89-4206-9DB5-E9B6E1A526FE")
+        
+        GW2Client.instance.authenticated.account.pvp.stats.get(/*parameters: [qi]*/) { result in
             switch result {
             case .success(let res):
                 guard let r = res else { return }

@@ -57,6 +57,7 @@
 		19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9A20EA6BA3004EF0B4 /* APIError.swift */; };
 		19406F9D20EA6C6C004EF0B4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9C20EA6C6C004EF0B4 /* APIClient.swift */; };
 		19406F9F20EA724C004EF0B4 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9E20EA724C004EF0B4 /* Achievements.swift */; };
+		196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196B264820ED613400095C0C /* AccountWalletItem.swift */; };
 		19865F4A20EAA40D00D4B8CE /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */; };
 		199F4EB020EBAEC50030FBCA /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EAF20EBAEC50030FBCA /* Authentication.swift */; };
 		199F4EB220EBB0650030FBCA /* Authenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EB120EBB0650030FBCA /* Authenticated.swift */; };
@@ -126,6 +127,7 @@
 		19406F9A20EA6BA3004EF0B4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		19406F9C20EA6C6C004EF0B4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		19406F9E20EA724C004EF0B4 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		196B264820ED613400095C0C /* AccountWalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
 		19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
 		199F4EAF20EBAEC50030FBCA /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		199F4EB120EBB0650030FBCA /* Authenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticated.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				1928F23320E7FF8400D6B43E /* AccountPVPStats.swift */,
 				1928F23220E7FF8400D6B43E /* AccountToken.swift */,
 				1928F23B20E7FF8500D6B43E /* AccountTransaction.swift */,
+				196B264820ED613400095C0C /* AccountWalletItem.swift */,
 			);
 			path = Authenticated;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				1928F26820E7FF9700D6B43E /* GuildLog.swift in Sources */,
 				199F4EB220EBB0650030FBCA /* Authenticated.swift in Sources */,
 				1928F25420E7FF8E00D6B43E /* GMRace.swift in Sources */,
+				196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */,
 				1928F26420E7FF9700D6B43E /* GuildMember.swift in Sources */,
 				1928F26A20E7FF9700D6B43E /* GuildEmblem.swift in Sources */,
 				1928F26B20E7FF9700D6B43E /* GuildUpgrade.swift in Sources */,

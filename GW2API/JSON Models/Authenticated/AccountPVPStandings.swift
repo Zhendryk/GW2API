@@ -18,8 +18,8 @@ struct CurrentStandings: Decodable {
     let tier: Int
     let points: Int
     let repeats: Int
-    let rating: Int
-    let decay: Int
+    let rating: Int?
+    let decay: Int?
 }
 
 struct BestStandings: Decodable {
