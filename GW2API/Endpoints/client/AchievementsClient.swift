@@ -58,7 +58,7 @@ class AchievementsClient: Client {
         }
         
         func get(parameters: [URLQueryItem], from endpoint: Achievements = .groups, completion: @escaping (Result<AchievementGroup?, APIError>) -> Void) {
-            let request = super.addQueryParameters(to: endpoint.request, parameters: parameters)
+            let request = addQueryParameters(to: endpoint.request, parameters: parameters)
             switch request {
             case .success(let result):
                 fetchAsync(with: result, decode: { json -> AchievementGroup? in
@@ -72,7 +72,7 @@ class AchievementsClient: Client {
         }
         
         func get(parameter: URLQueryItem, from endpoint: Achievements = .groups, completion: @escaping (Result<AchievementGroup?, APIError>) -> Void) {
-            let request = super.addQueryParameters(to: endpoint.request, parameters: [parameter])
+            let request = addQueryParameters(to: endpoint.request, parameters: [parameter])
             switch request {
             case .success(let result):
                 fetchAsync(with: result, decode: { json -> AchievementGroup? in

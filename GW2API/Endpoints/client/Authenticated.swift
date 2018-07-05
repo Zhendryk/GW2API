@@ -21,6 +21,7 @@ class AuthenticatedClient : Client {
         let dyes: AccountDyesClient = AccountDyesClient()
         let finishers: AccountFinishersCient = AccountFinishersCient()
         let home: AccountHomeClient = AccountHomeClient()
+        let inventory: AccountInventoryClient = AccountInventoryClient()
         let masteries: AccountMasteriesClient = AccountMasteriesClient()
         let materials: AccountMaterialsClient = AccountMaterialsClient()
         let minis: AccountMinisClient = AccountMinisClient()
@@ -43,6 +44,7 @@ class AuthenticatedClient : Client {
             self.dyes.setAPIKey(key)
             self.finishers.setAPIKey(key)
             self.home.setAPIKey(key)
+            self.inventory.setAPIKey(key)
             self.masteries.setAPIKey(key)
             self.materials.setAPIKey(key)
             self.minis.setAPIKey(key)
@@ -257,7 +259,7 @@ class AuthenticatedClient : Client {
         
         func get(characterName: String, from endpoint: Authentication = .characters, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
             guard var request = endpoint.request.url?.absoluteString else { return }
-            request += "/\(characterName)"
+            request.append("/\(characterName)")
             fetchAsync(with: URLRequest(url: URL(string: request)!), needsAuthorization: true, decode: { json -> AccountCharacter? in
                 guard let result = json as? AccountCharacter else { return nil }
                 return result

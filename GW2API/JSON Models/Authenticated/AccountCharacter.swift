@@ -20,7 +20,7 @@ struct AccountCharacter: Decodable {
     let crafting: [CraftingDiscipline]
     let title: Int?
     let backstory: [String]
-    let wvw_abilities: [WVWAbility]
+    let wvw_abilities: [WVWAbility] //
     let specializations: Specializations
     let skills: Skills
     let equipment: [EquipmentItem]
@@ -53,16 +53,16 @@ struct Specialization: Decodable {
 }
 
 struct Skills: Decodable {
-    let pve: [Skill]
-    let pvp: [Skill]
-    let wvw: [Skill]
+    let pve: Skill
+    let pvp: Skill
+    let wvw: Skill
 }
 
 struct Skill: Decodable {
     let heal: Int
     let utilities: [Int]
     let elite: Int
-    let legends: [String]
+    let legends: [String]?
 }
 
 struct EquipmentItem: Decodable {
@@ -75,7 +75,7 @@ struct EquipmentItem: Decodable {
     let binding: String?
     let charges: Int?
     let bound_to: String?
-    let dyes: [Int?]
+    let dyes: [Int?]?
 }
 
 struct EquipmentStats: Decodable {
@@ -92,6 +92,7 @@ struct EquipmentAttributes: Decodable {
     let ConditionDuration: Int?
     let Healing: Int?
     let BoonDuration: Int?
+    let CritDamage: Int?
 }
 
 struct EquipmentPVP: Decodable {
