@@ -20,14 +20,14 @@ struct AccountCharacter: Decodable {
     let crafting: [CraftingDiscipline]
     let title: Int?
     let backstory: [String]
-    let wvw_abilities: [WVWAbility] //
-    let specializations: Specializations
+    let wvw_abilities: [WVWAbility]
+    let specializations: Specializations?
     let skills: Skills
     let equipment: [EquipmentItem]
     let recipes: [Int]
     let equipment_pvp: EquipmentPVP
     let training: [TrainedSkill]
-    let bags: [Bag]
+    let bags: [Bag?]
 }
 
 struct CraftingDiscipline: Decodable {
@@ -49,7 +49,7 @@ struct Specializations: Decodable {
 
 struct Specialization: Decodable {
     let id: Int
-    let traits: [Int]
+    let traits: [Int?]
 }
 
 struct Skills: Decodable {
@@ -96,9 +96,9 @@ struct EquipmentAttributes: Decodable {
 }
 
 struct EquipmentPVP: Decodable {
-    let amulet: Int
-    let rune: Int
-    let sigils: [Int]
+    let amulet: Int?
+    let rune: Int?
+    let sigils: [Int?]?
 }
 
 struct TrainedSkill: Decodable {
@@ -117,7 +117,7 @@ struct CharacterInventoryItem: Decodable {
     let id: Int
     let count: Int
     let infusions: [Int]?
-    let upgrades: [Int]?
+    let upgrades: [Int?]?
     let skin: Int?
     let stats: EquipmentStats?
     let binding: String?

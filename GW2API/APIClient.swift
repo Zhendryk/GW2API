@@ -117,8 +117,7 @@ class Client : APIClient {
         }
         queryString.removeLast()
         str.append(queryString)
-        guard let qStr = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return Result.failure(.queryParameterAttachmentFailure) }
-        let formattedRequest = URL(string: qStr)!
+        guard let formattedRequest = URL(string: str) else { return Result.failure(.queryParameterAttachmentFailure) }
         return Result.success(URLRequest(url: formattedRequest))
     }
     
@@ -133,7 +132,8 @@ class Client : APIClient {
                     do {
                         let genericModel = try JSONDecoder().decode(decodingType, from: data)
                         completion(genericModel, nil)
-                    } catch {
+                    } catch let jsonError {
+                        print("\nJSON Conversion Error: \(jsonError)\n")
                         completion(nil, .jsonConversionFailure)
                     }
                 }
@@ -142,6 +142,7 @@ class Client : APIClient {
                 }
             }
             else {
+                print("HTTP Error: Code \(httpResponse.statusCode)\n")
                 completion(nil, .responseUnsuccessful)
             }
         }

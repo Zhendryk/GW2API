@@ -258,9 +258,9 @@ class AuthenticatedClient : Client {
         }
         
         func get(characterName: String, from endpoint: Authentication = .characters, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
-            guard var request = endpoint.request.url?.absoluteString else { return }
-            request.append("/\(characterName)")
-            fetchAsync(with: URLRequest(url: URL(string: request)!), needsAuthorization: true, decode: { json -> AccountCharacter? in
+            var request = endpoint.request
+            request.url?.appendPathComponent(characterName)
+            fetchAsync(with: request, needsAuthorization: true, decode: { json -> AccountCharacter? in
                 guard let result = json as? AccountCharacter else { return nil }
                 return result
             }, completion: completion)
