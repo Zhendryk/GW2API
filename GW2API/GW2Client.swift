@@ -27,6 +27,7 @@ public class GW2Client {
     
     let achievements: AchievementsClient = AchievementsClient()
     let authenticated: AuthenticatedClient = AuthenticatedClient()
+    let gameMechanics: GameMechanicsClient = GameMechanicsClient()
     
     private init() {}
 
@@ -41,7 +42,6 @@ public class GW2Client {
 
     public func setAPIKey(key: String) {
         self.apiKey = key
-        self.achievements.setAPIKey(key)
         self.authenticated.setAPIKey(key)
     }
 }

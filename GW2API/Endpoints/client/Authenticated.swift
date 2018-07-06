@@ -60,7 +60,7 @@ class AuthenticatedClient : Client {
             self.tokeninfo.setAPIKey(key)
         }
         
-        func get(from endpoint: Authentication = .account, completion: @escaping (Result<Account?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .account, completion: @escaping (Result<Account?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> Account? in
                 guard let result = json as? Account else { return nil }
                 return result
@@ -69,7 +69,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountAchievementsClient : Client {
-        func get(from endpoint: Authentication = .accountAchievements, completion: @escaping (Result<[AccountAchievement]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountAchievements, completion: @escaping (Result<[AccountAchievement]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountAchievement]? in
                 guard let result = json as? [AccountAchievement] else { return nil }
                 return result
@@ -78,7 +78,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountBankClient : Client {
-        func get(from endpoint: Authentication = .accountBank, completion: @escaping (Result<[AccountBankItem?]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountBank, completion: @escaping (Result<[AccountBankItem?]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountBankItem?]? in
                 guard let result = json as? [AccountBankItem?] else { return nil }
                 return result
@@ -87,7 +87,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountDungeonsClient : Client {
-        func get(from endpoint: Authentication = .accountDungeons, completion: @escaping (Result<[String]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountDungeons, completion: @escaping (Result<[String]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [String]? in
                 guard let result = json as? [String] else { return nil }
                 return result
@@ -96,7 +96,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountDyesClient : Client {
-        func get(from endpoint: Authentication = .accountDyes, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountDyes, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -105,7 +105,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountFinishersCient: Client {
-        func get(from endpoint: Authentication = .accountFinishers, completion: @escaping (Result<[AccountFinisher]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountFinishers, completion: @escaping (Result<[AccountFinisher]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountFinisher]? in
                 guard let result = json as? [AccountFinisher] else { return nil }
                 return result
@@ -124,7 +124,7 @@ class AuthenticatedClient : Client {
         }
         
         class AccountHomeCatsClient : Client {
-            func get(from endpoint: Authentication = .accountHomeCats, completion: @escaping (Result<[AccountCat]?, APIError>) -> Void) {
+            func get(from endpoint: EAuthentication = .accountHomeCats, completion: @escaping (Result<[AccountCat]?, APIError>) -> Void) {
                 fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountCat]? in
                     guard let result = json as? [AccountCat] else { return nil }
                     return result
@@ -133,7 +133,7 @@ class AuthenticatedClient : Client {
         }
         
         class AccountHomeNodesClient : Client {
-            func get(from endpoint: Authentication = .accountHomeNodes, completion: @escaping (Result<[String]?, APIError>) -> Void) {
+            func get(from endpoint: EAuthentication = .accountHomeNodes, completion: @escaping (Result<[String]?, APIError>) -> Void) {
                 fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [String]? in
                     guard let result = json as? [String] else { return nil }
                     return result
@@ -143,7 +143,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountInventoryClient : Client {
-        func get(from endpoint: Authentication = .accountInventory, completion: @escaping (Result<[AccountInventoryItem?]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountInventory, completion: @escaping (Result<[AccountInventoryItem?]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountInventoryItem?]? in
                 guard let result = json as? [AccountInventoryItem?] else { return nil }
                 return result
@@ -160,7 +160,7 @@ class AuthenticatedClient : Client {
             self.points.setAPIKey(key)
         }
         
-        func get(from endpoint: Authentication = .accountMasteries, completion: @escaping (Result<[AccountMastery]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountMasteries, completion: @escaping (Result<[AccountMastery]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountMastery]? in
                 guard let result = json as? [AccountMastery] else { return nil }
                 return result
@@ -168,7 +168,7 @@ class AuthenticatedClient : Client {
         }
         
         class AccountMasteryPointsClient : Client {
-            func get(from endpoint: Authentication = .accountMasteryPoints, completion: @escaping (Result<AccountMasteryPoints?, APIError>) -> Void) {
+            func get(from endpoint: EAuthentication = .accountMasteryPoints, completion: @escaping (Result<AccountMasteryPoints?, APIError>) -> Void) {
                 fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> AccountMasteryPoints? in
                     guard let result = json as? AccountMasteryPoints else { return nil }
                     return result
@@ -178,7 +178,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountMaterialsClient : Client {
-        func get(from endpoint: Authentication = .accountMaterials, completion: @escaping (Result<[AccountMaterial]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountMaterials, completion: @escaping (Result<[AccountMaterial]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountMaterial]? in
                 guard let result = json as? [AccountMaterial] else { return nil }
                 return result
@@ -187,7 +187,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountMinisClient : Client {
-        func get(from endpoint: Authentication = .accountMinis, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountMinis, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -196,7 +196,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountOutfitsClient : Client {
-        func get(from endpoint: Authentication = .accountOutfits, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountOutfits, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -205,7 +205,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountRaidsClient : Client {
-        func get(from endpoint: Authentication = .accountRaids, completion: @escaping (Result<[String]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountRaids, completion: @escaping (Result<[String]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [String]? in
                 guard let result = json as? [String] else { return nil }
                 return result
@@ -214,7 +214,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountRecipesClient : Client {
-        func get(from endpoint: Authentication = .accountRecipes, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountRecipes, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -223,7 +223,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountSkinsClient : Client {
-        func get(from endpoint: Authentication = .accountSkins, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountSkins, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -232,7 +232,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountTitlesClient : Client {
-        func get(from endpoint: Authentication = .accountTitles, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountTitles, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -241,7 +241,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountWalletClient : Client {
-        func get(from endpoint: Authentication = .accountWallet, completion: @escaping (Result<[AccountWalletItem]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .accountWallet, completion: @escaping (Result<[AccountWalletItem]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountWalletItem]? in
                 guard let result = json as? [AccountWalletItem] else { return nil }
                 return result
@@ -250,14 +250,14 @@ class AuthenticatedClient : Client {
     }
     
     class AccountCharacterClient : Client {
-        func get(from endpoint: Authentication = .characters, completion: @escaping (Result<[String]?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .characters, completion: @escaping (Result<[String]?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [String]? in
                 guard let result = json as? [String] else { return nil }
                 return result
             }, completion: completion)
         }
         
-        func get(characterName: String, from endpoint: Authentication = .characters, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
+        func get(characterName: String, from endpoint: EAuthentication = .characters, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
             var request = endpoint.request
             request.url?.appendPathComponent(characterName)
             fetchAsync(with: request, needsAuthorization: true, decode: { json -> AccountCharacter? in
@@ -287,7 +287,7 @@ class AuthenticatedClient : Client {
             }
             
             class ATCBuysClient : Client {
-                func get(from endpoint: Authentication = .commerceTransactionsCurrentBuys, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                func get(from endpoint: EAuthentication = .commerceTransactionsCurrentBuys, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -296,7 +296,7 @@ class AuthenticatedClient : Client {
             }
             
             class ATCSellsClient : Client {
-                func get(from endpoint: Authentication = .commerceTransactionsCurrentSells, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                func get(from endpoint: EAuthentication = .commerceTransactionsCurrentSells, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -315,7 +315,7 @@ class AuthenticatedClient : Client {
             }
             
             class ATHBuysClient : Client {
-                func get(from endpoint: Authentication = .commerceTransactionsHistoryBuys, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                func get(from endpoint: EAuthentication = .commerceTransactionsHistoryBuys, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -324,7 +324,7 @@ class AuthenticatedClient : Client {
             }
             
             class ATHSellsClient : Client {
-                func get(from endpoint: Authentication = .commerceTransactionsHistorySells, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                func get(from endpoint: EAuthentication = .commerceTransactionsHistorySells, completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -346,7 +346,7 @@ class AuthenticatedClient : Client {
         }
         
         class AccountPVPStatsClient : Client {
-            func get(from endpoint: Authentication = .pvpStats, completion: @escaping (Result<AccountPVPStats?, APIError>) -> Void) {
+            func get(from endpoint: EAuthentication = .pvpStats, completion: @escaping (Result<AccountPVPStats?, APIError>) -> Void) {
                 fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> AccountPVPStats? in
                     guard let result = json as? AccountPVPStats else { return nil }
                     return result
@@ -355,14 +355,14 @@ class AuthenticatedClient : Client {
         }
         
         class AccountPVPGamesClient : Client {
-            func get(from endpoint: Authentication = .pvpGames, completion: @escaping (Result<[String]?, APIError>) -> Void) {
+            func get(from endpoint: EAuthentication = .pvpGames, completion: @escaping (Result<[String]?, APIError>) -> Void) {
                 fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [String]? in
                     guard let result = json as? [String] else { return nil }
                     return result
                 }, completion: completion)
             }
             
-            func get(parameters: [URLQueryItem], from endpoint: Authentication = .pvpGames, completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
+            func get(parameters: [URLQueryItem], from endpoint: EAuthentication = .pvpGames, completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
                 let request = addQueryParameters(to: endpoint.request, parameters: parameters)
                 switch request {
                 case .success(let result):
@@ -378,7 +378,7 @@ class AuthenticatedClient : Client {
         }
         
         class AccountPVPStandingsClient : Client {
-            func get(from endpoint: Authentication = .pvpStandings, completion: @escaping (Result<[AccountPVPStandings]?, APIError>) -> Void) {
+            func get(from endpoint: EAuthentication = .pvpStandings, completion: @escaping (Result<[AccountPVPStandings]?, APIError>) -> Void) {
                 fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> [AccountPVPStandings]? in
                     guard let result = json as? [AccountPVPStandings] else { return nil }
                     return result
@@ -388,7 +388,7 @@ class AuthenticatedClient : Client {
     }
     
     class AccountTokenInfoClient : Client {
-        func get(from endpoint: Authentication = .tokeninfo, completion: @escaping (Result<AccountToken?, APIError>) -> Void) {
+        func get(from endpoint: EAuthentication = .tokeninfo, completion: @escaping (Result<AccountToken?, APIError>) -> Void) {
             fetchAsync(with: endpoint.request, needsAuthorization: true, decode: { json -> AccountToken? in
                 guard let result = json as? AccountToken else { return nil }
                 return result

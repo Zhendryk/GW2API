@@ -19,6 +19,7 @@ enum APIError: Error {
     case needsAuthorizationError
     case authorizationAttachmentFailure
     case queryParameterAttachmentFailure
+    case queryEncodingError
     
     var localizedDescription: String {
         switch self {
@@ -30,6 +31,7 @@ enum APIError: Error {
         case .needsAuthorizationError: return "Request needs authorization key"
         case .authorizationAttachmentFailure: return "Failed to attach authorization key to request"
         case .queryParameterAttachmentFailure: return "Failed to attach one or more query parameters to request"
+        case .queryEncodingError: return "Failed to properly encode the API query"
         }
     }
 }

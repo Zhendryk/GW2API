@@ -22,6 +22,24 @@ class GW2APITests: XCTestCase {
         super.tearDown()
     }
     
+    func testAchievements() {
+        let expectation = self.expectation(description: "Querying gw2api/achievements...")
+        let qi = URLQueryItem(name: "ids", value: "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2, 56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47, B42E2379-9599-46CA-9D4A-40A27E192BBE")
+        GW2Client.instance.achievements.groups.get(ids: qi) { result in
+            switch result {
+            case .success(let res):
+                guard let res = res else { return }
+                print("\nSUCCESS\n\(res)\n")
+                expectation.fulfill()
+            case .failure(let error):
+                print("\nFAILURE:\n\(error)\n")
+                expectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    /*
     func testAuthAccount() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/account")
         GW2Client.instance.authenticated.account.get(/*parameters: [qi]*/) { result in
@@ -563,4 +581,5 @@ class GW2APITests: XCTestCase {
         }
         waitForExpectations(timeout: 5, handler: nil)
     }
+    */
 }

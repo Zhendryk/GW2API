@@ -1,12 +1,12 @@
 //
-//  Achievements.swift
+//  EAchievements.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 7/2/18.
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-enum Achievements {
+enum EAchievements {
     case achievements
     case daily
     case dailyTomorrow
@@ -15,7 +15,7 @@ enum Achievements {
 }
 
 
-extension Achievements: Endpoint {
+extension EAchievements: Endpoint {
     
     var path: String {
         switch self {

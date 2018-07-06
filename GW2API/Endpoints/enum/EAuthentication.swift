@@ -1,12 +1,12 @@
 //
-//  Authentication.swift
+//  EAuthentication.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 7/3/18.
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-enum Authentication {
+enum EAuthentication {
     case account
     case accountAchievements
     case accountBank
@@ -37,7 +37,7 @@ enum Authentication {
     case tokeninfo
 }
 
-extension Authentication : Endpoint {
+extension EAuthentication : Endpoint {
     var path: String {
         switch self {
         case .account: return "account"

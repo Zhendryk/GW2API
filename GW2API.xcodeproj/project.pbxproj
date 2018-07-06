@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191D26E320EF287400CCDA27 /* EGameMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26E220EF287400CCDA27 /* EGameMechanics.swift */; };
+		191D26E520EF294E00CCDA27 /* GameMechanicsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26E420EF294E00CCDA27 /* GameMechanicsClient.swift */; };
+		191D26E720EF2E6E00CCDA27 /* GMSpecialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26E620EF2E6E00CCDA27 /* GMSpecialization.swift */; };
+		191D26E920EF2EEB00CCDA27 /* GMSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26E820EF2EEB00CCDA27 /* GMSkill.swift */; };
+		191D26EB20EF306D00CCDA27 /* GMTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EA20EF306D00CCDA27 /* GMTrait.swift */; };
+		191D26ED20EF31C500CCDA27 /* GMLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EC20EF31C500CCDA27 /* GMLegend.swift */; };
 		1928F1F120E7EFDA00D6B43E /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1928F1E720E7EFDA00D6B43E /* GW2API.framework */; };
 		1928F1F620E7EFDA00D6B43E /* GW2APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F1F520E7EFDA00D6B43E /* GW2APITests.swift */; };
 		1928F1F820E7EFDA00D6B43E /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = 1928F1EA20E7EFDA00D6B43E /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,10 +62,10 @@
 		19406F9920EA6A1E004EF0B4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9820EA6A1E004EF0B4 /* Result.swift */; };
 		19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9A20EA6BA3004EF0B4 /* APIError.swift */; };
 		19406F9D20EA6C6C004EF0B4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9C20EA6C6C004EF0B4 /* APIClient.swift */; };
-		19406F9F20EA724C004EF0B4 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9E20EA724C004EF0B4 /* Achievements.swift */; };
+		19406F9F20EA724C004EF0B4 /* EAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9E20EA724C004EF0B4 /* EAchievements.swift */; };
 		196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196B264820ED613400095C0C /* AccountWalletItem.swift */; };
 		19865F4A20EAA40D00D4B8CE /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */; };
-		199F4EB020EBAEC50030FBCA /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EAF20EBAEC50030FBCA /* Authentication.swift */; };
+		199F4EB020EBAEC50030FBCA /* EAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */; };
 		199F4EB220EBB0650030FBCA /* Authenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EB120EBB0650030FBCA /* Authenticated.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +80,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191D26E220EF287400CCDA27 /* EGameMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGameMechanics.swift; sourceTree = "<group>"; };
+		191D26E420EF294E00CCDA27 /* GameMechanicsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanicsClient.swift; sourceTree = "<group>"; };
+		191D26E620EF2E6E00CCDA27 /* GMSpecialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSpecialization.swift; sourceTree = "<group>"; };
+		191D26E820EF2EEB00CCDA27 /* GMSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSkill.swift; sourceTree = "<group>"; };
+		191D26EA20EF306D00CCDA27 /* GMTrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTrait.swift; sourceTree = "<group>"; };
+		191D26EC20EF31C500CCDA27 /* GMLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMLegend.swift; sourceTree = "<group>"; };
 		1928F1E720E7EFDA00D6B43E /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1928F1EA20E7EFDA00D6B43E /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
 		1928F1EB20E7EFDA00D6B43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,10 +138,10 @@
 		19406F9820EA6A1E004EF0B4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		19406F9A20EA6BA3004EF0B4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		19406F9C20EA6C6C004EF0B4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		19406F9E20EA724C004EF0B4 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		19406F9E20EA724C004EF0B4 /* EAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAchievements.swift; sourceTree = "<group>"; };
 		196B264820ED613400095C0C /* AccountWalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
 		19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
-		199F4EAF20EBAEC50030FBCA /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAuthentication.swift; sourceTree = "<group>"; };
 		199F4EB120EBB0650030FBCA /* Authenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +271,10 @@
 				1928F25020E7FF8E00D6B43E /* GMPet.swift */,
 				1928F25320E7FF8E00D6B43E /* GMProfession.swift */,
 				1928F24F20E7FF8D00D6B43E /* GMRace.swift */,
+				191D26E620EF2E6E00CCDA27 /* GMSpecialization.swift */,
+				191D26E820EF2EEB00CCDA27 /* GMSkill.swift */,
+				191D26EA20EF306D00CCDA27 /* GMTrait.swift */,
+				191D26EC20EF31C500CCDA27 /* GMLegend.swift */,
 			);
 			path = "Game Mechanics";
 			sourceTree = "<group>";
@@ -304,8 +320,9 @@
 		19865F4720EAA3C100D4B8CE /* enum */ = {
 			isa = PBXGroup;
 			children = (
-				19406F9E20EA724C004EF0B4 /* Achievements.swift */,
-				199F4EAF20EBAEC50030FBCA /* Authentication.swift */,
+				19406F9E20EA724C004EF0B4 /* EAchievements.swift */,
+				199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */,
+				191D26E220EF287400CCDA27 /* EGameMechanics.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -315,6 +332,7 @@
 			children = (
 				19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */,
 				199F4EB120EBB0650030FBCA /* Authenticated.swift */,
+				191D26E420EF294E00CCDA27 /* GameMechanicsClient.swift */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -444,12 +462,15 @@
 				1928F24320E7FF8500D6B43E /* AccountInventoryItem.swift in Sources */,
 				1928F24420E7FF8500D6B43E /* AccountPVPGame.swift in Sources */,
 				1928F26920E7FF9700D6B43E /* GuildDetails.swift in Sources */,
+				191D26EB20EF306D00CCDA27 /* GMTrait.swift in Sources */,
 				1928F24D20E7FF8500D6B43E /* AccountBankItem.swift in Sources */,
 				1928F27720E7FFAB00D6B43E /* CommercePrices.swift in Sources */,
+				191D26E520EF294E00CCDA27 /* GameMechanicsClient.swift in Sources */,
+				191D26E920EF2EEB00CCDA27 /* GMSkill.swift in Sources */,
 				1928F25820E7FF8E00D6B43E /* GMProfession.swift in Sources */,
 				1928F24920E7FF8500D6B43E /* AccountMaterial.swift in Sources */,
 				1928F25720E7FF8E00D6B43E /* GMOutfit.swift in Sources */,
-				19406F9F20EA724C004EF0B4 /* Achievements.swift in Sources */,
+				19406F9F20EA724C004EF0B4 /* EAchievements.swift in Sources */,
 				1928F25620E7FF8E00D6B43E /* GMMasteries.swift in Sources */,
 				1928F20820E7F67D00D6B43E /* Endpoint.swift in Sources */,
 				1928F24A20E7FF8500D6B43E /* AccountTransaction.swift in Sources */,
@@ -458,7 +479,7 @@
 				1928F24C20E7FF8500D6B43E /* AccountPVPStandings.swift in Sources */,
 				1928F24520E7FF8500D6B43E /* AccountCharacter.swift in Sources */,
 				1928F24620E7FF8500D6B43E /* AccountFinisher.swift in Sources */,
-				199F4EB020EBAEC50030FBCA /* Authentication.swift in Sources */,
+				199F4EB020EBAEC50030FBCA /* EAuthentication.swift in Sources */,
 				1928F27020E7FFA200D6B43E /* Colors.swift in Sources */,
 				1928F22E20E7FF5B00D6B43E /* AchievementCategory.swift in Sources */,
 				19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */,
@@ -467,6 +488,7 @@
 				1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */,
 				1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */,
 				1928F26320E7FF9700D6B43E /* GuildStash.swift in Sources */,
+				191D26E720EF2E6E00CCDA27 /* GMSpecialization.swift in Sources */,
 				1928F20220E7EFF500D6B43E /* GW2Client.swift in Sources */,
 				1928F27A20E7FFAB00D6B43E /* Transaction.swift in Sources */,
 				1928F26F20E7FFA200D6B43E /* Build.swift in Sources */,
@@ -479,6 +501,8 @@
 				1928F26520E7FF9700D6B43E /* GuildRank.swift in Sources */,
 				1928F24220E7FF8500D6B43E /* AccountPVPStats.swift in Sources */,
 				1928F23020E7FF5B00D6B43E /* Achievement.swift in Sources */,
+				191D26E320EF287400CCDA27 /* EGameMechanics.swift in Sources */,
+				191D26ED20EF31C500CCDA27 /* GMLegend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

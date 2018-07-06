@@ -53,6 +53,30 @@ class Client : APIClient {
         self.apiKey = key
     }
     
+    private func ensureStringEncoding(originalString: String) -> URLRequest? {
+        if originalString.contains(" ") {
+            guard let encodedStr = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
+            guard let newlyEncodedQuery = URL(string: encodedStr) else { return nil }
+            return URLRequest(url: newlyEncodedQuery)
+        }
+        else {
+            guard let originalURL = URL(string: originalString) else { return nil }
+            return URLRequest(url: originalURL)
+        }
+    }
+    
+    private func ensureQueryEncoding(originalQuery: URLRequest) -> URLRequest? {
+        guard let qString = originalQuery.url?.absoluteString else { return nil }
+        if qString.contains(" ") {
+            guard let encodedStr = qString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
+            guard let newlyEncodedQuery = URL(string: encodedStr) else { return nil }
+            return URLRequest(url: newlyEncodedQuery)
+        }
+        else {
+            return originalQuery
+        }
+    }
+    
     func fetchAsync<T: Decodable>(with request: URLRequest, needsAuthorization: Bool = false, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
         var query = request
         if needsAuthorization {
@@ -65,7 +89,8 @@ class Client : APIClient {
                 return
             }
         }
-        let task = decodingTask(with: query, decodingType: T.self) { (json, error) in
+        guard let encodedQuery = ensureQueryEncoding(originalQuery: query) else { return }
+        let task = decodingTask(with: encodedQuery, decodingType: T.self) { (json, error) in
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {
@@ -117,8 +142,8 @@ class Client : APIClient {
         }
         queryString.removeLast()
         str.append(queryString)
-        guard let formattedRequest = URL(string: str) else { return Result.failure(.queryParameterAttachmentFailure) }
-        return Result.success(URLRequest(url: formattedRequest))
+        guard let encodedRequest = ensureStringEncoding(originalString: str) else { return Result.failure(.queryParameterAttachmentFailure) }
+        return Result.success(encodedRequest)
     }
     
     private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
