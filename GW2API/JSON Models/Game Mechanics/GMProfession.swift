@@ -13,7 +13,7 @@ struct GMProfession: Decodable {
     let icon_big: String
     let specializations: [Int]
     let training: [TrainingDetails]
-    let weapons: [ProfessionWeapon?]
+    let weapons: [String:ProfessionWeapon]
 }
 
 struct TrainingDetails: Decodable {
@@ -26,13 +26,12 @@ struct TrainingDetails: Decodable {
 struct TrainingTrack: Decodable {
     let cost: Int
     let type: String
-    let skill_id: Int
-    let trait_id: Int
+    let skill_id: Int?
+    let trait_id: Int?
 }
 
 struct ProfessionWeapon: Decodable {
-    let flag: [String]
-    let specialization: Int
+    let specialization: Int?
     let skills: [WeaponSkill]
     let flags: [String]
 }
@@ -40,7 +39,7 @@ struct ProfessionWeapon: Decodable {
 struct WeaponSkill: Decodable {
     let id: Int
     let slot: String
-    let offhand: String
-    let attunement: String
-    let source: String
+    let offhand: String?
+    let attunement: String?
+    let source: String?
 }

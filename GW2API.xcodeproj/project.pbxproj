@@ -14,6 +14,7 @@
 		191D26EB20EF306D00CCDA27 /* GMTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EA20EF306D00CCDA27 /* GMTrait.swift */; };
 		191D26ED20EF31C500CCDA27 /* GMLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EC20EF31C500CCDA27 /* GMLegend.swift */; };
 		191D26EF20EFE6AE00CCDA27 /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */; };
+		191D26F120EFF47800CCDA27 /* GameMechanicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26F020EFF47800CCDA27 /* GameMechanicsTests.swift */; };
 		1928F1F120E7EFDA00D6B43E /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1928F1E720E7EFDA00D6B43E /* GW2API.framework */; };
 		1928F1F620E7EFDA00D6B43E /* AuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F1F520E7EFDA00D6B43E /* AuthenticatedTests.swift */; };
 		1928F1F820E7EFDA00D6B43E /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = 1928F1EA20E7EFDA00D6B43E /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +89,7 @@
 		191D26EA20EF306D00CCDA27 /* GMTrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTrait.swift; sourceTree = "<group>"; };
 		191D26EC20EF31C500CCDA27 /* GMLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMLegend.swift; sourceTree = "<group>"; };
 		191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
+		191D26F020EFF47800CCDA27 /* GameMechanicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanicsTests.swift; sourceTree = "<group>"; };
 		1928F1E720E7EFDA00D6B43E /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1928F1EA20E7EFDA00D6B43E /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
 		1928F1EB20E7EFDA00D6B43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				1928F1F520E7EFDA00D6B43E /* AuthenticatedTests.swift */,
 				191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */,
+				191D26F020EFF47800CCDA27 /* GameMechanicsTests.swift */,
 				1928F1F720E7EFDA00D6B43E /* Info.plist */,
 			);
 			path = GW2APITests;
@@ -515,6 +518,7 @@
 			files = (
 				1928F1F620E7EFDA00D6B43E /* AuthenticatedTests.swift in Sources */,
 				191D26EF20EFE6AE00CCDA27 /* AchievementsTests.swift in Sources */,
+				191D26F120EFF47800CCDA27 /* GameMechanicsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

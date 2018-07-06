@@ -13,7 +13,7 @@ struct GMMasteries: Decodable {
     let order: Int
     let background: String
     let region: String
-    let levels: MasteryLevels
+    let levels: [MasteryLevels]
 }
 
 struct MasteryLevels: Decodable {

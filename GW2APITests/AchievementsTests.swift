@@ -33,7 +33,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nACHIEVEMENTS: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -50,7 +49,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nDAILY: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -67,7 +65,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nDAILY TOMORROW: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -84,7 +81,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nCATEGORIES: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -102,7 +98,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nCATEGORIES ID: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -111,7 +106,7 @@ class AchievementsTests: XCTestCase {
     func testAchievementsCategoriesIDS() {
         let expectation = self.expectation(description: "Querying GW2API/achievements...")
         let qi = URLQueryItem(name: "ids", value: "59, 61, 74")
-        GW2Client.instance.achievements.categories.get(id: qi){ result in
+        GW2Client.instance.achievements.categories.get(ids: qi){ result in
             switch result {
             case .success(_):
                 print("\nCATEGORIES IDS SUCCESS\n")
@@ -120,7 +115,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nCATEGORIES IDS: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -137,7 +131,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nGROUPS: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -155,7 +148,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nGROUPS ID: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
@@ -173,7 +165,6 @@ class AchievementsTests: XCTestCase {
                 print("\n\n\nGROUPS IDS: ")
                 print(error)
                 print("\n\n\n")
-                expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
