@@ -6,40 +6,44 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// @Class GW2Client: Main client of the framework, implemented as a singleton.                                                    //
-// @static instance: The one and only instance of the GW2Client.                                                                  //
-// @var lang: Private variable containing the language setting of the API wrapper.                                                //
-// @var apiKey: Private variable containing the user's authorization key for the GW2 API.                                         //
-// @init(): Private init, should not be invoked because of singleton status.                                                      //
-//                                                                                                                                //
-// @let achievements: Achievements endpoint of the GW2 API. Accessed via GW2Client.instance.achievements...                       //
-// ...                                                                                                                            //
-//                                                                                                                                //
-// @func language(): Returns the currently set language of the GW2Client.                                                         //
-// @func setLanguage(lang: String): Sets a new language to the GW2Client. Possible values: ['en', 'es', 'de', 'fr', 'ko', 'zh'].  //
-// @setAPIKey(key: String): Sets a new API key to the GW2Client.                                                                  //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Main client of the framework, implemented as a singleton.
 public class GW2Client {
+    
+    /// The singleton instance of the GW2Client. Used to access all endpoints.
     public static let instance = GW2Client()
     private var lang: String = "en"
     private var apiKey: String? = nil
     
+    
+    /// The achievements endpoint: api.guildwars2.com/v2/achievements/...
     let achievements: AchievementsClient = AchievementsClient()
+    
+    /// The authenticated endpoint: api.guildwars2.com/v2/...
     let authenticated: AuthenticatedClient = AuthenticatedClient()
+    
+    /// The game mechanics endpoint: api.guildwars2.com/v2/...
     let gameMechanics: GameMechanicsClient = GameMechanicsClient()
     
     private init() {}
-
+    
+    /// Returns the language setting of the GuildWars 2 Client
+    ///
+    /// - Returns: Returns a String containing the language setting
     public func language() -> String {
         return self.lang
     }
-
+    
+    /// Takes a string argument and sets the GuildWars 2 Client's language setting
+    ///
+    /// - Parameter lang: Any of the following supported language strings: en, es, de, fr, ko, zh
     public func setLanguage(lang: String) {
         assert(["en", "es", "de", "fr", "ko", "zh"].contains(lang.lowercased()), "Provided language is not supported. Possible values: en, es, de, fr, ko, zh")
         self.lang = lang.lowercased()
     }
-
+    
+    /// Takes a valid API key as a String and sets it to all authenticated endpoints in the client
+    ///
+    /// - Parameter key: A valid API key generated from guildwars2.com
     public func setAPIKey(key: String) {
         self.apiKey = key
         self.authenticated.setAPIKey(key)

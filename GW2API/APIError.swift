@@ -6,10 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// @enum APIError: Enumeration of Swift's Error class, defining the types of failures that can occur while accessing GW2API.  //
-// @var localizedDescription: Provides a description for each individual APIError for debugging purposes.                     //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/// All possible failures that can occur during API querying
 enum APIError: Error {
     case requestFailed
     case jsonConversionFailure
@@ -21,6 +19,8 @@ enum APIError: Error {
     case queryParameterAttachmentFailure
     case queryEncodingError
     
+    
+    /// Detailed description of the failure
     var localizedDescription: String {
         switch self {
         case .requestFailed: return "API request failed"

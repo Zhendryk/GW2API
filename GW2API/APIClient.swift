@@ -6,53 +6,80 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// @protocol APIClient: Protocol for all endpoint client classes.                                                                 //
-// @var session: URLSession to make http requests to api endpoints.                                                               //
-// @func fetchAsync<T: Decodable>: Asynchronous fetch to api endpoint, returns json data upon success and APIError upon failure.  //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/// The protocol for all endpoint clients to conform to
 protocol APIClient {
     var session: URLSession { get }
     func fetchAsync<T: Decodable>(with request: URLRequest, needsAuthorization: Bool, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void)
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// @extension to APIClient:                                                                                                                                                    //
-// @typealias JSONTaskCompletionHandler: Alias for completion handler that returns a generic Decodable structure and APIError (Decodable?, APIError?).                         //
-//   //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// MARK: - Extension to APIClient protocol, adds JSONTaskCompletionHandler typealias
 extension APIClient {
     typealias JSONTaskCompletionHandler = (Decodable?, APIError?) -> Void
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// @Class Client, conforms to APIClient protocol, base object for all endpoint client classes.                                                                                 //
-// @var session: URLSession conformed from APIClient protocol, see above.                                                                                                      //
-// @var apiKey: String, default nil, contains the user's authentication key for the API.                                                                                       //
-// @init(configuration: URLSessionConfiguration): Initializes the client with the provided URLSessionConfiguration.                                                            //
-// @init(): Convenience init method that initializes the client with the default URLSessionConfiguration.                                                                      //
-// @func setAPIKey(_ key: String): Sets this client's API key to the given key.                                                                                                //
-// @func fetchAsync<T: Decodable>: Creates asynchronous decodingTask (above), fetches decoded json, completionHandler completes with either Result.success or Result.failure.  //
-// @func getAuthorizedRequest(from request: URLRequest): Takes the provided request, attaches the client's API key if available, and returns a new authorized request.         //
-// @func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]): Takes the query, attaches all of the given query parameters and returns a new URLRequest.       //
-// @func decodingTask<T: Decodable>: Creates asynchronous dataTask, checks for errors and upon recieving HTTP 200 OK, decodes the json data into an object.                    //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/// The base class for all endpoint clients
 class Client : APIClient {
+    
+    /// The URLSession to interact with the API server for this client
     var session: URLSession
+    
+    /// The API key assigned to this client (synced between all when set from GW2Client.instance)
     var apiKey: String? = nil
     
+    /// Initializes this client with a custom URLSessionConfiguration
+    ///
+    /// - Parameter configuration: A custom URLSessionConfiguration
     init(configuration: URLSessionConfiguration) {
         self.session = URLSession(configuration: configuration)
     }
     
+    /// Initializes this client with the default URLSessionConfiguration
     convenience init() {
         self.init(configuration: .default)
     }
     
-    func setAPIKey(_ key: String) {
-        self.apiKey = key
+    /// URLSession data task to decode JSON data
+    ///
+    /// - Parameters:
+    ///   - request: The URLRequest that is getting the JSON data
+    ///   - decodingType: The type of data to decode
+    ///   - completion: Callback function to handle (Decodable?, APIError?) -> Void
+    /// - Returns: URLSessionDataTask to be used by fetchAsync function
+    private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
+        let task = session.dataTask(with: request) { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(nil, .requestFailed)
+                return
+            }
+            if httpResponse.statusCode == 200 {
+                if let data = data {
+                    do {
+                        let genericModel = try JSONDecoder().decode(decodingType, from: data)
+                        completion(genericModel, nil)
+                    } catch let jsonError {
+                        print("\nJSON Conversion Error: \(jsonError)\n")
+                        completion(nil, .jsonConversionFailure)
+                    }
+                }
+                else {
+                    completion(nil, .invalidData)
+                }
+            }
+            else {
+                print("HTTP Error: Code \(httpResponse.statusCode)\n")
+                completion(nil, .responseUnsuccessful)
+            }
+        }
+        return task
     }
     
+    /// Given a string URL, ensures it is properly encoded for a http query
+    ///
+    /// - Parameter originalString: The original string URL to be checked
+    /// - Returns: Properly encoded URLRequest, or nil if failure occurs
     private func ensureStringEncoding(originalString: String) -> URLRequest? {
         if originalString.contains(" ") {
             guard let encodedStr = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
@@ -65,6 +92,10 @@ class Client : APIClient {
         }
     }
     
+    /// Given a URLRequest, ensures the string is properly encoded for a http query
+    ///
+    /// - Parameter originalQuery: The original URLRequest to be checked
+    /// - Returns: Properly encoded URLRequest, or nil if failure occurs
     private func ensureQueryEncoding(originalQuery: URLRequest) -> URLRequest? {
         guard let qString = originalQuery.url?.absoluteString else { return nil }
         if qString.contains(" ") {
@@ -77,6 +108,13 @@ class Client : APIClient {
         }
     }
     
+    /// Fetches JSON data for any given endpoint from the GuildWars 2 API
+    ///
+    /// - Parameters:
+    ///   - request: URLRequest for the API endpoint
+    ///   - needsAuthorization: If the endpoint requires an API key to be accessed
+    ///   - decode: Callback function to parse the JSON into a generic decodable object
+    ///   - completion: Callback function to handle the JSON data in the form of Result<T, APIError>
     func fetchAsync<T: Decodable>(with request: URLRequest, needsAuthorization: Bool = false, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
         var query = request
         if needsAuthorization {
@@ -110,6 +148,10 @@ class Client : APIClient {
         task.resume()
     }
     
+    /// Attaches an API key to a given URLRequest
+    ///
+    /// - Parameter request: The request to attach the API key to
+    /// - Returns: Result<URLRequest, APIError>, .success(URLRequest) if successful, or .failure(APIError) if a failure occurs
     func getAuthorizedRequest(from request: URLRequest) -> Result<URLRequest, APIError> {
         if self.apiKey != nil {
             var authorizedRequest = request
@@ -132,6 +174,12 @@ class Client : APIClient {
         return Result.failure(.authorizationAttachmentFailure)
     }
     
+    /// Adds the given query parameters to the given URLRequest
+    ///
+    /// - Parameters:
+    ///   - query: The URLRequest to attach parameters to
+    ///   - parameters: The [URLQueryItem] parameters to attach to the URLRequest
+    /// - Returns: Result<URLRequest, APIError>, .success(URLRequest) if successful, .failure(APIError) if failure occurs
     func addQueryParameters(to query: URLRequest, parameters: [URLQueryItem]) -> Result<URLRequest, APIError> {
         var newQuery = query
         var queryString = "?"
@@ -146,31 +194,10 @@ class Client : APIClient {
         return Result.success(encodedRequest)
     }
     
-    private func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
-        let task = session.dataTask(with: request) { data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completion(nil, .requestFailed)
-                return
-            }
-            if httpResponse.statusCode == 200 {
-                if let data = data {
-                    do {
-                        let genericModel = try JSONDecoder().decode(decodingType, from: data)
-                        completion(genericModel, nil)
-                    } catch let jsonError {
-                        print("\nJSON Conversion Error: \(jsonError)\n")
-                        completion(nil, .jsonConversionFailure)
-                    }
-                }
-                else {
-                    completion(nil, .invalidData)
-                }
-            }
-            else {
-                print("HTTP Error: Code \(httpResponse.statusCode)\n")
-                completion(nil, .responseUnsuccessful)
-            }
-        }
-        return task
+    /// Takes a valid API key as a string and sets it to this client (synced between all if set from GW2Client.instance)
+    ///
+    /// - Parameter key: A valid API key generated from guildwars2.com
+    func setAPIKey(_ key: String) {
+        self.apiKey = key
     }
 }

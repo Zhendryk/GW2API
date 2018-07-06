@@ -6,14 +6,16 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+
+/// The protocol to which all API endpoints conform to
 protocol Endpoint {
     var base: String { get }
     var version: String { get }
     var path: String { get }
-    
-    mutating func setAPIKey(key: String)
 }
 
+
+// MARK: - Extension to Endpoint protocol, defines base url, version, urlComponents, and request
 extension Endpoint {
     
     var base: String {
@@ -28,7 +30,6 @@ extension Endpoint {
         get {
             var components = URLComponents(string: base)!
             components.path = "/" + version + "/" + path
-            //components.queryItems = queryParameters
             return components
         }
         set {
@@ -43,15 +44,6 @@ extension Endpoint {
         }
         set {
             request = newValue
-        }
-    }
-    
-    mutating func setAPIKey(key: String) {
-        var authenticatedRequest = request
-        if key != "" {
-            authenticatedRequest.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
-            authenticatedRequest.httpMethod = "GET"
-            request = authenticatedRequest
         }
     }
 }

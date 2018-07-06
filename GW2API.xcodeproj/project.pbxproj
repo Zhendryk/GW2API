@@ -13,8 +13,9 @@
 		191D26E920EF2EEB00CCDA27 /* GMSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26E820EF2EEB00CCDA27 /* GMSkill.swift */; };
 		191D26EB20EF306D00CCDA27 /* GMTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EA20EF306D00CCDA27 /* GMTrait.swift */; };
 		191D26ED20EF31C500CCDA27 /* GMLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EC20EF31C500CCDA27 /* GMLegend.swift */; };
+		191D26EF20EFE6AE00CCDA27 /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */; };
 		1928F1F120E7EFDA00D6B43E /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1928F1E720E7EFDA00D6B43E /* GW2API.framework */; };
-		1928F1F620E7EFDA00D6B43E /* GW2APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F1F520E7EFDA00D6B43E /* GW2APITests.swift */; };
+		1928F1F620E7EFDA00D6B43E /* AuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F1F520E7EFDA00D6B43E /* AuthenticatedTests.swift */; };
 		1928F1F820E7EFDA00D6B43E /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = 1928F1EA20E7EFDA00D6B43E /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1928F20220E7EFF500D6B43E /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F20120E7EFF500D6B43E /* GW2Client.swift */; };
 		1928F20820E7F67D00D6B43E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F20720E7F67D00D6B43E /* Endpoint.swift */; };
@@ -86,11 +87,12 @@
 		191D26E820EF2EEB00CCDA27 /* GMSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMSkill.swift; sourceTree = "<group>"; };
 		191D26EA20EF306D00CCDA27 /* GMTrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTrait.swift; sourceTree = "<group>"; };
 		191D26EC20EF31C500CCDA27 /* GMLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMLegend.swift; sourceTree = "<group>"; };
+		191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
 		1928F1E720E7EFDA00D6B43E /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1928F1EA20E7EFDA00D6B43E /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
 		1928F1EB20E7EFDA00D6B43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1928F1F020E7EFDA00D6B43E /* GW2APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1928F1F520E7EFDA00D6B43E /* GW2APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APITests.swift; sourceTree = "<group>"; };
+		1928F1F520E7EFDA00D6B43E /* AuthenticatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedTests.swift; sourceTree = "<group>"; };
 		1928F1F720E7EFDA00D6B43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1928F20120E7EFF500D6B43E /* GW2Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
 		1928F20720E7F67D00D6B43E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -200,7 +202,8 @@
 		1928F1F420E7EFDA00D6B43E /* GW2APITests */ = {
 			isa = PBXGroup;
 			children = (
-				1928F1F520E7EFDA00D6B43E /* GW2APITests.swift */,
+				1928F1F520E7EFDA00D6B43E /* AuthenticatedTests.swift */,
+				191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */,
 				1928F1F720E7EFDA00D6B43E /* Info.plist */,
 			);
 			path = GW2APITests;
@@ -510,7 +513,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1928F1F620E7EFDA00D6B43E /* GW2APITests.swift in Sources */,
+				1928F1F620E7EFDA00D6B43E /* AuthenticatedTests.swift in Sources */,
+				191D26EF20EFE6AE00CCDA27 /* AchievementsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

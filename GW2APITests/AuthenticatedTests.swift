@@ -9,7 +9,7 @@
 import XCTest
 @testable import GW2API
 
-class GW2APITests: XCTestCase {
+class AuthenticatedTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,34 +22,16 @@ class GW2APITests: XCTestCase {
         super.tearDown()
     }
     
-    func testAchievements() {
-        let expectation = self.expectation(description: "Querying gw2api/achievements...")
-        let qi = URLQueryItem(name: "ids", value: "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2, 56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47, B42E2379-9599-46CA-9D4A-40A27E192BBE")
-        GW2Client.instance.achievements.groups.get(ids: qi) { result in
-            switch result {
-            case .success(let res):
-                guard let res = res else { return }
-                print("\nSUCCESS\n\(res)\n")
-                expectation.fulfill()
-            case .failure(let error):
-                print("\nFAILURE:\n\(error)\n")
-                expectation.fulfill()
-            }
-        }
-        waitForExpectations(timeout: 5, handler: nil)
-    }
-    
-    /*
     func testAuthAccount() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/account")
         GW2Client.instance.authenticated.account.get(/*parameters: [qi]*/) { result in
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nACCOUNT SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nACCOUNT: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -64,10 +46,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nACCOUNT ACHIEVEMENTS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nACCOUNT ACHIEVEMENTS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -83,10 +65,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nBANK SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nBANK: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -101,10 +83,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nDUNGEONS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nDUNGEONS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -119,10 +101,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nDYES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nDYES: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -137,10 +119,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nFINISHERS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nFINISHERS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -156,10 +138,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nCATS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nCATS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -175,10 +157,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nNODES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nNODES: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -194,10 +176,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nINVENTORY SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nINVENTORY: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -213,10 +195,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nMASTERIES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nMASTERIES: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -231,10 +213,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nMASTERY POINTS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nMASTERY POINTS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -250,10 +232,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nMATERIALS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nMATERIALS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -269,10 +251,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nMINIS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nMINIS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -288,10 +270,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nOUTFITS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nOUTFITS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -308,10 +290,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nRAIDS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nRAIDS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -326,10 +308,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nRECIPES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nRECIPES: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -345,10 +327,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nSKINS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nSKINS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -364,10 +346,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nTITLES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nTITLES: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -384,10 +366,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nWALLET SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nWALLET: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -403,10 +385,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nCHARACTERS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nCHARACTERS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -421,10 +403,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nCHARACTERS SPECIFIC SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nCHARACTERS SPECIFIC: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -440,10 +422,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nCURRENT BUYS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nCURRENT BUYS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -459,10 +441,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nCURRENT SELLS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nCURRENT SELLS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -478,10 +460,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nHISTORY BUYS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nHISTORY BUYS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -498,10 +480,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nHISTORY SELLS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nHISTORY SELLS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -516,10 +498,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nPVP GAMES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nPVP GAMES: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -534,10 +516,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nPVP STATS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nPVP STATS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -552,10 +534,10 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nPVP STANDINGS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nPVP STANDINGS: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
@@ -570,16 +552,15 @@ class GW2APITests: XCTestCase {
             switch result {
             case .success(let res):
                 guard let r = res else { return }
-                print("\nSUCCESS\n")
+                print("\nAUTH TOKEN SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
-                print("\n\n\n")
+                print("\n\n\nAUTH TOKEN: ")
                 print(error)
                 print("\n\n\n")
                 expectation.fulfill()
             }
         }
         waitForExpectations(timeout: 5, handler: nil)
-    }
-    */
+     }
 }
