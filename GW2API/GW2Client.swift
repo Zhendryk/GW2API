@@ -13,6 +13,10 @@ public class GW2Client {
     public static let instance = GW2Client()
     private var lang: String = "en"
     private var apiKey: String? = nil
+    private var guildID: String? = nil
+    
+    static let IDS = "ids"
+    static let ID = "id"
     
     
     /// The achievements endpoint: api.guildwars2.com/v2/achievements/...
@@ -23,6 +27,9 @@ public class GW2Client {
     
     /// The game mechanics endpoint: api.guildwars2.com/v2/...
     let gameMechanics: GameMechanicsClient = GameMechanicsClient()
+    
+    /// The guild endpoint: api.guildwars2.com/v2/guild/...
+    let guild: GuildClient = GuildClient()
     
     private init() {}
     
@@ -47,5 +54,12 @@ public class GW2Client {
     public func setAPIKey(key: String) {
         self.apiKey = key
         self.authenticated.setAPIKey(key)
+    }
+    
+    /// Takes a valid guild ID as a String and sets it to the guild endpoint
+    ///
+    /// - Parameter id: The ID of the guild you want to query for
+    public func setGuildID(id: String) {
+        self.guildID = id
     }
 }

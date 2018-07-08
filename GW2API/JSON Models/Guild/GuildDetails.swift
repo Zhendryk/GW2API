@@ -7,18 +7,21 @@
 //
 
 struct GuildDetails: Decodable {
-    let level: Int
-    let motd: String
-    let influence: Int
-    let aetherium: String
-    let favor: Int
+    let level: Int?
+    let motd: String?
+    let influence: Int?
+    let aetherium: String?
+    let favor: Int?
     let id: String
     let name: String
     let tag: String
-    let emblem: String
+    let emblem: emblem
+    let flags: [String]?
+}
+
+struct emblem: Decodable {
     let background: background
     let foreground: foreground
-    let flags: [String]?
 }
 
 struct background: Decodable {

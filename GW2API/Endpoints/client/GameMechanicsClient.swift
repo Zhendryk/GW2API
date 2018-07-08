@@ -187,7 +187,7 @@ class GameMechanicsClient : Client {
                     return res
                 }, completion: completion)
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
                 return
             }
         }

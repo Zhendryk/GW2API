@@ -1,5 +1,5 @@
 //
-//  Authenticated.swift
+//  AuthenticatedClient.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 7/3/18.
