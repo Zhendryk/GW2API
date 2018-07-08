@@ -67,7 +67,7 @@ class GuildTests: XCTestCase {
     
     func testGuildForegrounds2() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.emblem.foregrounds.get(id: URLQueryItem(name: "id", value: "4")) { result in
+        GW2Client.instance.guild.emblem.foregrounds.get(id: "4") { result in
             switch result {
             case .success(_):
                 print("\nGUILD FOREGROUNDS 2 SUCCESS\n")
@@ -81,7 +81,7 @@ class GuildTests: XCTestCase {
     
     func testGuildForegrounds3() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.emblem.foregrounds.get(ids: URLQueryItem(name: "ids", value: "5, 6, 7")) { result in
+        GW2Client.instance.guild.emblem.foregrounds.get(ids: "5, 6, 7") { result in
             switch result {
             case .success(_):
                 print("\nGUILD FOREGROUNDS 3 SUCCESS\n")
@@ -109,7 +109,7 @@ class GuildTests: XCTestCase {
     
     func testGuildBackgrounds2() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.emblem.backgrounds.get(id: URLQueryItem(name: "id", value: "2")) { result in
+        GW2Client.instance.guild.emblem.backgrounds.get(id: "2") { result in
             switch result {
             case .success(_):
                 print("\nGUILD ID SUCCESS\n")
@@ -123,7 +123,7 @@ class GuildTests: XCTestCase {
     
     func testGuildBackgrounds3() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.emblem.backgrounds.get(ids: URLQueryItem(name: "ids", value: "5, 6, 7")) { result in
+        GW2Client.instance.guild.emblem.backgrounds.get(ids: "5, 6, 7") { result in
             switch result {
             case .success(_):
                 print("\nGUILD BACKGROUNDS 3 SUCCESS\n")
@@ -151,7 +151,7 @@ class GuildTests: XCTestCase {
     
     func testGuildPermissions2() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.permissions.get(id: URLQueryItem(name: "id", value: "Admin")) { result in
+        GW2Client.instance.guild.permissions.get(id: "Admin") { result in
             switch result {
             case .success(_):
                 print("\nGUILD PERMISSSIONS 2 SUCCESS\n")
@@ -165,7 +165,7 @@ class GuildTests: XCTestCase {
     
     func testGuildPermissions3() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.permissions.get(ids: URLQueryItem(name: "ids", value: "Admin, EditBGM, EditRoles")) { result in
+        GW2Client.instance.guild.permissions.get(ids: "Admin, EditBGM, EditRoles") { result in
             switch result {
             case .success(_):
                 print("\nGUILD PERMISSSIONS 3 SUCCESS\n")
@@ -193,7 +193,7 @@ class GuildTests: XCTestCase {
     
     func testGuildUpgrades2() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.upgrades.get(id: URLQueryItem(name: "id", value: "38")) { result in
+        GW2Client.instance.guild.upgrades.get(id: "38") { result in
             switch result {
             case .success(_):
                 print("\nGUILD UPGRADES 2 SUCCESS\n")
@@ -207,7 +207,7 @@ class GuildTests: XCTestCase {
     
     func testGuildUpgrades3() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.upgrades.get(ids: URLQueryItem(name: "ids", value: "38, 43, 44, 51")) { result in
+        GW2Client.instance.guild.upgrades.get(ids: "38, 43, 44, 51") { result in
             switch result {
             case .success(_):
                 print("\nGUILD UPGRADES 3 SUCCESS\n")

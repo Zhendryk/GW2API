@@ -618,14 +618,15 @@ class AuthenticatedClient : Client {
             /// Returns detailed information on a specific sPvP game this account was involved in
             ///
             /// - Parameters:
-            ///   - id: The id of the game you are searching for, URLQueryItem(name: "id", value: "gameID")
+            ///   - id: The id of the game you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            func get(id: URLQueryItem, completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
-                let request = addQueryParameters(to: EAuthentication.pvpGames.request, parameters: [id])
+            func get(id: String, completion: @escaping (Result<AccountPVPGame?, APIError>) -> Void) {
+                let idItem = URLQueryItem(name: "id", value: id)
+                let request = addQueryParameters(to: EAuthentication.pvpGames.request, parameters: [idItem])
                 switch request {
                 case .success(let result):
-                    fetchAsync(with: result, needsAuthorization: true, decode: { json -> [AccountPVPGame]? in
-                        guard let res = json as? [AccountPVPGame] else { return nil }
+                    fetchAsync(with: result, needsAuthorization: true, decode: { json -> AccountPVPGame? in
+                        guard let res = json as? AccountPVPGame else { return nil }
                         return res
                     }, completion: completion)
                 case .failure(let error):
@@ -637,10 +638,11 @@ class AuthenticatedClient : Client {
             /// Returns detailed information on multiple specified sPvP games this account was involved in
             ///
             /// - Parameters:
-            ///   - ids: The ids of the games you are searching for, URLQueryItem(name: "ids", value: "id1, id2, id3... etc")
+            ///   - ids: The ids of the games you are searching for "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            func get(ids: URLQueryItem, completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
-                let request = addQueryParameters(to: EAuthentication.pvpGames.request, parameters: [ids])
+            func get(ids: String, completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
+                let idsItem = URLQueryItem(name: "ids", value: ids)
+                let request = addQueryParameters(to: EAuthentication.pvpGames.request, parameters: [idsItem])
                 switch request {
                 case .success(let result):
                     fetchAsync(with: result, needsAuthorization: true, decode: { json -> [AccountPVPGame]? in

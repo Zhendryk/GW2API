@@ -51,8 +51,6 @@ class GuildClient : Client {
     /// The guild id endpoint client: api.guildwars2.com/v2/guild/:id
     class GuildIDClient: Client {
         
-        
-        
         /// Returns the details of the guild with the associated ID (guild ID must be set using GW2Client.instance.guild.setGuildID())
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<GuildDetails?, APIError>)
@@ -89,10 +87,11 @@ class GuildClient : Client {
             /// Returns the emblem foreground associated with the given id
             ///
             /// - Parameters:
-            ///   - id: The ID of the foreground, URLQueryItem(name: "id", value: "foregroundID")
+            ///   - id: The ID of the foreground
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
-            func get(id: URLQueryItem, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
-                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [id])
+            func get(id: String, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
+                let idItem = URLQueryItem(name: "id", value: id)
+                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [idItem])
                 switch request {
                 case .success(let query):
                     fetchAsync(with: query, decode: { json -> GuildEmblem? in
@@ -108,10 +107,11 @@ class GuildClient : Client {
             /// Returns the list of emblem foregrounds associated with the given ids
             ///
             /// - Parameters:
-            ///   - ids: The ids of the backgrounds, URLQueryItem(name: "ids", value: "id1, id2, id3... etc")
+            ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
-            func get(ids: URLQueryItem, completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
-                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [ids])
+            func get(ids: String, completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
+                let idsItem = URLQueryItem(name: "ids", value: ids)
+                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [idsItem])
                 switch request {
                 case .success(let query):
                     fetchAsync(with: query, decode: { json -> [GuildEmblem]? in
@@ -141,10 +141,11 @@ class GuildClient : Client {
             /// Returns the emblem background associated with the given id
             ///
             /// - Parameters:
-            ///   - id: The ID of the background, URLQueryItem(name: "id", value: "backgroundID")
+            ///   - id: The ID of the background
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
-            func get(id: URLQueryItem, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
-                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [id])
+            func get(id: String, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
+                let idItem = URLQueryItem(name: "id", value: id)
+                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [idItem])
                 switch request {
                 case .success(let query):
                     fetchAsync(with: query, decode: { json -> GuildEmblem? in
@@ -160,10 +161,11 @@ class GuildClient : Client {
             /// Returns the list of emblem backgrounds associated with the given ids
             ///
             /// - Parameters:
-            ///   - ids: The ids of the backgrounds, URLQueryItem(name: "ids", value: "id1, id2, id3... etc")
+            ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
-            func get(ids: URLQueryItem, completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
-                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [ids])
+            func get(ids: String, completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
+                let idsItem = URLQueryItem(name: "ids", value: ids)
+                let request = addQueryParameters(to: EGuild.foregrounds.request, parameters: [idsItem])
                 switch request {
                 case .success(let query):
                     fetchAsync(with: query, decode: { json -> [GuildEmblem]? in
@@ -196,8 +198,9 @@ class GuildClient : Client {
         /// - Parameters:
         ///   - id: The id of the permission, URLQueryItem(name: "id", value: "permissionID")
         ///   - completion: Callback function to handle the data returned from the API (Result<Permissions?, APIError>)
-        func get(id: URLQueryItem, completion: @escaping (Result<Permissions?, APIError>) -> Void) {
-            let request = addQueryParameters(to: EGuild.permissions.request, parameters: [id])
+        func get(id: String, completion: @escaping (Result<Permissions?, APIError>) -> Void) {
+            let idItem = URLQueryItem(name: "id", value: id)
+            let request = addQueryParameters(to: EGuild.permissions.request, parameters: [idItem])
             switch request {
             case .success(let result):
                 fetchAsync(with: result, decode: {json -> Permissions? in
@@ -213,10 +216,11 @@ class GuildClient : Client {
         /// Returns more detailed info on multiple guild permissions associated with the given ids
         ///
         /// - Parameters:
-        ///   - ids: The ids of the guild permissions, URLQueryItem(name: "ids", value: "id1, id2, id3... etc)"
+        ///   - ids: The ids of the guild permissions "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[Permissions]?, APIError>)
-        func get(ids: URLQueryItem, completion: @escaping (Result<[Permissions]?, APIError>) -> Void) {
-            let request = addQueryParameters(to: EGuild.permissions.request, parameters: [ids])
+        func get(ids: String, completion: @escaping (Result<[Permissions]?, APIError>) -> Void) {
+            let idsItem = URLQueryItem(name: "ids", value: ids)
+            let request = addQueryParameters(to: EGuild.permissions.request, parameters: [idsItem])
             switch request {
             case .success(let result):
                 fetchAsync(with: result, decode: {json -> [Permissions]? in
@@ -246,10 +250,11 @@ class GuildClient : Client {
         /// Returns more detailed info on the guild upgrade specified by the given id
         ///
         /// - Parameters:
-        ///   - id: The id of the guild upgrade, URLQueryItem(name: "id", value: "upgradeID")
+        ///   - id: The id of the guild upgrade
         ///   - completion: Callback function to handle the data returned from the API (Result<GuildUpgrade?, APIError>)
-        func get(id: URLQueryItem, completion: @escaping (Result<GuildUpgrade?, APIError>) -> Void) {
-            let request = addQueryParameters(to: EGuild.upgrades.request, parameters: [id])
+        func get(id: String, completion: @escaping (Result<GuildUpgrade?, APIError>) -> Void) {
+            let idItem = URLQueryItem(name: "id", value: id)
+            let request = addQueryParameters(to: EGuild.upgrades.request, parameters: [idItem])
             switch request {
             case .success(let result):
                 fetchAsync(with: result, decode: {json -> GuildUpgrade? in
@@ -267,8 +272,9 @@ class GuildClient : Client {
         /// - Parameters:
         ///   - ids: The ids of the guild upgrades, URLQueryItem(name: "ids", value: "id1, id2, id3... etc)"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GuildUpgrade]?, APIError>)
-        func get(ids: URLQueryItem, completion: @escaping (Result<[GuildUpgrade]?, APIError>) -> Void) {
-            let request = addQueryParameters(to: EGuild.upgrades.request, parameters: [ids])
+        func get(ids: String, completion: @escaping (Result<[GuildUpgrade]?, APIError>) -> Void) {
+            let idsItem = URLQueryItem(name: "ids", value: ids)
+            let request = addQueryParameters(to: EGuild.upgrades.request, parameters: [idsItem])
             switch request {
             case .success(let result):
                 fetchAsync(with: result, decode: {json -> [GuildUpgrade]? in

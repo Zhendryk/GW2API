@@ -13,7 +13,6 @@ class GameMechanicsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        //GW2Client.instance.setAPIKey(key: "4AF24083-8D27-2140-BB05-819E907771A35C4ACBD4-3310-42B6-B626-7FE72DEFF85E")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -40,8 +39,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMMasteriesID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "3")
-        GW2Client.instance.gameMechanics.masteries.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.masteries.get(id: "3") { result in
             switch result {
             case .success(_):
                 print("\nGM MASTERIES ID SUCCESS\n")
@@ -57,8 +55,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMMasteriesIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "3, 4, 5")
-        GW2Client.instance.gameMechanics.masteries.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.masteries.get(ids: "3, 4, 5") { result in
             switch result {
             case .success(_):
                 print("\nGM MASTERIES IDS SUCCESS\n")
@@ -90,8 +87,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMOutfitsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "44")
-        GW2Client.instance.gameMechanics.outfits.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.outfits.get(id: "44") { result in
             switch result {
             case .success(_):
                 print("\nGM OUTFITS ID SUCCESS\n")
@@ -107,8 +103,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMOutfitsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "43, 44, 45")
-        GW2Client.instance.gameMechanics.outfits.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.outfits.get(ids: "43, 44, 45") { result in
             switch result {
             case .success(_):
                 print("\nGM OUTFITS IDS SUCCESS\n")
@@ -140,8 +135,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMPetsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "36")
-        GW2Client.instance.gameMechanics.pets.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.pets.get(id: "36") { result in
             switch result {
             case .success(_):
                 print("\nGM PETS ID SUCCESS\n")
@@ -157,8 +151,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMPetsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "37, 38, 39")
-        GW2Client.instance.gameMechanics.pets.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.pets.get(ids: "37, 38, 39") { result in
             switch result {
             case .success(_):
                 print("\nGM PETS IDS SUCCESS\n")
@@ -190,8 +183,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMProfessionsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "Necromancer")
-        GW2Client.instance.gameMechanics.professions.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.professions.get(id: "Necromancer") { result in
             switch result {
             case .success(_):
                 print("\nGM PROFESSIONS ID SUCCESS\n")
@@ -207,8 +199,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMProfessionsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "Warrior, Engineer, Elementalist")
-        GW2Client.instance.gameMechanics.professions.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.professions.get(ids: "Warrior, Engineer, Elementalist") { result in
             switch result {
             case .success(_):
                 print("\nGM PROFESSIONS IDS SUCCESS\n")
@@ -240,8 +231,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMRacesID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "Asura")
-        GW2Client.instance.gameMechanics.races.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.races.get(id: "Asura") { result in
             switch result {
             case .success(_):
                 print("\nGM RACES ID SUCCESS\n")
@@ -257,8 +247,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMRacesIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "Human, Norn, Asura")
-        GW2Client.instance.gameMechanics.races.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.races.get(ids: "Human, Norn, Asura") { result in
             switch result {
             case .success(_):
                 print("\nGM RACES IDS SUCCESS\n")
@@ -290,8 +279,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMSpecializationsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "1")
-        GW2Client.instance.gameMechanics.specializations.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.specializations.get(id: "1") { result in
             switch result {
             case .success(_):
                 print("\nGM SPECIALIZATIONS ID SUCCESS\n")
@@ -307,8 +295,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMSpecializationsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "1, 2, 3")
-        GW2Client.instance.gameMechanics.specializations.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.specializations.get(ids: "1, 2, 3") { result in
             switch result {
             case .success(_):
                 print("\nGM SPECIALIZATIONS IDS SUCCESS\n")
@@ -340,8 +327,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMSkillsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "1110")
-        GW2Client.instance.gameMechanics.skills.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.skills.get(id: "1110") { result in
             switch result {
             case .success(_):
                 print("\nGM SKILLS ID SUCCESS\n")
@@ -357,8 +343,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMSkillsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "1110, 1115, 1118")
-        GW2Client.instance.gameMechanics.skills.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.skills.get(ids: "1110, 1115, 1118") { result in
             switch result {
             case .success(_):
                 print("\nGM SKILLS IDS SUCCESS\n")
@@ -390,8 +375,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMTraitsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "214")
-        GW2Client.instance.gameMechanics.traits.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.traits.get(id: "214") { result in
             switch result {
             case .success(_):
                 print("\nGM TRAITS ID SUCCESS\n")
@@ -407,8 +391,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMTraitsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "214, 221, 222")
-        GW2Client.instance.gameMechanics.traits.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.traits.get(ids: "214, 221, 222") { result in
             switch result {
             case .success(_):
                 print("\nGM TRAITS IDS SUCCESS\n")
@@ -440,8 +423,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMLegendsID() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "id", value: "Legend1")
-        GW2Client.instance.gameMechanics.legends.get(id: qi) { result in
+        GW2Client.instance.gameMechanics.legends.get(id: "Legend1") { result in
             switch result {
             case .success(_):
                 print("\nGM LEGENDS ID SUCCESS\n")
@@ -457,8 +439,7 @@ class GameMechanicsTests: XCTestCase {
     
     func testGMLegendsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/GM...")
-        let qi = URLQueryItem(name: "ids", value: "Legend1, Legend2, Legend3")
-        GW2Client.instance.gameMechanics.legends.get(ids: qi) { result in
+        GW2Client.instance.gameMechanics.legends.get(ids: "Legend1, Legend2, Legend3") { result in
             switch result {
             case .success(_):
                 print("\nGM LEGENDS IDS SUCCESS\n")

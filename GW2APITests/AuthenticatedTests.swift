@@ -24,7 +24,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthAccount() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/account")
-        GW2Client.instance.authenticated.account.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.get() { result in
             switch result {
             case .success(_):
                 print("\nACCOUNT SUCCESS\n")
@@ -40,7 +40,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthAchievements() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/account/achievements")
-        GW2Client.instance.authenticated.account.achievements.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.achievements.get() { result in
             switch result {
             case .success(_):
                 print("\nACCOUNT ACHIEVEMENTS SUCCESS\n")
@@ -57,7 +57,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthBank() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/bank")
-        GW2Client.instance.authenticated.account.bank.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.bank.get() { result in
             switch result {
             case .success(_):
                 print("\nBANK SUCCESS\n")
@@ -73,7 +73,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthDungeons() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/dungeons")
-        GW2Client.instance.authenticated.account.dungeons.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.dungeons.get() { result in
             switch result {
             case .success(_):
                 print("\nDUNGEONS SUCCESS\n")
@@ -89,7 +89,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthDyes() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/dyes")
-        GW2Client.instance.authenticated.account.dyes.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.dyes.get() { result in
             switch result {
             case .success(_):
                 print("\nDYES SUCCESS\n")
@@ -105,7 +105,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthFinishers() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/finishers")
-        GW2Client.instance.authenticated.account.finishers.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.finishers.get() { result in
             switch result {
             case .success(_):
                 print("\nFINISHERS SUCCESS\n")
@@ -122,7 +122,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthCats() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/home/cats")
-        GW2Client.instance.authenticated.account.home.cats.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.home.cats.get() { result in
             switch result {
             case .success(_):
                 print("\nCATS SUCCESS\n")
@@ -139,7 +139,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthNodes() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/home/nodes")
-        GW2Client.instance.authenticated.account.home.nodes.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.home.nodes.get() { result in
             switch result {
             case .success(_):
                 print("\nNODES SUCCESS\n")
@@ -156,7 +156,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthInventory() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/inventory")
-        GW2Client.instance.authenticated.account.inventory.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.inventory.get() { result in
             switch result {
             case .success(_):
                 print("\nINVENTORY SUCCESS\n")
@@ -173,7 +173,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthMasteries() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/masteries")
-        GW2Client.instance.authenticated.account.masteries.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.masteries.get() { result in
             switch result {
             case .success(_):
                 print("\nMASTERIES SUCCESS\n")
@@ -189,7 +189,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthMasteryPoints() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/masteries/points")
-        GW2Client.instance.authenticated.account.masteries.points.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.masteries.points.get() { result in
             switch result {
             case .success(_):
                 print("\nMASTERY POINTS SUCCESS\n")
@@ -206,7 +206,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthMaterials() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/materials")
-        GW2Client.instance.authenticated.account.materials.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.materials.get() { result in
             switch result {
             case .success(_):
                 print("\nMATERIALS SUCCESS\n")
@@ -223,7 +223,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthMinis() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/minis")
-        GW2Client.instance.authenticated.account.minis.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.minis.get() { result in
             switch result {
             case .success(_):
                 print("\nMINIS SUCCESS\n")
@@ -240,7 +240,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthOutfits() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/outfits")
-        GW2Client.instance.authenticated.account.outfits.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.outfits.get() { result in
             switch result {
             case .success(_):
                 print("\nOUTFITS SUCCESS\n")
@@ -258,7 +258,7 @@ class AuthenticatedTests: XCTestCase {
     func testAuthRaids() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/raids")
         
-        GW2Client.instance.authenticated.account.raids.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.raids.get() { result in
             switch result {
             case .success(_):
                 print("\nRAIDS SUCCESS\n")
@@ -274,7 +274,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthRecipes() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/recipes")
-        GW2Client.instance.authenticated.account.recipes.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.recipes.get() { result in
             switch result {
             case .success(_):
                 print("\nRECIPES SUCCESS\n")
@@ -291,7 +291,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthSkins() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/skins")
-        GW2Client.instance.authenticated.account.skins.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.skins.get() { result in
             switch result {
             case .success(_):
                 print("\nSKINS SUCCESS\n")
@@ -308,7 +308,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthTitles() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/titles")
-        GW2Client.instance.authenticated.account.titles.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.titles.get() { result in
             switch result {
             case .success(_):
                 print("\nTITLES SUCCESS\n")
@@ -326,7 +326,7 @@ class AuthenticatedTests: XCTestCase {
     func testAuthWallet() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/wallet")
         
-        GW2Client.instance.authenticated.account.wallet.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.wallet.get() { result in
             switch result {
             case .success(_):
                 print("\nWALLET SUCCESS\n")
@@ -343,7 +343,7 @@ class AuthenticatedTests: XCTestCase {
     func testAuthCharacters() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/characters")
         
-        GW2Client.instance.authenticated.account.characters.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.characters.get() { result in
             switch result {
             case .success(_):
                 print("\nCHARACTERS SUCCESS\n")
@@ -359,7 +359,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthCharactersSpecific() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/characters/zhendryk")
-        GW2Client.instance.authenticated.account.characters.get(characterName: "Forster Varre"/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.characters.get(characterName: "Forster Varre") { result in
             switch result {
             case .success(_):
                 print("\nCHARACTERS SPECIFIC SUCCESS\n")
@@ -376,7 +376,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthCurBuys() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/transactions/current/buys")
-        GW2Client.instance.authenticated.account.transactions.current.buys.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.transactions.current.buys.get() { result in
             switch result {
             case .success(_):
                 print("\nCURRENT BUYS SUCCESS\n")
@@ -393,7 +393,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthCurSells() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/transactions/current/sells")
-        GW2Client.instance.authenticated.account.transactions.current.sells.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.transactions.current.sells.get() { result in
             switch result {
             case .success(_):
                 print("\nCURRENT SELLS SUCCESS\n")
@@ -410,7 +410,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthHisBuys() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/transactions/history/buys")
-        GW2Client.instance.authenticated.account.transactions.history.buys.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.transactions.history.buys.get() { result in
             switch result {
             case .success(_):
                 print("\nHISTORY BUYS SUCCESS\n")
@@ -428,7 +428,7 @@ class AuthenticatedTests: XCTestCase {
     func testAuthHisSells() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/transactions/history/sells")
         
-        GW2Client.instance.authenticated.account.transactions.history.sells.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.transactions.history.sells.get() { result in
             switch result {
             case .success(_):
                 print("\nHISTORY SELLS SUCCESS\n")
@@ -442,9 +442,9 @@ class AuthenticatedTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testAuthPVPGames() { //timeout
+    func testAuthPVPGames() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
-        GW2Client.instance.authenticated.account.pvp.games.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.pvp.games.get() { result in
             switch result {
             case .success(_):
                 print("\nPVP GAMES SUCCESS\n")
@@ -458,9 +458,41 @@ class AuthenticatedTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testPVPGames2() {
+        let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
+        GW2Client.instance.authenticated.account.pvp.games.get(id: "067FDA8C-11B9-4E73-B18C-601FEA26A501") { result in
+            switch result {
+            case .success(_):
+                print("\nPVP GAMES 2 SUCCESS\n")
+                expectation.fulfill()
+            case .failure(let error):
+                print("\n\n\nPVP 2 GAMES: ")
+                print(error)
+                print("\n\n\n")
+            }
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testPVPGames3() {
+        let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
+        GW2Client.instance.authenticated.account.pvp.games.get(ids: "0D7345FF-1E89-4206-9DB5-E9B6E1A526FE, 1DF4187C-AE0E-430D-A2BE-2FA6235DEC09, 4EC2983E-E244-4C00-8359-6B7981912DDA") { result in
+            switch result {
+            case .success(_):
+                print("\nPVP GAMES 3 SUCCESS\n")
+                expectation.fulfill()
+            case .failure(let error):
+                print("\n\n\nPVP 3 GAMES: ")
+                print(error)
+                print("\n\n\n")
+            }
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
     func testAuthPVPStats() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/stats")
-        GW2Client.instance.authenticated.account.pvp.stats.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.pvp.stats.get() { result in
             switch result {
             case .success(_):
                 print("\nPVP STATS SUCCESS\n")
@@ -476,7 +508,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthPVPStandings() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/standings")
-        GW2Client.instance.authenticated.account.pvp.standings.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.pvp.standings.get() { result in
             switch result {
             case .success(_):
                 print("\nPVP STANDINGS SUCCESS\n")
@@ -492,7 +524,7 @@ class AuthenticatedTests: XCTestCase {
     
     func testAuthToken() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/tokeninfo")
-        GW2Client.instance.authenticated.account.tokeninfo.get(/*parameters: [qi]*/) { result in
+        GW2Client.instance.authenticated.account.tokeninfo.get() { result in
             switch result {
             case .success(_):
                 print("\nAUTH TOKEN SUCCESS\n")
