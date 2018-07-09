@@ -58,4 +58,20 @@ public class GW2Client {
     public func setGuildID(id: String) {
         self.guildID = id
     }
+    
+    /// Prints all of the current settings of the client
+    public func settings() {
+        print("GW2API Client Settings\n--------------------------\n")
+        print("Base URL: https://api.guildwars2.com")
+        print("Version: V2")
+        print("Language: \(self.lang)")
+        if self.apiKey != nil {
+            print("API Key: \(self.apiKey!)")
+        }
+        else { print("API Key: None set") }
+        if self.guildID != nil {
+            print("Guild ID: \(self.guildID!)")
+        }
+        else { print("Guild ID: None set") }
+    }
 }
