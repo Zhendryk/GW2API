@@ -213,9 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				1928F1F520E7EFDA00D6B43E /* AuthenticatedTests.swift */,
+				19C4644020F17B1A00571AD0 /* GuildTests.swift */,
 				191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */,
 				191D26F020EFF47800CCDA27 /* GameMechanicsTests.swift */,
-				19C4644020F17B1A00571AD0 /* GuildTests.swift */,
 				1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */,
 				1928F1F720E7EFDA00D6B43E /* Info.plist */,
 			);
