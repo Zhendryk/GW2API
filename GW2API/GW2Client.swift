@@ -15,10 +15,6 @@ public class GW2Client {
     private var apiKey: String? = nil
     private var guildID: String? = nil
     
-    static let IDS = "ids"
-    static let ID = "id"
-    
-    
     /// The achievements endpoint: api.guildwars2.com/v2/achievements/...
     let achievements: AchievementsClient = AchievementsClient()
     

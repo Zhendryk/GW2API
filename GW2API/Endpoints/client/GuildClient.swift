@@ -21,12 +21,22 @@ class GuildClient : Client {
     /// The guild upgrades endpoint: api.guildwars2.com/v2/guild/upgrades
     let upgrades: GuildUpgradesClient = GuildUpgradesClient()
     
+    /// The authenticated guild endpoints: api.guildwars2.com/v2/guild/:id/...
+    let authenticated: GuildAuthenticatedClient = GuildAuthenticatedClient()
+    
+    /// Sets the API key for the guild authenticated endpoints
+    ///
+    /// - Parameter key: A valid API key of the guild leader's account
+    override func setAPIKey(_ key: String) {
+        self.authenticated.setAPIKey(key)
+    }
     
     /// Sets the guild ID to the given string
     ///
     /// - Parameter id: The ID to set it to, you can find a guild ID by using the GW2Client.instance.guild.search function
     override func setGuildID(_ id: String) {
         self.id.setGuildID(id)
+        self.authenticated.setGuildID(id)
     }
     
     /// Returns the ID of the given guild, if it exists
@@ -284,6 +294,175 @@ class GuildClient : Client {
             case .failure(let error):
                 print(error.localizedDescription)
                 return
+            }
+        }
+    }
+    
+    
+    /// The authenticated guild endpoint client: Requires both a guild ID and a valid API key from that guild leader's account
+    class GuildAuthenticatedClient : Client {
+        
+        /// The guild log endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let log: GuildLogClient = GuildLogClient()
+        
+        /// The guild members endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let members: GuildMembersClient = GuildMembersClient()
+        
+        /// The guild ranks endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let ranks: GuildRanksClient = GuildRanksClient()
+        
+        /// The guild stash endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let stash: GuildStashClient = GuildStashClient()
+        
+        /// The guild treasury endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let treasury: GuildTreasuryClient = GuildTreasuryClient()
+        
+        /// The guild teams endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let teams: GuildTeamsClient = GuildTeamsClient()
+        
+        /// The guild upgrades endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        let upgrades: GuildAuthUpgradesClient = GuildAuthUpgradesClient()
+        
+        /// Sets the API key to all authenticated guild endpoints
+        ///
+        /// - Parameter key: A valid API key of the guild leader's account
+        override func setAPIKey(_ key: String) {
+            self.log.setAPIKey(key)
+            self.members.setAPIKey(key)
+            self.ranks.setAPIKey(key)
+            self.stash.setAPIKey(key)
+            self.treasury.setAPIKey(key)
+            self.teams.setAPIKey(key)
+            self.upgrades.setAPIKey(key)
+        }
+        
+        /// Sets the guild ID for all authenticated guild endpoints
+        ///
+        /// - Parameter id: The ID of the guild being queried
+        override func setGuildID(_ id: String) {
+            self.log.setGuildID(id)
+            self.members.setGuildID(id)
+            self.ranks.setGuildID(id)
+            self.stash.setGuildID(id)
+            self.treasury.setGuildID(id)
+            self.teams.setGuildID(id)
+            self.upgrades.setGuildID(id)
+        }
+        
+        /// The guild log endpoint client: api.guildwars2.com/v2/guild/:id/log
+        class GuildLogClient : Client {
+            
+            /// Returns information about certain events in a guild's log. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameters:
+            ///   - since: Event ID where you would like the log to start from
+            ///   - completion: Callback function to handle the data returned from the API (Result<[GuildLog]?, APIError>)
+            func get(since: String = "", completion: @escaping (Result<[GuildLog]?, APIError>) -> Void) {
+                if since != "" {
+                    let sinceParameter = URLQueryItem(name: "since", value: since)
+                    let result = addQueryParameters(to: EGuild.log.request, parameters: [sinceParameter])
+                    switch result {
+                    case .success(let query):
+                        fetchAsync(with: query, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildLog]? in
+                            guard let res = json as? [GuildLog] else { return nil }
+                            return res
+                        }, completion: completion)
+                        return
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        return
+                    }
+                }
+                else {
+                    fetchAsync(with: EGuild.log.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildLog]? in
+                        guard let result = json as? [GuildLog] else { return nil }
+                        return result
+                    }, completion: completion)
+                }
+            }
+        }
+        
+        /// The guild members endpoint client: api.guildwars2.com/v2/guild/:id/members
+        class GuildMembersClient : Client {
+            
+            /// Returns information about the members of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildMember]?, APIError>)
+            func get(completion: @escaping (Result<[GuildMember]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.members.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildMember]? in
+                    guard let result = json as? [GuildMember] else { return nil }
+                    return result
+                }, completion: completion)
+            }
+        }
+        
+        /// The guild ranks endpoint client: api.guildwars2.com/v2/guild/:id/ranks
+        class GuildRanksClient : Client {
+            
+            /// Returns information about the ranks in a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildRank]?, APIError>)
+            func get(completion: @escaping (Result<[GuildRank]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.ranks.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildRank]? in
+                    guard let result = json as? [GuildRank] else { return nil }
+                    return result
+                }, completion: completion)
+            }
+        }
+        
+        /// The guild stash endpoint client: api.guildwars2.com/v2/guild/:id/stash
+        class GuildStashClient : Client {
+            
+            /// Returns information about the stash of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildStash]?, APIError>)
+            func get(completion: @escaping (Result<[GuildStash]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.stash.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildStash]? in
+                    guard let result = json as? [GuildStash] else { return nil }
+                    return result
+                }, completion: completion)
+            }
+        }
+        
+        /// The guild treasury endpoint client: api.guildwars2.com/v2/guild/:id/treasury
+        class GuildTreasuryClient : Client {
+            
+            /// Returns information about the treasury of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildTreasury]?, APIError>)
+            func get(completion: @escaping (Result<[GuildTreasury]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.treasury.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildTreasury]? in
+                    guard let result = json as? [GuildTreasury] else { return nil }
+                    return result
+                }, completion: completion)
+            }
+        }
+        
+        /// The guild teams endpoint client: api.guildwars2.com/v2/guild/:id/teams
+        class GuildTeamsClient : Client {
+            
+            /// Returns information about the teams of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildTeam]?, APIError>)
+            func get(completion: @escaping (Result<[GuildTeam]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.teams.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [GuildTeam]? in
+                    guard let result = json as? [GuildTeam] else { return nil }
+                    return result
+                }, completion: completion)
+            }
+        }
+        
+        /// The guild authenticated upgrades endpoint client: api.guildwars2.com/v2/guild/:id/upgrades
+        class GuildAuthUpgradesClient : Client {
+            
+            /// Returns information about the upgrades of a specified guild (Resolvable against /v2/guil/upgrades). Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
+            ///
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
+            func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.authUpgrades.request, needsAuthorization: true, needsGuildID: true, decode: { json -> [Int]? in
+                    guard let result = json as? [Int] else { return nil }
+                    return result
+                }, completion: completion)
             }
         }
     }
