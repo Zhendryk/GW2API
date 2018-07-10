@@ -59,7 +59,7 @@
 		1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */; };
 		1928F27720E7FFAB00D6B43E /* CommercePrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27220E7FFAA00D6B43E /* CommercePrices.swift */; };
 		1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27320E7FFAB00D6B43E /* CommerceListing.swift */; };
-		1928F27920E7FFAB00D6B43E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27420E7FFAB00D6B43E /* Currency.swift */; };
+		1928F27920E7FFAB00D6B43E /* TPCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27420E7FFAB00D6B43E /* TPCurrency.swift */; };
 		1928F27A20E7FFAB00D6B43E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27520E7FFAB00D6B43E /* Transaction.swift */; };
 		19406F9920EA6A1E004EF0B4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9820EA6A1E004EF0B4 /* Result.swift */; };
 		19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9A20EA6BA3004EF0B4 /* APIError.swift */; };
@@ -67,6 +67,30 @@
 		19406F9F20EA724C004EF0B4 /* EAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9E20EA724C004EF0B4 /* EAchievements.swift */; };
 		1943DFD220F2D2D1004F4366 /* GuildAuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */; };
 		196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196B264820ED613400095C0C /* AccountWalletItem.swift */; };
+		19775DEB20F539B200523825 /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DEA20F539B200523825 /* Finisher.swift */; };
+		19775DED20F53A0200523825 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DEC20F53A0200523825 /* Item.swift */; };
+		19775DEF20F53DF000523825 /* ItemStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DEE20F53DF000523825 /* ItemStats.swift */; };
+		19775DF120F53E6900523825 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DF020F53E6900523825 /* Material.swift */; };
+		19775DF320F53EC400523825 /* PVPAmulet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DF220F53EC400523825 /* PVPAmulet.swift */; };
+		19775DF520F53F0500523825 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DF420F53F0500523825 /* Recipe.swift */; };
+		19775DF720F53FD700523825 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DF620F53FD700523825 /* Skin.swift */; };
+		19775DFA20F5421300523825 /* Continents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DF920F5421300523825 /* Continents.swift */; };
+		19775DFC20F5427200523825 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DFB20F5427200523825 /* Sector.swift */; };
+		19775DFE20F542B000523825 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DFD20F542B000523825 /* Map.swift */; };
+		19775E0020F5433B00523825 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DFF20F5433B00523825 /* Currency.swift */; };
+		19775E0220F5436F00523825 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0120F5436F00523825 /* Dungeon.swift */; };
+		19775E0420F5439F00523825 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0320F5439F00523825 /* File.swift */; };
+		19775E0620F543BB00523825 /* Quaggan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0520F543BB00523825 /* Quaggan.swift */; };
+		19775E0820F543D900523825 /* Minipet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0720F543D900523825 /* Minipet.swift */; };
+		19775E0A20F5440D00523825 /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0920F5440D00523825 /* Raid.swift */; };
+		19775E0C20F5446000523825 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0B20F5446000523825 /* Title.swift */; };
+		19775E0E20F5449600523825 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E0D20F5449600523825 /* World.swift */; };
+		19775E1120F544DD00523825 /* BackstoryAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1020F544DD00523825 /* BackstoryAnswer.swift */; };
+		19775E1320F5452100523825 /* BackstoryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1220F5452100523825 /* BackstoryQuestion.swift */; };
+		19775E1520F5456D00523825 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1420F5456D00523825 /* Story.swift */; };
+		19775E1720F545DE00523825 /* StorySeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1620F545DE00523825 /* StorySeason.swift */; };
+		19775E1C20F5465A00523825 /* PVPRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1B20F5465A00523825 /* PVPRank.swift */; };
+		19775E1E20F546BD00523825 /* PVPSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1D20F546BD00523825 /* PVPSeason.swift */; };
 		19865F4A20EAA40D00D4B8CE /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */; };
 		199F4EB020EBAEC50030FBCA /* EAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */; };
 		199F4EB220EBB0650030FBCA /* AuthenticatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EB120EBB0650030FBCA /* AuthenticatedClient.swift */; };
@@ -141,7 +165,7 @@
 		1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
 		1928F27220E7FFAA00D6B43E /* CommercePrices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrices.swift; sourceTree = "<group>"; };
 		1928F27320E7FFAB00D6B43E /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
-		1928F27420E7FFAB00D6B43E /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		1928F27420E7FFAB00D6B43E /* TPCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPCurrency.swift; sourceTree = "<group>"; };
 		1928F27520E7FFAB00D6B43E /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		19406F9820EA6A1E004EF0B4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		19406F9A20EA6BA3004EF0B4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -149,6 +173,30 @@
 		19406F9E20EA724C004EF0B4 /* EAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAchievements.swift; sourceTree = "<group>"; };
 		1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildAuthenticatedTests.swift; sourceTree = "<group>"; };
 		196B264820ED613400095C0C /* AccountWalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
+		19775DEA20F539B200523825 /* Finisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
+		19775DEC20F53A0200523825 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		19775DEE20F53DF000523825 /* ItemStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStats.swift; sourceTree = "<group>"; };
+		19775DF020F53E6900523825 /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		19775DF220F53EC400523825 /* PVPAmulet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPAmulet.swift; sourceTree = "<group>"; };
+		19775DF420F53F0500523825 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		19775DF620F53FD700523825 /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
+		19775DF920F5421300523825 /* Continents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continents.swift; sourceTree = "<group>"; };
+		19775DFB20F5427200523825 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		19775DFD20F542B000523825 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		19775DFF20F5433B00523825 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		19775E0120F5436F00523825 /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
+		19775E0320F5439F00523825 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		19775E0520F543BB00523825 /* Quaggan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quaggan.swift; sourceTree = "<group>"; };
+		19775E0720F543D900523825 /* Minipet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minipet.swift; sourceTree = "<group>"; };
+		19775E0920F5440D00523825 /* Raid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
+		19775E0B20F5446000523825 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		19775E0D20F5449600523825 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		19775E1020F544DD00523825 /* BackstoryAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackstoryAnswer.swift; sourceTree = "<group>"; };
+		19775E1220F5452100523825 /* BackstoryQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackstoryQuestion.swift; sourceTree = "<group>"; };
+		19775E1420F5456D00523825 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		19775E1620F545DE00523825 /* StorySeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySeason.swift; sourceTree = "<group>"; };
+		19775E1B20F5465A00523825 /* PVPRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPRank.swift; sourceTree = "<group>"; };
+		19775E1D20F546BD00523825 /* PVPSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPSeason.swift; sourceTree = "<group>"; };
 		19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
 		199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAuthentication.swift; sourceTree = "<group>"; };
 		199F4EB120EBB0650030FBCA /* AuthenticatedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedClient.swift; sourceTree = "<group>"; };
@@ -197,13 +245,13 @@
 		1928F1E920E7EFDA00D6B43E /* GW2API */ = {
 			isa = PBXGroup;
 			children = (
-				1928F20120E7EFF500D6B43E /* GW2Client.swift */,
 				19406F9C20EA6C6C004EF0B4 /* APIClient.swift */,
 				19406F9A20EA6BA3004EF0B4 /* APIError.swift */,
 				19406F9820EA6A1E004EF0B4 /* Result.swift */,
-				1928F20C20E7FD4D00D6B43E /* JSON Models */,
 				1928F20B20E7FD3400D6B43E /* Endpoints */,
+				1928F20C20E7FD4D00D6B43E /* JSON Models */,
 				1928F1EA20E7EFDA00D6B43E /* GW2API.h */,
+				1928F20120E7EFF500D6B43E /* GW2Client.swift */,
 				1928F1EB20E7EFDA00D6B43E /* Info.plist */,
 			);
 			path = GW2API;
@@ -235,6 +283,10 @@
 		1928F20C20E7FD4D00D6B43E /* JSON Models */ = {
 			isa = PBXGroup;
 			children = (
+				19775E1820F5460900523825 /* Structured PVP */,
+				19775E0F20F544C800523825 /* Story */,
+				19775DF820F5420700523825 /* Map Information */,
+				19775DE920F5398800523825 /* Items */,
 				1928F20D20E7FD7400D6B43E /* Achievements */,
 				1928F20E20E7FD7E00D6B43E /* Authenticated */,
 				1928F20F20E7FD8900D6B43E /* Game Mechanics */,
@@ -317,6 +369,14 @@
 			children = (
 				1928F26D20E7FFA200D6B43E /* Build.swift */,
 				1928F26E20E7FFA200D6B43E /* Colors.swift */,
+				19775DFF20F5433B00523825 /* Currency.swift */,
+				19775E0120F5436F00523825 /* Dungeon.swift */,
+				19775E0320F5439F00523825 /* File.swift */,
+				19775E0520F543BB00523825 /* Quaggan.swift */,
+				19775E0720F543D900523825 /* Minipet.swift */,
+				19775E0920F5440D00523825 /* Raid.swift */,
+				19775E0B20F5446000523825 /* Title.swift */,
+				19775E0D20F5449600523825 /* World.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -327,10 +387,54 @@
 				1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */,
 				1928F27320E7FFAB00D6B43E /* CommerceListing.swift */,
 				1928F27220E7FFAA00D6B43E /* CommercePrices.swift */,
-				1928F27420E7FFAB00D6B43E /* Currency.swift */,
+				1928F27420E7FFAB00D6B43E /* TPCurrency.swift */,
 				1928F27520E7FFAB00D6B43E /* Transaction.swift */,
 			);
 			path = "Trading Post";
+			sourceTree = "<group>";
+		};
+		19775DE920F5398800523825 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				19775DEA20F539B200523825 /* Finisher.swift */,
+				19775DEC20F53A0200523825 /* Item.swift */,
+				19775DEE20F53DF000523825 /* ItemStats.swift */,
+				19775DF020F53E6900523825 /* Material.swift */,
+				19775DF220F53EC400523825 /* PVPAmulet.swift */,
+				19775DF420F53F0500523825 /* Recipe.swift */,
+				19775DF620F53FD700523825 /* Skin.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		19775DF820F5420700523825 /* Map Information */ = {
+			isa = PBXGroup;
+			children = (
+				19775DF920F5421300523825 /* Continents.swift */,
+				19775DFB20F5427200523825 /* Sector.swift */,
+				19775DFD20F542B000523825 /* Map.swift */,
+			);
+			path = "Map Information";
+			sourceTree = "<group>";
+		};
+		19775E0F20F544C800523825 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				19775E1020F544DD00523825 /* BackstoryAnswer.swift */,
+				19775E1220F5452100523825 /* BackstoryQuestion.swift */,
+				19775E1420F5456D00523825 /* Story.swift */,
+				19775E1620F545DE00523825 /* StorySeason.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		19775E1820F5460900523825 /* Structured PVP */ = {
+			isa = PBXGroup;
+			children = (
+				19775E1B20F5465A00523825 /* PVPRank.swift */,
+				19775E1D20F546BD00523825 /* PVPSeason.swift */,
+			);
+			path = "Structured PVP";
 			sourceTree = "<group>";
 		};
 		19865F4720EAA3C100D4B8CE /* enum */ = {
@@ -468,9 +572,13 @@
 				199F4EB220EBB0650030FBCA /* AuthenticatedClient.swift in Sources */,
 				1928F25420E7FF8E00D6B43E /* GMRace.swift in Sources */,
 				196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */,
+				19775E0C20F5446000523825 /* Title.swift in Sources */,
 				1928F26420E7FF9700D6B43E /* GuildMember.swift in Sources */,
+				19775E1720F545DE00523825 /* StorySeason.swift in Sources */,
+				19775DEB20F539B200523825 /* Finisher.swift in Sources */,
 				1928F26A20E7FF9700D6B43E /* GuildEmblem.swift in Sources */,
 				1928F26B20E7FF9700D6B43E /* GuildUpgrade.swift in Sources */,
+				19775DF320F53EC400523825 /* PVPAmulet.swift in Sources */,
 				1928F24120E7FF8500D6B43E /* AccountToken.swift in Sources */,
 				1928F22D20E7FF5B00D6B43E /* AchievementGroup.swift in Sources */,
 				19406F9D20EA6C6C004EF0B4 /* APIClient.swift in Sources */,
@@ -481,38 +589,58 @@
 				19C4644320F19B3100571AD0 /* EGuild.swift in Sources */,
 				1928F24320E7FF8500D6B43E /* AccountInventoryItem.swift in Sources */,
 				1928F24420E7FF8500D6B43E /* AccountPVPGame.swift in Sources */,
+				19775DFE20F542B000523825 /* Map.swift in Sources */,
 				1928F26920E7FF9700D6B43E /* GuildDetails.swift in Sources */,
 				191D26EB20EF306D00CCDA27 /* GMTrait.swift in Sources */,
 				1928F24D20E7FF8500D6B43E /* AccountBankItem.swift in Sources */,
 				1928F27720E7FFAB00D6B43E /* CommercePrices.swift in Sources */,
+				19775DED20F53A0200523825 /* Item.swift in Sources */,
 				191D26E520EF294E00CCDA27 /* GameMechanicsClient.swift in Sources */,
+				19775E0020F5433B00523825 /* Currency.swift in Sources */,
+				19775E1120F544DD00523825 /* BackstoryAnswer.swift in Sources */,
+				19775E0220F5436F00523825 /* Dungeon.swift in Sources */,
+				19775E0820F543D900523825 /* Minipet.swift in Sources */,
+				19775E1C20F5465A00523825 /* PVPRank.swift in Sources */,
 				191D26E920EF2EEB00CCDA27 /* GMSkill.swift in Sources */,
 				1928F25820E7FF8E00D6B43E /* GMProfession.swift in Sources */,
 				1928F24920E7FF8500D6B43E /* AccountMaterial.swift in Sources */,
 				1928F25720E7FF8E00D6B43E /* GMOutfit.swift in Sources */,
+				19775DF120F53E6900523825 /* Material.swift in Sources */,
+				19775E1E20F546BD00523825 /* PVPSeason.swift in Sources */,
 				19406F9F20EA724C004EF0B4 /* EAchievements.swift in Sources */,
 				1928F25620E7FF8E00D6B43E /* GMMasteries.swift in Sources */,
 				1928F20820E7F67D00D6B43E /* Endpoint.swift in Sources */,
+				19775E1520F5456D00523825 /* Story.swift in Sources */,
 				1928F24A20E7FF8500D6B43E /* AccountTransaction.swift in Sources */,
+				19775DFA20F5421300523825 /* Continents.swift in Sources */,
+				19775E0E20F5449600523825 /* World.swift in Sources */,
 				1928F26720E7FF9700D6B43E /* GuildTreasury.swift in Sources */,
+				19775E1320F5452100523825 /* BackstoryQuestion.swift in Sources */,
 				1928F24020E7FF8500D6B43E /* AccountMasteryPoints.swift in Sources */,
 				1928F24C20E7FF8500D6B43E /* AccountPVPStandings.swift in Sources */,
 				1928F24520E7FF8500D6B43E /* AccountCharacter.swift in Sources */,
+				19775DFC20F5427200523825 /* Sector.swift in Sources */,
 				1928F24620E7FF8500D6B43E /* AccountFinisher.swift in Sources */,
 				199F4EB020EBAEC50030FBCA /* EAuthentication.swift in Sources */,
 				1928F27020E7FFA200D6B43E /* Colors.swift in Sources */,
 				1928F22E20E7FF5B00D6B43E /* AchievementCategory.swift in Sources */,
 				19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */,
-				1928F27920E7FFAB00D6B43E /* Currency.swift in Sources */,
+				19775E0620F543BB00523825 /* Quaggan.swift in Sources */,
+				1928F27920E7FFAB00D6B43E /* TPCurrency.swift in Sources */,
+				19775DF720F53FD700523825 /* Skin.swift in Sources */,
 				1928F24820E7FF8500D6B43E /* AccountMastery.swift in Sources */,
 				1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */,
 				1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */,
 				1928F26320E7FF9700D6B43E /* GuildStash.swift in Sources */,
+				19775DEF20F53DF000523825 /* ItemStats.swift in Sources */,
+				19775DF520F53F0500523825 /* Recipe.swift in Sources */,
 				191D26E720EF2E6E00CCDA27 /* GMSpecialization.swift in Sources */,
 				1928F20220E7EFF500D6B43E /* GW2Client.swift in Sources */,
 				1928F27A20E7FFAB00D6B43E /* Transaction.swift in Sources */,
 				1928F26F20E7FFA200D6B43E /* Build.swift in Sources */,
 				19406F9920EA6A1E004EF0B4 /* Result.swift in Sources */,
+				19775E0A20F5440D00523825 /* Raid.swift in Sources */,
+				19775E0420F5439F00523825 /* File.swift in Sources */,
 				1928F26C20E7FF9700D6B43E /* Permissions.swift in Sources */,
 				1928F22F20E7FF5B00D6B43E /* DailyAchievement.swift in Sources */,
 				1928F26620E7FF9700D6B43E /* GuildTeam.swift in Sources */,
