@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//outfits
+//lang, page, page_size, id, ids
 struct GMOutfit: Decodable {
     let id: Int
     let name: String

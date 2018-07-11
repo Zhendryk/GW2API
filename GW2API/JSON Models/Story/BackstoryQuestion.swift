@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//backstory/questions
+//lang, page, page_size, id, ids
 struct BackstoryQuestion : Decodable {
     let id: Int
     let title: String

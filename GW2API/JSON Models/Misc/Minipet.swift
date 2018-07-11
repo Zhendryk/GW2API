@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//minis
+//lang, id, ids
 struct Minipet : Decodable {
     let id: Int
     let name: String

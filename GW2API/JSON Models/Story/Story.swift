@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//stories
+//lang, page, page_size, id, ids
 struct Story : Decodable {
     let id: Int
     let season: String
@@ -14,11 +16,11 @@ struct Story : Decodable {
     let timeline: String
     let level: Int
     let order: Int
-    let chapters: [storyChapter]
+    let chapters: [StoryChapter]
     let races: [String]
     let flags: [String]
     
-    struct storyChapter : Decodable {
+    struct StoryChapter : Decodable {
         let name: String
     }
 }

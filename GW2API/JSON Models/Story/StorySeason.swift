@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//stories/seasons
+//lang, page, page_size, id, ids
 struct StorySeason : Decodable {
     let id: String
     let name: String

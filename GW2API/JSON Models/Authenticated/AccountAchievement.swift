@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//account/achievements
+//access_token
 struct AccountAchievement: Decodable {
     let id: Int
     let current: Int?

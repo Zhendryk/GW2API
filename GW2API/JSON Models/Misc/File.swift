@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//files
+//id, ids
 struct File : Decodable {
     let id: String
     let icon: String

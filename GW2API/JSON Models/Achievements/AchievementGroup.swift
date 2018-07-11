@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//achievements/groups
+//lang, id, ids
 struct AchievementGroup: Decodable {
     let id: String
     let name: String

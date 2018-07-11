@@ -10,19 +10,21 @@ struct AccountPVPStats: Decodable {
     let pvp_rank: Int
     let pvp_rank_points: Int
     let pvp_rank_rollovers: Int
-    let aggregate: aggregate
-    let professions: professions
-    let ladders: ladders
+    let Aggregate: Aggregate
+    let professions: Professions
+    let ladders: Ladders
+    
+    struct Professions: Decodable {
+        let elementalist: Aggregate?
+        let ranger: Aggregate?
+        let necromancer: Aggregate?
+        let engineer: Aggregate?
+        let revenant: Aggregate?
+        let warrior: Aggregate?
+        let thief: Aggregate?
+        let mesmer: Aggregate?
+        let guardian: Aggregate?
+    }
 }
 
-struct professions: Decodable {
-    let elementalist: aggregate?
-    let ranger: aggregate?
-    let necromancer: aggregate?
-    let engineer: aggregate?
-    let revenant: aggregate?
-    let warrior: aggregate?
-    let thief: aggregate?
-    let mesmer: aggregate?
-    let guardian: aggregate?
-}
+

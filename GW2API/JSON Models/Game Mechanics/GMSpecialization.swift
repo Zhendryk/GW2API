@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//specializations
+//lang, id, ids
 struct GMSpecialization : Decodable {
     let id: Int
     let name: String

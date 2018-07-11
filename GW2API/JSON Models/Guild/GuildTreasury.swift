@@ -9,10 +9,10 @@
 struct GuildTreasury: Decodable {
     let item_id: Int
     let count: Int
-    let needed_by: [itemNeeded]
+    let needed_by: [NeededItem]
 }
 
-struct itemNeeded: Decodable {
+struct NeededItem: Decodable {
     let upgrade_id: Int
     let count: Int
 }

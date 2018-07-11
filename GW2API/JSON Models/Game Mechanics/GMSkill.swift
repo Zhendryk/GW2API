@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//skills
+//lang, id, ids
 struct GMSkill : Decodable {
     let id: Int
     let name: String
@@ -16,8 +18,8 @@ struct GMSkill : Decodable {
     let weapon_type: String?
     let professions: [String]
     let slot: String?
-    let facts: [fact]?
-    let traited_facts: [fact]?
+    let facts: [SkillFact]?
+    let traited_facts: [SkillFact]?
     let categories: [String]?
     let attunement: String?
     let cost: Int?
@@ -28,10 +30,10 @@ struct GMSkill : Decodable {
     let prev_chain: Int?
     let transform_skills: [String]?
     let toolbelt_skill: Int?
-}
-
-struct fact : Decodable {
-    let text: String
-    let icon: String?
-    let type: String
+    
+    struct SkillFact : Decodable {
+        let text: String
+        let icon: String?
+        let type: String
+    }
 }

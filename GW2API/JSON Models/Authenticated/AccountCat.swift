@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//account/home/cats
+//access_token
 struct AccountCat: Decodable {
     let id: Int
     let hint: String?

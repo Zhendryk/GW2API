@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//finishers
+//lang, page, page_size, id, ids
 struct Finisher : Decodable {
     let id: Int
     let unlock_details: String

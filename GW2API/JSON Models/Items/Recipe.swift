@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//recipes
+//id, ids
 struct Recipe : Decodable {
     let id: Int
     let type: String
@@ -15,17 +17,17 @@ struct Recipe : Decodable {
     let disciplines: [String]
     let min_rating: Int
     let flags: [String]
-    let ingredients: [ingredient]
-    let guild_ingredients: [guildIngredient]?
+    let ingredients: [Ingredient]
+    let guild_ingredients: [GuildIngredient]?
     let output_upgrade_id: Int?
     let chat_link: String
     
-    struct ingredient : Decodable {
+    struct Ingredient : Decodable {
         let item_id: Int
         let count: Int
     }
     
-    struct guildIngredient : Decodable {
+    struct GuildIngredient : Decodable {
         let upgrade_id: Int
         let count: Int
     }

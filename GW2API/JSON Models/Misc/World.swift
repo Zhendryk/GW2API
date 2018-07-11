@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//worlds
+//lang, id, ids
 struct World : Decodable {
     let id: Int
     let name: String

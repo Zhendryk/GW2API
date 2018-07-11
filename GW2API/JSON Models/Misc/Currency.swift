@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//currencies
+//lang, id, ids
 struct Currency : Decodable {
     let id: Int
     let name: String

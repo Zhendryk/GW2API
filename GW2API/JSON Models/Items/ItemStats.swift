@@ -6,12 +6,14 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//itemstats
+//lang, id, ids
 struct ItemStats : Decodable {
     let id: Int
     let name: String
-    let attributes: [attribute]
+    let attributes: [ItemStatsAttribute]
     
-    struct attribute : Decodable {
+    struct ItemStatsAttribute : Decodable {
         let attribute: String
         let multiplier: Float
         let value: Int

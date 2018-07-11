@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//build
 struct Build: Decodable {
     let id: Int
 }

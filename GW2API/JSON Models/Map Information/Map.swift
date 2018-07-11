@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>
 struct Map : Decodable {
     let id: Int
     let name: String

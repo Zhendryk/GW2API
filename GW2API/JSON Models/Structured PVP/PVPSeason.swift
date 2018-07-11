@@ -6,44 +6,55 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//pvp/seasons
+//lang
 struct PVPSeason : Decodable {
     let id: String
     let name: Int
     let start: String
     let end: String
     let active: Bool
-    let divisions: [pvpDivision]
-    let leaderboards: [pvpLeaderboard]
+    let divisions: [PVPDivision]
+    let leaderboards: [PVPLeaderboard]
     
-    struct pvpDivision : Decodable {
+    struct PVPDivision : Decodable {
         let name: String
         let flags: [String]
         let large_icon: String
         let small_icon: String
         let pip_icon: String
-        let tiers: [pvpTier]
+        let tiers: [PVPTier]
     }
     
-    struct pvpLeaderboard : Decodable {
-        let ladder: pvpLeaderboardLadder
-        let scorings: [pvpLeaderboardScoring]
+    struct PVPLeaderboard : Decodable {
+        let ladder: PVPLeaderboardLadder
+        let scorings: [PVPLeaderboardScoring]
         
-        struct pvpLeaderboardLadder : Decodable {
-            let settings: pvpLBLadderSettings
-            struct pvpLBLadderSettings : Decodable {
+        struct PVPLeaderboardLadder : Decodable {
+            let settings: PVPLBLadderSettings
+            
+            struct PVPLBLadderSettings : Decodable {
                 let name: String
                 let duration: Int
                 let scoring: String
-                //more to do here...
+                let tiers: [PVPLBLadderTier]
+                
+                struct PVPLBLadderTier : Decodable {
+                    let range: [Int]
+                }
             }
         }
         
-        struct pvpLeaderboardScoring : Decodable {
-            //fill in here...
+        struct PVPLeaderboardScoring : Decodable {
+            let id: String
+            let type: String
+            let description: String
+            let name: String
+            let ordering: String
         }
     }
     
-    struct pvpTier : Decodable {
+    struct PVPTier : Decodable {
         let points: Int
     }
 }

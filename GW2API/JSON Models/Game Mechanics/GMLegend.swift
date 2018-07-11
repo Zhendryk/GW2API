@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//legends
+//lang, page, page_size, id, ids
 struct GMLegend : Decodable {
     let id: String
     let swap: Int

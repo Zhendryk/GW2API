@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//races
+//id, ids
 struct GMRace: Decodable {
     let id: String
     let skills: [Int]

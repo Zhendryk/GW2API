@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//dungeons
+//lang, id, ids
 struct Dungeon : Decodable {
     let id: String
     let paths: [path]

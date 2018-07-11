@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//skins
+//lang, id, ids
 struct Skin : Decodable {
     let id: Int
     let name: String
@@ -15,25 +17,25 @@ struct Skin : Decodable {
     let icon: String
     let rarity: String
     let description: String
-    let details: details?
+    let details: SkinDetails?
     
-    struct details : Decodable {
+    struct SkinDetails : Decodable {
         let type: String
         
         //Armor
         let weight_class: String?
-        let dye_slots: dyeSlots?
+        let dye_slots: DyeSlots?
         
-        struct dyeSlots : Decodable {
+        struct DyeSlots : Decodable {
             let `default`: [`default`]
-            let overrides: overrides
+            let overrides: Overrides
             
             struct `default` : Decodable {
                 let color_id: Int
                 let material: String
             }
             
-            struct overrides : Decodable {
+            struct Overrides : Decodable {
                 let AsuraMale: `default`?
                 let AsuraFemale: `default`?
                 let CharrMale: `default`?

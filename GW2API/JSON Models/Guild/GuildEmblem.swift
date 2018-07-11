@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//emblem
+//id, ids
 struct GuildEmblem: Decodable {
     let id: Int
     let layers: [String]

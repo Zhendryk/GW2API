@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//account
+//access_token
 struct Account: Decodable {
     let id: String
     let age: Int

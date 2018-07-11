@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//materials
+//lang, id, ids
 struct Material : Decodable {
     let id: Int
     let name: String

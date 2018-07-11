@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//quaggans
+//id, ids
 struct Quaggan : Decodable {
     let id: Int
     let url: String

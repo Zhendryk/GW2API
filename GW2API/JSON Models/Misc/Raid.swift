@@ -6,15 +6,17 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//raids
+//lang, id, ids
 struct Raid : Decodable {
     let id: String
-    let wings: [raidWing]
+    let wings: [RaidWing]
     
-    struct raidWing : Decodable {
+    struct RaidWing : Decodable {
         let id: String
-        let events: [raidEvent]
+        let events: [RaidEvent]
         
-        struct raidEvent : Decodable {
+        struct RaidEvent : Decodable {
             let id: String
             let type: String
         }

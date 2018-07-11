@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//achievements
+//lang, id, ids
 struct Achievement: Decodable {
     let id: Int
     let icon: String?
@@ -15,33 +17,33 @@ struct Achievement: Decodable {
     let locked_text: String
     let type: String
     let flags: [String]
-    let tiers: [tier]
+    let tiers: [AchievementTier]
     let prerequisites: [Int]?
-    let rewards: [reward]?
-    let bits: [bit]?
+    let rewards: [AchievementReward]?
+    let bits: [AchievementBit]?
     let point_cap: Int?
-}
-
-struct tier: Decodable {
-    let count: Int
-    let points: Int
-}
-
-struct reward: Decodable {
-    let type: String
     
-    //If type = "coins" || "item"
-    let count: Int?
+    struct AchievementTier: Decodable {
+        let count: Int
+        let points: Int
+    }
     
-    //If type = "item" || "mastery" || "title"
-    let id: Int?
+    struct AchievementReward: Decodable {
+        let type: String
+        
+        //If type = "coins" || "item"
+        let count: Int?
+        
+        //If type = "item" || "mastery" || "title"
+        let id: Int?
+        
+        //If type = "mastery"
+        let region: String?
+    }
     
-    //If type = "mastery"
-    let region: String?
-}
-
-struct bit: Decodable {
-    let type: String
-    let id: Int?
-    let text: String?
+    struct AchievementBit: Decodable {
+        let type: String
+        let id: Int?
+        let text: String?
+    }
 }

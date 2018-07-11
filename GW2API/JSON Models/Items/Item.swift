@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//items
+//lang, id, ids
 struct Item : Decodable {
     let id: Int
     let chat_link: String
@@ -20,13 +22,13 @@ struct Item : Decodable {
     let flags: [String]
     let game_types: [String]
     let restrictions: [String]
-    let details: details?
+    let details: ItemDetails?
 }
 
-struct details : Decodable {
+struct ItemDetails : Decodable {
     let type: String
-    let infusion_slots: [infusionSlot]?
-    let infix_upgrade: [infixUpgrade]?
+    let infusion_slots: [InfusionSlot]?
+    let infix_upgrade: [InfixUpgrade]?
     let suffix_item_id: Int?
     let secondary_suffix_id: String?
     let stat_choices: [String]?
@@ -67,21 +69,21 @@ struct details : Decodable {
     let max_power: Int?
 }
 
-struct infusionSlot : Decodable {
+struct InfusionSlot : Decodable {
     let flags: [String]
     let item_id: Int?
 }
 
-struct infixUpgrade : Decodable {
-    let attributes: [attribute]
-    let buff: buff?
+struct InfixUpgrade : Decodable {
+    let attributes: [InfixUpgradeAttribute]
+    let buff: InfixUpgradeBuff?
     
-    struct attribute : Decodable {
+    struct InfixUpgradeAttribute : Decodable {
         let attribute: String
         let modifier: Int
     }
     
-    struct buff : Decodable {
+    struct InfixUpgradeBuff : Decodable {
         let skill_id: Int
         let description: String
     }

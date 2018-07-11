@@ -6,19 +6,15 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//commerce/listings
+//id, ids
 struct CommerceListing: Decodable {
     let id: Int
-    let buys: [buy]
-    let sells: [sell]
+    let buys: [CommerceTransaction]
+    let sells: [CommerceTransaction]
 }
 
-struct buy: Decodable {
-    let listings: Int
-    let unit_price: Int
-    let quantity: Int
-}
-
-struct sell: Decodable {
+struct CommerceTransaction: Decodable {
     let listings: Int
     let unit_price: Int
     let quantity: Int

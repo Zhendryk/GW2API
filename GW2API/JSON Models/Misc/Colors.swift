@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//colors
+//lang, id, ids
 struct Colors: Decodable {
     let id: Int
     let name: String

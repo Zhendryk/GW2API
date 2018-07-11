@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//pvp/amulets
+//lang, page, page_size, id, ids
 struct PVPAmulet : Decodable {
     let id: Int
     let name: String

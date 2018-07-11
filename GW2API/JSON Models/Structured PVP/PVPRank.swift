@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+//pvp/ranks
+//lang, ids
 struct PVPRank : Decodable {
     let id: Int
     let finisher_id: Int
@@ -13,9 +15,9 @@ struct PVPRank : Decodable {
     let icon: String
     let min_rank: Int
     let max_rank: Int
-    let levels: [pvpLevel]
+    let levels: [PVPLevel]
     
-    struct pvpLevel : Decodable {
+    struct PVPLevel : Decodable {
         let min_rank: Int
         let max_rank: Int
         let points: Int
