@@ -46,4 +46,10 @@ extension Endpoint {
             request = newValue
         }
     }
+    
+    func idRequest(id: String) -> URLRequest {
+        var url = request.url!
+        url.appendPathComponent(id)
+        return URLRequest(url: url)
+    }
 }

@@ -33,11 +33,6 @@ struct GuildTeam: Decodable {
         let season: String?
     }
     
-    struct Scores: Decodable {
-        let red: Int
-        let blue: Int
-    }
-    
     struct Season: Decodable {
         let id: String
         let wins: Int
@@ -57,4 +52,9 @@ struct Aggregate: Decodable {
 struct Ladders: Decodable {
     let ranked: Aggregate
     let unranked: Aggregate
+}
+
+struct Scores: Decodable {
+    let red: Int
+    let blue: Int
 }

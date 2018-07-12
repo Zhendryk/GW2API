@@ -10,7 +10,7 @@ struct AccountPVPStats: Decodable {
     let pvp_rank: Int
     let pvp_rank_points: Int
     let pvp_rank_rollovers: Int
-    let Aggregate: Aggregate
+    let aggregate: Aggregate
     let professions: Professions
     let ladders: Ladders
     

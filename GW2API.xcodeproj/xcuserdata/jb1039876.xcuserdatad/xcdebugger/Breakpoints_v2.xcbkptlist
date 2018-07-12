@@ -2,4 +2,102 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GW2APITests/AchievementsTests.swift"
+            timestampString = "553058422.539517"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "testAchievementCategoriesID()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GW2APITests.AchievementsTests.testAchievementCategoriesID() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/AchievementsTests.swift"
+                  timestampString = "553055825.143362"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;GW2API.AchievementCategory&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.AchievementsTests.testAchievementCategoriesID() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/AchievementsTests.swift"
+                  timestampString = "553055825.146516"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GW2APITests/GuildTests.swift"
+            timestampString = "553059101.226894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "testGuildID()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GW2APITests.GuildTests.testGuildID() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/GuildTests.swift"
+                  timestampString = "553058979.8751481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;GW2API.GuildDetails&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.GuildTests.testGuildID() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/GuildTests.swift"
+                  timestampString = "553058979.877359"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

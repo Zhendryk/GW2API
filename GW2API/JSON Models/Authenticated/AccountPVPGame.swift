@@ -14,7 +14,7 @@ struct AccountPVPGame: Decodable {
     let result: String
     let team: String
     let profession: String
-    let scores: scores
+    let scores: Scores
     let rating_type: String
     let rating_change: Int
     let season: String?

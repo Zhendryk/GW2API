@@ -40,8 +40,13 @@ public class GW2Client {
     ///
     /// - Parameter lang: Any of the following supported language strings: en, es, de, fr, ko, zh
     public func setLanguage(lang: String) {
-        assert(["en", "es", "de", "fr", "ko", "zh"].contains(lang.lowercased()), "Provided language is not supported. Possible values: en, es, de, fr, ko, zh")
-        self.lang = lang.lowercased()
+        let langLower = lang.lowercased()
+        assert(["en", "es", "de", "fr", "ko", "zh"].contains(langLower), "Provided language is not supported. Possible values: en, es, de, fr, ko, zh")
+        self.lang = langLower
+        self.achievements.setLanguage(langLower)
+        self.authenticated.setLanguage(langLower)
+        self.gameMechanics.setLanguage(langLower)
+        self.guild.setLanguage(langLower)
     }
     
     /// Takes a valid API key as a String and sets it to all authenticated endpoints in the client
