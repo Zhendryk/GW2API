@@ -27,7 +27,12 @@ public class GW2Client {
     /// The guild endpoint: api.guildwars2.com/v2/guild/...
     let guild: GuildClient = GuildClient()
     
-    private init() {}
+    /// The items endpoint: api.guildwars2.com/v2/...
+    let items: ItemsClient = ItemsClient()
+    
+    private init() {
+        self.setLanguage(lang: "en")
+    }
     
     /// Returns the language setting of the GuildWars 2 Client
     ///
@@ -47,6 +52,7 @@ public class GW2Client {
         self.authenticated.setLanguage(langLower)
         self.gameMechanics.setLanguage(langLower)
         self.guild.setLanguage(langLower)
+        self.items.setLanguage(langLower)
     }
     
     /// Takes a valid API key as a String and sets it to all authenticated endpoints in the client

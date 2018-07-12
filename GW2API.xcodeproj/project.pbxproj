@@ -59,6 +59,7 @@
 		1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */; };
 		1928F27720E7FFAB00D6B43E /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27220E7FFAA00D6B43E /* CommercePrice.swift */; };
 		1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27320E7FFAB00D6B43E /* CommerceListing.swift */; };
+		1939EF0120F7929A00DB0F36 /* EItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939EF0020F7929A00DB0F36 /* EItems.swift */; };
 		19406F9920EA6A1E004EF0B4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9820EA6A1E004EF0B4 /* Result.swift */; };
 		19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9A20EA6BA3004EF0B4 /* APIError.swift */; };
 		19406F9D20EA6C6C004EF0B4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9C20EA6C6C004EF0B4 /* APIClient.swift */; };
@@ -172,6 +173,7 @@
 		1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
 		1928F27220E7FFAA00D6B43E /* CommercePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
 		1928F27320E7FFAB00D6B43E /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
+		1939EF0020F7929A00DB0F36 /* EItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EItems.swift; sourceTree = "<group>"; };
 		19406F9820EA6A1E004EF0B4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		19406F9A20EA6BA3004EF0B4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		19406F9C20EA6C6C004EF0B4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 				199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */,
 				191D26E220EF287400CCDA27 /* EGameMechanics.swift */,
 				19C4644220F19B3100571AD0 /* EGuild.swift */,
+				1939EF0020F7929A00DB0F36 /* EItems.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				1928F26520E7FF9700D6B43E /* GuildRank.swift in Sources */,
 				1928F24220E7FF8500D6B43E /* AccountPVPStats.swift in Sources */,
 				1928F23020E7FF5B00D6B43E /* Achievement.swift in Sources */,
+				1939EF0120F7929A00DB0F36 /* EItems.swift in Sources */,
 				191D26E320EF287400CCDA27 /* EGameMechanics.swift in Sources */,
 				191D26ED20EF31C500CCDA27 /* GMLegend.swift in Sources */,
 			);
