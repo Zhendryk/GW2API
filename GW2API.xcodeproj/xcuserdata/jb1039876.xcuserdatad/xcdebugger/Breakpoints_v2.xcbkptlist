@@ -99,5 +99,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GW2APITests/AuthenticatedTests.swift"
+            timestampString = "553113885.010331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
+            landmarkName = "testAuthCharactersSpecific()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GW2APITests.AuthenticatedTests.testAuthCharactersSpecific() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/AuthenticatedTests.swift"
+                  timestampString = "553114519.204253"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "362"
+                  endingLineNumber = "362"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;GW2API.AccountCharacter&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.AuthenticatedTests.testAuthCharactersSpecific() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/AuthenticatedTests.swift"
+                  timestampString = "553114519.206181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "363"
+                  endingLineNumber = "363"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -142,36 +142,32 @@ class Client : APIClient {
         return task
     }
     
-    /// Given a string URL, ensures it is properly encoded for a http query
+    /// Determines if the given string is percent encoded for a url
     ///
-    /// - Parameter originalString: The original string URL to be checked
-    /// - Returns: Properly encoded URLRequest, or nil if failure occurs
-    private func ensureStringEncoding(originalString: String) -> URLRequest? {
-        if originalString.contains(" ") {
-            guard let encodedStr = originalString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
-            guard let newlyEncodedQuery = URL(string: encodedStr) else { return nil }
-            return URLRequest(url: newlyEncodedQuery)
-        }
-        else {
-            guard let originalURL = URL(string: originalString) else { return nil }
-            return URLRequest(url: originalURL)
-        }
+    /// - Parameter urlString: The string to validate
+    /// - Returns: True if it is percent encoded, false if not
+    private func isPercentEncoded(urlString: String) -> Bool {
+        return urlString.removingPercentEncoding != urlString
     }
     
-    /// Given a URLRequest, ensures the string is properly encoded for a http query
+    /// Determines if the given string is a valid url string
     ///
-    /// - Parameter originalQuery: The original URLRequest to be checked
-    /// - Returns: Properly encoded URLRequest, or nil if failure occurs
-    private func ensureQueryEncoding(originalQuery: URLRequest) -> URLRequest? {
-        guard let qString = originalQuery.url?.absoluteString else { return nil }
-        if qString.contains(" ") {
-            guard let encodedStr = qString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
-            guard let newlyEncodedQuery = URL(string: encodedStr) else { return nil }
-            return URLRequest(url: newlyEncodedQuery)
-        }
-        else {
-            return originalQuery
-        }
+    /// - Parameter urlString: The string to validate
+    /// - Returns: True if valid, false if not
+    private func isValidURLString(urlString: String) -> Bool {
+        if isPercentEncoded(urlString: urlString) { return true }
+        guard let url = URL(string: urlString) else { return false }
+        return UIApplication.shared.canOpenURL(url)
+    }
+    
+    /// Encodes a string using percent encoding and creates a URLRequest from it
+    ///
+    /// - Parameter urlString: The string to encode
+    /// - Returns: A valid URLRequest if successful, nil if optional values fail
+    private func encodeToURLRequest(urlString: String) -> URLRequest? {
+        guard let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
+        guard let encodedURL = URL(string: encodedString) else { return nil }
+        return URLRequest(url: encodedURL)
     }
     
     /// Adds the given query parameters to the given URLRequest
@@ -190,8 +186,11 @@ class Client : APIClient {
         }
         queryString.removeLast()
         str.append(queryString)
-        guard let encodedRequest = ensureStringEncoding(originalString: str) else { return Result.failure(.queryParameterAttachmentFailure) }
-        return Result.success(encodedRequest)
+        if !isValidURLString(urlString: str) {
+            guard let encodedRequest = encodeToURLRequest(urlString: str) else { return Result.failure(.queryParameterAttachmentFailure)}
+            return Result.success(encodedRequest)
+        }
+        else { return Result.success(URLRequest(url: URL(string: str)!))}
     }
 
     /// Attaches an API key to a given URLRequest
@@ -264,7 +263,6 @@ class Client : APIClient {
         case .failure(let error):
             return Result.failure(error)
         }
-        guard let encodedQuery = ensureQueryEncoding(originalQuery: editableQuery) else { return Result.failure(.queryEncodingError) }
-        return Result.success(encodedQuery)
+        return Result.success(editableQuery)
     }
 }

@@ -97,6 +97,7 @@
 		19C4644120F17B1A00571AD0 /* GuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4644020F17B1A00571AD0 /* GuildTests.swift */; };
 		19C4644320F19B3100571AD0 /* EGuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4644220F19B3100571AD0 /* EGuild.swift */; };
 		19C4644520F19F2B00571AD0 /* GuildClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4644420F19F2B00571AD0 /* GuildClient.swift */; };
+		19CDABA820F7CC4B0035A22A /* EMapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDABA720F7CC4B0035A22A /* EMapInfo.swift */; };
 		19FE9F8520F63EB20088D826 /* PVPSeasonLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE9F8420F63EB20088D826 /* PVPSeasonLeaderboard.swift */; };
 		19FE9F8820F640550088D826 /* WVWAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE9F8720F640550088D826 /* WVWAbility.swift */; };
 		19FE9F8A20F640D40088D826 /* WVWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE9F8920F640D40088D826 /* WVWMatch.swift */; };
@@ -211,6 +212,7 @@
 		19C4644020F17B1A00571AD0 /* GuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTests.swift; sourceTree = "<group>"; };
 		19C4644220F19B3100571AD0 /* EGuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGuild.swift; sourceTree = "<group>"; };
 		19C4644420F19F2B00571AD0 /* GuildClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildClient.swift; sourceTree = "<group>"; };
+		19CDABA720F7CC4B0035A22A /* EMapInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMapInfo.swift; sourceTree = "<group>"; };
 		19FE9F8420F63EB20088D826 /* PVPSeasonLeaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPSeasonLeaderboard.swift; sourceTree = "<group>"; };
 		19FE9F8720F640550088D826 /* WVWAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWAbility.swift; sourceTree = "<group>"; };
 		19FE9F8920F640D40088D826 /* WVWMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatch.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				191D26E220EF287400CCDA27 /* EGameMechanics.swift */,
 				19C4644220F19B3100571AD0 /* EGuild.swift */,
 				1939EF0020F7929A00DB0F36 /* EItems.swift */,
+				19CDABA720F7CC4B0035A22A /* EMapInfo.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				1928F24820E7FF8500D6B43E /* AccountMastery.swift in Sources */,
 				19FE9F9020F646F50088D826 /* WVWUpgrade.swift in Sources */,
 				1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */,
+				19CDABA820F7CC4B0035A22A /* EMapInfo.swift in Sources */,
 				1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */,
 				1928F26320E7FF9700D6B43E /* GuildStash.swift in Sources */,
 				19FE9F9220F64B9A0088D826 /* POI.swift in Sources */,
