@@ -9,19 +9,19 @@
 /// The guild endpoint client: api.guildwars2.com/v2/guild...
 class GuildClient : Client {
     
-    /// The guild id endpoint: api.guildwars2.com/v2/guild/:id
+    /// The guild id endpoint: information about core details of a given guild
     let id: GuildIDClient = GuildIDClient()
     
-    /// The guild emblem endpoint: api.guildwars2.comm/v2/guild/emblem/...
+    /// The guild emblem endpoint: image resources needed to render guild emblems
     let emblem: GuildEmblemClient = GuildEmblemClient()
     
-    /// The guild permissions endpoint: api.guildwars2.com/v2/guild/permissions
+    /// The guild permissions endpoint: information about guild rank permissions
     let permissions: GuildPermissionsClient = GuildPermissionsClient()
     
-    /// The guild upgrades endpoint: api.guildwars2.com/v2/guild/upgrades
+    /// The guild upgrades endpoint: information about guild upgrades and scribe decorations
     let upgrades: GuildUpgradesClient = GuildUpgradesClient()
     
-    /// The authenticated guild endpoints: api.guildwars2.com/v2/guild/:id/...
+    /// The authenticated guild endpoints: accesses guild-specific data and requires an API key from the guild leader to view
     let authenticated: GuildAuthenticatedClient = GuildAuthenticatedClient()
     
     /// Sets the API key for the guild authenticated endpoints
@@ -231,25 +231,25 @@ class GuildClient : Client {
     /// The authenticated guild endpoint client: Requires both a guild ID and a valid API key from that guild leader's account
     class GuildAuthenticatedClient : Client {
         
-        /// The guild log endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild log endpoint: information about a guild's event log
         let log: GuildLogClient = GuildLogClient()
         
-        /// The guild members endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild members endpoint: information about the members of a guild
         let members: GuildMembersClient = GuildMembersClient()
         
-        /// The guild ranks endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild ranks endpoint: information about the permission ranks of a guild
         let ranks: GuildRanksClient = GuildRanksClient()
         
-        /// The guild stash endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild stash endpoint: information about the contents of a guild's stash
         let stash: GuildStashClient = GuildStashClient()
         
-        /// The guild treasury endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild treasury endpoint: information about a guild's treasury contents
         let treasury: GuildTreasuryClient = GuildTreasuryClient()
         
-        /// The guild teams endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild teams endpoint: information about a guild's teams
         let teams: GuildTeamsClient = GuildTeamsClient()
         
-        /// The guild upgrades endpoint: Requires both a guild ID and a valid API key from that guild leader's account
+        /// The guild upgrades endpoint: information about a guild's upgrades
         let upgrades: GuildAuthUpgradesClient = GuildAuthUpgradesClient()
         
         /// Sets the API key to all authenticated guild endpoints

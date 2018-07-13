@@ -10,16 +10,16 @@
 /// The achievements endpoint client: api.guildwars2.com/v2/achievements
 class AchievementsClient: Client {
     
-    /// The daily achievements endpoint: api.guildwars2.com/v2/achievements/daily
+    /// The daily achievements endpoint: information about daily achievements
     let daily: DailyAchievementClient = DailyAchievementClient()
     
-    /// The daily tomorrow achievements endpoint: api.guildwars2.com/v2/achievements/daily/tomorrow
+    /// The daily tomorrow achievements endpoint: information about tomorrow's daily achievements
     let dailyTomorrow: DailyTomorrowAchievementClient = DailyTomorrowAchievementClient()
     
-    /// The achievement categories endpoint: api.guildwars2.com/v2/achievements/categories
+    /// The achievement categories endpoint: information about achievement categories
     let categories: AchievementCategoryClient = AchievementCategoryClient()
     
-    /// The achievement groups endpoint: api.guildwars2.com/v2/achievements/groups
+    /// The achievement groups endpoint: information about achievement groups
     let groups: AchievementGroupClient = AchievementGroupClient()
     
     /// Returns a list of all achievement ids

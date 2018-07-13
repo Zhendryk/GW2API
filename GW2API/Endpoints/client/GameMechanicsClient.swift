@@ -9,31 +9,31 @@
 /// The game mechanics endpoint client: api.guildwars2.com/v2/...
 class GameMechanicsClient : Client {
     
-    /// The game mechanics masteries endpoint: api.guildwars2.com/v2/masteries
+    /// The game mechanics masteries endpoint: information about masteries
     let masteries: GameMechanicsMasteriesClient = GameMechanicsMasteriesClient()
     
-    /// The game mechanics outfits endpoint: api.guildwars2.com/v2/outfits
+    /// The game mechanics outfits endpoint: information about outfits
     let outfits: GameMechanicsOutfitsClient = GameMechanicsOutfitsClient()
     
-    /// The game mechanics pets endpoint: api.guildwars2.com/v2/pets
+    /// The game mechanics pets endpoint: information about pets
     let pets: GameMechanicsPetsClient = GameMechanicsPetsClient()
     
-    /// The game mechanics professions endpoint: api.guildwars2.com/v2/professions
+    /// The game mechanics professions endpoint: information about professions
     let professions: GameMechanicsProfessionsClient = GameMechanicsProfessionsClient()
     
-    /// The game mechanics races endpoint: api.guildwars2.com/v2/races
+    /// The game mechanics races endpoint: information about races and particular racial skills
     let races: GameMechanicsRacesClient = GameMechanicsRacesClient()
     
-    /// The game mechanics specializations endpoint: api.guildwars2.com/v2/specializations
+    /// The game mechanics specializations endpoint: information about specializations
     let specializations: GameMechanicsSpecializationsClient = GameMechanicsSpecializationsClient()
     
-    /// The game mechanics skills endpoint: api.guildwars2.com/v2/skills
+    /// The game mechanics skills endpoint: information about skills
     let skills: GameMechanicsSkillsClient = GameMechanicsSkillsClient()
     
-    /// The game mechanics traits endpoint: api.guildwars2.com/v2/traits
+    /// The game mechanics traits endpoint: information about traits
     let traits: GameMechanicsTraitsClient = GameMechanicsTraitsClient()
     
-    /// The game mechanics legends endpoint: api.guildwars2.com/v2/legends
+    /// The game mechanics legends endpoint: information about revenant legends
     let legends: GameMechanicsLegendsClient = GameMechanicsLegendsClient()
     
     /// The game mechanics masteries endpoint client: api.guildwars2.com/v2/masteries

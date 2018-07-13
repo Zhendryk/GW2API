@@ -9,10 +9,10 @@
 /// The map information endpoint client: api.guildwars2.com/v2/maps
 class MapInfoClient : Client {
     
-    /// The continents endpoint: api.guildwars2.com/v2/continents
+    /// The continents endpoint: information about each continent and what each contains
     let continents: ContinentsClient = ContinentsClient()
     
-    /// The maps endpoint: api.guildwars2.com/v2/maps
+    /// The maps endpoint: information about maps in the game
     let maps: MapsClient = MapsClient()
     
     /// Sets the language of every sub endpoint

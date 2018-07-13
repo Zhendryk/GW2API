@@ -10,22 +10,22 @@
 /// The item endpoint client: api.guildwars2.com/v2/...
 class ItemsClient : Client {
     
-    /// The finishers endpoint: api.guildwars2.com/v2/finishers
+    /// The finishers endpoint: information about finishers
     let finishers: FinishersClient = FinishersClient()
     
-    /// The itemstats endpoint: api.guildwars2.com/v2/itemstats
+    /// The itemstats endpoint: information about item stats
     let itemstats: ItemStatsClient = ItemStatsClient()
     
-    /// The materials endpoint: api.guildwars2.com/v2/materials
+    /// The materials endpoint: information about materials
     let materials: MaterialsClient = MaterialsClient()
     
-    /// The pvp amulets endpoint: api.guildwars2.com/v2/pvp/amulets
+    /// The pvp amulets endpoint: information about pvp amulets
     let pvpamulets: PVPAmuletsClient = PVPAmuletsClient()
     
-    /// The recipes endpoint: api.guildwars2.com/v2/recipes
+    /// The recipes endpoint: information about recipes, contains a search interface
     let recipes: RecipesClient = RecipesClient()
     
-    /// The skins endpoint: api.guildwars2.com/v2/skins
+    /// The skins endpoint: information about skins
     let skins: SkinsClient = SkinsClient()
     
     /// Sets the language setting of all endpoints

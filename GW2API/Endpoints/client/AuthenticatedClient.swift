@@ -23,64 +23,64 @@ class AuthenticatedClient : Client {
     /// The account endpoint client: api.guildwars2.com/v2/account (Needs API key)
     class AccountClient : Client {
         
-        /// The account achievements endpoint: api.guildwars2.com/v2/account/achievements (Needs API key)
+        /// The account achievements endpoint: information about an account's achievements
         let achievements: AccountAchievementsClient = AccountAchievementsClient()
         
-        /// The account bank endpoint: api.guildwars2.com/v2/account/bank (Needs API key)
+        /// The account bank endpoint: information about the contents of an account's bank
         let bank: AccountBankClient = AccountBankClient()
         
-        /// The account dungeons endpoint: api.guildwars2.com/v2/account/dungeons (Needs API key)
+        /// The account dungeons endpoint: information about the current daily cleared dungeons of an account
         let dungeons: AccountDungeonsClient = AccountDungeonsClient()
         
-        /// The account dyes endpoint: api.guildwars2.com/v2/account/dyes (Needs API key)
+        /// The account dyes endpoint: information about the dyes unlocked by an account
         let dyes: AccountDyesClient = AccountDyesClient()
         
-        /// The account finishers endpoint: api.guildwars2.com/v2/account/finishers (Needs API key)
+        /// The account finishers endpoint: information about the finishers unlocked by an account
         let finishers: AccountFinishersCient = AccountFinishersCient()
         
-        /// The account home endpoint: api.guildwars2.com/v2/account/home (Needs API key)
+        /// The account home endpoint: information about the home instance of an account
         let home: AccountHomeClient = AccountHomeClient()
         
-        /// The account inventory endpoint: api.guildwars2.com/v2/account/inventory (Needs API key)
+        /// The account inventory endpoint: information about the shared inventory slots of an account
         let inventory: AccountInventoryClient = AccountInventoryClient()
         
-        /// The account masteries endpoint: api.guildwars2.com/v2/account/masteries (Needs API key)
+        /// The account masteries endpoint: information about the masteries unlocked by an account
         let masteries: AccountMasteriesClient = AccountMasteriesClient()
         
-        /// The account materials endpoint: api.guildwars2.com/v2/account/materials (Needs API key)
+        /// The account materials endpoint: information about the material storage of an account
         let materials: AccountMaterialsClient = AccountMaterialsClient()
         
-        /// The account minis endpoint: api.guildwars2.com/v2/account/minis (Needs API key)
+        /// The account minis endpoint: information about the minipets unlocked by an account
         let minis: AccountMinisClient = AccountMinisClient()
         
-        /// The account outfits endpoint: api.guildwars2.com/v2/account/outfits (Needs API key)
+        /// The account outfits endpoint: information about the outfits unlocked by an account
         let outfits: AccountOutfitsClient = AccountOutfitsClient()
         
-        /// The account raids endpoint: api.guildwars2.com/v2/account/raids (Needs API key)
+        /// The account raids endpoint: information about the completed raid events between weekly resets of an account
         let raids: AccountRaidsClient = AccountRaidsClient()
         
-        /// The account recipes endpoint: api.guildwars2.com/v2/account/recipes (Needs API key)
+        /// The account recipes endpoint: information about the recipes unlocked by an account
         let recipes: AccountRecipesClient = AccountRecipesClient()
         
-        /// The account skins endpoint: api.guildwars2.com/v2/account/skins (Needs API key)
+        /// The account skins endpoint: information about the skins unlocked by an account
         let skins: AccountSkinsClient = AccountSkinsClient()
         
-        /// The account titles endpoint: api.guildwars2.com/v2/account/titles (Needs API key)
+        /// The account titles endpoint: information about the titles unlocked by an account
         let titles: AccountTitlesClient = AccountTitlesClient()
         
-        /// The account wallet endpoint: api.guildwars2.com/v2/account/wallet (Needs API key)
+        /// The account wallet endpoint: information about the wealth / contents of an account's wallet
         let wallet: AccountWalletClient = AccountWalletClient()
         
-        /// The account characters endpoint: api.guildwars2.com/v2/characters (Needs API key)
+        /// The account characters endpoint: information about an account's characters
         let characters: AccountCharacterClient = AccountCharacterClient()
         
-        /// The account transactions endpoint: api.guildwars2.com/v2/commerce/transactions (Needs API key)
+        /// The account transactions endpoint: information about an account's past and current trading post transactions
         let transactions: AccountTransactionsClient = AccountTransactionsClient()
         
-        /// The account pvp endpoint: api.guildwars2.com/v2/pvp (Needs API key)
+        /// The account pvp endpoint: information about an account's PVP performance / activity
         let pvp: AccountPVPClient = AccountPVPClient()
         
-        /// The account tokeninfo endpoint: api.guildwars2.com/v2/tokeninfo (Needs API key)
+        /// The account tokeninfo endpoint: information about the supplied API key
         let tokeninfo: AccountTokenInfoClient = AccountTokenInfoClient()
         
         

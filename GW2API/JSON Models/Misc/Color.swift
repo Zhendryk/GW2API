@@ -1,5 +1,5 @@
 //
-//  Colors.swift
+//  Color.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 3/17/18.
@@ -8,18 +8,18 @@
 
 //colors
 //lang, id, ids
-struct Colors: Decodable {
+struct Color: Decodable {
     let id: Int
     let name: String
     let base_rgb: [Int]
-    let cloth: cloth
-    let leather: leather
-    let metal: metal
+    let cloth: Cloth
+    let leather: Leather
+    let metal: Metal
     let item: Int
     let categories: [String]
 }
 
-struct cloth: Decodable {
+struct Cloth: Decodable {
     let brightness: Int
     let contrast: Float
     let hue: Int
@@ -28,7 +28,7 @@ struct cloth: Decodable {
     let rgb: [Int]
 }
 
-struct leather: Decodable {
+struct Leather: Decodable {
     let brightness: Int
     let contrast: Float
     let hue: Int
@@ -37,7 +37,7 @@ struct leather: Decodable {
     let rgb: [Int]
 }
 
-struct metal: Decodable {
+struct Metal: Decodable {
     let brightness: Int
     let contrast: Float
     let hue: Int
