@@ -11,6 +11,7 @@ enum EMapInfo {
     case floors
     case regions
     case maps
+    case detailedMaps
     case sectors
     case pois
     case tasks
@@ -20,21 +21,46 @@ extension EMapInfo : Endpoint {
     var path: String {
         switch self {
         case .continents: return "continents"
+        case .maps: return "maps"
         case .floors: return "continents/<continent_id>/floors"
         case .regions: return "continents/<continent_id>/floors/<floor_id>/regions"
-        case .maps: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps"
+        case .detailedMaps: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps"
         case .sectors: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/sectors"
         case .pois: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/pois"
         case .tasks: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks"
         }
     }
     
-    /*
-    func idSubresource(subresource: EMapInfo, continentID: Int = -1, floorID: Int = -1, regionID: Int = -1, mapID: Int = -1, sectorID: Int = -1, poiID: Int = -1, taskID: Int = -1) -> URLRequest {
+    func subresourceIDList(_ subresource: EMapInfo, _ continentID: Int = -1, _ floorID: Int = -1, _ regionID: Int = -1, _ mapID: Int = -1, _ sectorID: Int = -1, _ poiID: Int = -1, _ taskID: Int = -1) -> URLRequest {
+        switch subresource {
+        case .continents:
+            return EMapInfo.continents.request
+        case .maps:
+            return EMapInfo.maps.request
+        case .floors:
+            return insertBaseIDs(into: EMapInfo.floors.request, continentID)
+        case .regions:
+            return insertBaseIDs(into: EMapInfo.regions.request, continentID, floorID)
+        case .detailedMaps:
+            return insertBaseIDs(into: EMapInfo.detailedMaps.request, continentID, floorID, regionID)
+        case .sectors:
+            return insertBaseIDs(into: EMapInfo.sectors.request, continentID, floorID, regionID, mapID)
+        case .pois:
+            return insertBaseIDs(into: EMapInfo.pois.request, continentID, floorID, regionID, mapID)
+        case .tasks:
+            return insertBaseIDs(into: EMapInfo.tasks.request, continentID, floorID, regionID, mapID)
+        }
+    }
+    
+    func individualSubresource(_ subresource: EMapInfo, _ continentID: Int = -1, _ floorID: Int = -1, _ regionID: Int = -1, _ mapID: Int = -1, _ sectorID: Int = -1, _ poiID: Int = -1, _ taskID: Int = -1) -> URLRequest {
         switch subresource {
         case .continents:
             var request = EMapInfo.continents.request
             request.url!.appendPathComponent(String(continentID))
+            return request
+        case .maps:
+            var request = EMapInfo.maps.request
+            request.url!.appendPathComponent(String(mapID))
             return request
         case .floors:
             var request = insertBaseIDs(into: EMapInfo.floors.request, continentID)
@@ -44,8 +70,8 @@ extension EMapInfo : Endpoint {
             var request = insertBaseIDs(into: EMapInfo.regions.request, continentID, floorID)
             request.url!.appendPathComponent(String(regionID))
             return request
-        case .maps:
-            var request = insertBaseIDs(into: EMapInfo.maps.request, continentID, floorID, regionID)
+        case .detailedMaps:
+            var request = insertBaseIDs(into: EMapInfo.detailedMaps.request, continentID, floorID, regionID)
             request.url!.appendPathComponent(String(mapID))
             return request
         case .sectors:
@@ -77,18 +103,6 @@ extension EMapInfo : Endpoint {
         if mapID != -1 {
             str = str.replacingOccurrences(of: "<map_id>", with: String(mapID))
         }
-        
+        return URLRequest(url: URL(string: str)!)
     }
-    
-    
-    private func isValidURLString(urlString: String) -> Bool {
-        guard let url = URL(string: urlString) else { return false }
-        return UIApplication.shared.canOpenURL(url)
-    }
-    
-    private func encodeToURL(urlString: String) -> URL {
-        let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        //return URL(string: encodedString)!
-    }
- */
 }

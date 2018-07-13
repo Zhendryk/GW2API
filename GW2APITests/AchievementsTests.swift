@@ -26,7 +26,6 @@ class AchievementsTests: XCTestCase {
         GW2Client.instance.achievements.get(){ result in
             switch result {
             case .success(_):
-                print("\nACHIEVEMENTS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nACHIEVEMENTS: ")
@@ -42,7 +41,6 @@ class AchievementsTests: XCTestCase {
         GW2Client.instance.achievements.daily.get(){ result in
             switch result {
             case .success(_):
-                print("\nDAILY SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nDAILY: ")
@@ -58,7 +56,6 @@ class AchievementsTests: XCTestCase {
         GW2Client.instance.achievements.dailyTomorrow.get(){ result in
             switch result {
             case .success(_):
-                print("\nDAILY TOMORROW SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nDAILY TOMORROW: ")
@@ -74,7 +71,6 @@ class AchievementsTests: XCTestCase {
         GW2Client.instance.achievements.categories.get(){ result in
             switch result {
             case .success(_):
-                print("\nCATEGORIES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCATEGORIES: ")
@@ -87,10 +83,9 @@ class AchievementsTests: XCTestCase {
     
     func testAchievementCategoriesID() {
         let expectation = self.expectation(description: "Querying GW2API/achievements...")
-        GW2Client.instance.achievements.categories.get(id: "59"){ result in
+        GW2Client.instance.achievements.categories.get(id: 59){ result in
             switch result {
             case .success(_):
-                print("\nCATEGORIES ID SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCATEGORIES ID: ")
@@ -103,10 +98,9 @@ class AchievementsTests: XCTestCase {
     
     func testAchievementsCategoriesIDS() {
         let expectation = self.expectation(description: "Querying GW2API/achievements...")
-        GW2Client.instance.achievements.categories.get(ids: "59, 61, 74"){ result in
+        GW2Client.instance.achievements.categories.get(ids: [59, 61, 74]){ result in
             switch result {
             case .success(_):
-                print("\nCATEGORIES IDS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCATEGORIES IDS: ")
@@ -122,7 +116,6 @@ class AchievementsTests: XCTestCase {
         GW2Client.instance.achievements.groups.get(){ result in
             switch result {
             case .success(_):
-                print("\nGROUPS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nGROUPS: ")
@@ -138,7 +131,6 @@ class AchievementsTests: XCTestCase {
         GW2Client.instance.achievements.groups.get(id: "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2"){ result in
             switch result {
             case .success(_):
-                print("\nGROUPS ID SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nGROUPS ID: ")
@@ -151,10 +143,9 @@ class AchievementsTests: XCTestCase {
     
     func testAchievementGroupsIDS() {
         let expectation = self.expectation(description: "Querying GW2API/achievements...")
-        GW2Client.instance.achievements.groups.get(ids: "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2, 56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47, 18DB115A-8637-4290-A636-821362A3C4A8"){ result in
+        GW2Client.instance.achievements.groups.get(ids: ["A4ED8379-5B6B-4ECC-B6E1-70C350C902D2", "56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47", "18DB115A-8637-4290-A636-821362A3C4A8"]){ result in
             switch result {
             case .success(_):
-                print("\nGROUPS IDS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nGROUPS IDS: ")

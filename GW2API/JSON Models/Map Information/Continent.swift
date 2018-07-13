@@ -1,5 +1,5 @@
 //
-//  Continents.swift
+//  Continent.swift
 //  GW2API
 //
 //  Created by Jonathan Bailey on 7/10/18.
@@ -16,7 +16,7 @@
     <continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/pois
     <continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks
  */
-struct Continents : Decodable {
+struct Continent : Decodable {
     let id: Int
     let name: String
     let continent_dims: [Int]

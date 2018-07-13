@@ -632,8 +632,8 @@ class AuthenticatedClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the games you are searching for "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            func get(ids: String, completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.pvpGames.request, needsAuthorization: true, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [AccountPVPGame]? in
+            func get(ids: [String], completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
+                fetchAsync(with: EAuthentication.pvpGames.request, needsAuthorization: true, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [AccountPVPGame]? in
                     guard let res = json as? [AccountPVPGame] else { return nil }
                     return res
                 }, completion: completion)

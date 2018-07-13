@@ -55,8 +55,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - id: The ID of the mastery you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMMasteries?, APIError>)
-        func get(id: String, completion: @escaping (Result<GMMasteries?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.masteries.idRequest(id: id), decode: { json -> GMMasteries? in
+        func get(id: Int, completion: @escaping (Result<GMMasteries?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.masteries.idRequest(id: String(id)), decode: { json -> GMMasteries? in
                 guard let res = json as? GMMasteries else { return nil }
                 return res
             }, completion: completion)
@@ -67,8 +67,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the masteries you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMMasteries]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMMasteries]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.masteries.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMMasteries]? in
+        func get(ids: [Int], completion: @escaping (Result<[GMMasteries]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.masteries.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GMMasteries]? in
                 guard let res = json as? [GMMasteries] else { return nil }
                 return res
             }, completion: completion)
@@ -93,8 +93,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - id: The ID of the outfit you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMOutfit?, APIError>)
-        func get(id: String, completion: @escaping (Result<GMOutfit?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.outfits.idRequest(id: id), decode: { json -> GMOutfit? in
+        func get(id: Int, completion: @escaping (Result<GMOutfit?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.outfits.idRequest(id: String(id)), decode: { json -> GMOutfit? in
                 guard let res = json as? GMOutfit else { return nil }
                 return res
             }, completion: completion)
@@ -105,8 +105,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the outfits you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMOutfit]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMOutfit]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.outfits.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMOutfit]? in
+        func get(ids: [Int], completion: @escaping (Result<[GMOutfit]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.outfits.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GMOutfit]? in
                 guard let res = json as? [GMOutfit] else { return nil }
                 return res
             }, completion: completion)
@@ -131,8 +131,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - id: The ID of the pet you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMPet?, APIError>)
-        func get(id: String, completion: @escaping (Result<GMPet?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.pets.idRequest(id: id), decode: { json -> GMPet? in
+        func get(id: Int, completion: @escaping (Result<GMPet?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.pets.idRequest(id: String(id)), decode: { json -> GMPet? in
                 guard let res = json as? GMPet else { return nil }
                 return res
             }, completion: completion)
@@ -143,8 +143,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the pets you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMPet]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMPet]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.pets.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMPet]? in
+        func get(ids: [Int], completion: @escaping (Result<[GMPet]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.pets.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GMPet]? in
                 guard let res = json as? [GMPet] else { return nil }
                 return res
             }, completion: completion)
@@ -182,8 +182,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The names of the professions you are looking for (capitalized) "Profession1, Profession2... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMProfession]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMProfession]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.professions.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMProfession]? in
+        func get(ids: [String], completion: @escaping (Result<[GMProfession]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.professions.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [GMProfession]? in
                 guard let res = json as? [GMProfession] else { return nil }
                 return res
             }, completion: completion)
@@ -220,8 +220,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The names of the races you are looking for (capitalized) "Race1, Race2... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMRace]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMRace]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.races.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMRace]? in
+        func get(ids: [String], completion: @escaping (Result<[GMRace]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.races.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [GMRace]? in
                 guard let res = json as? [GMRace] else { return nil }
                 return res
             }, completion: completion)
@@ -246,8 +246,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - id: The ID of the specialization you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMSpecialization?, APIError>)
-        func get(id: String, completion: @escaping (Result<GMSpecialization?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.specializations.idRequest(id: id), decode: { json -> GMSpecialization? in
+        func get(id: Int, completion: @escaping (Result<GMSpecialization?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.specializations.idRequest(id: String(id)), decode: { json -> GMSpecialization? in
                 guard let res = json as? GMSpecialization else { return nil }
                 return res
             }, completion: completion)
@@ -258,8 +258,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the specializations you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMSpecialization]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMSpecialization]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.specializations.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMSpecialization]? in
+        func get(ids: [Int], completion: @escaping (Result<[GMSpecialization]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.specializations.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GMSpecialization]? in
                 guard let res = json as? [GMSpecialization] else { return nil }
                 return res
             }, completion: completion)
@@ -284,8 +284,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - id: The ID of the skill you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMSkill?, APIError>)
-        func get(id: String, completion: @escaping (Result<GMSkill?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.skills.idRequest(id: id), decode: { json -> GMSkill? in
+        func get(id: Int, completion: @escaping (Result<GMSkill?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.skills.idRequest(id: String(id)), decode: { json -> GMSkill? in
                 guard let res = json as? GMSkill else { return nil }
                 return res
             }, completion: completion)
@@ -296,8 +296,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the skills you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMSkill]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMSkill]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.skills.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMSkill]? in
+        func get(ids: [Int], completion: @escaping (Result<[GMSkill]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.skills.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GMSkill]? in
                 guard let res = json as? [GMSkill] else { return nil }
                 return res
             }, completion: completion)
@@ -322,8 +322,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - id: The ID of the trait you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMTrait?, APIError>)
-        func get(id: String, completion: @escaping (Result<GMTrait?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.traits.idRequest(id: id), decode: { json -> GMTrait? in
+        func get(id: Int, completion: @escaping (Result<GMTrait?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.traits.idRequest(id: String(id)), decode: { json -> GMTrait? in
                 guard let res = json as? GMTrait else { return nil }
                 return res
             }, completion: completion)
@@ -334,8 +334,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the traits you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMTrait]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMTrait]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.traits.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMTrait]? in
+        func get(ids: [Int], completion: @escaping (Result<[GMTrait]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.traits.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GMTrait]? in
                 guard let res = json as? [GMTrait] else { return nil }
                 return res
             }, completion: completion)
@@ -372,8 +372,8 @@ class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - ids: The IDs of the legends you are looking for "Legend1, Legend2, Legend3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMLegend]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GMLegend]?, APIError>) -> Void) {
-            fetchAsync(with: EGameMechanics.legends.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GMLegend]? in
+        func get(ids: [String], completion: @escaping (Result<[GMLegend]?, APIError>) -> Void) {
+            fetchAsync(with: EGameMechanics.legends.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [GMLegend]? in
                 guard let res = json as? [GMLegend] else { return nil }
                 return res
             }, completion: completion)

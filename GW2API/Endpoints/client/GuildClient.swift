@@ -92,8 +92,8 @@ class GuildClient : Client {
             /// - Parameters:
             ///   - id: The ID of the foreground
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
-            func get(id: String, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
-                fetchAsync(with: EGuild.foregrounds.idRequest(id: id), decode: { json -> GuildEmblem? in
+            func get(id: Int, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.foregrounds.idRequest(id: String(id)), decode: { json -> GuildEmblem? in
                     guard let res = json as? GuildEmblem else { return nil }
                     return res
                 }, completion: completion)
@@ -104,8 +104,8 @@ class GuildClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
-            func get(ids: String, completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
-                fetchAsync(with: EGuild.foregrounds.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GuildEmblem]? in
+            func get(ids: [Int], completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.foregrounds.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GuildEmblem]? in
                     guard let res = json as? [GuildEmblem] else { return nil }
                     return res
                 }, completion: completion)
@@ -130,8 +130,8 @@ class GuildClient : Client {
             /// - Parameters:
             ///   - id: The ID of the background
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
-            func get(id: String, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
-                fetchAsync(with: EGuild.backgrounds.idRequest(id: id), decode: { json -> GuildEmblem? in
+            func get(id: Int, completion: @escaping (Result<GuildEmblem?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.backgrounds.idRequest(id: String(id)), decode: { json -> GuildEmblem? in
                     guard let res = json as? GuildEmblem else { return nil }
                     return res
                 }, completion: completion)
@@ -142,8 +142,8 @@ class GuildClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
-            func get(ids: String, completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
-                fetchAsync(with: EGuild.backgrounds.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GuildEmblem]? in
+            func get(ids: [Int], completion: @escaping (Result<[GuildEmblem]?, APIError>) -> Void) {
+                fetchAsync(with: EGuild.backgrounds.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GuildEmblem]? in
                     guard let res = json as? [GuildEmblem] else { return nil }
                     return res
                 }, completion: completion)
@@ -170,7 +170,7 @@ class GuildClient : Client {
         ///   - id: The id of the permission, URLQueryItem(name: "id", value: "permissionID")
         ///   - completion: Callback function to handle the data returned from the API (Result<Permissions?, APIError>)
         func get(id: String, completion: @escaping (Result<Permissions?, APIError>) -> Void) {
-            fetchAsync(with: EGuild.permissions.idRequest(id: id), decode: { json -> Permissions? in
+            fetchAsync(with: EGuild.permissions.idRequest(id: String(id)), decode: { json -> Permissions? in
                 guard let res = json as? Permissions else { return nil }
                 return res
             }, completion: completion)
@@ -181,8 +181,8 @@ class GuildClient : Client {
         /// - Parameters:
         ///   - ids: The ids of the guild permissions "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[Permissions]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[Permissions]?, APIError>) -> Void) {
-            fetchAsync(with: EGuild.permissions.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [Permissions]? in
+        func get(ids: [String], completion: @escaping (Result<[Permissions]?, APIError>) -> Void) {
+            fetchAsync(with: EGuild.permissions.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [Permissions]? in
                 guard let res = json as? [Permissions] else { return nil }
                 return res
             }, completion: completion)
@@ -207,8 +207,8 @@ class GuildClient : Client {
         /// - Parameters:
         ///   - id: The id of the guild upgrade
         ///   - completion: Callback function to handle the data returned from the API (Result<GuildUpgrade?, APIError>)
-        func get(id: String, completion: @escaping (Result<GuildUpgrade?, APIError>) -> Void) {
-            fetchAsync(with: EGuild.upgrades.idRequest(id: id), decode: { json -> GuildUpgrade? in
+        func get(id: Int, completion: @escaping (Result<GuildUpgrade?, APIError>) -> Void) {
+            fetchAsync(with: EGuild.upgrades.idRequest(id: String(id)), decode: { json -> GuildUpgrade? in
                 guard let res = json as? GuildUpgrade else { return nil }
                 return res
             }, completion: completion)
@@ -219,8 +219,8 @@ class GuildClient : Client {
         /// - Parameters:
         ///   - ids: The ids of the guild upgrades, URLQueryItem(name: "ids", value: "id1, id2, id3... etc)"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GuildUpgrade]?, APIError>)
-        func get(ids: String, completion: @escaping (Result<[GuildUpgrade]?, APIError>) -> Void) {
-            fetchAsync(with: EGuild.upgrades.request, parameters: [URLQueryItem(name: "ids", value: ids)], decode: { json -> [GuildUpgrade]? in
+        func get(ids: [Int], completion: @escaping (Result<[GuildUpgrade]?, APIError>) -> Void) {
+            fetchAsync(with: EGuild.upgrades.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [GuildUpgrade]? in
                 guard let res = json as? [GuildUpgrade] else { return nil }
                 return res
             }, completion: completion)

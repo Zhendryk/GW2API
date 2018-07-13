@@ -170,6 +170,10 @@ class Client : APIClient {
         return URLRequest(url: encodedURL)
     }
     
+    private func intArrToStrList(arr: [Int]) -> String {
+        return arr.map { String($0) }.joined(separator: ", ")
+    }
+    
     /// Adds the given query parameters to the given URLRequest
     ///
     /// - Parameters:

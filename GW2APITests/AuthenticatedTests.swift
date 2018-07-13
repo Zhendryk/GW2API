@@ -27,7 +27,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.get() { result in
             switch result {
             case .success(_):
-                print("\nACCOUNT SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nACCOUNT: ")
@@ -43,7 +42,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.achievements.get() { result in
             switch result {
             case .success(_):
-                print("\nACCOUNT ACHIEVEMENTS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nACCOUNT ACHIEVEMENTS: ")
@@ -60,7 +58,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.bank.get() { result in
             switch result {
             case .success(_):
-                print("\nBANK SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nBANK: ")
@@ -76,7 +73,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.dungeons.get() { result in
             switch result {
             case .success(_):
-                print("\nDUNGEONS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nDUNGEONS: ")
@@ -92,7 +88,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.dyes.get() { result in
             switch result {
             case .success(_):
-                print("\nDYES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nDYES: ")
@@ -108,7 +103,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.finishers.get() { result in
             switch result {
             case .success(_):
-                print("\nFINISHERS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nFINISHERS: ")
@@ -125,7 +119,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.home.cats.get() { result in
             switch result {
             case .success(_):
-                print("\nCATS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCATS: ")
@@ -142,7 +135,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.home.nodes.get() { result in
             switch result {
             case .success(_):
-                print("\nNODES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nNODES: ")
@@ -159,7 +151,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.inventory.get() { result in
             switch result {
             case .success(_):
-                print("\nINVENTORY SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nINVENTORY: ")
@@ -176,7 +167,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.masteries.get() { result in
             switch result {
             case .success(_):
-                print("\nMASTERIES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nMASTERIES: ")
@@ -192,7 +182,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.masteries.points.get() { result in
             switch result {
             case .success(_):
-                print("\nMASTERY POINTS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nMASTERY POINTS: ")
@@ -209,7 +198,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.materials.get() { result in
             switch result {
             case .success(_):
-                print("\nMATERIALS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nMATERIALS: ")
@@ -226,7 +214,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.minis.get() { result in
             switch result {
             case .success(_):
-                print("\nMINIS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nMINIS: ")
@@ -243,7 +230,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.outfits.get() { result in
             switch result {
             case .success(_):
-                print("\nOUTFITS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nOUTFITS: ")
@@ -261,7 +247,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.raids.get() { result in
             switch result {
             case .success(_):
-                print("\nRAIDS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nRAIDS: ")
@@ -277,7 +262,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.recipes.get() { result in
             switch result {
             case .success(_):
-                print("\nRECIPES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nRECIPES: ")
@@ -294,7 +278,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.skins.get() { result in
             switch result {
             case .success(_):
-                print("\nSKINS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nSKINS: ")
@@ -311,7 +294,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.titles.get() { result in
             switch result {
             case .success(_):
-                print("\nTITLES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nTITLES: ")
@@ -329,7 +311,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.wallet.get() { result in
             switch result {
             case .success(_):
-                print("\nWALLET SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nWALLET: ")
@@ -346,7 +327,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.characters.get() { result in
             switch result {
             case .success(_):
-                print("\nCHARACTERS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCHARACTERS: ")
@@ -362,7 +342,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.characters.get(characterName: "Forster Varre") { result in
             switch result {
             case .success(_):
-                print("\nCHARACTERS SPECIFIC SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCHARACTERS SPECIFIC: ")
@@ -379,7 +358,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.transactions.current.buys.get() { result in
             switch result {
             case .success(_):
-                print("\nCURRENT BUYS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCURRENT BUYS: ")
@@ -396,7 +374,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.transactions.current.sells.get() { result in
             switch result {
             case .success(_):
-                print("\nCURRENT SELLS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nCURRENT SELLS: ")
@@ -413,7 +390,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.transactions.history.buys.get() { result in
             switch result {
             case .success(_):
-                print("\nHISTORY BUYS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nHISTORY BUYS: ")
@@ -431,7 +407,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.transactions.history.sells.get() { result in
             switch result {
             case .success(_):
-                print("\nHISTORY SELLS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nHISTORY SELLS: ")
@@ -447,7 +422,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.pvp.games.get() { result in
             switch result {
             case .success(_):
-                print("\nPVP GAMES SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nPVP GAMES: ")
@@ -463,7 +437,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.pvp.games.get(id: "067FDA8C-11B9-4E73-B18C-601FEA26A501") { result in
             switch result {
             case .success(_):
-                print("\nPVP GAMES 2 SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nPVP 2 GAMES: ")
@@ -476,10 +449,9 @@ class AuthenticatedTests: XCTestCase {
     
     func testPVPGames3() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
-        GW2Client.instance.authenticated.account.pvp.games.get(ids: "0D7345FF-1E89-4206-9DB5-E9B6E1A526FE, 1DF4187C-AE0E-430D-A2BE-2FA6235DEC09, 4EC2983E-E244-4C00-8359-6B7981912DDA") { result in
+        GW2Client.instance.authenticated.account.pvp.games.get(ids: ["0D7345FF-1E89-4206-9DB5-E9B6E1A526FE", "1DF4187C-AE0E-430D-A2BE-2FA6235DEC09", "4EC2983E-E244-4C00-8359-6B7981912DDA"]) { result in
             switch result {
             case .success(_):
-                print("\nPVP GAMES 3 SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nPVP 3 GAMES: ")
@@ -495,7 +467,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.pvp.stats.get() { result in
             switch result {
             case .success(_):
-                print("\nPVP STATS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nPVP STATS: ")
@@ -511,7 +482,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.pvp.standings.get() { result in
             switch result {
             case .success(_):
-                print("\nPVP STANDINGS SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nPVP STANDINGS: ")
@@ -527,7 +497,6 @@ class AuthenticatedTests: XCTestCase {
         GW2Client.instance.authenticated.account.tokeninfo.get() { result in
             switch result {
             case .success(_):
-                print("\nAUTH TOKEN SUCCESS\n")
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\n\nAUTH TOKEN: ")
