@@ -47,16 +47,16 @@ struct WVWMatch : Decodable {
             let type: String
             let owner: String
         }
-        
-        struct WVWMapSkirmish : Decodable {
-            let id: Int
-            let scores: [String:Int]
-            let map_scores: [WVWSkirmishMapScore]
-            
-            struct WVWSkirmishMapScore : Decodable {
-                let type: String
-                let scores: [String:Int]
-            }
-        }
+    }
+}
+
+struct WVWMapSkirmish : Decodable {
+    let id: Int
+    let scores: [String:Int]
+    let map_scores: [WVWSkirmishMapScore]
+    
+    struct WVWSkirmishMapScore : Decodable {
+        let type: String
+        let scores: [String:Int]
     }
 }

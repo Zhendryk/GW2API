@@ -14,4 +14,14 @@ class APIUtil {
     static func strArrToList(_ arr: [String]) -> String {
         return arr.joined(separator: ", ")
     }
+    
+    static func isValidAPIKey(_ key: String) -> Bool {
+        if (key.contains(" ") || key.count != 72) { return false }
+        return true
+    }
+    
+    static func isValidLanguage(_ lang: String) -> Bool {
+        if(!["en", "es", "de", "fr", "ko", "zh"].contains(lang)) { return false }
+        return true
+    }
 }

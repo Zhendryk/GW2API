@@ -105,6 +105,13 @@
 		19C4644120F17B1A00571AD0 /* GuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4644020F17B1A00571AD0 /* GuildTests.swift */; };
 		19C4644320F19B3100571AD0 /* EGuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4644220F19B3100571AD0 /* EGuild.swift */; };
 		19C4644520F19F2B00571AD0 /* GuildClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C4644420F19F2B00571AD0 /* GuildClient.swift */; };
+		19C6610820F999ED00637320 /* ETradingPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6610720F999ED00637320 /* ETradingPost.swift */; };
+		19C6610A20F99B8700637320 /* TradingPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6610920F99B8700637320 /* TradingPostClient.swift */; };
+		19C6610C20FA4F8000637320 /* EWVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6610B20FA4F8000637320 /* EWVW.swift */; };
+		19C6610E20FA4FE900637320 /* WVWClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6610D20FA4FE900637320 /* WVWClient.swift */; };
+		19C6611020FA572A00637320 /* WVWMatchStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6610F20FA572A00637320 /* WVWMatchStats.swift */; };
+		19C6611220FA581A00637320 /* WVWMatchScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6611120FA581A00637320 /* WVWMatchScore.swift */; };
+		19C6611420FA587000637320 /* WVWMatchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6611320FA587000637320 /* WVWMatchOverview.swift */; };
 		19CDABA820F7CC4B0035A22A /* EMapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDABA720F7CC4B0035A22A /* EMapInfo.swift */; };
 		19D647CC20F80B0A00E5BD42 /* MapInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D647CB20F80B0A00E5BD42 /* MapInfoClient.swift */; };
 		19E5D0CD20F858C500C657C0 /* MiscClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5D0CC20F858C500C657C0 /* MiscClient.swift */; };
@@ -231,6 +238,13 @@
 		19C4644020F17B1A00571AD0 /* GuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTests.swift; sourceTree = "<group>"; };
 		19C4644220F19B3100571AD0 /* EGuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGuild.swift; sourceTree = "<group>"; };
 		19C4644420F19F2B00571AD0 /* GuildClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildClient.swift; sourceTree = "<group>"; };
+		19C6610720F999ED00637320 /* ETradingPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETradingPost.swift; sourceTree = "<group>"; };
+		19C6610920F99B8700637320 /* TradingPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPostClient.swift; sourceTree = "<group>"; };
+		19C6610B20FA4F8000637320 /* EWVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWVW.swift; sourceTree = "<group>"; };
+		19C6610D20FA4FE900637320 /* WVWClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWClient.swift; sourceTree = "<group>"; };
+		19C6610F20FA572A00637320 /* WVWMatchStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatchStats.swift; sourceTree = "<group>"; };
+		19C6611120FA581A00637320 /* WVWMatchScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatchScore.swift; sourceTree = "<group>"; };
+		19C6611320FA587000637320 /* WVWMatchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatchOverview.swift; sourceTree = "<group>"; };
 		19CDABA720F7CC4B0035A22A /* EMapInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMapInfo.swift; sourceTree = "<group>"; };
 		19D647CB20F80B0A00E5BD42 /* MapInfoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoClient.swift; sourceTree = "<group>"; };
 		19E5D0CC20F858C500C657C0 /* MiscClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscClient.swift; sourceTree = "<group>"; };
@@ -503,6 +517,8 @@
 				19E5D0CE20F858CE00C657C0 /* EMisc.swift */,
 				1917BA3720F922BD004DF31C /* EStory.swift */,
 				1917BA3B20F927EB004DF31C /* EPVP.swift */,
+				19C6610720F999ED00637320 /* ETradingPost.swift */,
+				19C6610B20FA4F8000637320 /* EWVW.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -519,6 +535,8 @@
 				19E5D0CC20F858C500C657C0 /* MiscClient.swift */,
 				1917BA3920F92331004DF31C /* StoryClient.swift */,
 				1917BA3D20F92854004DF31C /* PVPClient.swift */,
+				19C6610920F99B8700637320 /* TradingPostClient.swift */,
+				19C6610D20FA4FE900637320 /* WVWClient.swift */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -531,6 +549,9 @@
 				19FE9F8B20F644960088D826 /* WVWObjective.swift */,
 				19FE9F8D20F646AE0088D826 /* WVWRank.swift */,
 				19FE9F8F20F646F50088D826 /* WVWUpgrade.swift */,
+				19C6610F20FA572A00637320 /* WVWMatchStats.swift */,
+				19C6611120FA581A00637320 /* WVWMatchScore.swift */,
+				19C6611320FA587000637320 /* WVWMatchOverview.swift */,
 			);
 			path = "World vs. World";
 			sourceTree = "<group>";
@@ -650,6 +671,7 @@
 				196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */,
 				19775E0C20F5446000523825 /* Title.swift in Sources */,
 				1928F26420E7FF9700D6B43E /* GuildMember.swift in Sources */,
+				19C6610E20FA4FE900637320 /* WVWClient.swift in Sources */,
 				19775E1720F545DE00523825 /* StorySeason.swift in Sources */,
 				19420E9120F81D60000B7C00 /* Floor.swift in Sources */,
 				19775DEB20F539B200523825 /* Finisher.swift in Sources */,
@@ -685,18 +707,22 @@
 				19775E1C20F5465A00523825 /* PVPRank.swift in Sources */,
 				191D26E920EF2EEB00CCDA27 /* GMSkill.swift in Sources */,
 				1928F25820E7FF8E00D6B43E /* GMProfession.swift in Sources */,
+				19C6610820F999ED00637320 /* ETradingPost.swift in Sources */,
 				1928F24920E7FF8500D6B43E /* AccountMaterial.swift in Sources */,
 				1928F25720E7FF8E00D6B43E /* GMOutfit.swift in Sources */,
 				19775DF120F53E6900523825 /* Material.swift in Sources */,
+				19C6610A20F99B8700637320 /* TradingPostClient.swift in Sources */,
 				19FE9F8E20F646AE0088D826 /* WVWRank.swift in Sources */,
 				19775E1E20F546BD00523825 /* PVPSeason.swift in Sources */,
 				19FE9F9420F64BA30088D826 /* Task.swift in Sources */,
 				19406F9F20EA724C004EF0B4 /* EAchievements.swift in Sources */,
 				1928F25620E7FF8E00D6B43E /* GMMasteries.swift in Sources */,
 				1928F20820E7F67D00D6B43E /* Endpoint.swift in Sources */,
+				19C6611420FA587000637320 /* WVWMatchOverview.swift in Sources */,
 				19775E1520F5456D00523825 /* Story.swift in Sources */,
 				1928F24A20E7FF8500D6B43E /* AccountTransaction.swift in Sources */,
 				19775DFA20F5421300523825 /* Continent.swift in Sources */,
+				19C6611220FA581A00637320 /* WVWMatchScore.swift in Sources */,
 				19775E0E20F5449600523825 /* World.swift in Sources */,
 				1928F26720E7FF9700D6B43E /* GuildTreasury.swift in Sources */,
 				19775E1320F5452100523825 /* BackstoryQuestion.swift in Sources */,
@@ -743,9 +769,11 @@
 				1928F24720E7FF8500D6B43E /* AccountAchievement.swift in Sources */,
 				1928F26520E7FF9700D6B43E /* GuildRank.swift in Sources */,
 				1928F24220E7FF8500D6B43E /* AccountPVPStats.swift in Sources */,
+				19C6611020FA572A00637320 /* WVWMatchStats.swift in Sources */,
 				1928F23020E7FF5B00D6B43E /* Achievement.swift in Sources */,
 				1939EF0120F7929A00DB0F36 /* EItems.swift in Sources */,
 				191D26E320EF287400CCDA27 /* EGameMechanics.swift in Sources */,
+				19C6610C20FA4F8000637320 /* EWVW.swift in Sources */,
 				191D26ED20EF31C500CCDA27 /* GMLegend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

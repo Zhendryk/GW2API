@@ -42,8 +42,11 @@ public class GW2Client {
     /// The pvp endpoint: information about Guild Wars 2 PVP
     let pvp: PVPClient = PVPClient()
     
+    /// The wvw endpoint: information about Guild Wars 2 world vs world
+    let wvw: WVWClient = WVWClient()
+    
     private init() {
-        self.setLanguage(lang: "en")
+        _ = self.setLanguage(lang: "en")
     }
     
     /// Returns the language setting of the GuildWars 2 Client
@@ -56,27 +59,36 @@ public class GW2Client {
     /// Takes a string argument and sets the GuildWars 2 Client's language setting
     ///
     /// - Parameter lang: Any of the following supported language strings: en, es, de, fr, ko, zh
-    public func setLanguage(lang: String) {
+    public func setLanguage(lang: String) -> Bool {
         let langLower = lang.lowercased()
-        assert(["en", "es", "de", "fr", "ko", "zh"].contains(langLower), "Provided language is not supported. Possible values: en, es, de, fr, ko, zh")
-        self.lang = langLower
-        self.achievements.setLanguage(langLower)
-        self.authenticated.setLanguage(langLower)
-        self.gameMechanics.setLanguage(langLower)
-        self.guild.setLanguage(langLower)
-        self.items.setLanguage(langLower)
-        self.mapinfo.setLanguage(langLower)
-        self.misc.setLanguage(langLower)
-        self.story.setLanguage(langLower)
-        self.pvp.setLanguage(langLower)
+        if APIUtil.isValidLanguage(langLower) {
+            self.lang = langLower
+            self.achievements.setLanguage(langLower)
+            self.authenticated.setLanguage(langLower)
+            self.gameMechanics.setLanguage(langLower)
+            self.guild.setLanguage(langLower)
+            self.items.setLanguage(langLower)
+            self.mapinfo.setLanguage(langLower)
+            self.misc.setLanguage(langLower)
+            self.story.setLanguage(langLower)
+            self.pvp.setLanguage(langLower)
+            self.wvw.setLanguage(langLower)
+            return true
+        }
+        return false
     }
     
     /// Takes a valid API key as a String and sets it to all authenticated endpoints in the client
     ///
     /// - Parameter key: A valid API key generated from guildwars2.com
-    public func setAPIKey(key: String) {
-        self.apiKey = key
-        self.authenticated.setAPIKey(key)
+    public func setAPIKey(key: String) -> Bool {
+        if APIUtil.isValidAPIKey(key) {
+            self.apiKey = key
+            self.authenticated.setAPIKey(key)
+            self.guild.setAPIKey(key)
+            return true
+        }
+        return false
     }
     
     /// Takes a valid guild ID as a String and sets it to the guild endpoint
