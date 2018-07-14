@@ -18,7 +18,7 @@ struct GuildLog: Decodable {
     let rank_change: rankChange?
     let treasury: treasury?
     let stash: stash?
-    let motd: motd?
+    let motd: String?
     let upgrade: upgrade?
 }
 
@@ -46,10 +46,6 @@ struct stash: Decodable {
     let item_id: Int
     let count: Int
     let coins: Int
-}
-
-struct motd: Decodable {
-    let motd: String
 }
 
 struct upgrade: Decodable {

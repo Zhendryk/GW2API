@@ -99,6 +99,7 @@
 		19775E1720F545DE00523825 /* StorySeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1620F545DE00523825 /* StorySeason.swift */; };
 		19775E1C20F5465A00523825 /* PVPRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1B20F5465A00523825 /* PVPRank.swift */; };
 		19775E1E20F546BD00523825 /* PVPSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775E1D20F546BD00523825 /* PVPSeason.swift */; };
+		1980579020FA9AC000568622 /* ItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1980578F20FA9AC000568622 /* ItemsTests.swift */; };
 		19865F4A20EAA40D00D4B8CE /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */; };
 		199F4EB020EBAEC50030FBCA /* EAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */; };
 		199F4EB220EBB0650030FBCA /* AuthenticatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199F4EB120EBB0650030FBCA /* AuthenticatedClient.swift */; };
@@ -232,6 +233,7 @@
 		19775E1620F545DE00523825 /* StorySeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySeason.swift; sourceTree = "<group>"; };
 		19775E1B20F5465A00523825 /* PVPRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPRank.swift; sourceTree = "<group>"; };
 		19775E1D20F546BD00523825 /* PVPSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPSeason.swift; sourceTree = "<group>"; };
+		1980578F20FA9AC000568622 /* ItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTests.swift; sourceTree = "<group>"; };
 		19865F4920EAA40D00D4B8CE /* AchievementsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
 		199F4EAF20EBAEC50030FBCA /* EAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAuthentication.swift; sourceTree = "<group>"; };
 		199F4EB120EBB0650030FBCA /* AuthenticatedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedClient.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				191D26EE20EFE6AE00CCDA27 /* AchievementsTests.swift */,
 				191D26F020EFF47800CCDA27 /* GameMechanicsTests.swift */,
 				1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */,
+				1980578F20FA9AC000568622 /* ItemsTests.swift */,
 				1928F1F720E7EFDA00D6B43E /* Info.plist */,
 			);
 			path = GW2APITests;
@@ -786,6 +789,7 @@
 				1928F1F620E7EFDA00D6B43E /* AuthenticatedTests.swift in Sources */,
 				191D26EF20EFE6AE00CCDA27 /* AchievementsTests.swift in Sources */,
 				191D26F120EFF47800CCDA27 /* GameMechanicsTests.swift in Sources */,
+				1980579020FA9AC000568622 /* ItemsTests.swift in Sources */,
 				19C4644120F17B1A00571AD0 /* GuildTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

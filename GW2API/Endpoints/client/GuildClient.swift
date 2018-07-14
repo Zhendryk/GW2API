@@ -286,9 +286,9 @@ class GuildClient : Client {
             /// - Parameters:
             ///   - since: Event ID where you would like the log to start from
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildLog]?, APIError>)
-            func get(since: String = "", completion: @escaping (Result<[GuildLog]?, APIError>) -> Void) {
-                if since != "" {
-                    fetchAsync(with: EGuild.log.request, needsAuthorization: true, needsGuildID: true, parameters: [URLQueryItem(name: "since", value: since)], decode: { json -> [GuildLog]? in
+            func get(since: Int = -1, completion: @escaping (Result<[GuildLog]?, APIError>) -> Void) {
+                if since != -1 {
+                    fetchAsync(with: EGuild.log.request, needsAuthorization: true, needsGuildID: true, parameters: [URLQueryItem(name: "since", value: String(since))], decode: { json -> [GuildLog]? in
                         guard let res = json as? [GuildLog] else { return nil }
                         return res
                     }, completion: completion)

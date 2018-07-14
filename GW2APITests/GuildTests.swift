@@ -13,7 +13,7 @@ class GuildTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        GW2Client.instance.guild.setGuildID("116E0C0E-0035-44A9-BB22-4AE3E23127E5")
+        GW2Client.instance.guild.setGuildID("7EC05420-622A-E811-81A1-1217F5237040")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -37,7 +37,7 @@ class GuildTests: XCTestCase {
     
     func testGuildSearch() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.search(guildName: "Black Lion Expeditions") { result in
+        GW2Client.instance.guild.search(guildName: "Order Of The Blood Eagle") { result in
             switch result {
             case .success(_):
                 expectation.fulfill()
