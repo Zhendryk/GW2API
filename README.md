@@ -76,7 +76,7 @@ GW2Client.instance.guild.authenticated.members.get() { result in
 
 ### Getting data linked to one or more IDs
 
-Some data is addressable in the API via either a number or word ID. For each endpoint, if this type of search is available, there will be a `.get()` method with either an `id` or `ids` parameter which each take a string. This string should contain the ID of the data you are looking for in the following formats:
+Some data is addressable in the API via either a number or word ID. For each endpoint, if this type of search is available, there will be a `.get()` method with either an `id` or `ids` parameter which each take their respective data types (Int, String, or [Int], [String]). This string should contain the ID of the data you are looking for in the following formats:
 
-* `id: "1", "Admin", etc...`
-* `ids: "1, 2, 3", "Admin, EditingRights, Roster", etc...`
+* `id: 1, "Admin", etc...`
+* `ids: [1, 2, 3], ["Admin", "EditingRights", "Roster"] etc...`
