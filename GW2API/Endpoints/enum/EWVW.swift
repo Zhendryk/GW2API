@@ -20,7 +20,7 @@ enum EWVW {
 extension EWVW : Endpoint {
     var path: String {
         switch self {
-        case .abilities: return "wvw/abilties"
+        case .abilities: return "wvw/abilities"
         case .matches: return "wvw/matches"
         case .matchOverview: return "wvw/matches/overview"
         case .matchScores: return "wvw/matches/scores"

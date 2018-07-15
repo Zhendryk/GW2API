@@ -115,7 +115,7 @@ class PVPClient : Client {
         ///   - id: The id of the pvp season you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<PVPSeason?, APIError>)
         func get(id: String, completion: @escaping (Result<PVPSeason?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.ranks.idRequest(id: id), decode: { json -> PVPSeason? in
+            fetchAsync(with: EPVP.seasons.idRequest(id: id), decode: { json -> PVPSeason? in
                 guard let res = json as? PVPSeason else { return nil }
                 return res
             }, completion: completion)
@@ -149,7 +149,59 @@ class PVPClient : Client {
         /// The pvp season leaderboard endpoint client: api.guildwars2.com/v2/pvp/seasons/leaderboards
         class PVPSeasonLeaderboardsClient : Client {
             
-            /// TODO: Implement me!
+            /// Returns the solo leaderboard for the given season ID **from seasons 1-4**
+            ///
+            /// - Parameters:
+            ///   - seasonID: The ID of the season you are looking for
+            ///   - eu: Mark as true if you want to search for Europe servers, default North America
+            ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
+            func getLegendary(seasonID: String, eu: Bool = false, completion: @escaping (Result<[PVPSeasonLeaderboard]?, APIError>) -> Void) {
+                var request = EPVP.seasonLeaderboardsLegendary.request.url!.absoluteString
+                if eu { request.append("/eu") }
+                else { request.append("/na") }
+                request = request.replacingOccurrences(of: ":seasonID", with: seasonID)
+                guard let url = URL(string: request) else { return }
+                fetchAsync(with: URLRequest(url: url), decode: { json -> [PVPSeasonLeaderboard]? in
+                    guard let res = json as? [PVPSeasonLeaderboard] else { return nil }
+                    return res
+                }, completion: completion)
+            }
+            
+            /// Returns the guild leaderboard for the given season ID **from seasons 1-4**
+            ///
+            /// - Parameters:
+            ///   - seasonID: The ID of the season you are looking for
+            ///   - eu: Mark as true if you want to search for Europe servers, default North America
+            ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
+            func getGuild(seasonID: String, eu: Bool = false, completion: @escaping (Result<[PVPSeasonLeaderboard]?, APIError>) -> Void) {
+                var request = EPVP.seasonLeaderboardsGuild.request.url!.absoluteString
+                if eu { request.append("/eu") }
+                else { request.append("/na") }
+                request = request.replacingOccurrences(of: ":seasonID", with: seasonID)
+                guard let url = URL(string: request) else { return }
+                fetchAsync(with: URLRequest(url: url), decode: { json -> [PVPSeasonLeaderboard]? in
+                    guard let res = json as? [PVPSeasonLeaderboard] else { return nil }
+                    return res
+                }, completion: completion)
+            }
+            
+            /// Returns the leaderboard for the given season ID **from seasons 5 onward**
+            ///
+            /// - Parameters:
+            ///   - seasonID: The ID of the season you are looking for
+            ///   - eu: Mark as true if you want to search for Europe servers, default North America
+            ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
+            func getLadder(seasonID: String, eu: Bool = false, completion: @escaping (Result<[PVPSeasonLeaderboard]?, APIError>) -> Void) {
+                var request = EPVP.seasonLeaderboardsLadder.request.url!.absoluteString
+                if eu { request.append("/eu") }
+                else { request.append("/na") }
+                request = request.replacingOccurrences(of: ":seasonID", with: seasonID)
+                guard let url = URL(string: request) else { return }
+                fetchAsync(with: URLRequest(url: url), decode: { json -> [PVPSeasonLeaderboard]? in
+                    guard let res = json as? [PVPSeasonLeaderboard] else { return nil }
+                    return res
+                }, completion: completion)
+            }
         }
     }
 }

@@ -194,7 +194,10 @@ class Client : APIClient {
             guard let encodedRequest = encodeToURLRequest(urlString: str) else { return Result.failure(.queryParameterAttachmentFailure)}
             return Result.success(encodedRequest)
         }
-        else { return Result.success(URLRequest(url: URL(string: str)!))}
+        else {
+            guard let url = URL(string: str) else { return Result.failure(.queryParameterAttachmentFailure)}
+            return Result.success(URLRequest(url: url))
+        }
     }
 
     /// Attaches an API key to a given URLRequest

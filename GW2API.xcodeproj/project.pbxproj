@@ -73,6 +73,12 @@
 		19420E9320F82EA9000B7C00 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19420E9220F82EA9000B7C00 /* Region.swift */; };
 		19420E9520F82F34000B7C00 /* DetailedMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19420E9420F82F34000B7C00 /* DetailedMap.swift */; };
 		1943DFD220F2D2D1004F4366 /* GuildAuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */; };
+		1946174A20FAF96300AE9D98 /* MapInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946174920FAF96300AE9D98 /* MapInfoTests.swift */; };
+		1946174C20FB05CC00AE9D98 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946174B20FB05CC00AE9D98 /* MiscTests.swift */; };
+		1946174E20FB05DC00AE9D98 /* StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946174D20FB05DC00AE9D98 /* StoryTests.swift */; };
+		1946175020FB05E400AE9D98 /* PVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946174F20FB05E400AE9D98 /* PVPTests.swift */; };
+		1946175220FB05F200AE9D98 /* TradingPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946175120FB05F200AE9D98 /* TradingPostTests.swift */; };
+		1946175420FB05F900AE9D98 /* WVWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946175320FB05F900AE9D98 /* WVWTests.swift */; };
 		196A055220F70439002B2970 /* ItemsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196A055120F70439002B2970 /* ItemsClient.swift */; };
 		196B264920ED613400095C0C /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196B264820ED613400095C0C /* AccountWalletItem.swift */; };
 		19775DEB20F539B200523825 /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19775DEA20F539B200523825 /* Finisher.swift */; };
@@ -207,6 +213,12 @@
 		19420E9220F82EA9000B7C00 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		19420E9420F82F34000B7C00 /* DetailedMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMap.swift; sourceTree = "<group>"; };
 		1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildAuthenticatedTests.swift; sourceTree = "<group>"; };
+		1946174920FAF96300AE9D98 /* MapInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoTests.swift; sourceTree = "<group>"; };
+		1946174B20FB05CC00AE9D98 /* MiscTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
+		1946174D20FB05DC00AE9D98 /* StoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTests.swift; sourceTree = "<group>"; };
+		1946174F20FB05E400AE9D98 /* PVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPTests.swift; sourceTree = "<group>"; };
+		1946175120FB05F200AE9D98 /* TradingPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPostTests.swift; sourceTree = "<group>"; };
+		1946175320FB05F900AE9D98 /* WVWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWTests.swift; sourceTree = "<group>"; };
 		196A055120F70439002B2970 /* ItemsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsClient.swift; sourceTree = "<group>"; };
 		196B264820ED613400095C0C /* AccountWalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
 		19775DEA20F539B200523825 /* Finisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
@@ -320,6 +332,12 @@
 				191D26F020EFF47800CCDA27 /* GameMechanicsTests.swift */,
 				1943DFD120F2D2D1004F4366 /* GuildAuthenticatedTests.swift */,
 				1980578F20FA9AC000568622 /* ItemsTests.swift */,
+				1946174920FAF96300AE9D98 /* MapInfoTests.swift */,
+				1946174B20FB05CC00AE9D98 /* MiscTests.swift */,
+				1946174D20FB05DC00AE9D98 /* StoryTests.swift */,
+				1946174F20FB05E400AE9D98 /* PVPTests.swift */,
+				1946175120FB05F200AE9D98 /* TradingPostTests.swift */,
+				1946175320FB05F900AE9D98 /* WVWTests.swift */,
 				1928F1F720E7EFDA00D6B43E /* Info.plist */,
 			);
 			path = GW2APITests;
@@ -785,11 +803,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1946175420FB05F900AE9D98 /* WVWTests.swift in Sources */,
 				1943DFD220F2D2D1004F4366 /* GuildAuthenticatedTests.swift in Sources */,
+				1946174E20FB05DC00AE9D98 /* StoryTests.swift in Sources */,
+				1946174C20FB05CC00AE9D98 /* MiscTests.swift in Sources */,
 				1928F1F620E7EFDA00D6B43E /* AuthenticatedTests.swift in Sources */,
+				1946175220FB05F200AE9D98 /* TradingPostTests.swift in Sources */,
 				191D26EF20EFE6AE00CCDA27 /* AchievementsTests.swift in Sources */,
 				191D26F120EFF47800CCDA27 /* GameMechanicsTests.swift in Sources */,
+				1946175020FB05E400AE9D98 /* PVPTests.swift in Sources */,
 				1980579020FA9AC000568622 /* ItemsTests.swift in Sources */,
+				1946174A20FAF96300AE9D98 /* MapInfoTests.swift in Sources */,
 				19C4644120F17B1A00571AD0 /* GuildTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

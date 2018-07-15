@@ -28,7 +28,7 @@ struct Item : Decodable {
 struct ItemDetails : Decodable {
     let type: String
     let infusion_slots: [InfusionSlot]?
-    let infix_upgrade: [InfixUpgrade]?
+    let infix_upgrade: InfixUpgrade?
     let suffix_item_id: Int?
     let secondary_suffix_id: String?
     let stat_choices: [String]?

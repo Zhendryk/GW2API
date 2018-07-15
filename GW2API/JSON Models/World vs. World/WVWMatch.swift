@@ -28,19 +28,19 @@ struct WVWMatch : Decodable {
         let deaths: [String:Int]
         let objectives: [WVWMapObjective]
         let bonuses: [WVWMapBonus]
-        let skirmishes: [WVWMapSkirmish]
-        let victory_points: [String:Int]
+        let skirmishes: [WVWMapSkirmish]?
+        let victory_points: [String:Int]?
         
         struct WVWMapObjective : Decodable {
             let id: String
             let owner: String
             let last_flipped: String
-            let claimed_by: String
-            let claimed_at: String
+            let claimed_by: String?
+            let claimed_at: String?
             let points_tick: Int
             let points_capture: Int
-            let guild_upgrades: [Int]
-            let yaks_delivered: [Int]
+            let guild_upgrades: [Int]?
+            let yaks_delivered: Int?
         }
         
         struct WVWMapBonus : Decodable {

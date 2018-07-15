@@ -112,7 +112,7 @@ class TradingPostClient : Client {
         ///   - id: The id of the commerce price you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommercePrice?, APIError>)
         func get(id: Int, completion: @escaping (Result<CommercePrice?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commerceListings.idRequest(id: String(id)), decode: { json -> CommercePrice? in
+            fetchAsync(with: ETradingPost.commercePrices.idRequest(id: String(id)), decode: { json -> CommercePrice? in
                 guard let res = json as? CommercePrice else { return nil }
                 return res
             }, completion: completion)

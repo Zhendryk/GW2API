@@ -17,8 +17,8 @@ struct Story : Decodable {
     let level: Int
     let order: Int
     let chapters: [StoryChapter]
-    let races: [String]
-    let flags: [String]
+    let races: [String]?
+    let flags: [String]?
     
     struct StoryChapter : Decodable {
         let name: String

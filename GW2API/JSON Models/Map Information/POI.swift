@@ -8,7 +8,7 @@
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/pois/<poi_id>
 struct POI : Decodable {
-    let name: String
+    let name: String?
     let type: String
     let floor: Int
     let coord: [Float]

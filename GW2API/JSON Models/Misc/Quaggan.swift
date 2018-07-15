@@ -9,6 +9,6 @@
 //quaggans
 //id, ids
 struct Quaggan : Decodable {
-    let id: Int
+    let id: String
     let url: String
 }

@@ -10,12 +10,12 @@
 //lang
 struct PVPSeason : Decodable {
     let id: String
-    let name: Int
+    let name: String
     let start: String
     let end: String
     let active: Bool
     let divisions: [PVPDivision]
-    let leaderboards: [PVPLeaderboard]
+    let leaderboards: [String:PVPLeaderboard]
     
     struct PVPDivision : Decodable {
         let name: String
@@ -27,21 +27,18 @@ struct PVPSeason : Decodable {
     }
     
     struct PVPLeaderboard : Decodable {
-        let ladder: PVPLeaderboardLadder
+        let settings: PVPLeaderboardSettings
         let scorings: [PVPLeaderboardScoring]
-        
-        struct PVPLeaderboardLadder : Decodable {
-            let settings: PVPLBLadderSettings
+
             
-            struct PVPLBLadderSettings : Decodable {
-                let name: String
-                let duration: Int
-                let scoring: String
-                let tiers: [PVPLBLadderTier]
-                
-                struct PVPLBLadderTier : Decodable {
-                    let range: [Int]
-                }
+        struct PVPLeaderboardSettings : Decodable {
+            let name: String
+            let duration: Int?
+            let scoring: String
+            let tiers: [PVPLBLadderTier]
+            
+            struct PVPLBLadderTier : Decodable {
+                let range: [Float]
             }
         }
         

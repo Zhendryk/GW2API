@@ -91,7 +91,7 @@ class MapInfoClient : Client {
             ///   - continentID: The ID of the continent you are searching for floors
             ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
             func get(continentID: Int, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                fetchAsync(with: EMapInfo.floors.subresourceIDList(EMapInfo.floors, continentID), decode: { json -> [Int]? in
+                fetchAsync(with: EMapInfo.floors.subresourceIDList(EMapInfo.floors, continentID: continentID), decode: { json -> [Int]? in
                     guard let res = json as? [Int] else { return nil }
                     return res
                 }, completion: completion)
@@ -104,7 +104,7 @@ class MapInfoClient : Client {
             ///   - floorID: The ID of the floor in the continent
             ///   - completion: Callback function to handle the data returned from the API (Result<Floor?, APIError>)
             func get(continentID: Int, floorID: Int, completion: @escaping (Result<Floor?, APIError>) -> Void) {
-                fetchAsync(with: EMapInfo.floors.individualSubresource(EMapInfo.floors, continentID, floorID), decode: { json -> Floor? in
+                fetchAsync(with: EMapInfo.floors.individualSubresource(EMapInfo.floors, continentID: continentID, floorID: floorID), decode: { json -> Floor? in
                     guard let res = json as? Floor else { return nil }
                     return res
                 }, completion: completion)
@@ -117,7 +117,7 @@ class MapInfoClient : Client {
             ///   - floorIDs: The id(s) of the floor(s) in the continent
             ///   - completion: Callback function to handle the data returned from the API (Result<[Floor]?, APIError>)
             func get(continentID: Int, floorIDs: [Int], completion: @escaping (Result<[Floor]?, APIError>) -> Void) {
-                fetchAsync(with: EMapInfo.floors.subresourceIDList(EMapInfo.floors, continentID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(floorIDs))], decode: { json -> [Floor]? in
+                fetchAsync(with: EMapInfo.floors.subresourceIDList(EMapInfo.floors, continentID: continentID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(floorIDs))], decode: { json -> [Floor]? in
                     guard let res = json as? [Floor] else { return nil }
                     return res
                 }, completion: completion)
@@ -144,7 +144,7 @@ class MapInfoClient : Client {
                 ///   - floorID: The ID of the floor within the continent you are searching in
                 ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
                 func get(continentID: Int, floorID: Int, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                    fetchAsync(with: EMapInfo.regions.subresourceIDList(EMapInfo.regions, continentID, floorID), decode: { json -> [Int]? in
+                    fetchAsync(with: EMapInfo.regions.subresourceIDList(EMapInfo.regions, continentID: continentID, floorID: floorID), decode: { json -> [Int]? in
                         guard let res = json as? [Int] else { return nil }
                         return res
                     }, completion: completion)
@@ -158,7 +158,7 @@ class MapInfoClient : Client {
                 ///   - regionID: The ID of the region you are searching for
                 ///   - completion: Callback function to handle the data returned from the API (Result<Region?, APIError>)
                 func get(continentID: Int, floorID: Int, regionID: Int, completion: @escaping (Result<Region?, APIError>) -> Void) {
-                    fetchAsync(with: EMapInfo.regions.individualSubresource(EMapInfo.regions, continentID, floorID, regionID), decode: { json -> Region? in
+                    fetchAsync(with: EMapInfo.regions.individualSubresource(EMapInfo.regions, continentID: continentID, floorID: floorID, regionID: regionID), decode: { json -> Region? in
                         guard let res = json as? Region else { return nil }
                         return res
                     }, completion: completion)
@@ -172,7 +172,7 @@ class MapInfoClient : Client {
                 ///   - regionIDs: The ID(s) of the region(s) you are searching for
                 ///   - completion: Callback function to handle the data returned from the API (Result<[Region]?, APIError>)
                 func get(continentID: Int, floorID: Int, regionIDs: [Int], completion: @escaping (Result<[Region]?, APIError>) -> Void) {
-                    fetchAsync(with: EMapInfo.regions.subresourceIDList(EMapInfo.regions, continentID, floorID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(regionIDs))], decode: { json -> [Region]? in
+                    fetchAsync(with: EMapInfo.regions.subresourceIDList(EMapInfo.regions, continentID: continentID, floorID: floorID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(regionIDs))], decode: { json -> [Region]? in
                         guard let res = json as? [Region] else { return nil }
                         return res
                     }, completion: completion)
@@ -209,7 +209,7 @@ class MapInfoClient : Client {
                     ///   - regionID: The ID of the region within the floor within the continent you are searching in
                     ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
                     func get(continentID: Int, floorID: Int, regionID: Int, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                        fetchAsync(with: EMapInfo.detailedMaps.subresourceIDList(EMapInfo.detailedMaps, continentID, floorID, regionID), decode: { json -> [Int]? in
+                        fetchAsync(with: EMapInfo.detailedMaps.subresourceIDList(EMapInfo.detailedMaps, continentID: continentID, floorID: floorID, regionID: regionID), decode: { json -> [Int]? in
                             guard let res = json as? [Int] else { return nil }
                             return res
                         }, completion: completion)
@@ -224,7 +224,7 @@ class MapInfoClient : Client {
                     ///   - mapID: The ID of the map you are searching for
                     ///   - completion: Callback function to handle the data returned from the API (Result<DetailedMap?, APIError>)
                     func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, completion: @escaping (Result<DetailedMap?, APIError>) -> Void) {
-                        fetchAsync(with: EMapInfo.detailedMaps.individualSubresource(EMapInfo.detailedMaps, continentID, floorID, regionID, mapID), decode: { json -> DetailedMap? in
+                        fetchAsync(with: EMapInfo.detailedMaps.individualSubresource(EMapInfo.detailedMaps, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), decode: { json -> DetailedMap? in
                             guard let res = json as? DetailedMap else { return nil }
                             return res
                         }, completion: completion)
@@ -239,7 +239,7 @@ class MapInfoClient : Client {
                     ///   - mapIDs: The ID of the map you are searching for
                     ///   - completion: Callback function to handle the data returned from the API (Result<[DetailedMap]?, APIError>)
                     func get(continentID: Int, floorID: Int, regionID: Int, mapIDs: [Int], completion: @escaping (Result<[DetailedMap]?, APIError>) -> Void) {
-                        fetchAsync(with: EMapInfo.detailedMaps.subresourceIDList(EMapInfo.detailedMaps, continentID, floorID, regionID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(mapIDs))], decode: { json -> [DetailedMap]? in
+                        fetchAsync(with: EMapInfo.detailedMaps.subresourceIDList(EMapInfo.detailedMaps, continentID: continentID, floorID: floorID, regionID: regionID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(mapIDs))], decode: { json -> [DetailedMap]? in
                             guard let res = json as? [DetailedMap] else { return nil }
                             return res
                         }, completion: completion)
@@ -258,7 +258,7 @@ class MapInfoClient : Client {
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.sectors.subresourceIDList(EMapInfo.sectors, continentID, floorID, regionID, mapID), decode: { json -> [Int]? in
+                            fetchAsync(with: EMapInfo.sectors.subresourceIDList(EMapInfo.sectors, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), decode: { json -> [Int]? in
                                 guard let res = json as? [Int] else { return nil }
                                 return res
                             }, completion: completion)
@@ -274,7 +274,7 @@ class MapInfoClient : Client {
                         ///   - sectorID: The ID of the sector you are searching for
                         ///   - completion: Callback function to handle the data returned from the API (Result<Sector?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorID: Int, completion: @escaping (Result<Sector?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.sectors.individualSubresource(EMapInfo.sectors, continentID, floorID, regionID, mapID, sectorID), decode: { json -> Sector? in
+                            fetchAsync(with: EMapInfo.sectors.individualSubresource(EMapInfo.sectors, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, sectorID: sectorID), decode: { json -> Sector? in
                                 guard let res = json as? Sector else { return nil }
                                 return res
                             }, completion: completion)
@@ -290,7 +290,7 @@ class MapInfoClient : Client {
                         ///   - sectorIDs: The ID(s) of the sector(s) you are searching for
                         ///   - completion: Callback function to handle the data returned from the API (Result<[Sector]?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorIDs: [Int], completion: @escaping (Result<[Sector]?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.sectors.subresourceIDList(EMapInfo.sectors, continentID, floorID, regionID, mapID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(sectorIDs))], decode: { json -> [Sector]? in
+                            fetchAsync(with: EMapInfo.sectors.subresourceIDList(EMapInfo.sectors, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(sectorIDs))], decode: { json -> [Sector]? in
                                 guard let res = json as? [Sector] else { return nil }
                                 return res
                             }, completion: completion)
@@ -308,7 +308,7 @@ class MapInfoClient : Client {
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.pois.subresourceIDList(EMapInfo.pois, continentID, floorID, regionID, mapID), decode: { json -> [Int]? in
+                            fetchAsync(with: EMapInfo.pois.subresourceIDList(EMapInfo.pois, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), decode: { json -> [Int]? in
                                 guard let res = json as? [Int] else { return nil }
                                 return res
                             }, completion: completion)
@@ -324,7 +324,7 @@ class MapInfoClient : Client {
                         ///   - poiID: The ID of the poi you are searching for
                         ///   - completion: Callback function to handle the data returned from the API (Result<POI?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiID: Int, completion: @escaping (Result<POI?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.pois.individualSubresource(EMapInfo.pois, continentID, floorID, regionID, mapID, poiID), decode: { json -> POI? in
+                            fetchAsync(with: EMapInfo.pois.individualSubresource(EMapInfo.pois, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, poiID: poiID), decode: { json -> POI? in
                                 guard let res = json as? POI else { return nil }
                                 return res
                             }, completion: completion)
@@ -340,7 +340,7 @@ class MapInfoClient : Client {
                         ///   - poiIDs: The ID(s) of the poi(s) you are searching for
                         ///   - completion: Callback function to handle the data returned from the API (Result<[POI]?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiIDs: [Int], completion: @escaping (Result<[POI]?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.pois.subresourceIDList(EMapInfo.pois, continentID, floorID, regionID, mapID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(poiIDs))], decode: { json -> [POI]? in
+                            fetchAsync(with: EMapInfo.pois.subresourceIDList(EMapInfo.pois, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(poiIDs))], decode: { json -> [POI]? in
                                 guard let res = json as? [POI] else { return nil }
                                 return res
                             }, completion: completion)
@@ -358,7 +358,7 @@ class MapInfoClient : Client {
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.tasks.subresourceIDList(EMapInfo.tasks, continentID, floorID, regionID, mapID), decode: { json -> [Int]? in
+                            fetchAsync(with: EMapInfo.tasks.subresourceIDList(EMapInfo.tasks, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), decode: { json -> [Int]? in
                                 guard let res = json as? [Int] else { return nil }
                                 return res
                             }, completion: completion)
@@ -374,7 +374,7 @@ class MapInfoClient : Client {
                         ///   - taskID: The ID of the task you are searching for
                         ///   - completion: Callback function to handle the data returned from the API (Result<Task?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskID: Int, completion: @escaping (Result<Task?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.tasks.individualSubresource(EMapInfo.tasks, continentID, floorID, regionID, mapID, taskID), decode: { json -> Task? in
+                            fetchAsync(with: EMapInfo.tasks.individualSubresource(EMapInfo.tasks, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, taskID: taskID), decode: { json -> Task? in
                                 guard let res = json as? Task else { return nil }
                                 return res
                             }, completion: completion)
@@ -390,7 +390,7 @@ class MapInfoClient : Client {
                         ///   - taskIDs: The ID(s) of the task(s) you are searching for
                         ///   - completion: Callback function to handle the data returned from the API (Result<[Task]?, APIError>)
                         func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskIDs: [Int], completion: @escaping (Result<[Task]?, APIError>) -> Void) {
-                            fetchAsync(with: EMapInfo.tasks.subresourceIDList(EMapInfo.tasks, continentID, floorID, regionID, mapID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(taskIDs))], decode: { json -> [Task]? in
+                            fetchAsync(with: EMapInfo.tasks.subresourceIDList(EMapInfo.tasks, continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(taskIDs))], decode: { json -> [Task]? in
                                 guard let res = json as? [Task] else { return nil }
                                 return res
                             }, completion: completion)

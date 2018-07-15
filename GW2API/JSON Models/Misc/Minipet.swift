@@ -11,7 +11,7 @@
 struct Minipet : Decodable {
     let id: Int
     let name: String
-    let unlock: String
+    let unlock: String?
     let icon: String
     let order: Int
     let item_id: Int

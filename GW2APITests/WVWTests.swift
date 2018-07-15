@@ -1,14 +1,14 @@
 //
-//  ItemsTests.swift
+//  WVWTests.swift
 //  GW2APITests
 //
-//  Created by Jonathan Bailey on 7/14/18.
+//  Created by Jonathan Bailey on 7/15/18.
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
 import XCTest
 @testable import GW2API
-class ItemsTests: XCTestCase {
+class WVWTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -20,11 +20,11 @@ class ItemsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testFinishersIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.finishers.get() { result in
+    func testWVWAbilitiesIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.abilities.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -33,11 +33,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testFinishersID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.finishers.get(id: 1) { result in
+    func testWVWAbilitiesID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.abilities.get(id: 2) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -46,11 +46,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testFinishersIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.finishers.get(ids: [1, 2, 3]) { result in
+    func testWVWAbilitiesIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.abilities.get(ids: [3, 4, 5]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -59,11 +59,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testFinishersPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.finishers.get(page: 0, page_size: 5) { result in
+    func testWVWMatchesIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -72,11 +72,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemstatsIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.itemstats.get() { result in
+    func testWVWMatchesID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.get(id: "2-1") { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -85,11 +85,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemstatsID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.itemstats.get(id: 112) { result in
+    func testWVWMatchesIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.get(ids: ["2-2", "2-3"]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -98,11 +98,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemstatsIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.itemstats.get(ids: [112, 137, 138, 139]) { result in
+    func testWVWMatchOverviewIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.overview.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -111,11 +111,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemstatsIDPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.itemstats.get(page: 0, page_size: 4) { result in
+    func testWVWMatchOverviewID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.overview.get(id: "2-1") { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -124,11 +124,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testMaterialsIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.materials.get() { result in
+    func testWVWMatchOverviewIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.overview.get(ids: ["2-2", "2-3"]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -137,11 +137,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testMaterialsID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.materials.get() { result in
+    func testWVWMatchOverviewWorld() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.overview.get(worldID: 1008) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -150,11 +150,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testMaterialsIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.materials.get() { result in
+    func testWVWMatchScoresIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.scores.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -163,11 +163,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testMaterialsIDPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.materials.get() { result in
+    func testWVWMatchScoresID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.scores.get(id: "2-1") { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -176,13 +176,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    //pvpamulets, recipes, skins, items
-    
-    func testPVPAmuletIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.pvpamulets.get() { result in
+    func testWVWMatchScoresIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.scores.get(ids: ["2-2", "2-3"]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -191,11 +189,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testPVPAmuletID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.pvpamulets.get(id: 1) { result in
+    func testWVWMatchScoresWorld() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.scores.get(worldID: 1008) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -204,11 +202,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testPVPAmuletIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.pvpamulets.get(ids: [1, 4, 5, 7]) { result in
+    func testWVWMatchStatsIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.stats.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -217,11 +215,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testPVPAmuletIDPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.pvpamulets.get(page: 0, page_size: 6) { result in
+    func testWVWMatchStatsID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.stats.get(id: "2-1") { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -230,11 +228,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testRecipesIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.recipes.get() { result in
+    func testWVWMatchStatsIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.stats.get(ids: ["2-2", "2-3"]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -243,11 +241,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testRecipesID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.recipes.get(id: 1) { result in
+    func testWVWMatchStatsWorld() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.matches.stats.get(worldID: 1008) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -256,11 +254,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testRecipesIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.recipes.get(ids: [1, 2, 3]) { result in
+    func testWVWObjectivesIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.objectives.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -269,11 +267,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testRecipesIDPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.recipes.get(page: 0, page_size: 5) { result in
+    func testWVWObjectivesID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.objectives.get(id: "96-62") { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -282,11 +280,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testSkinsIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.skins.get() { result in
+    func testWVWObjectivesIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.objectives.get(ids: ["94-62", "95-62"]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -295,11 +293,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testSkinsID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.skins.get(id: 1) { result in
+    func testWVWRanksIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.ranks.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -308,11 +306,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testSkinsIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.skins.get(ids: [1, 2, 3]) { result in
+    func testWVWRanksID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.ranks.get(id: 1) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -321,11 +319,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testSkinsIDPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.skins.get(page: 0, page_size: 4) { result in
+    func testWVWRanksIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.ranks.get(ids: [2, 3, 4]) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -334,11 +332,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemsIDList() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.get() { result in
+    func testWVWUpgradesIDList() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.upgrades.get() { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -347,11 +345,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemsID() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.get(id: 24) { result in
+    func testWVWUpgradesID() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.upgrades.get(id: 4) { result in
             switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")
@@ -360,24 +358,11 @@ class ItemsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testItemsIDs() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.get(ids: [24, 68, 69]) { result in
+    func testWVWUpgradesIDs() {
+        let expectation = self.expectation(description: "Querying GW2Client/wvw...")
+        GW2Client.instance.wvw.upgrades.get(ids: [5, 6, 7]) { result in
             switch result {
-            case.success(_):
-                expectation.fulfill()
-            case .failure(let error):
-                print("\n\(error.localizedDescription)\n")
-            }
-        }
-        waitForExpectations(timeout: 5, handler: nil)
-    }
-    
-    func testItemsIDPaged() {
-        let expectation = self.expectation(description: "Querying GW2Client/items...")
-        GW2Client.instance.items.get(page: 0, page_size: 10) { result in
-            switch result {
-            case.success(_):
+            case .success(_):
                 expectation.fulfill()
             case .failure(let error):
                 print("\n\(error.localizedDescription)\n")

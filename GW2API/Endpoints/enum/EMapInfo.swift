@@ -22,16 +22,16 @@ extension EMapInfo : Endpoint {
         switch self {
         case .continents: return "continents"
         case .maps: return "maps"
-        case .floors: return "continents/<continent_id>/floors"
-        case .regions: return "continents/<continent_id>/floors/<floor_id>/regions"
-        case .detailedMaps: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps"
-        case .sectors: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/sectors"
-        case .pois: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/pois"
-        case .tasks: return "continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks"
+        case .floors: return "continents/:continent_id:/floors"
+        case .regions: return "continents/:continent_id:/floors/:floor_id:/regions"
+        case .detailedMaps: return "continents/:continent_id:/floors/:floor_id:/regions/:region_id:/maps"
+        case .sectors: return "continents/:continent_id:/floors/:floor_id:/regions/:region_id:/maps/:map_id:/sectors"
+        case .pois: return "continents/:continent_id:/floors/:floor_id:/regions/:region_id:/maps/:map_id:/pois"
+        case .tasks: return "continents/:continent_id:/floors/:floor_id:/regions/:region_id:/maps/:map_id:/tasks"
         }
     }
     
-    func subresourceIDList(_ subresource: EMapInfo, _ continentID: Int = -1, _ floorID: Int = -1, _ regionID: Int = -1, _ mapID: Int = -1, _ sectorID: Int = -1, _ poiID: Int = -1, _ taskID: Int = -1) -> URLRequest {
+    func subresourceIDList(_ subresource: EMapInfo, continentID: Int = -1, floorID: Int = -1, regionID: Int = -1, mapID: Int = -1, sectorID: Int = -1, poiID: Int = -1, taskID: Int = -1) -> URLRequest {
         switch subresource {
         case .continents:
             return EMapInfo.continents.request
@@ -52,7 +52,7 @@ extension EMapInfo : Endpoint {
         }
     }
     
-    func individualSubresource(_ subresource: EMapInfo, _ continentID: Int = -1, _ floorID: Int = -1, _ regionID: Int = -1, _ mapID: Int = -1, _ sectorID: Int = -1, _ poiID: Int = -1, _ taskID: Int = -1) -> URLRequest {
+    func individualSubresource(_ subresource: EMapInfo, continentID: Int = -1, floorID: Int = -1, regionID: Int = -1, mapID: Int = -1, sectorID: Int = -1, poiID: Int = -1, taskID: Int = -1) -> URLRequest {
         switch subresource {
         case .continents:
             var request = EMapInfo.continents.request
@@ -92,16 +92,16 @@ extension EMapInfo : Endpoint {
     private func insertBaseIDs(into request: URLRequest, _ continentID: Int = -1, _ floorID: Int = -1, _ regionID: Int = -1, _ mapID: Int = -1) -> URLRequest {
         var str = request.url!.absoluteString
         if continentID != -1 {
-            str = str.replacingOccurrences(of: "<continent_id>", with: String(continentID))
+            str = str.replacingOccurrences(of: ":continent_id:", with: String(continentID))
         }
         if floorID != -1 {
-            str = str.replacingOccurrences(of: "<floor_id>", with: String(floorID))
+            str = str.replacingOccurrences(of: ":floor_id:", with: String(floorID))
         }
         if regionID != -1 {
-            str = str.replacingOccurrences(of: "<region_id>", with: String(regionID))
+            str = str.replacingOccurrences(of: ":region_id:", with: String(regionID))
         }
         if mapID != -1 {
-            str = str.replacingOccurrences(of: "<map_id>", with: String(mapID))
+            str = str.replacingOccurrences(of: ":map_id:", with: String(mapID))
         }
         return URLRequest(url: URL(string: str)!)
     }

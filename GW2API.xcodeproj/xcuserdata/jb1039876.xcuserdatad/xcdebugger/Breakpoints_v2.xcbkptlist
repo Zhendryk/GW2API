@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GW2APITests/GuildTests.swift"
-            timestampString = "553294885.565635"
+            timestampString = "553329823.496453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -47,6 +47,102 @@
                   startingLineNumber = "28"
                   endingLineNumber = "28"
                   offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GW2APITests/WVWTests.swift"
+            timestampString = "553329871.209187"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "testWVWObjectivesIDs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GW2APITests.WVWTests.testWVWObjectivesIDs() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/WVWTests.swift"
+                  timestampString = "553327282.2723089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "285"
+                  endingLineNumber = "285"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;Swift.Array&lt;GW2API.WVWObjective&gt;&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.WVWTests.testWVWObjectivesIDs() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/WVWTests.swift"
+                  timestampString = "553327282.274164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GW2APITests/WVWTests.swift"
+            timestampString = "553329871.209251"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "testWVWMatchesIDList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GW2APITests.WVWTests.testWVWMatchesIDList() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/WVWTests.swift"
+                  timestampString = "553327920.56582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (GW2API.Result&lt;Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, GW2API.APIError&gt;) -&gt; () in GW2APITests.WVWTests.testWVWMatchesIDList() -&gt; ()"
+                  moduleName = "GW2APITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb1039876/Desktop/gw2api/GW2APITests/WVWTests.swift"
+                  timestampString = "553327920.568138"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "30">
                </Location>
             </Locations>
          </BreakpointContent>

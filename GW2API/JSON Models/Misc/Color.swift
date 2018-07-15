@@ -15,7 +15,7 @@ struct Color: Decodable {
     let cloth: Cloth
     let leather: Leather
     let metal: Metal
-    let item: Int
+    let item: Int?
     let categories: [String]
 }
 

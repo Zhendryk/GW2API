@@ -10,7 +10,9 @@ enum EPVP {
     case pvp
     case ranks
     case seasons
-    case seasonLeaderboards
+    case seasonLeaderboardsLadder
+    case seasonLeaderboardsLegendary
+    case seasonLeaderboardsGuild
 }
 
 extension EPVP : Endpoint {
@@ -19,7 +21,9 @@ extension EPVP : Endpoint {
         case .pvp: return "pvp"
         case .ranks: return "pvp/ranks"
         case .seasons: return "pvp/seasons"
-        case .seasonLeaderboards: return "pvp/seasons/leaderboards"
+        case .seasonLeaderboardsLadder: return "pvp/seasons/:seasonID/leaderboards/ladder"
+        case .seasonLeaderboardsLegendary: return "pvp/seasons/:seasonID/leaderboards/legendary"
+        case .seasonLeaderboardsGuild: return "pvp/seasons/:seasonID/leaderboards/guild"
         }
     }
 }

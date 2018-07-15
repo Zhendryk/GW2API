@@ -13,5 +13,5 @@ struct Title : Decodable {
     let name: String
     let achievement: Int
     let achievements: [Int]
-    let ap_required: Int
+    let ap_required: Int?
 }

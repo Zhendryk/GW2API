@@ -9,12 +9,12 @@
 //wvw/upgrades
 //lang
 struct WVWUpgrade : Decodable {
-    let id: String
+    let id: Int
     let tiers: [WVWUpgradeTier]
     
     struct WVWUpgradeTier : Decodable {
         let name: String
-        let description: String
+        let yaks_required: Int
         let upgrades: [WVWUpgradeTierUpgrade]
         
         struct WVWUpgradeTierUpgrade : Decodable {

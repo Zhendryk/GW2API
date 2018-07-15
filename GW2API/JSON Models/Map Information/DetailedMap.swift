@@ -11,7 +11,7 @@ struct DetailedMap : Decodable {
     let min_level: Int
     let max_level: Int
     let default_floor: Int
-    let label_coord: [Int]
+    let label_coord: [Int]?
     let map_rect: [[Int]]
     let continent_rect: [[Int]]
     let points_of_interest: [String:POI]
@@ -31,7 +31,7 @@ struct DetailedMap : Decodable {
     
     struct MapSkillChallenge : Decodable {
         let coord: [Float]
-        let id: Int
+        let id: String
     }
     
     struct MapAdventure : Decodable {

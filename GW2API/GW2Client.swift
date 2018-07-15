@@ -42,6 +42,9 @@ public class GW2Client {
     /// The pvp endpoint: information about Guild Wars 2 PVP
     let pvp: PVPClient = PVPClient()
     
+    /// The trading post endpoint: information about the Black Lion Trading Post
+    let tradingPost: TradingPostClient = TradingPostClient()
+    
     /// The wvw endpoint: information about Guild Wars 2 world vs world
     let wvw: WVWClient = WVWClient()
     
@@ -72,6 +75,7 @@ public class GW2Client {
             self.misc.setLanguage(langLower)
             self.story.setLanguage(langLower)
             self.pvp.setLanguage(langLower)
+            self.tradingPost.setLanguage(langLower)
             self.wvw.setLanguage(langLower)
             return true
         }

@@ -13,6 +13,6 @@ struct BackstoryAnswer : Decodable {
     let title: String
     let description: String
     let journal: String
-    let professions: [String]
-    let races: [String]
+    let professions: [String]?
+    let races: [String]?
 }

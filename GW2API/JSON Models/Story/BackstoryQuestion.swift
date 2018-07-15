@@ -12,8 +12,8 @@ struct BackstoryQuestion : Decodable {
     let id: Int
     let title: String
     let description: String
-    let answers: [Int]
+    let answers: [String]
     let order: Int
-    let races: [String]
-    let professions: [String]
+    let races: [String]?
+    let professions: [String]?
 }

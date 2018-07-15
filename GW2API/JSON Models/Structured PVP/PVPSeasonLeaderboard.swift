@@ -11,7 +11,7 @@
 struct PVPSeasonLeaderboard : Decodable {
     let name: String
     let rank: Int
-    let id: String
+    let id: String?
     let team: String?
     let team_id: Int?
     let date: String

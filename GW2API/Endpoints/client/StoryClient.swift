@@ -138,9 +138,9 @@ class StoryClient : Client {
             /// Returns a list of all backstory question ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.request, decode: { json -> [String]? in
-                    guard let res = json as? [String] else { return nil }
+            func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+                fetchAsync(with: EStory.backstoryQuestions.request, decode: { json -> [Int]? in
+                    guard let res = json as? [Int] else { return nil }
                     return res
                 }, completion: completion)
             }
@@ -150,8 +150,8 @@ class StoryClient : Client {
             /// - Parameters:
             ///   - id: The id of the backstory question you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<BackstoryQuestion?, APIError>)
-            func get(id: String, completion: @escaping (Result<BackstoryQuestion?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.idRequest(id: id), decode: { json -> BackstoryQuestion? in
+            func get(id: Int, completion: @escaping (Result<BackstoryQuestion?, APIError>) -> Void) {
+                fetchAsync(with: EStory.backstoryQuestions.idRequest(id: String(id)), decode: { json -> BackstoryQuestion? in
                     guard let res = json as? BackstoryQuestion else { return nil }
                     return res
                 }, completion: completion)
@@ -162,8 +162,8 @@ class StoryClient : Client {
             /// - Parameters:
             ///   - ids: The id(s) of the backstory question(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryQuestion]?, APIError>)
-            func get(ids: [String], completion: @escaping (Result<[BackstoryQuestion]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [BackstoryQuestion]? in
+            func get(ids: [Int], completion: @escaping (Result<[BackstoryQuestion]?, APIError>) -> Void) {
+                fetchAsync(with: EStory.backstoryQuestions.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [BackstoryQuestion]? in
                     guard let res = json as? [BackstoryQuestion] else { return nil }
                     return res
                 }, completion: completion)

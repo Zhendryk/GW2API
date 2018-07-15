@@ -16,7 +16,7 @@ struct Skin : Decodable {
     let restrictions: [String]
     let icon: String
     let rarity: String
-    let description: String
+    let description: String?
     let details: SkinDetails?
     
     struct SkinDetails : Decodable {
@@ -27,7 +27,7 @@ struct Skin : Decodable {
         let dye_slots: DyeSlots?
         
         struct DyeSlots : Decodable {
-            let `default`: [`default`]
+            let `default`: [`default`?]
             let overrides: Overrides
             
             struct `default` : Decodable {
