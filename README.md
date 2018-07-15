@@ -2,6 +2,12 @@
 
 A simple Swift wrapper for the Guild Wars 2 API (Version 2).
 
+## Installation
+
+There are two options for installing: You can either clone/fork this repository and use the source code yourself, or use cocoapods. 
+
+The repository contains a podspec and Podfile for ease of use, and more information can be found here to install the cocoapod into your xcode project: https://guides.cocoapods.org/using/using-cocoapods
+
 
 ## Usage
 
