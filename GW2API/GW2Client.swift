@@ -11,8 +11,14 @@ public class GW2Client {
     
     /// The singleton instance of the GW2Client. Used to access all endpoints.
     public static let instance = GW2Client()
+    
+    /// The language of the client, default English(en)
     private var lang: String = ""
+    
+    /// The API key assigned to the client, default nil
     private var apiKey: String? = nil
+    
+    /// The Guild ID assigned to the client, default nil
     private var guildID: String? = nil
     
     /// The achievements endpoint: information about Guild Wars 2 achievements
@@ -102,19 +108,21 @@ public class GW2Client {
         self.guildID = id
     }
     
-    /// Prints all of the current settings of the client
-    public func settings() {
-        print("GW2API Client Settings\n--------------------------\n")
-        print("Base URL: https://api.guildwars2.com")
-        print("Version: V2")
-        print("Language: \(self.lang)")
+    /// Prints all of the current settings of the client to the console and returns it for external use
+    public func settings() -> String {
+        var settingsStr = "GW2API Client Settings\n--------------------------\n"
+        settingsStr.append("Base URL: https://api.guildwars2.com\n")
+        settingsStr.append("Version: V2\n")
+        settingsStr.append("Language: \(self.lang)")
         if self.apiKey != nil {
-            print("API Key: \(self.apiKey!)")
+            settingsStr.append("API Key: \(self.apiKey!)")
         }
-        else { print("API Key: None set") }
+        else { settingsStr.append("API Key: None set") }
         if self.guildID != nil {
-            print("Guild ID: \(self.guildID!)")
+            settingsStr.append("Guild ID: \(self.guildID!)")
         }
-        else { print("Guild ID: None set") }
+        else { settingsStr.append("Guild ID: None set") }
+        print(settingsStr)
+        return settingsStr
     }
 }
