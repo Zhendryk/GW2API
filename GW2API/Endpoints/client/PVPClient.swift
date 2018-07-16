@@ -2,12 +2,12 @@
 //  PVPClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/13/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/13/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// The PVP endpoint client: api.guildwars2.com/v2/pvp
-class PVPClient : Client {
+public class PVPClient : Client {
     
     /// The pvp ranks endpoint: information about pvp ranks
     let ranks: PVPRanksClient = PVPRanksClient()

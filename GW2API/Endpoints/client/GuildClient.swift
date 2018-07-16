@@ -2,12 +2,12 @@
 //  GuildClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// The guild endpoint client: api.guildwars2.com/v2/guild...
-class GuildClient : Client {
+public class GuildClient : Client {
     
     /// The guild id endpoint: information about core details of a given guild
     let id: GuildIDClient = GuildIDClient()

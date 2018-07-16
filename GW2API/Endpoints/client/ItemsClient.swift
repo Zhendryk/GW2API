@@ -2,13 +2,13 @@
 //  ItemsClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/11/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/11/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 
 /// The item endpoint client: api.guildwars2.com/v2/...
-class ItemsClient : Client {
+public class ItemsClient : Client {
     
     /// The finishers endpoint: information about finishers
     let finishers: FinishersClient = FinishersClient()

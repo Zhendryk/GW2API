@@ -2,12 +2,12 @@
 //  GameMechanicsClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/6/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/6/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// The game mechanics endpoint client: api.guildwars2.com/v2/...
-class GameMechanicsClient : Client {
+public class GameMechanicsClient : Client {
     
     /// The game mechanics masteries endpoint: information about masteries
     let masteries: GameMechanicsMasteriesClient = GameMechanicsMasteriesClient()

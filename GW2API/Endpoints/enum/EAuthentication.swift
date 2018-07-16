@@ -2,8 +2,8 @@
 //  EAuthentication.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/3/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/3/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 enum EAuthentication {

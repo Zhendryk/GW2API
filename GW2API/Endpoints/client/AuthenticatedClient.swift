@@ -2,13 +2,13 @@
 //  AuthenticatedClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/3/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/3/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 
 /// The authenticated endpoint client: api.guildwars2.com/v2/...
-class AuthenticatedClient : Client {
+public class AuthenticatedClient : Client {
     
     /// The account endpoint: api.guildwars2.com/v2/account (Needs API key)
     let account: AccountClient = AccountClient()

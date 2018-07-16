@@ -2,8 +2,8 @@
 //  Endpoint.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 6/30/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 6/30/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 

@@ -2,8 +2,8 @@
 //  APIClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/2/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/2/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 
@@ -21,7 +21,7 @@ extension APIClient {
 
 
 /// The base class for all endpoint clients
-class Client : APIClient {
+public class Client : APIClient {
 
     /// The URLSession to interact with the API server for this client
     var session: URLSession

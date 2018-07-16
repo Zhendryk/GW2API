@@ -2,12 +2,12 @@
 //  MiscClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/12/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/12/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// The miscellaneous endpoint client: api.guildwars2.com/v2/...
-class MiscClient : Client {
+public class MiscClient : Client {
     
     /// The build endpoint: information about the current build id
     let build: BuildClient = BuildClient()

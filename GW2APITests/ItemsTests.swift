@@ -2,8 +2,8 @@
 //  ItemsTests.swift
 //  GW2APITests
 //
-//  Created by Jonathan Bailey on 7/14/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/14/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import XCTest

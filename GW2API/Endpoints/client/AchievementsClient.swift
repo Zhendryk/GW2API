@@ -2,13 +2,13 @@
 //  AchievementsClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/2/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/2/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 
 /// The achievements endpoint client: api.guildwars2.com/v2/achievements
-class AchievementsClient: Client {
+public class AchievementsClient: Client {
     
     /// The daily achievements endpoint: information about daily achievements
     let daily: DailyAchievementClient = DailyAchievementClient()

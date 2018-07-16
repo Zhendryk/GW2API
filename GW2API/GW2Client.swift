@@ -2,8 +2,8 @@
 //  GW2Client.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 6/30/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 6/30/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// Main client of the framework, implemented as a singleton.
@@ -22,37 +22,37 @@ public class GW2Client {
     private var guildID: String? = nil
     
     /// The achievements endpoint: information about Guild Wars 2 achievements
-    let achievements: AchievementsClient = AchievementsClient()
+    public let achievements: AchievementsClient = AchievementsClient()
     
     /// The authenticated endpoint: information about accounts, requires a valid API key to access and view
-    let authenticated: AuthenticatedClient = AuthenticatedClient()
+    public let authenticated: AuthenticatedClient = AuthenticatedClient()
     
     /// The game mechanics endpoint: information about various game mechanics
-    let gameMechanics: GameMechanicsClient = GameMechanicsClient()
+    public let gameMechanics: GameMechanicsClient = GameMechanicsClient()
     
     /// The guild endpoint: information about guilds
-    let guild: GuildClient = GuildClient()
+    public let guild: GuildClient = GuildClient()
     
     /// The items endpoint: information about items
-    let items: ItemsClient = ItemsClient()
+    public let items: ItemsClient = ItemsClient()
     
     /// The map information endpoint: information about the map
-    let mapinfo: MapInfoClient = MapInfoClient()
+    public let mapinfo: MapInfoClient = MapInfoClient()
     
     /// The miscellaneous endpoint: miscellaneous information
-    let misc: MiscClient  = MiscClient()
+    public let misc: MiscClient  = MiscClient()
     
     /// The story endpoint: information about the Guild Wars 2 story and character backstories
-    let story: StoryClient = StoryClient()
+    public let story: StoryClient = StoryClient()
     
     /// The pvp endpoint: information about Guild Wars 2 PVP
-    let pvp: PVPClient = PVPClient()
+    public let pvp: PVPClient = PVPClient()
     
     /// The trading post endpoint: information about the Black Lion Trading Post
-    let tradingPost: TradingPostClient = TradingPostClient()
+    public let tradingPost: TradingPostClient = TradingPostClient()
     
     /// The wvw endpoint: information about Guild Wars 2 world vs world
-    let wvw: WVWClient = WVWClient()
+    public let wvw: WVWClient = WVWClient()
     
     private init() {
         _ = self.setLanguage(lang: "en")

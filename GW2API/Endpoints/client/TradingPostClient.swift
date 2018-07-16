@@ -2,12 +2,12 @@
 //  TradingPostClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/13/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/13/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// The trading post endpoint client: api.guildwars2.com/v2/commerce
-class TradingPostClient : Client {
+public class TradingPostClient : Client {
     
     /// The listings endpoint: information about trading post listings
     let listings: ListingsClient = ListingsClient()

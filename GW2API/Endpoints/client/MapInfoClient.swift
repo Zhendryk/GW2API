@@ -2,12 +2,12 @@
 //  MapInfoClient.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 7/12/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 7/12/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 /// The map information endpoint client: api.guildwars2.com/v2/maps
-class MapInfoClient : Client {
+public class MapInfoClient : Client {
     
     /// The continents endpoint: information about each continent and what each contains
     let continents: ContinentsClient = ContinentsClient()
