@@ -7,14 +7,14 @@
 //
 
 public struct GuildStash: Decodable {
-    let upgrade_id: Int
-    let size: Int
-    let coins: Int
-    let note: String
-    let inventory: [inventoryItem?]
+    public let upgrade_id: Int
+    public let size: Int
+    public let coins: Int
+    public let note: String
+    public let inventory: [inventoryItem?]
 }
 
 public struct inventoryItem: Decodable {
-    let id: Int
-    let count: Int
+    public let id: Int
+    public let count: Int
 }

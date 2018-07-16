@@ -9,10 +9,10 @@
 //finishers
 //lang, page, page_size, id, ids
 public struct Finisher : Decodable {
-    let id: Int
-    let unlock_details: String
-    let unlock_items: [Int]?
-    let order: Int
-    let icon: String
-    let name: String
+    public let id: Int
+    public let unlock_details: String
+    public let unlock_items: [Int]?
+    public let order: Int
+    public let icon: String
+    public let name: String
 }

@@ -7,7 +7,7 @@
 //
 
 public struct GuildMember: Decodable {
-    let name: String
-    let rank: String
-    let joined: String
+    public let name: String
+    public let rank: String
+    public let joined: String
 }

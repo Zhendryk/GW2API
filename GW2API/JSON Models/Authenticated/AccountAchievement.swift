@@ -9,10 +9,10 @@
 //account/achievements
 //access_token
 public struct AccountAchievement: Decodable {
-    let id: Int
-    let current: Int?
-    let max: Int?
-    let done: Bool
-    let repeated: Int?
-    let bits: [Int]?
+    public let id: Int
+    public let current: Int?
+    public let max: Int?
+    public let done: Bool
+    public let repeated: Int?
+    public let bits: [Int]?
 }

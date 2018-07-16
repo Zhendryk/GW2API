@@ -8,10 +8,10 @@
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/sectors/<sector_id>
 public struct Sector : Decodable {
-    let id: Int
-    let name: String?
-    let level: Int
-    let coord: [Float]
-    let bounds: [[Float]]
-    let chat_link: String
+    public let id: Int
+    public let name: String?
+    public let level: Int
+    public let coord: [Float]
+    public let bounds: [[Float]]
+    public let chat_link: String
 }

@@ -9,6 +9,6 @@
 //emblem
 //id, ids
 public struct GuildEmblem: Decodable {
-    let id: Int
-    let layers: [String]
+    public let id: Int
+    public let layers: [String]
 }

@@ -9,20 +9,20 @@
 //achievements/daily
 //id, ids
 public struct DailyAchievement: Decodable {
-    let pve: [Daily]
-    let pvp: [Daily]
-    let wvw: [Daily]
-    let fractals: [Daily]
-    let special: [Daily]
+    public let pve: [Daily]
+    public let pvp: [Daily]
+    public let wvw: [Daily]
+    public let fractals: [Daily]
+    public let special: [Daily]
     
     public struct Daily: Decodable {
-        let id: Int
-        let level: DailyLevel
-        let required_access: [String]
+        public let id: Int
+        public let level: DailyLevel
+        public let required_access: [String]
         
         public struct DailyLevel: Decodable {
-            let min: Int
-            let max: Int
+            public let min: Int
+            public let max: Int
         }
     }
 }

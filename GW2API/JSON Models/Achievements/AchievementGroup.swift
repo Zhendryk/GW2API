@@ -9,9 +9,9 @@
 //achievements/groups
 //lang, id, ids
 public struct AchievementGroup: Decodable {
-    let id: String
-    let name: String
-    let description: String
-    let order: Int
-    let categories: [Int]
+    public let id: String
+    public let name: String
+    public let description: String
+    public let order: Int
+    public let categories: [Int]
 }

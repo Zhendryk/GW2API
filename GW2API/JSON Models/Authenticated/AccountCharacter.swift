@@ -8,119 +8,119 @@
 
 //characters
 public struct AccountCharacter: Decodable {
-    let name: String
-    let race: String
-    let gender: String
-    let flags: [String]
-    let profession: String
-    let level: Int
-    let guild: String?
-    let age: Int
-    let created: String
-    let deaths: Int
-    let crafting: [CraftingDiscipline]
-    let title: Int?
-    let backstory: [String]
-    let wvw_abilities: [AccountWVWAbility]
-    let specializations: Specializations?
-    let skills: Skills
-    let equipment: [EquipmentItem]
-    let recipes: [Int]
-    let equipment_pvp: EquipmentPVP
-    let training: [TrainedSkill]
-    let bags: [Bag?]
+    public let name: String
+    public let race: String
+    public let gender: String
+    public let flags: [String]
+    public let profession: String
+    public let level: Int
+    public let guild: String?
+    public let age: Int
+    public let created: String
+    public let deaths: Int
+    public let crafting: [CraftingDiscipline]
+    public let title: Int?
+    public let backstory: [String]
+    public let wvw_abilities: [AccountWVWAbility]
+    public let specializations: Specializations?
+    public let skills: Skills
+    public let equipment: [EquipmentItem]
+    public let recipes: [Int]
+    public let equipment_pvp: EquipmentPVP
+    public let training: [TrainedSkill]
+    public let bags: [Bag?]
     
     public struct CraftingDiscipline: Decodable {
-        let discipline: String
-        let rating: Int
-        let active: Bool
+        public let discipline: String
+        public let rating: Int
+        public let active: Bool
     }
     
     public struct AccountWVWAbility: Decodable {
-        let id: Int
-        let rank: Int
+        public let id: Int
+        public let rank: Int
     }
     
     public struct Specializations: Decodable {
-        let pve: [Specialization]
-        let pvp: [Specialization]
-        let wvw: [Specialization]
+        public let pve: [Specialization]
+        public let pvp: [Specialization]
+        public let wvw: [Specialization]
         
         public struct Specialization: Decodable {
-            let id: Int
-            let traits: [Int?]
+            public let id: Int
+            public let traits: [Int?]
         }
     }
     
     public struct Skills: Decodable {
-        let pve: Skill
-        let pvp: Skill
-        let wvw: Skill
+        public let pve: Skill
+        public let pvp: Skill
+        public let wvw: Skill
         
         public struct Skill: Decodable {
-            let heal: Int
-            let utilities: [Int]
-            let elite: Int
-            let legends: [String]?
+            public let heal: Int
+            public let utilities: [Int]
+            public let elite: Int
+            public let legends: [String]?
         }
     }
     
     public struct EquipmentItem: Decodable {
-        let id: Int
-        let slot: String
-        let infusions: [Int]?
-        let upgrades: [Int]?
-        let skin: Int?
-        let stats: EquipmentStats?
-        let binding: String?
-        let charges: Int?
-        let bound_to: String?
-        let dyes: [Int?]?
+        public let id: Int
+        public let slot: String
+        public let infusions: [Int]?
+        public let upgrades: [Int]?
+        public let skin: Int?
+        public let stats: EquipmentStats?
+        public let binding: String?
+        public let charges: Int?
+        public let bound_to: String?
+        public let dyes: [Int?]?
     }
     
     public struct CharacterInventoryItem: Decodable {
-        let id: Int
-        let count: Int
-        let infusions: [Int]?
-        let upgrades: [Int?]?
-        let skin: Int?
-        let stats: EquipmentStats?
-        let binding: String?
-        let bound_to: String?
+        public let id: Int
+        public let count: Int
+        public let infusions: [Int]?
+        public let upgrades: [Int?]?
+        public let skin: Int?
+        public let stats: EquipmentStats?
+        public let binding: String?
+        public let bound_to: String?
     }
     
     public struct EquipmentStats: Decodable {
-        let id: Int
-        let attributes: EquipmentAttributes
+        public let id: Int
+        public let attributes: EquipmentAttributes
         
         public struct EquipmentAttributes: Decodable {
-            let Power: Int?
-            let Precision: Int?
-            let Toughness: Int?
-            let Vitality: Int?
-            let ConditionDamage: Int?
-            let ConditionDuration: Int?
-            let Healing: Int?
-            let BoonDuration: Int?
-            let CritDamage: Int?
+            public let Power: Int?
+            public let Precision: Int?
+            public let Toughness: Int?
+            public let Vitality: Int?
+            public let ConditionDamage: Int?
+            public let ConditionDuration: Int?
+            public let Healing: Int?
+            public let BoonDuration: Int?
+            public let CritDamage: Int?
         }
     }
     
     public struct Bag: Decodable {
-        let id: Int
-        let size: Int
-        let inventory: [CharacterInventoryItem?]
+        public let id: Int
+        public let size: Int
+        public let inventory: [CharacterInventoryItem?]
     }
     
     public struct EquipmentPVP: Decodable {
-        let amulet: Int?
-        let rune: Int?
-        let sigils: [Int?]?
+        public let amulet: Int?
+        public let rune: Int?
+        public let sigils: [Int?]?
     }
     
     public struct TrainedSkill: Decodable {
-        let id: Int
-        let spent: Int
-        let done: Bool
+        public let id: Int
+        public let spent: Int
+        public let done: Bool
     }
 }

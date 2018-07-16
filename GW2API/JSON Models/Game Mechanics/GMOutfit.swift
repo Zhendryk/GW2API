@@ -9,8 +9,8 @@
 //outfits
 //lang, page, page_size, id, ids
 public struct GMOutfit: Decodable {
-    let id: Int
-    let name: String
-    let icon: String
-    let unlock_items: [Int]
+    public let id: Int
+    public let name: String
+    public let icon: String
+    public let unlock_items: [Int]
 }

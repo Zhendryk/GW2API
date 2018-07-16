@@ -7,15 +7,15 @@
 //
 
 public struct WVWMatchStats : Decodable {
-    let id: String
-    let deaths: [String:Int]
-    let kills: [String:Int]
-    let maps: [WVWStatsMap]
+    public let id: String
+    public let deaths: [String:Int]
+    public let kills: [String:Int]
+    public let maps: [WVWStatsMap]
     
     public struct WVWStatsMap : Decodable {
-        let id: Int
-        let type: String
-        let deaths: [String:Int]
-        let kills: [String:Int]
+        public let id: Int
+        public let type: String
+        public let deaths: [String:Int]
+        public let kills: [String:Int]
     }
 }

@@ -9,18 +9,18 @@
 //stories
 //lang, page, page_size, id, ids
 public struct Story : Decodable {
-    let id: Int
-    let season: String
-    let name: String
-    let description: String
-    let timeline: String
-    let level: Int
-    let order: Int
-    let chapters: [StoryChapter]
-    let races: [String]?
-    let flags: [String]?
+    public let id: Int
+    public let season: String
+    public let name: String
+    public let description: String
+    public let timeline: String
+    public let level: Int
+    public let order: Int
+    public let chapters: [StoryChapter]
+    public let races: [String]?
+    public let flags: [String]?
     
     public struct StoryChapter : Decodable {
-        let name: String
+        public let name: String
     }
 }

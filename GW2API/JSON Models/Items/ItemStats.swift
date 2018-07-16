@@ -9,13 +9,13 @@
 //itemstats
 //lang, id, ids
 public struct ItemStats : Decodable {
-    let id: Int
-    let name: String
-    let attributes: [ItemStatsAttribute]
+    public let id: Int
+    public let name: String
+    public let attributes: [ItemStatsAttribute]
     
     public struct ItemStatsAttribute : Decodable {
-        let attribute: String
-        let multiplier: Float
-        let value: Int
+        public let attribute: String
+        public let multiplier: Float
+        public let value: Int
     }
 }

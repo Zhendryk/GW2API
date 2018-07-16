@@ -9,41 +9,41 @@
 //achievements
 //lang, id, ids
 public struct Achievement: Decodable {
-    let id: Int
-    let icon: String?
-    let name: String
-    let description: String
-    let requirement: String
-    let locked_text: String
-    let type: String
-    let flags: [String]
-    let tiers: [AchievementTier]
-    let prerequisites: [Int]?
-    let rewards: [AchievementReward]?
-    let bits: [AchievementBit]?
-    let point_cap: Int?
+    public let id: Int
+    public let icon: String?
+    public let name: String
+    public let description: String
+    public let requirement: String
+    public let locked_text: String
+    public let type: String
+    public let flags: [String]
+    public let tiers: [AchievementTier]
+    public let prerequisites: [Int]?
+    public let rewards: [AchievementReward]?
+    public let bits: [AchievementBit]?
+    public let point_cap: Int?
     
     public struct AchievementTier: Decodable {
-        let count: Int
-        let points: Int
+        public let count: Int
+        public let points: Int
     }
     
     public struct AchievementReward: Decodable {
-        let type: String
+        public let type: String
         
         //If type = "coins" || "item"
-        let count: Int?
+        public let count: Int?
         
         //If type = "item" || "mastery" || "title"
-        let id: Int?
+        public let id: Int?
         
         //If type = "mastery"
-        let region: String?
+        public let region: String?
     }
     
     public struct AchievementBit: Decodable {
-        let type: String
-        let id: Int?
-        let text: String?
+        public let type: String
+        public let id: Int?
+        public let text: String?
     }
 }

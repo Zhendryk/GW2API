@@ -9,37 +9,37 @@
 //traits
 //lang, id, ids
 public struct GMTrait : Decodable {
-    let id: Int
-    let name: String
-    let icon: String
-    let description: String
-    let specialization: Int
-    let tier: Int
-    let slot: String
-    let facts: [TraitFact]?
-    let traited_facts: [TraitedFact]?
-    let skills: [TraitSkill]?
+    public let id: Int
+    public let name: String
+    public let icon: String
+    public let description: String
+    public let specialization: Int
+    public let tier: Int
+    public let slot: String
+    public let facts: [TraitFact]?
+    public let traited_facts: [TraitedFact]?
+    public let skills: [TraitSkill]?
     
     public struct TraitFact : Decodable {
-        let text: String?
-        let icon: String?
-        let type: String
+        public let text: String?
+        public let icon: String?
+        public let type: String
     }
     
     public struct TraitedFact : Decodable {
-        let text: String?
-        let icon: String?
-        let type: String
-        let requires_trait: Int
-        let overrides: Int?
+        public let text: String?
+        public let icon: String?
+        public let type: String
+        public let requires_trait: Int
+        public let overrides: Int?
     }
     
     public struct TraitSkill : Decodable {
-        let id: Int
-        let name: String
-        let description: String
-        let icon: String
-        let facts: [TraitFact]?
-        let traited_facts: [TraitedFact]?
+        public let id: Int
+        public let name: String
+        public let description: String
+        public let icon: String
+        public let facts: [TraitFact]?
+        public let traited_facts: [TraitedFact]?
     }
 }

@@ -9,10 +9,10 @@
 //backstory/answers
 //lang, page, page_size, id, ids
 public struct BackstoryAnswer : Decodable {
-    let id: String
-    let title: String
-    let description: String
-    let journal: String
-    let professions: [String]?
-    let races: [String]?
+    public let id: String
+    public let title: String
+    public let description: String
+    public let journal: String
+    public let professions: [String]?
+    public let races: [String]?
 }

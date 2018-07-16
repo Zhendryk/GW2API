@@ -9,13 +9,13 @@
 //commerce/listings
 //id, ids
 public struct CommerceListing: Decodable {
-    let id: Int
-    let buys: [CommerceTransaction]
-    let sells: [CommerceTransaction]
+    public let id: Int
+    public let buys: [CommerceTransaction]
+    public let sells: [CommerceTransaction]
 }
 
 public struct CommerceTransaction: Decodable {
-    let listings: Int
-    let unit_price: Int
-    let quantity: Int
+    public let listings: Int
+    public let unit_price: Int
+    public let quantity: Int
 }

@@ -9,6 +9,6 @@
 //either commerce/exchange/coins or commerce/exchange/gems
 //quantity
 public struct CommerceExchange: Decodable {
-    let coins_per_gem: Int
-    let quantity: Int
+    public let coins_per_gem: Int
+    public let quantity: Int
 }

@@ -8,10 +8,10 @@
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks/<task_id>
 public struct Task : Decodable {
-    let objective: String
-    let level: Int
-    let coord: [Float]
-    let bounds: [[Float]]
-    let id: Int
-    let chat_link: String
+    public let objective: String
+    public let level: Int
+    public let coord: [Float]
+    public let bounds: [[Float]]
+    public let id: Int
+    public let chat_link: String
 }

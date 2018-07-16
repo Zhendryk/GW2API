@@ -9,17 +9,17 @@
 //account
 //access_token
 public struct Account: Decodable {
-    let id: String
-    let age: Int
-    let name: String
-    let world: Int
-    let guilds: [String]
-    let guild_leader: [String]
-    let created: String
-    let access: [String]
-    let commander: Bool
-    let fractal_level: Int
-    let daily_ap: Int
-    let monthly_ap: Int
-    let wvw_rank: Int
+    public let id: String
+    public let age: Int
+    public let name: String
+    public let world: Int
+    public let guilds: [String]
+    public let guild_leader: [String]
+    public let created: String
+    public let access: [String]
+    public let commander: Bool
+    public let fractal_level: Int
+    public let daily_ap: Int
+    public let monthly_ap: Int
+    public let wvw_rank: Int
 }

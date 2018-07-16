@@ -7,7 +7,7 @@
 //
 
 public struct AccountInventoryItem: Decodable {
-    let id: Int
-    let count: Int
-    let binding: String?
+    public let id: Int
+    public let count: Int
+    public let binding: String?
 }

@@ -9,12 +9,12 @@
 //specializations
 //lang, id, ids
 public struct GMSpecialization : Decodable {
-    let id: Int
-    let name: String
-    let profession: String
-    let elite: Bool
-    let icon: String
-    let background: String
-    let minor_traits: [Int]
-    let major_traits: [Int]
+    public let id: Int
+    public let name: String
+    public let profession: String
+    public let elite: Bool
+    public let icon: String
+    public let background: String
+    public let minor_traits: [Int]
+    public let major_traits: [Int]
 }

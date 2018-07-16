@@ -7,12 +7,12 @@
 //
 
 public struct AccountMasteryPoints: Decodable {
-    let totals: [Total]
-    let unlocked: [Int]
+    public let totals: [Total]
+    public let unlocked: [Int]
     
     public struct Total: Decodable {
-        let region: String
-        let spent: Int
-        let earned: Int
+        public let region: String
+        public let spent: Int
+        public let earned: Int
     }
 }

@@ -9,16 +9,16 @@
 //raids
 //lang, id, ids
 public struct Raid : Decodable {
-    let id: String
-    let wings: [RaidWing]
+    public let id: String
+    public let wings: [RaidWing]
     
     public struct RaidWing : Decodable {
-        let id: String
-        let events: [RaidEvent]
+        public let id: String
+        public let events: [RaidEvent]
         
         public struct RaidEvent : Decodable {
-            let id: String
-            let type: String
+            public let id: String
+            public let type: String
         }
     }
 }

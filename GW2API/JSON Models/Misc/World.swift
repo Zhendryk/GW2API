@@ -9,7 +9,7 @@
 //worlds
 //lang, id, ids
 public struct World : Decodable {
-    let id: Int
-    let name: String
-    let population: String
+    public let id: Int
+    public let name: String
+    public let population: String
 }

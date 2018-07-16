@@ -9,47 +9,47 @@
 //skins
 //lang, id, ids
 public struct Skin : Decodable {
-    let id: Int
-    let name: String
-    let type: String
-    let flags: [String]
-    let restrictions: [String]
-    let icon: String
-    let rarity: String
-    let description: String?
-    let details: SkinDetails?
+    public let id: Int
+    public let name: String
+    public let type: String
+    public let flags: [String]
+    public let restrictions: [String]
+    public let icon: String
+    public let rarity: String
+    public let description: String?
+    public let details: SkinDetails?
     
     public struct SkinDetails : Decodable {
-        let type: String
+        public let type: String
         
         //Armor
-        let weight_class: String?
-        let dye_slots: DyeSlots?
+        public let weight_class: String?
+        public let dye_slots: DyeSlots?
         
         public struct DyeSlots : Decodable {
-            let `default`: [`default`?]
-            let overrides: Overrides
+            public let `default`: [`default`?]
+            public let overrides: Overrides
             
             public struct `default` : Decodable {
-                let color_id: Int
-                let material: String
+                public let color_id: Int
+                public let material: String
             }
             
             public struct Overrides : Decodable {
-                let AsuraMale: `default`?
-                let AsuraFemale: `default`?
-                let CharrMale: `default`?
-                let CharrFemale: `default`?
-                let HumanMale: `default`?
-                let HumanFemale: `default`?
-                let NornMale: `default`?
-                let NornFemale: `default`?
-                let SylvariMale: `default`?
-                let SylvariFemale: `default`?
+                public let AsuraMale: `default`?
+                public let AsuraFemale: `default`?
+                public let CharrMale: `default`?
+                public let CharrFemale: `default`?
+                public let HumanMale: `default`?
+                public let HumanFemale: `default`?
+                public let NornMale: `default`?
+                public let NornFemale: `default`?
+                public let SylvariMale: `default`?
+                public let SylvariFemale: `default`?
             }
         }
         //Weapons
-        let damage_type: String?
+        public let damage_type: String?
     }
 
 }

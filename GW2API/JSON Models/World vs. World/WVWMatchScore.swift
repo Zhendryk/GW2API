@@ -7,8 +7,8 @@
 //
 
 public struct WVWMatchScore : Decodable {
-    let id: String
-    let scores: [String:Int]
-    let victory_points: [String:Int]
-    let skirmishes: [WVWMapSkirmish]
+    public let id: String
+    public let scores: [String:Int]
+    public let victory_points: [String:Int]
+    public let skirmishes: [WVWMapSkirmish]
 }

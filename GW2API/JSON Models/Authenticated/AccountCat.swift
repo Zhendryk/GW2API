@@ -9,6 +9,6 @@
 //account/home/cats
 //access_token
 public struct AccountCat: Decodable {
-    let id: Int
-    let hint: String?
+    public let id: Int
+    public let hint: String?
 }

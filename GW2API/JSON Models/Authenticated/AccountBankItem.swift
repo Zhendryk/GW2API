@@ -9,19 +9,19 @@
 //account/bank
 //access_token
 public struct AccountBankItem: Decodable {
-    let id: Int
-    let count: Int
-    let skin: Int?
-    let upgrades: [Int]?
-    let infusions: [Int]?
-    let binding: String?
-    let charges: Int?
-    let bound_to: String?
-    let dyes: [Int]?
-    let stats: BankItemStats?
+    public let id: Int
+    public let count: Int
+    public let skin: Int?
+    public let upgrades: [Int]?
+    public let infusions: [Int]?
+    public let binding: String?
+    public let charges: Int?
+    public let bound_to: String?
+    public let dyes: [Int]?
+    public let stats: BankItemStats?
     
     public struct BankItemStats: Decodable {
-        let id: Int
-        let attributes: [String:Float]?
+        public let id: Int
+        public let attributes: [String:Float]?
     }
 }

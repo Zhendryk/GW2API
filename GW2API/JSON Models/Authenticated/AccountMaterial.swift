@@ -7,7 +7,7 @@
 //
 
 public struct AccountMaterial: Decodable {
-    let id: Int
-    let category: Int
-    let count: Int
+    public let id: Int
+    public let category: Int
+    public let count: Int
 }

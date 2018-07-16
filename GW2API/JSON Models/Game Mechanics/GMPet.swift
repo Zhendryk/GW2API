@@ -9,13 +9,13 @@
 //pets
 //
 public struct GMPet: Decodable {
-    let id: Int
-    let name: String
-    let description: String
-    let icon: String
-    let skills: [PetSkill]
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let icon: String
+    public let skills: [PetSkill]
     
     public struct PetSkill: Decodable {
-        let id: Int
+        public let id: Int
     }
 }

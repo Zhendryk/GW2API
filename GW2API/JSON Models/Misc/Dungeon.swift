@@ -9,11 +9,11 @@
 //dungeons
 //lang, id, ids
 public struct Dungeon : Decodable {
-    let id: String
-    let paths: [path]
+    public let id: String
+    public let paths: [path]
     
     public struct path : Decodable {
-        let id: String
-        let type: String
+        public let id: String
+        public let type: String
     }
 }

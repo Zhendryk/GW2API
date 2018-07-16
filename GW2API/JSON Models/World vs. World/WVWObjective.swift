@@ -9,15 +9,15 @@
 //wvw/objectives
 //lang
 public struct WVWObjective : Decodable {
-    let id: String
-    let name: String
-    let type: String
-    let sector_id: Int
-    let map_id: Int
-    let upgrade_id: Int?
-    let map_type: String
-    let coord: [Float]?
-    let label_coord: [Float]?
-    let marker: String
-    let chat_link: String
+    public let id: String
+    public let name: String
+    public let type: String
+    public let sector_id: Int
+    public let map_id: Int
+    public let upgrade_id: Int?
+    public let map_type: String
+    public let coord: [Float]?
+    public let label_coord: [Float]?
+    public let marker: String
+    public let chat_link: String
 }

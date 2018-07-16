@@ -9,10 +9,10 @@
 //minis
 //lang, id, ids
 public struct Minipet : Decodable {
-    let id: Int
-    let name: String
-    let unlock: String?
-    let icon: String
-    let order: Int
-    let item_id: Int
+    public let id: Int
+    public let name: String
+    public let unlock: String?
+    public let icon: String
+    public let order: Int
+    public let item_id: Int
 }

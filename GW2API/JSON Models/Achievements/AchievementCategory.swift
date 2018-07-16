@@ -9,10 +9,10 @@
 //achievements/categories
 //lang, id, ids
 public struct AchievementCategory: Decodable {
-    let id: Int
-    let name: String
-    let description: String
-    let order: Int
-    let icon: String
-    let achievements: [Int]
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let order: Int
+    public let icon: String
+    public let achievements: [Int]
 }

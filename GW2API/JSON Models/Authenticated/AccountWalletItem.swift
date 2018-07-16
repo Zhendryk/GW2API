@@ -7,6 +7,6 @@
 //
 
 public struct AccountWalletItem : Decodable {
-    let id: Int
-    let value: Int
+    public let id: Int
+    public let value: Int
 }

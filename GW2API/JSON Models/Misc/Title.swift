@@ -9,9 +9,9 @@
 //titles
 //lang, page, page_size, id, ids
 public struct Title : Decodable {
-    let id: Int
-    let name: String
-    let achievement: Int
-    let achievements: [Int]
-    let ap_required: Int?
+    public let id: Int
+    public let name: String
+    public let achievement: Int
+    public let achievements: [Int]
+    public let ap_required: Int?
 }

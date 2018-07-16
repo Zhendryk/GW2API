@@ -7,50 +7,50 @@
 //
 
 public struct GuildLog: Decodable {
-    let id: Int
-    let time: String
-    let user: String
-    let type: String
+    public let id: Int
+    public let time: String
+    public let user: String
+    public let type: String
     
-    let joined: String?
-    let invited: invited?
-    let kick: kick?
-    let rank_change: rankChange?
-    let treasury: treasury?
-    let stash: stash?
-    let motd: String?
-    let upgrade: upgrade?
+    public let joined: String?
+    public let invited: invited?
+    public let kick: kick?
+    public let rank_change: rankChange?
+    public let treasury: treasury?
+    public let stash: stash?
+    public let motd: String?
+    public let upgrade: upgrade?
 }
 
 public struct invited: Decodable {
-    let invited_by: String
+    public let invited_by: String
 }
 
 public struct kick: Decodable {
-    let kicked_by: String
+    public let kicked_by: String
 }
 
 public struct rankChange: Decodable {
-    let changed_by: String
-    let old_rank: String
-    let new_rank: String
+    public let changed_by: String
+    public let old_rank: String
+    public let new_rank: String
 }
 
 public struct treasury: Decodable {
-    let item_id: Int
-    let count: Int
+    public let item_id: Int
+    public let count: Int
 }
 
 public struct stash: Decodable {
-    let operation: String
-    let item_id: Int
-    let count: Int
-    let coins: Int
+    public let operation: String
+    public let item_id: Int
+    public let count: Int
+    public let coins: Int
 }
 
 public struct upgrade: Decodable {
-    let action: String
-    let upgrade_id: Int
-    let count: Int?
-    let recipe_id: Int?
+    public let action: String
+    public let upgrade_id: Int
+    public let count: Int?
+    public let recipe_id: Int?
 }

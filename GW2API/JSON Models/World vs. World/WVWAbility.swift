@@ -9,14 +9,14 @@
 //wvw/abilities
 //lang, ids
 public struct WVWAbility : Decodable {
-    let id: Int
-    let name: String
-    let description: String
-    let icon: String
-    let ranks: [WVWAbilityRank]
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let icon: String
+    public let ranks: [WVWAbilityRank]
 }
 
 public struct WVWAbilityRank : Decodable {
-    let cost: Int
-    let effect: String
+    public let cost: Int
+    public let effect: String
 }

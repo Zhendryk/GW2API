@@ -7,54 +7,54 @@
 //
 
 public struct GuildTeam: Decodable {
-    let id: Int
-    let members: [Member]
-    let name: String
-    let aggregate: Aggregate
-    let ladders: Ladders
-    let games: [Game]
-    let seasons: [Season]
+    public let id: Int
+    public let members: [Member]
+    public let name: String
+    public let aggregate: Aggregate
+    public let ladders: Ladders
+    public let games: [Game]
+    public let seasons: [Season]
     
     public struct Member: Decodable {
-        let name: String
-        let role: String
+        public let name: String
+        public let role: String
     }
     
     public struct Game: Decodable {
-        let id: String
-        let map_id: Int
-        let started: String
-        let ended: String
-        let result: String
-        let team: String
-        let scores: Scores
-        let rating_type: String
-        let rating_change: Int
-        let season: String?
+        public let id: String
+        public let map_id: Int
+        public let started: String
+        public let ended: String
+        public let result: String
+        public let team: String
+        public let scores: Scores
+        public let rating_type: String
+        public let rating_change: Int
+        public let season: String?
     }
     
     public struct Season: Decodable {
-        let id: String
-        let wins: Int
-        let losses: Int
-        let rating: Int
+        public let id: String
+        public let wins: Int
+        public let losses: Int
+        public let rating: Int
     }
 }
 
 public struct Aggregate: Decodable {
-    let wins: Int
-    let losses: Int
-    let desertions: Int
-    let byes: Int
-    let forfeits: Int
+    public let wins: Int
+    public let losses: Int
+    public let desertions: Int
+    public let byes: Int
+    public let forfeits: Int
 }
 
 public struct Ladders: Decodable {
-    let ranked: Aggregate
-    let unranked: Aggregate
+    public let ranked: Aggregate
+    public let unranked: Aggregate
 }
 
 public struct Scores: Decodable {
-    let red: Int
-    let blue: Int
+    public let red: Int
+    public let blue: Int
 }

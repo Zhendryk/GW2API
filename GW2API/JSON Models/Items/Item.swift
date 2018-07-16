@@ -9,83 +9,83 @@
 //items
 //lang, id, ids
 public struct Item : Decodable {
-    let id: Int
-    let chat_link: String
-    let name: String
-    let icon: String
-    let description: String?
-    let type: String
-    let rarity: String
-    let level: Int
-    let vendor_value: Int
-    let default_skin: Int?
-    let flags: [String]
-    let game_types: [String]
-    let restrictions: [String]
-    let details: ItemDetails?
+    public let id: Int
+    public let chat_link: String
+    public let name: String
+    public let icon: String
+    public let description: String?
+    public let type: String
+    public let rarity: String
+    public let level: Int
+    public let vendor_value: Int
+    public let default_skin: Int?
+    public let flags: [String]
+    public let game_types: [String]
+    public let restrictions: [String]
+    public let details: ItemDetails?
 }
 
 public struct ItemDetails : Decodable {
-    let type: String
-    let infusion_slots: [InfusionSlot]?
-    let infix_upgrade: InfixUpgrade?
-    let suffix_item_id: Int?
-    let secondary_suffix_id: String?
-    let stat_choices: [String]?
+    public let type: String
+    public let infusion_slots: [InfusionSlot]?
+    public let infix_upgrade: InfixUpgrade?
+    public let suffix_item_id: Int?
+    public let secondary_suffix_id: String?
+    public let stat_choices: [String]?
     
     //Armor
-    let weight_class: String?
-    let defense: Int?
+    public let weight_class: String?
+    public let defense: Int?
     
     //Bag
-    let size: Int?
-    let no_sell_or_sort: Bool?
+    public let size: Int?
+    public let no_sell_or_sort: Bool?
     
     //Consumable
-    let description: String?
-    let duration_ms: Int?
-    let unlock_type: String?
-    let color_id: Int?
-    let recipe_id: Int?
-    let apply_count: Int?
-    let name: String?
-    let skins: [Int]?
+    public let description: String?
+    public let duration_ms: Int?
+    public let unlock_type: String?
+    public let color_id: Int?
+    public let recipe_id: Int?
+    public let apply_count: Int?
+    public let name: String?
+    public let skins: [Int]?
     
     //Minipet
-    let minipet_id: Int?
+    public let minipet_id: Int?
     
     //Salvage Kits
-    let charges: Int?
+    public let charges: Int?
     
     //Upgrade Components
-    let flags: [String]?
-    let infusion_upgrade_flags: [String]?
-    let suffix: String?
-    let bonuses: [String]?
+    public let flags: [String]?
+    public let infusion_upgrade_flags: [String]?
+    public let suffix: String?
+    public let bonuses: [String]?
     
     //Weapon
-    let damage_type: String?
-    let min_power: Int?
-    let max_power: Int?
+    public let damage_type: String?
+    public let min_power: Int?
+    public let max_power: Int?
 }
 
 public struct InfusionSlot : Decodable {
-    let flags: [String]
-    let item_id: Int?
+    public let flags: [String]
+    public let item_id: Int?
 }
 
 public struct InfixUpgrade : Decodable {
-    let attributes: [InfixUpgradeAttribute]
-    let buff: InfixUpgradeBuff?
+    public let attributes: [InfixUpgradeAttribute]
+    public let buff: InfixUpgradeBuff?
     
     public struct InfixUpgradeAttribute : Decodable {
-        let attribute: String
-        let modifier: Int
+        public let attribute: String
+        public let modifier: Int
     }
     
     public struct InfixUpgradeBuff : Decodable {
-        let skill_id: Int
-        let description: String
+        public let skill_id: Int
+        public let description: String
     }
 }
 

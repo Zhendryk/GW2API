@@ -7,10 +7,10 @@
 //
 
 public struct AccountTransaction: Decodable {
-    let id: Int
-    let item_id: Int
-    let price: Int
-    let quantity: Int
-    let created: String
-    let purchased: String
+    public let id: Int
+    public let item_id: Int
+    public let price: Int
+    public let quantity: Int
+    public let created: String
+    public let purchased: String
 }

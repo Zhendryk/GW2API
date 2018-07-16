@@ -7,9 +7,9 @@
 //
 
 public struct WVWMatchOverview : Decodable {
-    let id: String
-    let worlds: [String:Int]
-    let all_worlds: [String:[Int]]
-    let start_time: String
-    let end_time: String
+    public let id: String
+    public let worlds: [String:Int]
+    public let all_worlds: [String:[Int]]
+    public let start_time: String
+    public let end_time: String
 }

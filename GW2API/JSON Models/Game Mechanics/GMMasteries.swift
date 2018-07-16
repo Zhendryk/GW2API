@@ -9,21 +9,21 @@
 //masteries
 //lang, id, ids
 public struct GMMasteries: Decodable {
-    let id: Int
-    let name: String
-    let requirement: String
-    let order: Int
-    let background: String
-    let region: String
-    let levels: [MasteryLevel]
+    public let id: Int
+    public let name: String
+    public let requirement: String
+    public let order: Int
+    public let background: String
+    public let region: String
+    public let levels: [MasteryLevel]
     
     public struct MasteryLevel: Decodable {
-        let name: String
-        let description: String
-        let instruction: String
-        let icon: String
-        let point_cost: Int
-        let exp_cost: Int
+        public let name: String
+        public let description: String
+        public let instruction: String
+        public let icon: String
+        public let point_cost: Int
+        public let exp_cost: Int
     }
 }
 

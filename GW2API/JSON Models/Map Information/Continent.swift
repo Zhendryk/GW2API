@@ -17,10 +17,10 @@
     <continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks
  */
 public struct Continent : Decodable {
-    let id: Int
-    let name: String
-    let continent_dims: [Int]
-    let min_zoom: Int
-    let max_zoom: Int
-    let floors: [Int]
+    public let id: Int
+    public let name: String
+    public let continent_dims: [Int]
+    public let min_zoom: Int
+    public let max_zoom: Int
+    public let floors: [Int]
 }

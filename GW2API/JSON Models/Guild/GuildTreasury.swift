@@ -7,12 +7,12 @@
 //
 
 public struct GuildTreasury: Decodable {
-    let item_id: Int
-    let count: Int
-    let needed_by: [NeededItem]
+    public let item_id: Int
+    public let count: Int
+    public let needed_by: [NeededItem]
 }
 
 public struct NeededItem: Decodable {
-    let upgrade_id: Int
-    let count: Int
+    public let upgrade_id: Int
+    public let count: Int
 }

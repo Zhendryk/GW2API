@@ -9,31 +9,31 @@
 //skills
 //lang, id, ids
 public struct GMSkill : Decodable {
-    let id: Int
-    let name: String
-    let description: String?
-    let icon: String
-    let chat_link: String
-    let type: String?
-    let weapon_type: String?
-    let professions: [String]
-    let slot: String?
-    let facts: [SkillFact]?
-    let traited_facts: [SkillFact]?
-    let categories: [String]?
-    let attunement: String?
-    let cost: Int?
-    let dual_wield: String?
-    let flip_skill: Int?
-    let initiative: Int?
-    let next_chain: Int?
-    let prev_chain: Int?
-    let transform_skills: [String]?
-    let toolbelt_skill: Int?
+    public let id: Int
+    public let name: String
+    public let description: String?
+    public let icon: String
+    public let chat_link: String
+    public let type: String?
+    public let weapon_type: String?
+    public let professions: [String]
+    public let slot: String?
+    public let facts: [SkillFact]?
+    public let traited_facts: [SkillFact]?
+    public let categories: [String]?
+    public let attunement: String?
+    public let cost: Int?
+    public let dual_wield: String?
+    public let flip_skill: Int?
+    public let initiative: Int?
+    public let next_chain: Int?
+    public let prev_chain: Int?
+    public let transform_skills: [String]?
+    public let toolbelt_skill: Int?
     
     public struct SkillFact : Decodable {
-        let text: String
-        let icon: String?
-        let type: String
+        public let text: String
+        public let icon: String?
+        public let type: String
     }
 }

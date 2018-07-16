@@ -9,39 +9,39 @@
 //colors
 //lang, id, ids
 public struct Color: Decodable {
-    let id: Int
-    let name: String
-    let base_rgb: [Int]
-    let cloth: Cloth
-    let leather: Leather
-    let metal: Metal
-    let item: Int?
-    let categories: [String]
+    public let id: Int
+    public let name: String
+    public let base_rgb: [Int]
+    public let cloth: Cloth
+    public let leather: Leather
+    public let metal: Metal
+    public let item: Int?
+    public let categories: [String]
 }
 
 public struct Cloth: Decodable {
-    let brightness: Int
-    let contrast: Float
-    let hue: Int
-    let saturation: Float
-    let lightness: Float
-    let rgb: [Int]
+    public let brightness: Int
+    public let contrast: Float
+    public let hue: Int
+    public let saturation: Float
+    public let lightness: Float
+    public let rgb: [Int]
 }
 
 public struct Leather: Decodable {
-    let brightness: Int
-    let contrast: Float
-    let hue: Int
-    let saturation: Float
-    let lightness: Float
-    let rgb: [Int]
+    public let brightness: Int
+    public let contrast: Float
+    public let hue: Int
+    public let saturation: Float
+    public let lightness: Float
+    public let rgb: [Int]
 }
 
 public struct Metal: Decodable {
-    let brightness: Int
-    let contrast: Float
-    let hue: Int
-    let saturation: Float
-    let lightness: Float
-    let rgb: [Int]
+    public let brightness: Int
+    public let contrast: Float
+    public let hue: Int
+    public let saturation: Float
+    public let lightness: Float
+    public let rgb: [Int]
 }

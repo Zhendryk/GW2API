@@ -7,6 +7,6 @@
 //
 
 public struct AccountMastery: Decodable {
-    let id: Int
-    let level: Int
+    public let id: Int
+    public let level: Int
 }

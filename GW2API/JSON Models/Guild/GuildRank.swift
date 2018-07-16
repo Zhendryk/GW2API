@@ -7,8 +7,8 @@
 //
 
 public struct GuildRank: Decodable {
-    let id: String
-    let order: Int
-    let permissions: [String]
-    let icon: String
+    public let id: String
+    public let order: Int
+    public let permissions: [String]
+    public let icon: String
 }

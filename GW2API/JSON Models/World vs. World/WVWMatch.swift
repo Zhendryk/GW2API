@@ -10,53 +10,53 @@
 //world, id, ids
 //Possible to add /overview, /scores or /stats to this endpoint for more info
 public struct WVWMatch : Decodable {
-    let id: String
-    let start_time: String
-    let end_time: String
-    let scores: [String:Int]
-    let worlds: [String:Int]
-    let all_worlds: [String:[Int]]
-    let deaths: [String:Int]
-    let kills: [String:Int]
-    let maps: [WVWMap]
+    public let id: String
+    public let start_time: String
+    public let end_time: String
+    public let scores: [String:Int]
+    public let worlds: [String:Int]
+    public let all_worlds: [String:[Int]]
+    public let deaths: [String:Int]
+    public let kills: [String:Int]
+    public let maps: [WVWMap]
     
     public struct WVWMap : Decodable {
-        let id: Int
-        let type: String
-        let scores: [String:Int]
-        let kills: [String:Int]
-        let deaths: [String:Int]
-        let objectives: [WVWMapObjective]
-        let bonuses: [WVWMapBonus]
-        let skirmishes: [WVWMapSkirmish]?
-        let victory_points: [String:Int]?
+        public let id: Int
+        public let type: String
+        public let scores: [String:Int]
+        public let kills: [String:Int]
+        public let deaths: [String:Int]
+        public let objectives: [WVWMapObjective]
+        public let bonuses: [WVWMapBonus]
+        public let skirmishes: [WVWMapSkirmish]?
+        public let victory_points: [String:Int]?
         
         public struct WVWMapObjective : Decodable {
-            let id: String
-            let owner: String
-            let last_flipped: String
-            let claimed_by: String?
-            let claimed_at: String?
-            let points_tick: Int
-            let points_capture: Int
-            let guild_upgrades: [Int]?
-            let yaks_delivered: Int?
+            public let id: String
+            public let owner: String
+            public let last_flipped: String
+            public let claimed_by: String?
+            public let claimed_at: String?
+            public let points_tick: Int
+            public let points_capture: Int
+            public let guild_upgrades: [Int]?
+            public let yaks_delivered: Int?
         }
         
         public struct WVWMapBonus : Decodable {
-            let type: String
-            let owner: String
+            public let type: String
+            public let owner: String
         }
     }
 }
 
 public struct WVWMapSkirmish : Decodable {
-    let id: Int
-    let scores: [String:Int]
-    let map_scores: [WVWSkirmishMapScore]
+    public let id: Int
+    public let scores: [String:Int]
+    public let map_scores: [WVWSkirmishMapScore]
     
     public struct WVWSkirmishMapScore : Decodable {
-        let type: String
-        let scores: [String:Int]
+        public let type: String
+        public let scores: [String:Int]
     }
 }

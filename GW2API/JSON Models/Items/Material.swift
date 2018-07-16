@@ -9,8 +9,8 @@
 //materials
 //lang, id, ids
 public struct Material : Decodable {
-    let id: Int
-    let name: String
-    let items: [Int]
-    let order: Int
+    public let id: Int
+    public let name: String
+    public let items: [Int]
+    public let order: Int
 }

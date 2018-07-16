@@ -9,6 +9,6 @@
 //files
 //id, ids
 public struct File : Decodable {
-    let id: String
-    let icon: String
+    public let id: String
+    public let icon: String
 }

@@ -7,8 +7,8 @@
 //
 
 public struct Floor : Decodable {
-    let texture_dims: [Int]
-    let clamped_view: [[Int]]
-    let regions: [String:Region]
-    let id: Int
+    public let texture_dims: [Int]
+    public let clamped_view: [[Int]]
+    public let regions: [String:Region]
+    public let id: Int
 }

@@ -8,5 +8,5 @@
 
 //build
 public struct Build: Decodable {
-    let id: Int
+    public let id: Int
 }

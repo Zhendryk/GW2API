@@ -7,9 +7,9 @@
 //
 
 public struct Region : Decodable {
-    let name: String
-    let label_coord: [Int]
-    let continent_rect: [[Int]]
-    let maps: [String:DetailedMap]
-    let id: Int
+    public let name: String
+    public let label_coord: [Int]
+    public let continent_rect: [[Int]]
+    public let maps: [String:DetailedMap]
+    public let id: Int
 }

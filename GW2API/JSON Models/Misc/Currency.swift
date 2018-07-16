@@ -9,9 +9,9 @@
 //currencies
 //lang, id, ids
 public struct Currency : Decodable {
-    let id: Int
-    let name: String
-    let description: String
-    let icon: String
-    let order: Int
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let icon: String
+    public let order: Int
 }

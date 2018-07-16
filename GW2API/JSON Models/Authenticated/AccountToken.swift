@@ -7,7 +7,7 @@
 //
 
 public struct AccountToken: Decodable {
-    let id: String
-    let name: String
-    let permissions: [String]
+    public let id: String
+    public let name: String
+    public let permissions: [String]
 }

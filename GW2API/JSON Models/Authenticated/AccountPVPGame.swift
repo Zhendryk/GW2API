@@ -7,15 +7,15 @@
 //
 
 public struct AccountPVPGame: Decodable {
-    let id: String
-    let map_id: Int
-    let started: String
-    let ended: String
-    let result: String
-    let team: String
-    let profession: String
-    let scores: Scores
-    let rating_type: String
-    let rating_change: Int
-    let season: String?
+    public let id: String
+    public let map_id: Int
+    public let started: String
+    public let ended: String
+    public let result: String
+    public let team: String
+    public let profession: String
+    public let scores: Scores
+    public let rating_type: String
+    public let rating_change: Int
+    public let season: String?
 }

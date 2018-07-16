@@ -9,6 +9,6 @@
 //races
 //id, ids
 public struct GMRace: Decodable {
-    let id: String
-    let skills: [Int]
+    public let id: String
+    public let skills: [Int]
 }

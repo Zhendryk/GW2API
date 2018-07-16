@@ -9,26 +9,26 @@
 //recipes
 //id, ids
 public struct Recipe : Decodable {
-    let id: Int
-    let type: String
-    let output_item_id: Int
-    let output_item_count: Int
-    let time_to_craft_ms: Int
-    let disciplines: [String]
-    let min_rating: Int
-    let flags: [String]
-    let ingredients: [Ingredient]
-    let guild_ingredients: [GuildIngredient]?
-    let output_upgrade_id: Int?
-    let chat_link: String
+    public let id: Int
+    public let type: String
+    public let output_item_id: Int
+    public let output_item_count: Int
+    public let time_to_craft_ms: Int
+    public let disciplines: [String]
+    public let min_rating: Int
+    public let flags: [String]
+    public let ingredients: [Ingredient]
+    public let guild_ingredients: [GuildIngredient]?
+    public let output_upgrade_id: Int?
+    public let chat_link: String
     
     public struct Ingredient : Decodable {
-        let item_id: Int
-        let count: Int
+        public let item_id: Int
+        public let count: Int
     }
     
     public struct GuildIngredient : Decodable {
-        let upgrade_id: Int
-        let count: Int
+        public let upgrade_id: Int
+        public let count: Int
     }
 }

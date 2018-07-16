@@ -7,7 +7,7 @@
 //
 
 public struct AccountFinisher: Decodable {
-    let id: Int
-    let permanent: Bool
-    let quantity: Int?
+    public let id: Int
+    public let permanent: Bool
+    public let quantity: Int?
 }

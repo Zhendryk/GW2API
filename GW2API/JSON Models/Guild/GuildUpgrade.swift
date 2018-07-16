@@ -8,24 +8,24 @@
 
 //lang, id, ids
 public struct GuildUpgrade: Decodable {
-    let id: Int
-    let name: String
-    let description: String
-    let type: String
-    let icon: String
-    let build_time: Int
-    let required_level: Int
-    let experience: Int
-    let prerequisites: [Int]
-    let costs: [GuildUpgradeCost]
+    public let id: Int
+    public let name: String
+    public let description: String
+    public let type: String
+    public let icon: String
+    public let build_time: Int
+    public let required_level: Int
+    public let experience: Int
+    public let prerequisites: [Int]
+    public let costs: [GuildUpgradeCost]
     
-    let bag_max_items: Int?
-    let bag_max_coins: Int?
+    public let bag_max_items: Int?
+    public let bag_max_coins: Int?
 }
 
 public struct GuildUpgradeCost: Decodable {
-    let type: String
-    let name: String
-    let count: Int
-    let item_id: Int?
+    public let type: String
+    public let name: String
+    public let count: Int
+    public let item_id: Int?
 }
