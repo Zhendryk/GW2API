@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildRank: Decodable {
+public struct GuildRank: Decodable {
     let id: String
     let order: Int
     let permissions: [String]

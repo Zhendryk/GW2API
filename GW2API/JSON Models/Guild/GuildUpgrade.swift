@@ -7,7 +7,7 @@
 //
 
 //lang, id, ids
-struct GuildUpgrade: Decodable {
+public struct GuildUpgrade: Decodable {
     let id: Int
     let name: String
     let description: String
@@ -23,7 +23,7 @@ struct GuildUpgrade: Decodable {
     let bag_max_coins: Int?
 }
 
-struct GuildUpgradeCost: Decodable {
+public struct GuildUpgradeCost: Decodable {
     let type: String
     let name: String
     let count: Int

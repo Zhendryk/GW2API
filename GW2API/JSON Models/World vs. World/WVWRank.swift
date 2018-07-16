@@ -8,7 +8,7 @@
 
 //wvw/ranks
 //lang, ids
-struct WVWRank : Decodable {
+public struct WVWRank : Decodable {
     let id: Int
     let title: String
     let min_rank: Int

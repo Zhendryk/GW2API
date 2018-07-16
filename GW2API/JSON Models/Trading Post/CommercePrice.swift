@@ -8,14 +8,14 @@
 
 //commerce/prices
 //id, ids
-struct CommercePrice: Decodable {
+public struct CommercePrice: Decodable {
     let id: Int
     let whitelisted: Bool
     let buys: CommercePriceTransaction
     let sells: CommercePriceTransaction
 }
 
-struct CommercePriceTransaction: Decodable {
+public struct CommercePriceTransaction: Decodable {
     let unit_price: Int
     let quantity: Int
 }

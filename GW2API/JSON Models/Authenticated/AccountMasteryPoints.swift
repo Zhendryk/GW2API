@@ -6,11 +6,11 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountMasteryPoints: Decodable {
+public struct AccountMasteryPoints: Decodable {
     let totals: [Total]
     let unlocked: [Int]
     
-    struct Total: Decodable {
+    public struct Total: Decodable {
         let region: String
         let spent: Int
         let earned: Int

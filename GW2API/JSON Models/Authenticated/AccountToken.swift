@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountToken: Decodable {
+public struct AccountToken: Decodable {
     let id: String
     let name: String
     let permissions: [String]

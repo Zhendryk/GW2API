@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildLog: Decodable {
+public struct GuildLog: Decodable {
     let id: Int
     let time: String
     let user: String
@@ -22,33 +22,33 @@ struct GuildLog: Decodable {
     let upgrade: upgrade?
 }
 
-struct invited: Decodable {
+public struct invited: Decodable {
     let invited_by: String
 }
 
-struct kick: Decodable {
+public struct kick: Decodable {
     let kicked_by: String
 }
 
-struct rankChange: Decodable {
+public struct rankChange: Decodable {
     let changed_by: String
     let old_rank: String
     let new_rank: String
 }
 
-struct treasury: Decodable {
+public struct treasury: Decodable {
     let item_id: Int
     let count: Int
 }
 
-struct stash: Decodable {
+public struct stash: Decodable {
     let operation: String
     let item_id: Int
     let count: Int
     let coins: Int
 }
 
-struct upgrade: Decodable {
+public struct upgrade: Decodable {
     let action: String
     let upgrade_id: Int
     let count: Int?

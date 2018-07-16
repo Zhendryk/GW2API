@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountWalletItem : Decodable {
+public struct AccountWalletItem : Decodable {
     let id: Int
     let value: Int
 }

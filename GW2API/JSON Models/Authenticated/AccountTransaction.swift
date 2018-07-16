@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountTransaction: Decodable {
+public struct AccountTransaction: Decodable {
     let id: Int
     let item_id: Int
     let price: Int

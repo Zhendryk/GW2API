@@ -8,7 +8,7 @@
 
 //pvp/ranks
 //lang, ids
-struct PVPRank : Decodable {
+public struct PVPRank : Decodable {
     let id: Int
     let finisher_id: Int
     let name: String
@@ -17,7 +17,7 @@ struct PVPRank : Decodable {
     let max_rank: Int
     let levels: [PVPLevel]
     
-    struct PVPLevel : Decodable {
+    public struct PVPLevel : Decodable {
         let min_rank: Int
         let max_rank: Int
         let points: Int

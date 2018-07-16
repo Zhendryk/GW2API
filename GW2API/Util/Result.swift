@@ -11,7 +11,7 @@
 ///
 /// - success: Task was successful, returns generic type T
 /// - failure: Task failed, returns generic error U
-enum Result<T, U> where U: Error {
+public enum Result<T, U> where U: Error {
     case success(T)
     case failure(U)
 }

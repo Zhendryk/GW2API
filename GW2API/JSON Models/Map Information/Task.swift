@@ -7,7 +7,7 @@
 //
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks/<task_id>
-struct Task : Decodable {
+public struct Task : Decodable {
     let objective: String
     let level: Int
     let coord: [Float]

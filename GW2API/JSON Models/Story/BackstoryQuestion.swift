@@ -8,7 +8,7 @@
 
 //backstory/questions
 //lang, page, page_size, id, ids
-struct BackstoryQuestion : Decodable {
+public struct BackstoryQuestion : Decodable {
     let id: Int
     let title: String
     let description: String

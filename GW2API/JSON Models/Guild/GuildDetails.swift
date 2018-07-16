@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildDetails: Decodable {
+public struct GuildDetails: Decodable {
     let level: Int?
     let motd: String?
     let influence: Int?
@@ -19,17 +19,17 @@ struct GuildDetails: Decodable {
     let flags: [String]?
 }
 
-struct emblem: Decodable {
+public struct emblem: Decodable {
     let background: background
     let foreground: foreground
 }
 
-struct background: Decodable {
+public struct background: Decodable {
     let id: Int
     let colors: [Int]
 }
 
-struct foreground: Decodable {
+public struct foreground: Decodable {
     let id: Int
     let colors: [Int]
 }

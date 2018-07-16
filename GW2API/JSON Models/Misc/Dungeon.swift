@@ -8,11 +8,11 @@
 
 //dungeons
 //lang, id, ids
-struct Dungeon : Decodable {
+public struct Dungeon : Decodable {
     let id: String
     let paths: [path]
     
-    struct path : Decodable {
+    public struct path : Decodable {
         let id: String
         let type: String
     }

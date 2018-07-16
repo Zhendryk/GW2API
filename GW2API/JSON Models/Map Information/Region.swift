@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct Region : Decodable {
+public struct Region : Decodable {
     let name: String
     let label_coord: [Int]
     let continent_rect: [[Int]]

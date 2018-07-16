@@ -8,7 +8,7 @@
 
 //skins
 //lang, id, ids
-struct Skin : Decodable {
+public struct Skin : Decodable {
     let id: Int
     let name: String
     let type: String
@@ -19,23 +19,23 @@ struct Skin : Decodable {
     let description: String?
     let details: SkinDetails?
     
-    struct SkinDetails : Decodable {
+    public struct SkinDetails : Decodable {
         let type: String
         
         //Armor
         let weight_class: String?
         let dye_slots: DyeSlots?
         
-        struct DyeSlots : Decodable {
+        public struct DyeSlots : Decodable {
             let `default`: [`default`?]
             let overrides: Overrides
             
-            struct `default` : Decodable {
+            public struct `default` : Decodable {
                 let color_id: Int
                 let material: String
             }
             
-            struct Overrides : Decodable {
+            public struct Overrides : Decodable {
                 let AsuraMale: `default`?
                 let AsuraFemale: `default`?
                 let CharrMale: `default`?

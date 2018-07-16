@@ -8,7 +8,7 @@
 
 //guild/permissions
 //lang, id, ids
-struct Permissions: Decodable {
+public struct Permissions: Decodable {
     let id: String
     let name: String
     let description: String

@@ -11,7 +11,7 @@
 public class AuthenticatedClient : Client {
     
     /// The account endpoint: api.guildwars2.com/v2/account (Needs API key)
-    let account: AccountClient = AccountClient()
+    public let account: AccountClient = AccountClient()
     
     /// Sets the API key for the account endpoint
     ///
@@ -21,67 +21,67 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account endpoint client: api.guildwars2.com/v2/account (Needs API key)
-    class AccountClient : Client {
+    public class AccountClient : Client {
         
         /// The account achievements endpoint: information about an account's achievements
-        let achievements: AccountAchievementsClient = AccountAchievementsClient()
+        public let achievements: AccountAchievementsClient = AccountAchievementsClient()
         
         /// The account bank endpoint: information about the contents of an account's bank
-        let bank: AccountBankClient = AccountBankClient()
+        public let bank: AccountBankClient = AccountBankClient()
         
         /// The account dungeons endpoint: information about the current daily cleared dungeons of an account
-        let dungeons: AccountDungeonsClient = AccountDungeonsClient()
+        public let dungeons: AccountDungeonsClient = AccountDungeonsClient()
         
         /// The account dyes endpoint: information about the dyes unlocked by an account
-        let dyes: AccountDyesClient = AccountDyesClient()
+        public let dyes: AccountDyesClient = AccountDyesClient()
         
         /// The account finishers endpoint: information about the finishers unlocked by an account
-        let finishers: AccountFinishersCient = AccountFinishersCient()
+        public let finishers: AccountFinishersCient = AccountFinishersCient()
         
         /// The account home endpoint: information about the home instance of an account
-        let home: AccountHomeClient = AccountHomeClient()
+        public let home: AccountHomeClient = AccountHomeClient()
         
         /// The account inventory endpoint: information about the shared inventory slots of an account
-        let inventory: AccountInventoryClient = AccountInventoryClient()
+        public let inventory: AccountInventoryClient = AccountInventoryClient()
         
         /// The account masteries endpoint: information about the masteries unlocked by an account
-        let masteries: AccountMasteriesClient = AccountMasteriesClient()
+        public let masteries: AccountMasteriesClient = AccountMasteriesClient()
         
         /// The account materials endpoint: information about the material storage of an account
-        let materials: AccountMaterialsClient = AccountMaterialsClient()
+        public let materials: AccountMaterialsClient = AccountMaterialsClient()
         
         /// The account minis endpoint: information about the minipets unlocked by an account
-        let minis: AccountMinisClient = AccountMinisClient()
+        public let minis: AccountMinisClient = AccountMinisClient()
         
         /// The account outfits endpoint: information about the outfits unlocked by an account
-        let outfits: AccountOutfitsClient = AccountOutfitsClient()
+        public let outfits: AccountOutfitsClient = AccountOutfitsClient()
         
         /// The account raids endpoint: information about the completed raid events between weekly resets of an account
-        let raids: AccountRaidsClient = AccountRaidsClient()
+        public let raids: AccountRaidsClient = AccountRaidsClient()
         
         /// The account recipes endpoint: information about the recipes unlocked by an account
-        let recipes: AccountRecipesClient = AccountRecipesClient()
+        public let recipes: AccountRecipesClient = AccountRecipesClient()
         
         /// The account skins endpoint: information about the skins unlocked by an account
-        let skins: AccountSkinsClient = AccountSkinsClient()
+        public let skins: AccountSkinsClient = AccountSkinsClient()
         
         /// The account titles endpoint: information about the titles unlocked by an account
-        let titles: AccountTitlesClient = AccountTitlesClient()
+        public let titles: AccountTitlesClient = AccountTitlesClient()
         
         /// The account wallet endpoint: information about the wealth / contents of an account's wallet
-        let wallet: AccountWalletClient = AccountWalletClient()
+        public let wallet: AccountWalletClient = AccountWalletClient()
         
         /// The account characters endpoint: information about an account's characters
-        let characters: AccountCharacterClient = AccountCharacterClient()
+        public let characters: AccountCharacterClient = AccountCharacterClient()
         
         /// The account transactions endpoint: information about an account's past and current trading post transactions
-        let transactions: AccountTransactionsClient = AccountTransactionsClient()
+        public let transactions: AccountTransactionsClient = AccountTransactionsClient()
         
         /// The account pvp endpoint: information about an account's PVP performance / activity
-        let pvp: AccountPVPClient = AccountPVPClient()
+        public let pvp: AccountPVPClient = AccountPVPClient()
         
         /// The account tokeninfo endpoint: information about the supplied API key
-        let tokeninfo: AccountTokenInfoClient = AccountTokenInfoClient()
+        public let tokeninfo: AccountTokenInfoClient = AccountTokenInfoClient()
         
         
         /// Sets the API key to all authenticated endpoints
@@ -115,7 +115,7 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<Account?, APIError>)
-        func get(completion: @escaping (Result<Account?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<Account?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.account.request, needsAuthorization: true, decode: { json -> Account? in
                 guard let result = json as? Account else { return nil }
                 return result
@@ -124,13 +124,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account achievements endpoint client: api.guildwars2.com/v2/account/achievements (Needs API key)
-    class AccountAchievementsClient : Client {
+    public class AccountAchievementsClient : Client {
         
         /// Returns information about an account's achievement progress
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountAchievement]?, APIError>)
-        func get(completion: @escaping (Result<[AccountAchievement]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountAchievement]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountAchievements.request, needsAuthorization: true, decode: { json -> [AccountAchievement]? in
                 guard let result = json as? [AccountAchievement] else { return nil }
                 return result
@@ -139,13 +139,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account bank endpoint client: api.guildwars2.com/v2/account/bank (Needs API key)
-    class AccountBankClient : Client {
+    public class AccountBankClient : Client {
         
         /// Returns information about the bank associated with an API key
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountBankItem]?, APIError>)
-        func get(completion: @escaping (Result<[AccountBankItem?]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountBankItem?]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountBank.request, needsAuthorization: true, decode: { json -> [AccountBankItem?]? in
                 guard let result = json as? [AccountBankItem?] else { return nil }
                 return result
@@ -154,13 +154,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account dungeons endpoint client: api.guildwars2.com/v2/account/dungeons (Needs API key)
-    class AccountDungeonsClient : Client {
+    public class AccountDungeonsClient : Client {
         
         /// Returns a list of all dungeons cleared today by this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountDungeons.request, needsAuthorization: true, decode: { json -> [String]? in
                 guard let result = json as? [String] else { return nil }
                 return result
@@ -169,13 +169,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account dyes endpoint client: api.guildwars2.com/v2/account/dyes (Needs API key)
-    class AccountDyesClient : Client {
+    public class AccountDyesClient : Client {
         
         /// Returns a list of all the dye ids associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountDyes.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -184,13 +184,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account finishers endpoint client: api.guildwars2.com/v2/account/finishers (Needs API key)
-    class AccountFinishersCient: Client {
+    public class AccountFinishersCient: Client {
         
         /// Returns information on all of the finishers unlocked on this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountFinisher]?, APIError>)
-        func get(completion: @escaping (Result<[AccountFinisher]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountFinisher]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountFinishers.request, needsAuthorization: true, decode: { json -> [AccountFinisher]? in
                 guard let result = json as? [AccountFinisher] else { return nil }
                 return result
@@ -199,13 +199,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account home endpoint client: api.guildwars2.com/v2/account/home (Needs API key)
-    class AccountHomeClient : Client {
+    public class AccountHomeClient : Client {
         
         /// The account home cats endpoint: api.guildwars2.com/v2/account/home/cats (Needs API key)
-        let cats: AccountHomeCatsClient = AccountHomeCatsClient()
+        public let cats: AccountHomeCatsClient = AccountHomeCatsClient()
         
         /// The account home nodes endpoint: api.guildwars2.com/v2/account/home/nodes (Needs API key)
-        let nodes: AccountHomeNodesClient = AccountHomeNodesClient()
+        public let nodes: AccountHomeNodesClient = AccountHomeNodesClient()
         
         /// Sets the API key for the account/home endpoint
         ///
@@ -216,13 +216,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account home cats endpoint client: api.guildwars2.com/v2/account/home/cats (Needs API key)
-        class AccountHomeCatsClient : Client {
+        public class AccountHomeCatsClient : Client {
             
             /// Returns information about unlocked cats in the home instance associated with this account
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountCat]?, APIError>)
-            func get(completion: @escaping (Result<[AccountCat]?, APIError>) -> Void) {
+            public func get(completion: @escaping (Result<[AccountCat]?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.accountHomeCats.request, needsAuthorization: true, decode: { json -> [AccountCat]? in
                     guard let result = json as? [AccountCat] else { return nil }
                     return result
@@ -231,13 +231,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account home nodes endpoint client: api.guildwars2.com/v2/account/home/nodes (Needs API key)
-        class AccountHomeNodesClient : Client {
+        public class AccountHomeNodesClient : Client {
             
             /// Returns information about unlocked gathering nodes in the home instance associated with this account
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
+            public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.accountHomeNodes.request, needsAuthorization: true, decode: { json -> [String]? in
                     guard let result = json as? [String] else { return nil }
                     return result
@@ -247,13 +247,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account inventory endpoint client: api.guildwars2.com/v2/account/inventory (Needs API key)
-    class AccountInventoryClient : Client {
+    public class AccountInventoryClient : Client {
         
         /// Returns information about the shared inventory slots associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountInventoryItem]?, APIError>)
-        func get(completion: @escaping (Result<[AccountInventoryItem?]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountInventoryItem?]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountInventory.request, needsAuthorization: true, decode: { json -> [AccountInventoryItem?]? in
                 guard let result = json as? [AccountInventoryItem?] else { return nil }
                 return result
@@ -262,10 +262,10 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account masteries endpoint client: api.guildwars2.com/v2/account/masteries (Needs API key)
-    class AccountMasteriesClient : Client {
+    public class AccountMasteriesClient : Client {
         
         /// The account mastery points endpoint: api.guildwars2.com/v2/account/mastery/points (Needs API key)
-        let points: AccountMasteryPointsClient = AccountMasteryPointsClient()
+        public let points: AccountMasteryPointsClient = AccountMasteryPointsClient()
         
         /// Sets the API key for the account/masteries endpoint
         ///
@@ -279,7 +279,7 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountMastery]?, APIError>)
-        func get(completion: @escaping (Result<[AccountMastery]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountMastery]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountMasteries.request, needsAuthorization: true, decode: { json -> [AccountMastery]? in
                 guard let result = json as? [AccountMastery] else { return nil }
                 return result
@@ -287,13 +287,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account mastery points endpoint client: api.guildwars2.com/v2/account/mastery/points (Needs API key)
-        class AccountMasteryPointsClient : Client {
+        public class AccountMasteryPointsClient : Client {
             
             /// Returns a summary of the tallied up total of this account's mastery points
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<AccountMasteryPoints?, APIError>)
-            func get(completion: @escaping (Result<AccountMasteryPoints?, APIError>) -> Void) {
+            public func get(completion: @escaping (Result<AccountMasteryPoints?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.accountMasteryPoints.request, needsAuthorization: true, decode: { json -> AccountMasteryPoints? in
                     guard let result = json as? AccountMasteryPoints else { return nil }
                     return result
@@ -303,13 +303,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account materials endpoint client: api.guildwars2.com/v2/account/materials (Needs API key)
-    class AccountMaterialsClient : Client {
+    public class AccountMaterialsClient : Client {
         
         /// Returns information about the material storage associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountMaterial]?, APIError>)
-        func get(completion: @escaping (Result<[AccountMaterial]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountMaterial]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountMaterials.request, needsAuthorization: true, decode: { json -> [AccountMaterial]? in
                 guard let result = json as? [AccountMaterial] else { return nil }
                 return result
@@ -318,13 +318,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account minis endpoint client: api.guildwars2.com/v2/account/minis (Needs API key)
-    class AccountMinisClient : Client {
+    public class AccountMinisClient : Client {
         
         /// Returns information about unlocked mini pets associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountMinis.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -333,13 +333,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account outfits endpoint client: api.guildwars2.com/v2/account/outfits (Needs API key)
-    class AccountOutfitsClient : Client {
+    public class AccountOutfitsClient : Client {
         
         /// Returns information about unlocked outfits associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountOutfits.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -348,13 +348,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account raids endpoint client: api.guildwars2.com/v2/account/raids (Needs API key)
-    class AccountRaidsClient : Client {
+    public class AccountRaidsClient : Client {
         
         /// Returns a list of completed raid events between weekly resets associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountRaids.request, needsAuthorization: true, decode: { json -> [String]? in
                 guard let result = json as? [String] else { return nil }
                 return result
@@ -363,13 +363,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account recipes endpoint client: api.guildwars2.com/v2/account/recipes (Needs API key)
-    class AccountRecipesClient : Client {
+    public class AccountRecipesClient : Client {
         
         /// Returns a list of unlocked recipe ids associated with this account. Resolvable against /v2/recipes
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountRecipes.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -378,13 +378,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account skins endpoint client: api.guildwars2.com/v2/account/skins (Needs API key)
-    class AccountSkinsClient : Client {
+    public class AccountSkinsClient : Client {
         
         /// Returns a list of unlocked skin ids associated with this account. Resolvable against /v2/skins
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountSkins.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -393,13 +393,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account titles endpoint client: api.guildwars2.com/v2/account/titles (Needs API key)
-    class AccountTitlesClient : Client {
+    public class AccountTitlesClient : Client {
         
         /// Returns a list of unlocked title ids associated with this account. Resolvable against /v2/titles
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountTitles.request, needsAuthorization: true, decode: { json -> [Int]? in
                 guard let result = json as? [Int] else { return nil }
                 return result
@@ -408,13 +408,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account wallet endpoint client: api.guildwars2.com/v2/account/wallet (Needs API key)
-    class AccountWalletClient : Client {
+    public class AccountWalletClient : Client {
         
         /// Returns information about the wealth associated with this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountWalletItem]?, APIError>)
-        func get(completion: @escaping (Result<[AccountWalletItem]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[AccountWalletItem]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.accountWallet.request, needsAuthorization: true, decode: { json -> [AccountWalletItem]? in
                 guard let result = json as? [AccountWalletItem] else { return nil }
                 return result
@@ -423,13 +423,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account characters endpoint client: api.guildwars2.com/v2/characters (Needs API key)
-    class AccountCharacterClient : Client {
+    public class AccountCharacterClient : Client {
         
         /// Returns a list of names of characters created on this account
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.characters.request, needsAuthorization: true, decode: { json -> [String]? in
                 guard let result = json as? [String] else { return nil }
                 return result
@@ -441,7 +441,7 @@ public class AuthenticatedClient : Client {
         /// - Parameters:
         ///   - characterName: The name of the character you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<AccountCharacter?, APIError>)
-        func get(characterName: String, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
+        public func get(characterName: String, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
             var request = EAuthentication.characters.request
             request.url?.appendPathComponent(characterName)
             fetchAsync(with: request, needsAuthorization: true, decode: { json -> AccountCharacter? in
@@ -452,13 +452,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account transactions endpoint client: api.guildwars2.com/v2/commerce/transactions (Needs API key)
-    class AccountTransactionsClient : Client {
+    public class AccountTransactionsClient : Client {
         
         /// The account current transactions endpoint: api.guildwars2.com/v2/commerce/transactions/current (Needs API key)
-        let current: ATCurrentClient = ATCurrentClient()
+        public let current: ATCurrentClient = ATCurrentClient()
         
         /// The account transactions history endpoint: api.guildwars2.com/v2/commerce/transactions/history (Needs API key)
-        let history: ATHistoryClient = ATHistoryClient()
+        public let history: ATHistoryClient = ATHistoryClient()
         
         /// Sets the API key for the commerce/transactions endpoint
         ///
@@ -469,13 +469,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account current transactions endpoint client: api.guildwars2.com/v2/commerce/transactions/current (Needs API key)
-        class ATCurrentClient : Client {
+        public class ATCurrentClient : Client {
             
             /// The account current buy transactions endpoint: api.guildwars2.com/v2/commerce/transactions/current/buys (Needs API key)
-            let buys: ATCBuysClient = ATCBuysClient()
+            public let buys: ATCBuysClient = ATCBuysClient()
             
             /// The account current buy transactions endpoint: api.guildwars2.com/v2/commerce/transactions/current/sells (Needs API key)
-            let sells: ATCSellsClient = ATCSellsClient()
+            public let sells: ATCSellsClient = ATCSellsClient()
             
             /// Sets the API key for the buy and sell endpoints
             ///
@@ -486,13 +486,13 @@ public class AuthenticatedClient : Client {
             }
             
             /// The account current buy transactions endpoint client: api.guildwars2.com/v2/commerce/transactions/current/buys (Needs API key)
-            class ATCBuysClient : Client {
+            public class ATCBuysClient : Client {
                 
                 /// Returns information on this account's current buy transactions
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AccountTransaction]?, APIError>)
-                func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: EAuthentication.commerceTransactionsCurrentBuys.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -501,13 +501,13 @@ public class AuthenticatedClient : Client {
             }
             
             /// The account current sell transactions endpoint client: api.guildwars2.com/v2/commerce/transactions/current/sells (Needs API key)
-            class ATCSellsClient : Client {
+            public class ATCSellsClient : Client {
                 
                 /// Returns informatino on this account's current sell transactions
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AcccountTransaction]?, APIError>)
-                func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: EAuthentication.commerceTransactionsCurrentSells.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -517,13 +517,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account transactions history endpoint client: api.guildwars2.com/v2/commerce/transactions/history (Needs API key)
-        class ATHistoryClient : Client {
+        public class ATHistoryClient : Client {
             
             /// The account transactions history buys endpoint: api.guildwars2.com/v2/commerce/transactions/history/buys (Needs API key)
-            let buys: ATHBuysClient = ATHBuysClient()
+            public let buys: ATHBuysClient = ATHBuysClient()
             
             /// The account transactions history sells endpoint: api.guildwars2.com/v2/commerce/transactions/history/sells (Needs API key)
-            let sells: ATHSellsClient = ATHSellsClient()
+            public let sells: ATHSellsClient = ATHSellsClient()
             
             /// Sets the API key for the buy and sell endpoints
             ///
@@ -534,13 +534,13 @@ public class AuthenticatedClient : Client {
             }
             
             /// The account transactions history buys endpoint client: api.guildwars2.com/v2/commerce/transactions/history/buys (Needs API key)
-            class ATHBuysClient : Client {
+            public class ATHBuysClient : Client {
                 
                 /// Returns information on this account's past buy transactions
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AcccountTransaction]?, APIError>)
-                func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: EAuthentication.commerceTransactionsHistoryBuys.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -549,13 +549,13 @@ public class AuthenticatedClient : Client {
             }
             
             /// The account transactions history sells endpoint client: api.guildwars2.com/v2/commerce/transactions/history/sells (Needs API key)
-            class ATHSellsClient : Client {
+            public class ATHSellsClient : Client {
                 
                 /// Returns information on this account's past sell transactions
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AcccountTransaction]?, APIError>)
-                func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
+                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
                     fetchAsync(with: EAuthentication.commerceTransactionsHistorySells.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
                         guard let result = json as? [AccountTransaction] else { return nil }
                         return result
@@ -566,16 +566,16 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account pvp endpoint client: api.guildwars2.com/v2/pvp (Needs API key)
-    class AccountPVPClient : Client {
+    public class AccountPVPClient : Client {
         
         /// The account pvp stats endpoint: api.guildwars2.com/pvp/stats (Needs API key)
-        let stats: AccountPVPStatsClient = AccountPVPStatsClient()
+        public let stats: AccountPVPStatsClient = AccountPVPStatsClient()
         
         /// The account pvp games endpoint: api.guildwars2.com/pvp/games (Needs API key)
-        let games: AccountPVPGamesClient = AccountPVPGamesClient()
+        public let games: AccountPVPGamesClient = AccountPVPGamesClient()
         
         /// The account pvp standings endpoint: api.guildwars2.com/pvp/standings (Needs API key)
-        let standings: AccountPVPStandingsClient = AccountPVPStandingsClient()
+        public let standings: AccountPVPStandingsClient = AccountPVPStandingsClient()
         
         /// Sets the API key for the api endpoint
         ///
@@ -587,13 +587,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account pvp stats endpoint client: api.guildwars2.com/v2/pvp/stats (Needs API key)
-        class AccountPVPStatsClient : Client {
+        public class AccountPVPStatsClient : Client {
             
             /// Returns information on this account's performance in sPvP
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<AccountPVPStats?, APIError>)
-            func get(completion: @escaping (Result<AccountPVPStats?, APIError>) -> Void) {
+            public func get(completion: @escaping (Result<AccountPVPStats?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.pvpStats.request, needsAuthorization: true, decode: { json -> AccountPVPStats? in
                     guard let result = json as? AccountPVPStats else { return nil }
                     return result
@@ -602,13 +602,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account pvp games endpoint client: api.guildwars2.com/v2/pvp/games (Needs API key)
-        class AccountPVPGamesClient : Client {
+        public class AccountPVPGamesClient : Client {
             
             /// Returns more detailed information on this account's most recent sPvP matches
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
+            public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.pvpGames.request, needsAuthorization: true, decode: { json -> [String]? in
                     guard let result = json as? [String] else { return nil }
                     return result
@@ -620,7 +620,7 @@ public class AuthenticatedClient : Client {
             /// - Parameters:
             ///   - id: The id of the game you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            func get(id: String, completion: @escaping (Result<AccountPVPGame?, APIError>) -> Void) {
+            public func get(id: String, completion: @escaping (Result<AccountPVPGame?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.pvpGames.idRequest(id: id), needsAuthorization: true, decode: { json -> AccountPVPGame? in
                     guard let res = json as? AccountPVPGame else { return nil }
                     return res
@@ -632,7 +632,7 @@ public class AuthenticatedClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the games you are searching for "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            func get(ids: [String], completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
+            public func get(ids: [String], completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.pvpGames.request, needsAuthorization: true, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [AccountPVPGame]? in
                     guard let res = json as? [AccountPVPGame] else { return nil }
                     return res
@@ -641,13 +641,13 @@ public class AuthenticatedClient : Client {
         }
         
         /// The account pvp standings endpoint client: api.guildwars2.com/v2/pvp/standings (Needs API key)
-        class AccountPVPStandingsClient : Client {
+        public class AccountPVPStandingsClient : Client {
             
             /// Returns the best and current standing of this account in sPvP leagues
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPStandings]?, APIError>)
-            func get(completion: @escaping (Result<[AccountPVPStandings]?, APIError>) -> Void) {
+            public func get(completion: @escaping (Result<[AccountPVPStandings]?, APIError>) -> Void) {
                 fetchAsync(with: EAuthentication.pvpStandings.request, needsAuthorization: true, decode: { json -> [AccountPVPStandings]? in
                     guard let result = json as? [AccountPVPStandings] else { return nil }
                     return result
@@ -657,13 +657,13 @@ public class AuthenticatedClient : Client {
     }
     
     /// The account tokeninfo endpoint client: api.guildwars2.com/v2/tokeninfo (Needs API key)
-    class AccountTokenInfoClient : Client {
+    public class AccountTokenInfoClient : Client {
         
         /// Returns information about the supplied API key
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<AccountToken?, APIError>)
-        func get(completion: @escaping (Result<AccountToken?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<AccountToken?, APIError>) -> Void) {
             fetchAsync(with: EAuthentication.tokeninfo.request, needsAuthorization: true, decode: { json -> AccountToken? in
                 guard let result = json as? AccountToken else { return nil }
                 return result

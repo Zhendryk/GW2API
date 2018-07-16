@@ -8,7 +8,7 @@
 
 //wvw/objectives
 //lang
-struct WVWObjective : Decodable {
+public struct WVWObjective : Decodable {
     let id: String
     let name: String
     let type: String

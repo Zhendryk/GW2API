@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct DetailedMap : Decodable {
+public struct DetailedMap : Decodable {
     let name: String
     let min_level: Int
     let max_level: Int
@@ -22,19 +22,19 @@ struct DetailedMap : Decodable {
     let mastery_points: [MapMasteryPoint]
     let skill_challenges: [MapSkillChallenge]
     
-    struct MapMasteryPoint : Decodable {
+    public struct MapMasteryPoint : Decodable {
         let coord: [Float]
         let id: Int
         let region: String
         
     }
     
-    struct MapSkillChallenge : Decodable {
+    public struct MapSkillChallenge : Decodable {
         let coord: [Float]
         let id: String
     }
     
-    struct MapAdventure : Decodable {
+    public struct MapAdventure : Decodable {
         let coord: [Float]
         let name: String
         let id: String

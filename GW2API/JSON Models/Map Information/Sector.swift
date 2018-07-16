@@ -7,7 +7,7 @@
 //
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/sectors/<sector_id>
-struct Sector : Decodable {
+public struct Sector : Decodable {
     let id: Int
     let name: String?
     let level: Int

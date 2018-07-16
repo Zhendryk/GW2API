@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountMastery: Decodable {
+public struct AccountMastery: Decodable {
     let id: Int
     let level: Int
 }

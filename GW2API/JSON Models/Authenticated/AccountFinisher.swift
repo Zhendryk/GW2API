@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountFinisher: Decodable {
+public struct AccountFinisher: Decodable {
     let id: Int
     let permanent: Bool
     let quantity: Int?

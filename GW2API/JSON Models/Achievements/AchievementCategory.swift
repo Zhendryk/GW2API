@@ -8,7 +8,7 @@
 
 //achievements/categories
 //lang, id, ids
-struct AchievementCategory: Decodable {
+public struct AchievementCategory: Decodable {
     let id: Int
     let name: String
     let description: String

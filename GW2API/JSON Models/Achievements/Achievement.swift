@@ -8,7 +8,7 @@
 
 //achievements
 //lang, id, ids
-struct Achievement: Decodable {
+public struct Achievement: Decodable {
     let id: Int
     let icon: String?
     let name: String
@@ -23,12 +23,12 @@ struct Achievement: Decodable {
     let bits: [AchievementBit]?
     let point_cap: Int?
     
-    struct AchievementTier: Decodable {
+    public struct AchievementTier: Decodable {
         let count: Int
         let points: Int
     }
     
-    struct AchievementReward: Decodable {
+    public struct AchievementReward: Decodable {
         let type: String
         
         //If type = "coins" || "item"
@@ -41,7 +41,7 @@ struct Achievement: Decodable {
         let region: String?
     }
     
-    struct AchievementBit: Decodable {
+    public struct AchievementBit: Decodable {
         let type: String
         let id: Int?
         let text: String?

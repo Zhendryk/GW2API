@@ -8,7 +8,7 @@
 
 //items
 //lang, id, ids
-struct Item : Decodable {
+public struct Item : Decodable {
     let id: Int
     let chat_link: String
     let name: String
@@ -25,7 +25,7 @@ struct Item : Decodable {
     let details: ItemDetails?
 }
 
-struct ItemDetails : Decodable {
+public struct ItemDetails : Decodable {
     let type: String
     let infusion_slots: [InfusionSlot]?
     let infix_upgrade: InfixUpgrade?
@@ -69,21 +69,21 @@ struct ItemDetails : Decodable {
     let max_power: Int?
 }
 
-struct InfusionSlot : Decodable {
+public struct InfusionSlot : Decodable {
     let flags: [String]
     let item_id: Int?
 }
 
-struct InfixUpgrade : Decodable {
+public struct InfixUpgrade : Decodable {
     let attributes: [InfixUpgradeAttribute]
     let buff: InfixUpgradeBuff?
     
-    struct InfixUpgradeAttribute : Decodable {
+    public struct InfixUpgradeAttribute : Decodable {
         let attribute: String
         let modifier: Int
     }
     
-    struct InfixUpgradeBuff : Decodable {
+    public struct InfixUpgradeBuff : Decodable {
         let skill_id: Int
         let description: String
     }

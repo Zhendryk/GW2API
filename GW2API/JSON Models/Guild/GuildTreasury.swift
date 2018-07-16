@@ -6,13 +6,13 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildTreasury: Decodable {
+public struct GuildTreasury: Decodable {
     let item_id: Int
     let count: Int
     let needed_by: [NeededItem]
 }
 
-struct NeededItem: Decodable {
+public struct NeededItem: Decodable {
     let upgrade_id: Int
     let count: Int
 }

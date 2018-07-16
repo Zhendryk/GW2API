@@ -8,7 +8,7 @@
 
 //wvw/abilities
 //lang, ids
-struct WVWAbility : Decodable {
+public struct WVWAbility : Decodable {
     let id: Int
     let name: String
     let description: String
@@ -16,7 +16,7 @@ struct WVWAbility : Decodable {
     let ranks: [WVWAbilityRank]
 }
 
-struct WVWAbilityRank : Decodable {
+public struct WVWAbilityRank : Decodable {
     let cost: Int
     let effect: String
 }

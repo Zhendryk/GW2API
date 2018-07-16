@@ -8,7 +8,7 @@
 
 //specializations
 //lang, id, ids
-struct GMSpecialization : Decodable {
+public struct GMSpecialization : Decodable {
     let id: Int
     let name: String
     let profession: String

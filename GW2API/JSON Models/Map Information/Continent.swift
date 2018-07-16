@@ -16,7 +16,7 @@
     <continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/pois
     <continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/tasks
  */
-struct Continent : Decodable {
+public struct Continent : Decodable {
     let id: Int
     let name: String
     let continent_dims: [Int]

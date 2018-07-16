@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountPVPStats: Decodable {
+public struct AccountPVPStats: Decodable {
     let pvp_rank: Int
     let pvp_rank_points: Int
     let pvp_rank_rollovers: Int
@@ -14,7 +14,7 @@ struct AccountPVPStats: Decodable {
     let professions: Professions
     let ladders: Ladders
     
-    struct Professions: Decodable {
+    public struct Professions: Decodable {
         let elementalist: Aggregate?
         let ranger: Aggregate?
         let necromancer: Aggregate?

@@ -8,7 +8,7 @@
 
 //masteries
 //lang, id, ids
-struct GMMasteries: Decodable {
+public struct GMMasteries: Decodable {
     let id: Int
     let name: String
     let requirement: String
@@ -17,7 +17,7 @@ struct GMMasteries: Decodable {
     let region: String
     let levels: [MasteryLevel]
     
-    struct MasteryLevel: Decodable {
+    public struct MasteryLevel: Decodable {
         let name: String
         let description: String
         let instruction: String

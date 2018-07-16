@@ -10,13 +10,13 @@
 public class TradingPostClient : Client {
     
     /// The listings endpoint: information about trading post listings
-    let listings: ListingsClient = ListingsClient()
+    public let listings: ListingsClient = ListingsClient()
     
     /// The exchange endpoint: information about conversion rates from coins to gems and vice versa
-    let exchange: ExchangeClient = ExchangeClient()
+    public let exchange: ExchangeClient = ExchangeClient()
     
     /// The prices endpoint: information about buy and sell listings
-    let prices: PricesClient = PricesClient()
+    public let prices: PricesClient = PricesClient()
     
     /// Sets the language for every sub endpoint
     ///
@@ -28,12 +28,12 @@ public class TradingPostClient : Client {
     }
     
     /// The listings endpoint client: api.guildwars2.com/v2/commerce/listings
-    class ListingsClient : Client {
+    public class ListingsClient : Client {
         
         /// Returns a list of all commerce listing ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commerceListings.request, decode: { json -> [Int]? in
                 guard let res = json as? [Int] else { return nil }
                 return res
@@ -45,7 +45,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - id: The id of the commerce listing you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommerceListing?, APIError>)
-        func get(id: Int, completion: @escaping (Result<CommerceListing?, APIError>) -> Void) {
+        public func get(id: Int, completion: @escaping (Result<CommerceListing?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commerceListings.idRequest(id: String(id)), decode: { json -> CommerceListing? in
                 guard let res = json as? CommerceListing else { return nil }
                 return res
@@ -57,7 +57,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the commerce listing(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommerceListing]?, APIError>)
-        func get(ids: [Int], completion: @escaping (Result<[CommerceListing]?, APIError>) -> Void) {
+        public func get(ids: [Int], completion: @escaping (Result<[CommerceListing]?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commerceListings.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [CommerceListing]? in
                 guard let res = json as? [CommerceListing] else { return nil }
                 return res
@@ -66,14 +66,14 @@ public class TradingPostClient : Client {
     }
     
     /// The exchange endpoint client: api.guildwars2.com/v2/...
-    class ExchangeClient : Client {
+    public class ExchangeClient : Client {
         
         /// Returns the current conversion rate from coins to gems
         ///
         /// - Parameters:
         ///   - quantity: The number of coins you want to know the conversion rate to gems
         ///   - completion: Callback function to handle the data returned from the API (Result<CommerceExchange?, APIError>)
-        func coinsToGems(quantity: Int, completion: @escaping (Result<CommerceExchange?, APIError>) -> Void) {
+        public func coinsToGems(quantity: Int, completion: @escaping (Result<CommerceExchange?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commerceExchangeCoins.request, parameters: [URLQueryItem(name: "quantity", value: String(quantity))], decode: { json -> CommerceExchange? in
                 guard let res = json as? CommerceExchange else { return nil }
                 return res
@@ -85,7 +85,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - quantity: The number of gems you want to know the conversion rate to coins
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommerceExchange]?, APIError>)
-        func gemsToCoins(quantity: Int, completion: @escaping (Result<CommerceExchange?, APIError>) -> Void) {
+        public func gemsToCoins(quantity: Int, completion: @escaping (Result<CommerceExchange?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commerceExchangeGems.request, parameters: [URLQueryItem(name: "quantity", value: String(quantity))], decode: { json -> CommerceExchange? in
                 guard let res = json as? CommerceExchange else { return nil }
                 return res
@@ -94,12 +94,12 @@ public class TradingPostClient : Client {
     }
     
     /// The prices endpoint client: api.guildwars2.com/v2/commerce/prices
-    class PricesClient : Client {
+    public class PricesClient : Client {
         
         /// Returns a list of all commerce pricing ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
+        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commercePrices.request, decode: { json -> [Int]? in
                 guard let res = json as? [Int] else { return nil }
                 return res
@@ -111,7 +111,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - id: The id of the commerce price you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommercePrice?, APIError>)
-        func get(id: Int, completion: @escaping (Result<CommercePrice?, APIError>) -> Void) {
+        public func get(id: Int, completion: @escaping (Result<CommercePrice?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commercePrices.idRequest(id: String(id)), decode: { json -> CommercePrice? in
                 guard let res = json as? CommercePrice else { return nil }
                 return res
@@ -123,7 +123,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the commerce price(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommercePrice]?, APIError>)
-        func get(ids: [Int], completion: @escaping (Result<[CommercePrice]?, APIError>) -> Void) {
+        public func get(ids: [Int], completion: @escaping (Result<[CommercePrice]?, APIError>) -> Void) {
             fetchAsync(with: ETradingPost.commercePrices.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [CommercePrice]? in
                 guard let res = json as? [CommercePrice] else { return nil }
                 return res

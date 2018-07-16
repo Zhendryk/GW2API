@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct WVWMatchScore : Decodable {
+public struct WVWMatchScore : Decodable {
     let id: String
     let scores: [String:Int]
     let victory_points: [String:Int]

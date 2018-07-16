@@ -8,7 +8,7 @@
 
 //traits
 //lang, id, ids
-struct GMTrait : Decodable {
+public struct GMTrait : Decodable {
     let id: Int
     let name: String
     let icon: String
@@ -20,13 +20,13 @@ struct GMTrait : Decodable {
     let traited_facts: [TraitedFact]?
     let skills: [TraitSkill]?
     
-    struct TraitFact : Decodable {
+    public struct TraitFact : Decodable {
         let text: String?
         let icon: String?
         let type: String
     }
     
-    struct TraitedFact : Decodable {
+    public struct TraitedFact : Decodable {
         let text: String?
         let icon: String?
         let type: String
@@ -34,7 +34,7 @@ struct GMTrait : Decodable {
         let overrides: Int?
     }
     
-    struct TraitSkill : Decodable {
+    public struct TraitSkill : Decodable {
         let id: Int
         let name: String
         let description: String

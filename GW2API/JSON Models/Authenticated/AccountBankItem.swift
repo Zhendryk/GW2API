@@ -8,7 +8,7 @@
 
 //account/bank
 //access_token
-struct AccountBankItem: Decodable {
+public struct AccountBankItem: Decodable {
     let id: Int
     let count: Int
     let skin: Int?
@@ -20,7 +20,7 @@ struct AccountBankItem: Decodable {
     let dyes: [Int]?
     let stats: BankItemStats?
     
-    struct BankItemStats: Decodable {
+    public struct BankItemStats: Decodable {
         let id: Int
         let attributes: [String:Float]?
     }

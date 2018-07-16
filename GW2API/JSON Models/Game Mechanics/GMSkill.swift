@@ -8,7 +8,7 @@
 
 //skills
 //lang, id, ids
-struct GMSkill : Decodable {
+public struct GMSkill : Decodable {
     let id: Int
     let name: String
     let description: String?
@@ -31,7 +31,7 @@ struct GMSkill : Decodable {
     let transform_skills: [String]?
     let toolbelt_skill: Int?
     
-    struct SkillFact : Decodable {
+    public struct SkillFact : Decodable {
         let text: String
         let icon: String?
         let type: String

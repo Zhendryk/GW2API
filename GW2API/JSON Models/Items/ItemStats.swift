@@ -8,12 +8,12 @@
 
 //itemstats
 //lang, id, ids
-struct ItemStats : Decodable {
+public struct ItemStats : Decodable {
     let id: Int
     let name: String
     let attributes: [ItemStatsAttribute]
     
-    struct ItemStatsAttribute : Decodable {
+    public struct ItemStatsAttribute : Decodable {
         let attribute: String
         let multiplier: Float
         let value: Int

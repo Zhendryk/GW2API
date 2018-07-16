@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildTeam: Decodable {
+public struct GuildTeam: Decodable {
     let id: Int
     let members: [Member]
     let name: String
@@ -15,12 +15,12 @@ struct GuildTeam: Decodable {
     let games: [Game]
     let seasons: [Season]
     
-    struct Member: Decodable {
+    public struct Member: Decodable {
         let name: String
         let role: String
     }
     
-    struct Game: Decodable {
+    public struct Game: Decodable {
         let id: String
         let map_id: Int
         let started: String
@@ -33,7 +33,7 @@ struct GuildTeam: Decodable {
         let season: String?
     }
     
-    struct Season: Decodable {
+    public struct Season: Decodable {
         let id: String
         let wins: Int
         let losses: Int
@@ -41,7 +41,7 @@ struct GuildTeam: Decodable {
     }
 }
 
-struct Aggregate: Decodable {
+public struct Aggregate: Decodable {
     let wins: Int
     let losses: Int
     let desertions: Int
@@ -49,12 +49,12 @@ struct Aggregate: Decodable {
     let forfeits: Int
 }
 
-struct Ladders: Decodable {
+public struct Ladders: Decodable {
     let ranked: Aggregate
     let unranked: Aggregate
 }
 
-struct Scores: Decodable {
+public struct Scores: Decodable {
     let red: Int
     let blue: Int
 }

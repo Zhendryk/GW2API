@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildMember: Decodable {
+public struct GuildMember: Decodable {
     let name: String
     let rank: String
     let joined: String

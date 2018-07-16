@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountPVPGame: Decodable {
+public struct AccountPVPGame: Decodable {
     let id: String
     let map_id: Int
     let started: String

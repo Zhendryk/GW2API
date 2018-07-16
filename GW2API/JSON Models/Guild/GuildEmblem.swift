@@ -8,7 +8,7 @@
 
 //emblem
 //id, ids
-struct GuildEmblem: Decodable {
+public struct GuildEmblem: Decodable {
     let id: Int
     let layers: [String]
 }

@@ -8,7 +8,7 @@
 
 //pvp/seasons
 //lang
-struct PVPSeason : Decodable {
+public struct PVPSeason : Decodable {
     let id: String
     let name: String
     let start: String
@@ -17,7 +17,7 @@ struct PVPSeason : Decodable {
     let divisions: [PVPDivision]
     let leaderboards: [String:PVPLeaderboard]
     
-    struct PVPDivision : Decodable {
+    public struct PVPDivision : Decodable {
         let name: String
         let flags: [String]
         let large_icon: String
@@ -26,23 +26,23 @@ struct PVPSeason : Decodable {
         let tiers: [PVPTier]
     }
     
-    struct PVPLeaderboard : Decodable {
+    public struct PVPLeaderboard : Decodable {
         let settings: PVPLeaderboardSettings
         let scorings: [PVPLeaderboardScoring]
 
             
-        struct PVPLeaderboardSettings : Decodable {
+        public struct PVPLeaderboardSettings : Decodable {
             let name: String
             let duration: Int?
             let scoring: String
             let tiers: [PVPLBLadderTier]
             
-            struct PVPLBLadderTier : Decodable {
+            public struct PVPLBLadderTier : Decodable {
                 let range: [Float]
             }
         }
         
-        struct PVPLeaderboardScoring : Decodable {
+        public struct PVPLeaderboardScoring : Decodable {
             let id: String
             let type: String
             let description: String
@@ -51,7 +51,7 @@ struct PVPSeason : Decodable {
         }
     }
     
-    struct PVPTier : Decodable {
+    public struct PVPTier : Decodable {
         let points: Int
     }
 }

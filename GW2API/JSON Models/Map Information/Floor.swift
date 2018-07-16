@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct Floor : Decodable {
+public struct Floor : Decodable {
     let texture_dims: [Int]
     let clamped_view: [[Int]]
     let regions: [String:Region]

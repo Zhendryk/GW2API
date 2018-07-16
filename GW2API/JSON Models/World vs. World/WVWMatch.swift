@@ -9,7 +9,7 @@
 //wvw/matches
 //world, id, ids
 //Possible to add /overview, /scores or /stats to this endpoint for more info
-struct WVWMatch : Decodable {
+public struct WVWMatch : Decodable {
     let id: String
     let start_time: String
     let end_time: String
@@ -20,7 +20,7 @@ struct WVWMatch : Decodable {
     let kills: [String:Int]
     let maps: [WVWMap]
     
-    struct WVWMap : Decodable {
+    public struct WVWMap : Decodable {
         let id: Int
         let type: String
         let scores: [String:Int]
@@ -31,7 +31,7 @@ struct WVWMatch : Decodable {
         let skirmishes: [WVWMapSkirmish]?
         let victory_points: [String:Int]?
         
-        struct WVWMapObjective : Decodable {
+        public struct WVWMapObjective : Decodable {
             let id: String
             let owner: String
             let last_flipped: String
@@ -43,19 +43,19 @@ struct WVWMatch : Decodable {
             let yaks_delivered: Int?
         }
         
-        struct WVWMapBonus : Decodable {
+        public struct WVWMapBonus : Decodable {
             let type: String
             let owner: String
         }
     }
 }
 
-struct WVWMapSkirmish : Decodable {
+public struct WVWMapSkirmish : Decodable {
     let id: Int
     let scores: [String:Int]
     let map_scores: [WVWSkirmishMapScore]
     
-    struct WVWSkirmishMapScore : Decodable {
+    public struct WVWSkirmishMapScore : Decodable {
         let type: String
         let scores: [String:Int]
     }

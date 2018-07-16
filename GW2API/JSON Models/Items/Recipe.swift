@@ -8,7 +8,7 @@
 
 //recipes
 //id, ids
-struct Recipe : Decodable {
+public struct Recipe : Decodable {
     let id: Int
     let type: String
     let output_item_id: Int
@@ -22,12 +22,12 @@ struct Recipe : Decodable {
     let output_upgrade_id: Int?
     let chat_link: String
     
-    struct Ingredient : Decodable {
+    public struct Ingredient : Decodable {
         let item_id: Int
         let count: Int
     }
     
-    struct GuildIngredient : Decodable {
+    public struct GuildIngredient : Decodable {
         let upgrade_id: Int
         let count: Int
     }

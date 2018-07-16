@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountInventoryItem: Decodable {
+public struct AccountInventoryItem: Decodable {
     let id: Int
     let count: Int
     let binding: String?

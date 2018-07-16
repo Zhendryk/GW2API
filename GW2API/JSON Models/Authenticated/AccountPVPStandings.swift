@@ -6,12 +6,12 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct AccountPVPStandings: Decodable {
+public struct AccountPVPStandings: Decodable {
     let current: CurrentStandings
     let best: BestStandings
     let season_id: String
     
-    struct CurrentStandings: Decodable {
+    public struct CurrentStandings: Decodable {
         let total_points: Int
         let division: Int
         let tier: Int
@@ -21,7 +21,7 @@ struct AccountPVPStandings: Decodable {
         let decay: Int?
     }
     
-    struct BestStandings: Decodable {
+    public struct BestStandings: Decodable {
         let total_points: Int
         let division: Int
         let tier: Int

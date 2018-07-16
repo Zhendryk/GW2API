@@ -8,7 +8,7 @@
 
 //colors
 //lang, id, ids
-struct Color: Decodable {
+public struct Color: Decodable {
     let id: Int
     let name: String
     let base_rgb: [Int]
@@ -19,7 +19,7 @@ struct Color: Decodable {
     let categories: [String]
 }
 
-struct Cloth: Decodable {
+public struct Cloth: Decodable {
     let brightness: Int
     let contrast: Float
     let hue: Int
@@ -28,7 +28,7 @@ struct Cloth: Decodable {
     let rgb: [Int]
 }
 
-struct Leather: Decodable {
+public struct Leather: Decodable {
     let brightness: Int
     let contrast: Float
     let hue: Int
@@ -37,7 +37,7 @@ struct Leather: Decodable {
     let rgb: [Int]
 }
 
-struct Metal: Decodable {
+public struct Metal: Decodable {
     let brightness: Int
     let contrast: Float
     let hue: Int

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct WVWMatchOverview : Decodable {
+public struct WVWMatchOverview : Decodable {
     let id: String
     let worlds: [String:Int]
     let all_worlds: [String:[Int]]

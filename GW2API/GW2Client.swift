@@ -88,6 +88,14 @@ public class GW2Client {
         return false
     }
     
+    /// Returns the currently set API key for the client
+    ///
+    /// - Returns: The currently set API key, default ""
+    public func currentAPIKey() -> String {
+        guard let key = self.apiKey else { return "" }
+        return key
+    }
+    
     /// Takes a valid API key as a String and sets it to all authenticated endpoints in the client
     ///
     /// - Parameter key: A valid API key generated from guildwars2.com
@@ -99,6 +107,14 @@ public class GW2Client {
             return true
         }
         return false
+    }
+    
+    /// Returns the currently set guild ID for the client
+    ///
+    /// - Returns: The currently set guild ID, default ""
+    public func currentGuildID() -> String {
+        guard let id = self.guildID else { return "" }
+        return id
     }
     
     /// Takes a valid guild ID as a String and sets it to the guild endpoint

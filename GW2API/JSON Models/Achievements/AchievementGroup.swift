@@ -8,7 +8,7 @@
 
 //achievements/groups
 //lang, id, ids
-struct AchievementGroup: Decodable {
+public struct AchievementGroup: Decodable {
     let id: String
     let name: String
     let description: String

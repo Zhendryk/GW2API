@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-struct GuildStash: Decodable {
+public struct GuildStash: Decodable {
     let upgrade_id: Int
     let size: Int
     let coins: Int
@@ -14,7 +14,7 @@ struct GuildStash: Decodable {
     let inventory: [inventoryItem?]
 }
 
-struct inventoryItem: Decodable {
+public struct inventoryItem: Decodable {
     let id: Int
     let count: Int
 }

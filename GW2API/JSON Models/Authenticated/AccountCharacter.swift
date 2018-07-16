@@ -7,7 +7,7 @@
 //
 
 //characters
-struct AccountCharacter: Decodable {
+public struct AccountCharacter: Decodable {
     let name: String
     let race: String
     let gender: String
@@ -30,34 +30,34 @@ struct AccountCharacter: Decodable {
     let training: [TrainedSkill]
     let bags: [Bag?]
     
-    struct CraftingDiscipline: Decodable {
+    public struct CraftingDiscipline: Decodable {
         let discipline: String
         let rating: Int
         let active: Bool
     }
     
-    struct AccountWVWAbility: Decodable {
+    public struct AccountWVWAbility: Decodable {
         let id: Int
         let rank: Int
     }
     
-    struct Specializations: Decodable {
+    public struct Specializations: Decodable {
         let pve: [Specialization]
         let pvp: [Specialization]
         let wvw: [Specialization]
         
-        struct Specialization: Decodable {
+        public struct Specialization: Decodable {
             let id: Int
             let traits: [Int?]
         }
     }
     
-    struct Skills: Decodable {
+    public struct Skills: Decodable {
         let pve: Skill
         let pvp: Skill
         let wvw: Skill
         
-        struct Skill: Decodable {
+        public struct Skill: Decodable {
             let heal: Int
             let utilities: [Int]
             let elite: Int
@@ -65,7 +65,7 @@ struct AccountCharacter: Decodable {
         }
     }
     
-    struct EquipmentItem: Decodable {
+    public struct EquipmentItem: Decodable {
         let id: Int
         let slot: String
         let infusions: [Int]?
@@ -78,7 +78,7 @@ struct AccountCharacter: Decodable {
         let dyes: [Int?]?
     }
     
-    struct CharacterInventoryItem: Decodable {
+    public struct CharacterInventoryItem: Decodable {
         let id: Int
         let count: Int
         let infusions: [Int]?
@@ -89,11 +89,11 @@ struct AccountCharacter: Decodable {
         let bound_to: String?
     }
     
-    struct EquipmentStats: Decodable {
+    public struct EquipmentStats: Decodable {
         let id: Int
         let attributes: EquipmentAttributes
         
-        struct EquipmentAttributes: Decodable {
+        public struct EquipmentAttributes: Decodable {
             let Power: Int?
             let Precision: Int?
             let Toughness: Int?
@@ -106,19 +106,19 @@ struct AccountCharacter: Decodable {
         }
     }
     
-    struct Bag: Decodable {
+    public struct Bag: Decodable {
         let id: Int
         let size: Int
         let inventory: [CharacterInventoryItem?]
     }
     
-    struct EquipmentPVP: Decodable {
+    public struct EquipmentPVP: Decodable {
         let amulet: Int?
         let rune: Int?
         let sigils: [Int?]?
     }
     
-    struct TrainedSkill: Decodable {
+    public struct TrainedSkill: Decodable {
         let id: Int
         let spent: Int
         let done: Bool

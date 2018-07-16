@@ -8,7 +8,7 @@
 
 //stories
 //lang, page, page_size, id, ids
-struct Story : Decodable {
+public struct Story : Decodable {
     let id: Int
     let season: String
     let name: String
@@ -20,7 +20,7 @@ struct Story : Decodable {
     let races: [String]?
     let flags: [String]?
     
-    struct StoryChapter : Decodable {
+    public struct StoryChapter : Decodable {
         let name: String
     }
 }

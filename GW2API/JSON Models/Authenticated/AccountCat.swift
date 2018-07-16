@@ -8,7 +8,7 @@
 
 //account/home/cats
 //access_token
-struct AccountCat: Decodable {
+public struct AccountCat: Decodable {
     let id: Int
     let hint: String?
 }

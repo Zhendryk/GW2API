@@ -8,7 +8,7 @@
 
 //materials
 //lang, id, ids
-struct Material : Decodable {
+public struct Material : Decodable {
     let id: Int
     let name: String
     let items: [Int]
