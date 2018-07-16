@@ -63,6 +63,7 @@
 		1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */; };
 		1928F27720E7FFAB00D6B43E /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27220E7FFAA00D6B43E /* CommercePrice.swift */; };
 		1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27320E7FFAB00D6B43E /* CommerceListing.swift */; };
+		1936DBCF20FD129700CB4671 /* GW2API.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1936DBCE20FD129700CB4671 /* GW2API.podspec */; };
 		1939EF0120F7929A00DB0F36 /* EItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939EF0020F7929A00DB0F36 /* EItems.swift */; };
 		19406F9920EA6A1E004EF0B4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9820EA6A1E004EF0B4 /* Result.swift */; };
 		19406F9B20EA6BA3004EF0B4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9A20EA6BA3004EF0B4 /* APIError.swift */; };
@@ -203,6 +204,7 @@
 		1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
 		1928F27220E7FFAA00D6B43E /* CommercePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
 		1928F27320E7FFAB00D6B43E /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
+		1936DBCE20FD129700CB4671 /* GW2API.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GW2API.podspec; path = GW2API/Pod/GW2API.podspec; sourceTree = SOURCE_ROOT; };
 		1939EF0020F7929A00DB0F36 /* EItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EItems.swift; sourceTree = "<group>"; };
 		19406F9820EA6A1E004EF0B4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		19406F9A20EA6BA3004EF0B4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 		1928F1E920E7EFDA00D6B43E /* GW2API */ = {
 			isa = PBXGroup;
 			children = (
+				1936DBCD20FD128300CB4671 /* Pod */,
 				19420E8D20F81096000B7C00 /* Util */,
 				1928F20B20E7FD3400D6B43E /* Endpoints */,
 				1928F20C20E7FD4D00D6B43E /* JSON Models */,
@@ -463,6 +466,14 @@
 				1928F27220E7FFAA00D6B43E /* CommercePrice.swift */,
 			);
 			path = "Trading Post";
+			sourceTree = "<group>";
+		};
+		1936DBCD20FD128300CB4671 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1936DBCE20FD129700CB4671 /* GW2API.podspec */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		19420E8D20F81096000B7C00 /* Util */ = {
@@ -669,6 +680,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1936DBCF20FD129700CB4671 /* GW2API.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
