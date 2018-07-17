@@ -129,15 +129,15 @@ public class GW2Client {
         var settingsStr = "GW2API Client Settings\n--------------------------\n"
         settingsStr.append("Base URL: https://api.guildwars2.com\n")
         settingsStr.append("Version: V2\n")
-        settingsStr.append("Language: \(self.lang)")
+        settingsStr.append("Language: \(self.lang)\n")
         if self.apiKey != nil {
-            settingsStr.append("API Key: \(self.apiKey!)")
+            settingsStr.append("API Key: \(self.apiKey!)\n")
         }
-        else { settingsStr.append("API Key: None set") }
+        else { settingsStr.append("API Key: None set\n") }
         if self.guildID != nil {
-            settingsStr.append("Guild ID: \(self.guildID!)")
+            settingsStr.append("Guild ID: \(self.guildID!)\n")
         }
-        else { settingsStr.append("Guild ID: None set") }
+        else { settingsStr.append("Guild ID: None set\n") }
         print(settingsStr)
         return settingsStr
     }

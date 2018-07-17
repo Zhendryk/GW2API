@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GW2API"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "A Swift API Wrapper for the Guild Wars 2 API Version 2."
   s.description  = <<-DESC
   Access data about your Guild Wars 2 account, in game items, trading post data, and more!
