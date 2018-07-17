@@ -15,11 +15,11 @@ sudo gem install cocoapods
 ```
 You can find further help here: https://guides.cocoapods.org/using/getting-started.html#toc_3
 * Create a Podfile using the `pod init` command. Further information on Podfiles can be found here: https://guides.cocoapods.org/using/the-podfile.html
-* Point the Podfile to the GW2API with the version number you want to use, like so:
+* Point the Podfile to the GW2API, like so:
 ```
 target 'MyApp' do
   use_frameworks!
-  pod 'GW2API', '~> 1.0'
+  pod 'GW2API'
 end
 ```
 * Once you have that Podfile, use the `pod install` command to install the GW2API dependency into your xcode project. Then enter your project and build it.
