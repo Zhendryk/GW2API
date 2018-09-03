@@ -12,7 +12,7 @@ public struct Item : Decodable {
     public let id: Int
     public let chat_link: String
     public let name: String
-    public let icon: String
+    public let icon: String?
     public let description: String?
     public let type: String
     public let rarity: String
@@ -26,7 +26,7 @@ public struct Item : Decodable {
 }
 
 public struct ItemDetails : Decodable {
-    public let type: String
+    public let type: String?
     public let infusion_slots: [InfusionSlot]?
     public let infix_upgrade: InfixUpgrade?
     public let suffix_item_id: Int?
@@ -70,22 +70,22 @@ public struct ItemDetails : Decodable {
 }
 
 public struct InfusionSlot : Decodable {
-    public let flags: [String]
+    public let flags: [String]?
     public let item_id: Int?
 }
 
 public struct InfixUpgrade : Decodable {
-    public let attributes: [InfixUpgradeAttribute]
+    public let attributes: [InfixUpgradeAttribute]?
     public let buff: InfixUpgradeBuff?
     
     public struct InfixUpgradeAttribute : Decodable {
-        public let attribute: String
-        public let modifier: Int
+        public let attribute: String?
+        public let modifier: Int?
     }
     
     public struct InfixUpgradeBuff : Decodable {
-        public let skill_id: Int
-        public let description: String
+        public let skill_id: Int?
+        public let description: String?
     }
 }
 
