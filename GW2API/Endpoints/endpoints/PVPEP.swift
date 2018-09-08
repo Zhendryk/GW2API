@@ -131,7 +131,7 @@ struct GetNALegendaryLeaderboard: APIRequest {
     
     init(id: String) {
         self.extraPathComponents.append(id)
-        self.extraPathComponents.append("/leaderboards/legendary/na")
+        self.extraPathComponents.append("leaderboards/legendary/na")
     }
 }
 
@@ -144,7 +144,7 @@ struct GetEULegendaryLeaderboard: APIRequest {
     
     init(id: String) {
         self.extraPathComponents.append(id)
-        self.extraPathComponents.append("/leaderboards/legendary/eu")
+        self.extraPathComponents.append("leaderboards/legendary/eu")
     }
 }
 
@@ -157,7 +157,7 @@ struct GetNAGuildLeaderboard: APIRequest {
     
     init(id: String) {
         self.extraPathComponents.append(id)
-        self.extraPathComponents.append("/leaderboards/guild/na")
+        self.extraPathComponents.append("leaderboards/guild/na")
     }
 }
 
@@ -170,7 +170,7 @@ struct GetEUGuildLeaderboard: APIRequest {
     
     init(id: String) {
         self.extraPathComponents.append(id)
-        self.extraPathComponents.append("/leaderboards/guild/eu")
+        self.extraPathComponents.append("leaderboards/guild/eu")
     }
 }
 
@@ -183,7 +183,7 @@ struct GetNALadderLeaderboard: APIRequest {
     
     init(id: String) {
         self.extraPathComponents.append(id)
-        self.extraPathComponents.append("/leaderboards/ladder/na")
+        self.extraPathComponents.append("leaderboards/ladder/na")
     }
 }
 
@@ -196,6 +196,6 @@ struct GetEULadderLeaderboard: APIRequest {
     
     init(id: String) {
         self.extraPathComponents.append(id)
-        self.extraPathComponents.append("/leaderboards/ladder/eu")
+        self.extraPathComponents.append("leaderboards/ladder/eu")
     }
 }

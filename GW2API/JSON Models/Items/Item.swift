@@ -31,7 +31,7 @@ public struct ItemDetails : Decodable {
     public let infix_upgrade: InfixUpgrade?
     public let suffix_item_id: Int?
     public let secondary_suffix_id: String?
-    public let stat_choices: [String]?
+    public let stat_choices: [Int]?
     
     //Armor
     public let weight_class: String?
