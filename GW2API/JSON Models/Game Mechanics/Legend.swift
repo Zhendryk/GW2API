@@ -8,7 +8,7 @@
 
 //legends
 //lang, page, page_size, id, ids
-public struct GMLegend : Decodable {
+public struct Legend : Decodable {
     public let id: String
     public let swap: Int
     public let heal: Int

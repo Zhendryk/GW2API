@@ -8,7 +8,7 @@
 
 //skills
 //lang, id, ids
-public struct GMSkill : Decodable {
+public struct Skill : Decodable {
     public let id: Int
     public let name: String
     public let description: String?

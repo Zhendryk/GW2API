@@ -24,7 +24,7 @@ class GuildAuthenticatedTests: XCTestCase {
     
     func testLog() {
         let expectation = self.expectation(description: "Querying GW2Client/authenticatedGuild...")
-        GW2Client.instance.guild.authenticated.log.get() { result in
+        GW2Client.instance.guild.authenticated.log.get(since: nil) { result in
             switch result {
             case .success(_):
                 expectation.fulfill()

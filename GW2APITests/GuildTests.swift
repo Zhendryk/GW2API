@@ -24,7 +24,7 @@ class GuildTests: XCTestCase {
     
     func testGuildID() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.id.get() { result in
+        GW2Client.instance.guild.id.get(id: "7EC05420-622A-E811-81A1-1217F5237040") { result in
             switch result {
             case .success(_):
                 expectation.fulfill()

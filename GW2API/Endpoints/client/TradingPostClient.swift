@@ -6,6 +6,8 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
+import Swift_Generic_API_Client
+
 /// The trading post endpoint client: api.guildwars2.com/v2/commerce
 public class TradingPostClient : Client {
     
@@ -33,11 +35,10 @@ public class TradingPostClient : Client {
         /// Returns a list of all commerce listing ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commerceListings.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetListingIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the commerce listing corresponding to the given id
@@ -45,11 +46,10 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - id: The id of the commerce listing you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommerceListing?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<CommerceListing?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commerceListings.idRequest(id: String(id)), decode: { json -> CommerceListing? in
-                guard let res = json as? CommerceListing else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<CommerceListing>) {
+            _ = self.client.send(request: GetListing(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more commerce listings corresponding to the given ids
@@ -57,11 +57,10 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the commerce listing(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommerceListing]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[CommerceListing]?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commerceListings.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [CommerceListing]? in
-                guard let res = json as? [CommerceListing] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[CommerceListing]>) {
+            _ = self.client.send(request: GetListings(ids: ids)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -73,11 +72,10 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - quantity: The number of coins you want to know the conversion rate to gems
         ///   - completion: Callback function to handle the data returned from the API (Result<CommerceExchange?, APIError>)
-        public func coinsToGems(quantity: Int, completion: @escaping (Result<CommerceExchange?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commerceExchangeCoins.request, parameters: [URLQueryItem(name: "quantity", value: String(quantity))], decode: { json -> CommerceExchange? in
-                guard let res = json as? CommerceExchange else { return nil }
-                return res
-            }, completion: completion)
+        public func coinsToGems(quantity: Int, completion: @escaping RequestCallback<CommerceExchange>) {
+            _ = self.client.send(request: GetCoinsToGems(quantity: quantity)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the current conversion rate from gems to coins
@@ -85,11 +83,10 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - quantity: The number of gems you want to know the conversion rate to coins
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommerceExchange]?, APIError>)
-        public func gemsToCoins(quantity: Int, completion: @escaping (Result<CommerceExchange?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commerceExchangeGems.request, parameters: [URLQueryItem(name: "quantity", value: String(quantity))], decode: { json -> CommerceExchange? in
-                guard let res = json as? CommerceExchange else { return nil }
-                return res
-            }, completion: completion)
+        public func gemsToCoins(quantity: Int, completion: @escaping RequestCallback<CommerceExchange>) {
+            _ = self.client.send(request: GetGemsToCoins(quantity: quantity)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -99,11 +96,10 @@ public class TradingPostClient : Client {
         /// Returns a list of all commerce pricing ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commercePrices.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetPriceIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the commerce price corresponding to the given id
@@ -111,11 +107,10 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - id: The id of the commerce price you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommercePrice?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<CommercePrice?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commercePrices.idRequest(id: String(id)), decode: { json -> CommercePrice? in
-                guard let res = json as? CommercePrice else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<CommercePrice>) {
+            _ = self.client.send(request: GetPrice(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more commerce prices corresponding to the given ids
@@ -123,11 +118,10 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the commerce price(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommercePrice]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[CommercePrice]?, APIError>) -> Void) {
-            fetchAsync(with: ETradingPost.commercePrices.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [CommercePrice]? in
-                guard let res = json as? [CommercePrice] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[CommercePrice]>) {
+            _ = self.client.send(request: GetPrices(ids: ids)) { result in
+                completion(result)
+            }
         }
     }
 }

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
+import Swift_Generic_API_Client
+
 /// The miscellaneous endpoint client: api.guildwars2.com/v2/...
 public class MiscClient : Client {
     
@@ -62,11 +64,10 @@ public class MiscClient : Client {
         /// Returns the current build ID of the game
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<Build?, APIError>)
-        public func get(completion: @escaping (Result<Build?, APIError>) -> Void){
-            fetchAsync(with: EMisc.build.request, decode: { json -> Build? in
-                guard let res = json as? Build else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<Build>){
+            _ = self.client.send(request: GetBuild()) { result in
+                completion(result)
+            }
         }
     }
     
@@ -76,11 +77,10 @@ public class MiscClient : Client {
         /// Returns a list of all color ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.colors.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetColorIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the color corresponding to the given ID
@@ -88,11 +88,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the color you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Color?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<Color?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.colors.idRequest(id: String(id)), decode: { json -> Color? in
-                guard let res = json as? Color else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<Color>) {
+            _ = self.client.send(request: GetColor(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more colors corresponding to the given ids
@@ -100,11 +99,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the color(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Color]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[Color]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.colors.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [Color]? in
-                guard let res = json as? [Color] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[Color]>) {
+            _ = self.client.send(request: GetColors(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about colors
@@ -113,11 +111,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Color]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Color]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.colors.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Color]? in
-                guard let res = json as? [Color] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Color]>) {
+            _ = self.client.send(request: GetColors(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -127,11 +124,10 @@ public class MiscClient : Client {
         /// Returns a list of all currency ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.currencies.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetCurrencyIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the currency corresponding to the given ID
@@ -139,11 +135,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the currency you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Currency?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<Currency?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.currencies.idRequest(id: String(id)), decode: { json -> Currency? in
-                guard let res = json as? Currency else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<Currency>) {
+            _ = self.client.send(request: GetCurrency(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more currencies corresponding to the given ids
@@ -151,11 +146,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the currency(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Currency]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[Currency]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.currencies.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [Currency]? in
-                guard let res = json as? [Currency] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[Currency]>) {
+            _ = self.client.send(request: GetCurrencies(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about currencies
@@ -164,11 +158,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Currency]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Currency]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.currencies.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Currency]? in
-                guard let res = json as? [Currency] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Currency]>) {
+            _ = self.client.send(request: GetCurrencies(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -178,11 +171,10 @@ public class MiscClient : Client {
         /// Returns a list of all dungeon ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.dungeons.request, decode: { json -> [String]? in
-                guard let res = json as? [String] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetDungeonIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the dungeon corresponding to the given ID
@@ -190,11 +182,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the dungeon you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Dungeon?, APIError>)
-        public func get(id: String, completion: @escaping (Result<Dungeon?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.dungeons.idRequest(id: id), decode: { json -> Dungeon? in
-                guard let res = json as? Dungeon else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: String, completion: @escaping RequestCallback<Dungeon>) {
+            _ = self.client.send(request: GetDungeon(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more dungeons corresponding to the given ids
@@ -202,11 +193,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the dungeon(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Dungeon]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[Dungeon]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.dungeons.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [Dungeon]? in
-                guard let res = json as? [Dungeon] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [String], completion: @escaping RequestCallback<[Dungeon]>) {
+            _ = self.client.send(request: GetDungeons(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about dungeons
@@ -215,11 +205,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Dungeon]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Dungeon]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.dungeons.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Dungeon]? in
-                guard let res = json as? [Dungeon] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Dungeon]>) {
+            _ = self.client.send(request: GetDungeons(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -229,11 +218,10 @@ public class MiscClient : Client {
         /// Returns a list of all file ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.files.request, decode: { json -> [String]? in
-                guard let res = json as? [String] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetFileIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the file corresponding to the given ID
@@ -241,11 +229,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the file you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<File?, APIError>)
-        public func get(id: String, completion: @escaping (Result<File?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.files.idRequest(id: id), decode: { json -> File? in
-                guard let res = json as? File else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: String, completion: @escaping RequestCallback<File>) {
+            _ = self.client.send(request: GetFile(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more files corresponding to the given ids
@@ -253,11 +240,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the file(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[File]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[File]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.files.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [File]? in
-                guard let res = json as? [File] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [String], completion: @escaping RequestCallback<[File]>) {
+            _ = self.client.send(request: GetFiles(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about files
@@ -266,11 +252,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[File]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[File]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.files.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [File]? in
-                guard let res = json as? [File] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[File]>) {
+            _ = self.client.send(request: GetFiles(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -280,11 +265,10 @@ public class MiscClient : Client {
         /// Returns a list of all quaggan ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.quaggans.request, decode: { json -> [String]? in
-                guard let res = json as? [String] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetQuagganIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the quaggan corresponding to the given ID
@@ -292,11 +276,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the quaggan you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Quaggan?, APIError>)
-        public func get(id: String, completion: @escaping (Result<Quaggan?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.quaggans.idRequest(id: id), decode: { json -> Quaggan? in
-                guard let res = json as? Quaggan else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: String, completion: @escaping RequestCallback<Quaggan>) {
+            _ = self.client.send(request: GetQuaggan(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more quaggans corresponding to the given ids
@@ -304,11 +287,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the quaggan(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Quaggan]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[Quaggan]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.quaggans.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [Quaggan]? in
-                guard let res = json as? [Quaggan] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [String], completion: @escaping RequestCallback<[Quaggan]>) {
+            _ = self.client.send(request: GetQuaggans(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about quaggans
@@ -317,11 +299,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Quaggan]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Quaggan]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.quaggans.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Quaggan]? in
-                guard let res = json as? [Quaggan] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Quaggan]>) {
+            _ = self.client.send(request: GetQuaggans(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -331,11 +312,10 @@ public class MiscClient : Client {
         /// Returns a list of all minipet ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.minis.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetMiniIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the minipet corresponding to the given ID
@@ -343,11 +323,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the minipet you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Minipet?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<Minipet?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.minis.idRequest(id: String(id)), decode: { json -> Minipet? in
-                guard let res = json as? Minipet else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<Minipet>) {
+            _ = self.client.send(request: GetMini(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more minipets corresponding to the given ids
@@ -355,11 +334,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the minipet(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Minipet]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[Minipet]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.minis.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [Minipet]? in
-                guard let res = json as? [Minipet] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[Minipet]>) {
+            _ = self.client.send(request: GetMinis(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about minipets
@@ -368,11 +346,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Minipet]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Minipet]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.minis.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Minipet]? in
-                guard let res = json as? [Minipet] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Minipet]>) {
+            _ = self.client.send(request: GetMinis(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -382,11 +359,10 @@ public class MiscClient : Client {
         /// Returns a list of all raid ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.raids.request, decode: { json -> [String]? in
-                guard let res = json as? [String] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetRaidIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the raid corresponding to the given ID
@@ -394,11 +370,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the raid you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Raid?, APIError>)
-        public func get(id: String, completion: @escaping (Result<Raid?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.raids.idRequest(id: id), decode: { json -> Raid? in
-                guard let res = json as? Raid else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: String, completion: @escaping RequestCallback<Raid>) {
+            _ = self.client.send(request: GetRaid(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more raids corresponding to the given ids
@@ -406,11 +381,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the raid(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Raid]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[Raid]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.raids.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [Raid]? in
-                guard let res = json as? [Raid] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [String], completion: @escaping RequestCallback<[Raid]>) {
+            _ = self.client.send(request: GetRaids(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about raids
@@ -419,11 +393,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Raid]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Raid]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.raids.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Raid]? in
-                guard let res = json as? [Raid] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Raid]>) {
+            _ = self.client.send(request: GetRaids(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -433,11 +406,10 @@ public class MiscClient : Client {
         /// Returns a list of all title ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.titles.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetTitleIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the title corresponding to the given ID
@@ -445,11 +417,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the title you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<Title?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<Title?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.titles.idRequest(id: String(id)), decode: { json -> Title? in
-                guard let res = json as? Title else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<Title>) {
+            _ = self.client.send(request: GetTitle(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more titles corresponding to the given ids
@@ -457,11 +428,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the title(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[Title]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[Title]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.titles.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [Title]? in
-                guard let res = json as? [Title] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[Title]>) {
+            _ = self.client.send(request: GetTitles(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about titles
@@ -470,12 +440,12 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[Title]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[Title]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.titles.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Title]? in
-                guard let res = json as? [Title] else { return nil }
-                return res
-            }, completion: completion)
-        }    }
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Title]>) {
+            _ = self.client.send(request: GetTitles(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
+        }
+    }
     
     /// The worlds endpoint client: api.guildwars2.com/v2/worlds
     public class WorldsClient : Client {
@@ -483,11 +453,10 @@ public class MiscClient : Client {
         /// Returns a list of all world ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.worlds.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetWorldIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the world corresponding to the given ID
@@ -495,11 +464,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - id: The ID of the world you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<World?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<World?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.worlds.idRequest(id: String(id)), decode: { json -> World? in
-                guard let res = json as? World else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<World>) {
+            _ = self.client.send(request: GetWorld(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more worlds corresponding to the given ids
@@ -507,11 +475,10 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the world(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[World]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[World]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.worlds.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [World]? in
-                guard let res = json as? [World] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[World]>) {
+            _ = self.client.send(request: GetWorlds(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated data with the given number of entries about worlds
@@ -520,11 +487,10 @@ public class MiscClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[World]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[World]?, APIError>) -> Void) {
-            fetchAsync(with: EMisc.worlds.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [World]? in
-                guard let res = json as? [World] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[World]>) {
+            _ = self.client.send(request: GetWorlds(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
 }

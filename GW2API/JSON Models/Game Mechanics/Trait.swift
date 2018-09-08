@@ -8,7 +8,7 @@
 
 //traits
 //lang, id, ids
-public struct GMTrait : Decodable {
+public struct Trait : Decodable {
     public let id: Int
     public let name: String
     public let icon: String

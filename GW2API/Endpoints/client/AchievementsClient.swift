@@ -5,7 +5,7 @@
 //  Created by Zhendryk on 7/2/18.
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
-
+import Swift_Generic_API_Client
 
 /// The achievements endpoint client: api.guildwars2.com/v2/achievements
 public class AchievementsClient: Client {
@@ -26,50 +26,43 @@ public class AchievementsClient: Client {
     ///
     /// - Parameters:
     ///   - endpoint: Endpoint to request, default = EAchievements.achievements
-    ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-    public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-        fetchAsync(with: EAchievements.achievements.request, decode: { json -> [Int]? in
-            guard let result = json as? [Int] else { return nil }
-            return result
-        }, completion: completion)
+    ///   - completion: Callback function to handle the data returned from the API
+    public func get(completion: @escaping RequestCallback<[Int]>) {
+        _ = self.client.send(request: GetAchievementIDs()) { result in
+            completion(result)
+        }
     }
     
     /// Returns the single achievement associated with the given id
     ///
     /// - Parameters:
     ///   - id: The id of the desired achievement
-    ///   - completion: Callback function to handle the data returned from the API (Result<Achievement?, APIError>)
-    public func get(id: Int, completion: @escaping (Result<Achievement?, APIError>) -> Void) {
-        fetchAsync(with: EAchievements.achievements.idRequest(id: String(id)), decode: { json -> Achievement? in
-            guard let res = json as? Achievement else { return nil }
-            return res
-        }, completion: completion)
+    ///   - completion: Callback function to handle the data returned from the API
+    public func get(id: Int, completion: @escaping RequestCallback<Achievement>) {
+        _ = self.client.send(request: GetAchievement(id: id)) { result in
+            completion(result)
+        }
     }
     
     /// Returns information for a list of associated achievement ids
     ///
     /// - Parameters:
     ///   - ids: The ids of the desired achievements "id1, id2, id3... etc"
-    ///   - completion: Callback function to handle the data returned from the API (Result<Achievement?, APIError>)
-    public func get(ids: [Int], completion: @escaping (Result<[Achievement]?, APIError>) -> Void) {
-        fetchAsync(with: EAchievements.achievements.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [Achievement]? in
-            guard let res = json as? [Achievement] else { return nil }
-            return res
-        }, completion: completion)
+    ///   - completion: Callback function to handle the data returned from the API
+    public func get(ids: [Int], completion: @escaping RequestCallback<[Achievement]>) {
+        _ = self.client.send(request: GetAchievements(ids: ids)) { result in
+            completion(result)
+        }
     }
+
     
     /// The daily achievements endpoint client: api.guildwars2.com/v2/achievements/daily
-    public class DailyAchievementClient: Client {
+    public class DailyAchievementClient : Client {
         
-        /// Returns information about daily achievements
-        ///
-        /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API (Result<DailyAchievement?, APIError>)
-        public func get(completion: @escaping (Result<DailyAchievement?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.daily.request, decode: { json -> DailyAchievement? in
-                guard let result = json as? DailyAchievement else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<DailyAchievement>) {
+            _ = self.client.send(request: GetDailyAchievements()) { result in
+                completion(result)
+            }
         }
     }
     
@@ -79,12 +72,11 @@ public class AchievementsClient: Client {
         /// Returns information about the next daily achievements
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API (Result<DailyAchievement?, APIError>)
-        public func get(completion: @escaping (Result<DailyAchievement?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.dailyTomorrow.request, decode: { json -> DailyAchievement? in
-                guard let result = json as? DailyAchievement else { return nil }
-                return result
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(completion: @escaping RequestCallback<DailyAchievement>) {
+            _ = self.client.send(request: GetDailyTomorrowAchievements()) { result in
+                completion(result)
+            }
         }
     }
     
@@ -94,36 +86,33 @@ public class AchievementsClient: Client {
         /// Returns a list of all achievement category ids
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.categories.request, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAchievementCategoryIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the single achievement category associated with the given id
         ///
         /// - Parameters:
         ///   - id: The id of the desired achievement category
-        ///   - completion: Callback function to handle the data returned from the API (Result<AchievementCategory?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<AchievementCategory?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.categories.idRequest(id: String(id)), decode: { json -> AchievementCategory? in
-                guard let res = json as? AchievementCategory else { return nil }
-                return res
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(id: Int, completion: @escaping RequestCallback<AchievementCategory>) {
+            _ = self.client.send(request: GetAchievementCategory(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns information for a list of associated achievement category ids
         ///
         /// - Parameters:
         ///   - ids: The ids of the desired achievement categories "id1, id2, id3... etc"
-        ///   - completion: Callback function to handle the data returned from the API (Result<[AchievementCategory]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[AchievementCategory]?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.categories.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [AchievementCategory]? in
-                guard let res = json as? [AchievementCategory] else { return nil }
-                return res
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(ids: [Int], completion: @escaping RequestCallback<[AchievementCategory]>) {
+            _ = self.client.send(request: GetAchievementCategories(ids: ids)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -133,36 +122,34 @@ public class AchievementsClient: Client {
         /// Returns a list of all achievement group ids
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.groups.request, decode: { json -> [String]? in
-                guard let result = json as? [String] else { return nil }
-                return result
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetAchievementGroupIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the single achievement group associated with the given id
         ///
         /// - Parameters:
         ///   - id: The id of the desired achievement group
-        ///   - completion: Callback function to handle the data returned from the API (Result<AchievementGroup?, APIError>)
-        public func get(id: String, completion: @escaping (Result<AchievementGroup?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.groups.idRequest(id: id), decode: { json -> AchievementGroup? in
-                guard let res = json as? AchievementGroup else { return nil }
-                return res
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(id: String, completion: @escaping RequestCallback<AchievementGroup>) {
+            _ = self.client.send(request: GetAchievementGroup(id: id)) { result in
+                completion(result)
+            }
         }
         
+        //TODO: Compare to old and figure out what's going on... check out the percent encoding for array parameters
         /// Returns information for a list of associated achievement group ids
         ///
         /// - Parameters:
         ///   - ids: The ids of the desired achievement groups "id1, id2, id3... etc"
-        ///   - completion: Callback function to handle the data returned from the API (Result<[AchievementGroup]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[AchievementGroup]?, APIError>) -> Void) {
-            fetchAsync(with: EAchievements.groups.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [AchievementGroup]? in
-                guard let res = json as? [AchievementGroup] else { return nil }
-                return res
-            }, completion: completion)
+        ///   - completion: Callback function to handle the data returned from the API
+        public func get(ids: [String], completion: @escaping RequestCallback<[AchievementGroup]>) {
+            _ = self.client.send(request: GetAchievementGroups(ids: ids)) { result in
+                completion(result)
+            }
         }
     }
 }

@@ -7,14 +7,6 @@
 //
 
 class APIUtil {
-    static func intArrToStrList(_ arr: [Int]) -> String {
-        return arr.map { String($0) }.joined(separator: ", ")
-    }
-    
-    static func strArrToList(_ arr: [String]) -> String {
-        return arr.joined(separator: ", ")
-    }
-    
     static func isValidAPIKey(_ key: String) -> Bool {
         if (key.contains(" ") || key.count != 72) { return false }
         return true

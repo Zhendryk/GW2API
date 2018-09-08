@@ -8,7 +8,7 @@
 
 //professions
 //lang, page, page_size, id, ids
-public struct GMProfession: Decodable {
+public struct Profession: Decodable {
     public let id: String
     public let name: String
     public let icon: String

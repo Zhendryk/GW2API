@@ -6,6 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
+import Swift_Generic_API_Client
 
 /// The authenticated endpoint client: api.guildwars2.com/v2/...
 public class AuthenticatedClient : Client {
@@ -38,11 +39,17 @@ public class AuthenticatedClient : Client {
         /// The account finishers endpoint: information about the finishers unlocked by an account
         public let finishers: AccountFinishersCient = AccountFinishersCient()
         
+        /// The account gliders endpoint: information about the gliders unlocked by an account
+        public let gliders: AccountGlidersClient = AccountGlidersClient()
+        
         /// The account home endpoint: information about the home instance of an account
         public let home: AccountHomeClient = AccountHomeClient()
         
         /// The account inventory endpoint: information about the shared inventory slots of an account
         public let inventory: AccountInventoryClient = AccountInventoryClient()
+        
+        /// The account mail carriers endpoint: information about the mail carriers unlocked by an account
+        public let mailcarriers: AccountMailCarriersClient = AccountMailCarriersClient()
         
         /// The account masteries endpoint: information about the masteries unlocked by an account
         public let masteries: AccountMasteriesClient = AccountMasteriesClient()
@@ -55,6 +62,9 @@ public class AuthenticatedClient : Client {
         
         /// The account outfits endpoint: information about the outfits unlocked by an account
         public let outfits: AccountOutfitsClient = AccountOutfitsClient()
+        
+        /// The account pvp heroes endpoint: information about the PVP heroes unlocked by an account
+        public let pvpHeroes: AccountPVPHeroesClient = AccountPVPHeroesClient()
         
         /// The account raids endpoint: information about the completed raid events between weekly resets of an account
         public let raids: AccountRaidsClient = AccountRaidsClient()
@@ -84,6 +94,8 @@ public class AuthenticatedClient : Client {
         public let tokeninfo: AccountTokenInfoClient = AccountTokenInfoClient()
         
         
+        
+        
         /// Sets the API key to all authenticated endpoints
         ///
         /// - Parameter key: A valid API key generated from guildwars2.com
@@ -94,12 +106,15 @@ public class AuthenticatedClient : Client {
             self.dungeons.setAPIKey(key)
             self.dyes.setAPIKey(key)
             self.finishers.setAPIKey(key)
+            self.gliders.setAPIKey(key)
             self.home.setAPIKey(key)
             self.inventory.setAPIKey(key)
+            self.mailcarriers.setAPIKey(key)
             self.masteries.setAPIKey(key)
             self.materials.setAPIKey(key)
             self.minis.setAPIKey(key)
             self.outfits.setAPIKey(key)
+            self.pvpHeroes.setAPIKey(key)
             self.raids.setAPIKey(key)
             self.recipes.setAPIKey(key)
             self.skins.setAPIKey(key)
@@ -115,11 +130,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<Account?, APIError>)
-        public func get(completion: @escaping (Result<Account?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.account.request, needsAuthorization: true, decode: { json -> Account? in
-                guard let result = json as? Account else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<Account>) {
+            _ = self.client.send(request: GetAccount(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -130,11 +144,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountAchievement]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountAchievement]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountAchievements.request, needsAuthorization: true, decode: { json -> [AccountAchievement]? in
-                guard let result = json as? [AccountAchievement] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountAchievement]>) {
+            _ = self.client.send(request: GetAccountAchievements(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -145,11 +158,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountBankItem]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountBankItem?]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountBank.request, needsAuthorization: true, decode: { json -> [AccountBankItem?]? in
-                guard let result = json as? [AccountBankItem?] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountBankItem?]>) {
+            _ = self.client.send(request: GetAccountBank(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -160,11 +172,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountDungeons.request, needsAuthorization: true, decode: { json -> [String]? in
-                guard let result = json as? [String] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetAccountDungeons(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -175,11 +186,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountDyes.request, needsAuthorization: true, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountDyes(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -190,17 +200,29 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountFinisher]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountFinisher]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountFinishers.request, needsAuthorization: true, decode: { json -> [AccountFinisher]? in
-                guard let result = json as? [AccountFinisher] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountFinisher]>) {
+            _ = self.client.send(request: GetAccountFinishers(access_token: self.apiKey)) { result in
+                completion(result)
+            }
+        }
+    }
+    
+    /// The account gliders endpoint client: api.guildwars2.com/v2/account/gliders (Needs API key)
+    public class AccountGlidersClient: Client {
+        
+        
+        /// Returns information on all of the gliders unlocked on this account
+        ///
+        /// - Parameter completion: Callback function to handle the data returned from the API
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountGliders(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
     /// The account home endpoint client: api.guildwars2.com/v2/account/home (Needs API key)
     public class AccountHomeClient : Client {
-        
         /// The account home cats endpoint: api.guildwars2.com/v2/account/home/cats (Needs API key)
         public let cats: AccountHomeCatsClient = AccountHomeCatsClient()
         
@@ -222,11 +244,10 @@ public class AuthenticatedClient : Client {
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountCat]?, APIError>)
-            public func get(completion: @escaping (Result<[AccountCat]?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.accountHomeCats.request, needsAuthorization: true, decode: { json -> [AccountCat]? in
-                    guard let result = json as? [AccountCat] else { return nil }
-                    return result
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<[AccountCat]>) {
+                _ = self.client.send(request: GetAccountHomeCats(access_token: self.apiKey)) { result in
+                    completion(result)
+                }
             }
         }
         
@@ -237,11 +258,10 @@ public class AuthenticatedClient : Client {
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.accountHomeNodes.request, needsAuthorization: true, decode: { json -> [String]? in
-                    guard let result = json as? [String] else { return nil }
-                    return result
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<[String]>) {
+                _ = self.client.send(request: GetAccountHomeNodes(access_token: self.apiKey)) { result in
+                    completion(result)
+                }
             }
         }
     }
@@ -253,11 +273,24 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountInventoryItem]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountInventoryItem?]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountInventory.request, needsAuthorization: true, decode: { json -> [AccountInventoryItem?]? in
-                guard let result = json as? [AccountInventoryItem?] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountInventoryItem]>) {
+            _ = self.client.send(request: GetAccountInventory(access_token: self.apiKey)) { result in
+                completion(result)
+            }
+        }
+    }
+    
+    /// The account mail carriers endpoint client: api.guildwars2.com/v2/account/mailcarriers (Needs API key)
+    public class AccountMailCarriersClient: Client {
+        
+        
+        /// Returns information about the mail carriers unlocked on this account
+        ///
+        /// - Parameter completion: Callback function to handle the data returned from the API
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountMailCarriers(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -279,11 +312,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountMastery]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountMastery]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountMasteries.request, needsAuthorization: true, decode: { json -> [AccountMastery]? in
-                guard let result = json as? [AccountMastery] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountMastery]>) {
+            _ = self.client.send(request: GetAccountMasteries(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
         
         /// The account mastery points endpoint client: api.guildwars2.com/v2/account/mastery/points (Needs API key)
@@ -293,11 +325,10 @@ public class AuthenticatedClient : Client {
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<AccountMasteryPoints?, APIError>)
-            public func get(completion: @escaping (Result<AccountMasteryPoints?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.accountMasteryPoints.request, needsAuthorization: true, decode: { json -> AccountMasteryPoints? in
-                    guard let result = json as? AccountMasteryPoints else { return nil }
-                    return result
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<AccountMasteryPoints>) {
+                _ = self.client.send(request: GetAccountMasteryPoints(access_token: self.apiKey)) { result in
+                    completion(result)
+                }
             }
         }
     }
@@ -309,11 +340,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountMaterial]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountMaterial]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountMaterials.request, needsAuthorization: true, decode: { json -> [AccountMaterial]? in
-                guard let result = json as? [AccountMaterial] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountMaterial]>) {
+            _ = self.client.send(request: GetAccountMaterials(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -324,11 +354,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountMinis.request, needsAuthorization: true, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountMinis(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -339,11 +368,24 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountOutfits.request, needsAuthorization: true, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountOutfits(access_token: self.apiKey)) { result in
+                completion(result)
+            }
+        }
+    }
+    
+    /// The account PVP heroes endpoint client: api.guildwars2.com/v2/account/pvp/heroes (Needs API key)
+    public class AccountPVPHeroesClient: Client {
+        
+        
+        /// Returns information about the PVP heroes unlocked on this account
+        ///
+        /// - Parameter completion: Callback function to handle the data returned from the API
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountPVPHeroes(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -354,11 +396,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountRaids.request, needsAuthorization: true, decode: { json -> [String]? in
-                guard let result = json as? [String] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetAccountRaids(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -369,11 +410,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountRecipes.request, needsAuthorization: true, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountRecipes(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -384,11 +424,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountSkins.request, needsAuthorization: true, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountSkins(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -399,11 +438,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountTitles.request, needsAuthorization: true, decode: { json -> [Int]? in
-                guard let result = json as? [Int] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetAccountTitles(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -414,11 +452,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountWalletItem]?, APIError>)
-        public func get(completion: @escaping (Result<[AccountWalletItem]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.accountWallet.request, needsAuthorization: true, decode: { json -> [AccountWalletItem]? in
-                guard let result = json as? [AccountWalletItem] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[AccountWalletItem]>) {
+            _ = self.client.send(request: GetAccountWallet(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -429,11 +466,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.characters.request, needsAuthorization: true, decode: { json -> [String]? in
-                guard let result = json as? [String] else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetAccountCharacterNames(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
         
         /// Returns detailed information about the specified character on this account
@@ -441,13 +477,10 @@ public class AuthenticatedClient : Client {
         /// - Parameters:
         ///   - characterName: The name of the character you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<AccountCharacter?, APIError>)
-        public func get(characterName: String, completion: @escaping (Result<AccountCharacter?, APIError>) -> Void) {
-            var request = EAuthentication.characters.request
-            request.url?.appendPathComponent(characterName)
-            fetchAsync(with: request, needsAuthorization: true, decode: { json -> AccountCharacter? in
-                guard let result = json as? AccountCharacter else { return nil }
-                return result
-            }, completion: completion)
+        public func get(characterName: String, completion: @escaping RequestCallback<AccountCharacter>) {
+            _ = self.client.send(request: GetAccountCharacter(access_token: self.apiKey, characterName: characterName)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -492,11 +525,10 @@ public class AuthenticatedClient : Client {
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AccountTransaction]?, APIError>)
-                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
-                    fetchAsync(with: EAuthentication.commerceTransactionsCurrentBuys.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
-                        guard let result = json as? [AccountTransaction] else { return nil }
-                        return result
-                    }, completion: completion)
+                public func get(completion: @escaping RequestCallback<[AccountTransaction]>) {
+                    _ = self.client.send(request: GetAccountCurrentBuyTransactions(access_token: self.apiKey)) { result in
+                        completion(result)
+                    }
                 }
             }
             
@@ -507,11 +539,10 @@ public class AuthenticatedClient : Client {
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AcccountTransaction]?, APIError>)
-                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
-                    fetchAsync(with: EAuthentication.commerceTransactionsCurrentSells.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
-                        guard let result = json as? [AccountTransaction] else { return nil }
-                        return result
-                    }, completion: completion)
+                public func get(completion: @escaping RequestCallback<[AccountTransaction]>) {
+                    _ = self.client.send(request: GetAccountCurrentSellTransactions(access_token: self.apiKey)) { result in
+                        completion(result)
+                    }
                 }
             }
         }
@@ -540,11 +571,10 @@ public class AuthenticatedClient : Client {
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AcccountTransaction]?, APIError>)
-                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
-                    fetchAsync(with: EAuthentication.commerceTransactionsHistoryBuys.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
-                        guard let result = json as? [AccountTransaction] else { return nil }
-                        return result
-                    }, completion: completion)
+                public func get(completion: @escaping RequestCallback<[AccountTransaction]>) {
+                    _ = self.client.send(request: GetAccountPastBuyTransactions(access_token: self.apiKey)) { result in
+                        completion(result)
+                    }
                 }
             }
             
@@ -555,11 +585,10 @@ public class AuthenticatedClient : Client {
                 ///
                 /// - Parameters:
                 ///   - completion: Callback function to handle the data returned from the API (Result<[AcccountTransaction]?, APIError>)
-                public func get(completion: @escaping (Result<[AccountTransaction]?, APIError>) -> Void) {
-                    fetchAsync(with: EAuthentication.commerceTransactionsHistorySells.request, needsAuthorization: true, decode: { json -> [AccountTransaction]? in
-                        guard let result = json as? [AccountTransaction] else { return nil }
-                        return result
-                    }, completion: completion)
+                public func get(completion: @escaping RequestCallback<[AccountTransaction]>) {
+                    _ = self.client.send(request: GetAccountPastSellTransactions(access_token: self.apiKey)) { result in
+                        completion(result)
+                    }
                 }
             }
         }
@@ -593,11 +622,10 @@ public class AuthenticatedClient : Client {
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<AccountPVPStats?, APIError>)
-            public func get(completion: @escaping (Result<AccountPVPStats?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.pvpStats.request, needsAuthorization: true, decode: { json -> AccountPVPStats? in
-                    guard let result = json as? AccountPVPStats else { return nil }
-                    return result
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<AccountPVPStats>) {
+                _ = self.client.send(request: GetAccountPVPStats(access_token: self.apiKey)) { result in
+                    completion(result)
+                }
             }
         }
         
@@ -608,11 +636,10 @@ public class AuthenticatedClient : Client {
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.pvpGames.request, needsAuthorization: true, decode: { json -> [String]? in
-                    guard let result = json as? [String] else { return nil }
-                    return result
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<[String]>) {
+                _ = self.client.send(request: GetAccountPVPGameIDs(access_token: self.apiKey)) { result in
+                    completion(result)
+                }
             }
             
             /// Returns detailed information on a specific sPvP game this account was involved in
@@ -620,11 +647,10 @@ public class AuthenticatedClient : Client {
             /// - Parameters:
             ///   - id: The id of the game you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            public func get(id: String, completion: @escaping (Result<AccountPVPGame?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.pvpGames.idRequest(id: id), needsAuthorization: true, decode: { json -> AccountPVPGame? in
-                    guard let res = json as? AccountPVPGame else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(id: String, completion: @escaping RequestCallback<AccountPVPGame>) {
+                _ = self.client.send(request: GetAccountPVPGame(access_token: self.apiKey, id: id)) { result in
+                    completion(result)
+                }
             }
             
             /// Returns detailed information on multiple specified sPvP games this account was involved in
@@ -632,11 +658,10 @@ public class AuthenticatedClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the games you are searching for "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPGame]?, APIError>)
-            public func get(ids: [String], completion: @escaping (Result<[AccountPVPGame]?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.pvpGames.request, needsAuthorization: true, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [AccountPVPGame]? in
-                    guard let res = json as? [AccountPVPGame] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(ids: [String], completion: @escaping RequestCallback<[AccountPVPGame]>) {
+                _ = self.client.send(request: GetAccountPVPGames(access_token: self.apiKey, ids: ids)) { result in
+                    completion(result)
+                }
             }
         }
         
@@ -647,11 +672,10 @@ public class AuthenticatedClient : Client {
             ///
             /// - Parameters:
             ///   - completion: Callback function to handle the data returned from the API (Result<[AccountPVPStandings]?, APIError>)
-            public func get(completion: @escaping (Result<[AccountPVPStandings]?, APIError>) -> Void) {
-                fetchAsync(with: EAuthentication.pvpStandings.request, needsAuthorization: true, decode: { json -> [AccountPVPStandings]? in
-                    guard let result = json as? [AccountPVPStandings] else { return nil }
-                    return result
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<[AccountPVPStandings]>) {
+                _ = self.client.send(request: GetAccountPVPStandings(access_token: self.apiKey)) { result in
+                    completion(result)
+                }
             }
         }
     }
@@ -663,11 +687,10 @@ public class AuthenticatedClient : Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<AccountToken?, APIError>)
-        public func get(completion: @escaping (Result<AccountToken?, APIError>) -> Void) {
-            fetchAsync(with: EAuthentication.tokeninfo.request, needsAuthorization: true, decode: { json -> AccountToken? in
-                guard let result = json as? AccountToken else { return nil }
-                return result
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<AccountToken>) {
+            _ = self.client.send(request: GetAccountTokenInfo(access_token: self.apiKey)) { result in
+                completion(result)
+            }
         }
     }
 }

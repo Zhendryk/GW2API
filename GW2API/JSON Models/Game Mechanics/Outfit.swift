@@ -8,7 +8,7 @@
 
 //outfits
 //lang, page, page_size, id, ids
-public struct GMOutfit: Decodable {
+public struct Outfit: Decodable {
     public let id: Int
     public let name: String
     public let icon: String

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
+import Swift_Generic_API_Client
+
 /// The stories endpoint client: api.guildwars2.com/v2/stories
 public class StoryClient : Client {
     
@@ -27,11 +29,10 @@ public class StoryClient : Client {
     /// Returns a list of all story ids
     ///
     /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-    public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-        fetchAsync(with: EStory.stories.request, decode: { json -> [Int]? in
-            guard let res = json as? [Int] else { return nil }
-            return res
-        }, completion: completion)
+    public func get(completion: @escaping RequestCallback<[Int]>) {
+        _ = self.client.send(request: GetStoryIDs()) { result in
+            completion(result)
+        }
     }
     
     /// Returns the story associated with the given id
@@ -39,11 +40,10 @@ public class StoryClient : Client {
     /// - Parameters:
     ///   - id: The id of the story you are searching for
     ///   - completion: Callback function to handle the data returned from the API (Result<Story?, APIError>)
-    public func get(id: Int, completion: @escaping (Result<Story?, APIError>) -> Void) {
-        fetchAsync(with: EStory.stories.idRequest(id: String(id)), decode: { json -> Story? in
-            guard let res = json as? Story else { return nil }
-            return res
-        }, completion: completion)
+    public func get(id: Int, completion: @escaping RequestCallback<Story>) {
+        _ = self.client.send(request: GetStory(id: id)) { result in
+            completion(result)
+        }
     }
     
     /// Returns one or more stories associated with the given ids
@@ -51,11 +51,10 @@ public class StoryClient : Client {
     /// - Parameters:
     ///   - ids: The id(s) of the story(s) you are searching for
     ///   - completion: Callback function to handle the data returned from the API (Result<[Story]?, APIError>)
-    public func get(ids: [Int], completion: @escaping (Result<[Story]?, APIError>) -> Void) {
-        fetchAsync(with: EStory.stories.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [Story]? in
-            guard let res = json as? [Story] else { return nil }
-            return res
-        }, completion: completion)
+    public func get(ids: [Int], completion: @escaping RequestCallback<[Story]>) {
+        _ = self.client.send(request: GetStories(ids: ids, page: nil, page_size: nil)) { result in
+            completion(result)
+        }
     }
     
     /// Returns the specified page of paginated information with the given number of entries about stories
@@ -64,11 +63,10 @@ public class StoryClient : Client {
     ///   - page: The page number of paginated information
     ///   - page_size: The number of entries to restrict the page to
     ///   - completion: Callback function to handle the data returned from the API (Result<[Story]?, APIError>)
-    public func get(page: Int, page_size: Int, completion: @escaping (Result<[Story]?, APIError>) -> Void) {
-        fetchAsync(with: EStory.stories.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [Story]? in
-            guard let res = json as? [Story] else { return nil }
-            return res
-        }, completion: completion)
+    public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[Story]>) {
+        _ = self.client.send(request: GetStories(ids: nil, page: page, page_size: page_size)) { result in
+            completion(result)
+        }
     }
     
     
@@ -87,11 +85,10 @@ public class StoryClient : Client {
             /// Returns a list of all backstory answer ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryAnswers.request, decode: { json -> [String]? in
-                    guard let res = json as? [String] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<[String]>) {
+                _ = self.client.send(request: GetBackstoryAnswerIDs()) { result in
+                    completion(result)
+                }
             }
             
             /// Returns the backstory answer associated with the given id
@@ -99,11 +96,10 @@ public class StoryClient : Client {
             /// - Parameters:
             ///   - id: The id of the backstory answer you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<BackstoryAnswer?, APIError>)
-            public func get(id: String, completion: @escaping (Result<BackstoryAnswer?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryAnswers.idRequest(id: id), decode: { json -> BackstoryAnswer? in
-                    guard let res = json as? BackstoryAnswer else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(id: String, completion: @escaping RequestCallback<BackstoryAnswer>) {
+                _ = self.client.send(request: GetBackstoryAnswer(id: id)) { result in
+                    completion(result)
+                }
             }
             
             /// Returns one or more backstory answers associated with the given ids
@@ -111,11 +107,10 @@ public class StoryClient : Client {
             /// - Parameters:
             ///   - ids: The id(s) of the backstory answer(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryAnswer]?, APIError>)
-            public func get(ids: [String], completion: @escaping (Result<[BackstoryAnswer]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryAnswers.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [BackstoryAnswer]? in
-                    guard let res = json as? [BackstoryAnswer] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(ids: [String], completion: @escaping RequestCallback<[BackstoryAnswer]>) {
+                _ = self.client.send(request: GetBackstoryAnswers(ids: ids, page: nil, page_size: nil)) { result in
+                    completion(result)
+                }
             }
             
             /// Returns the specified page of paginated information with the given number of entries about backstory answers
@@ -124,11 +119,10 @@ public class StoryClient : Client {
             ///   - page: The page number of paginated information
             ///   - page_size: The number of entries to restrict the page to
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryAnswer]?, APIError>)
-            public func get(page: Int, page_size: Int, completion: @escaping (Result<[BackstoryAnswer]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryAnswers.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [BackstoryAnswer]? in
-                    guard let res = json as? [BackstoryAnswer] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[BackstoryAnswer]>) {
+                _ = self.client.send(request: GetBackstoryAnswers(ids: nil, page: page, page_size: page_size)) { result in
+                    completion(result)
+                }
             }
         }
         
@@ -138,11 +132,10 @@ public class StoryClient : Client {
             /// Returns a list of all backstory question ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.request, decode: { json -> [Int]? in
-                    guard let res = json as? [Int] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(completion: @escaping RequestCallback<[Int]>) {
+                _ = self.client.send(request: GetBackstoryQuestionIDs()) { result in
+                    completion(result)
+                }
             }
             
             /// Returns the backstory question associated with the given id
@@ -150,11 +143,10 @@ public class StoryClient : Client {
             /// - Parameters:
             ///   - id: The id of the backstory question you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<BackstoryQuestion?, APIError>)
-            public func get(id: Int, completion: @escaping (Result<BackstoryQuestion?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.idRequest(id: String(id)), decode: { json -> BackstoryQuestion? in
-                    guard let res = json as? BackstoryQuestion else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(id: Int, completion: @escaping RequestCallback<BackstoryQuestion>) {
+                _ = self.client.send(request: GetBackstoryQuestion(id: id)) { result in
+                    completion(result)
+                }
             }
             
             /// Returns one or more backstory questions associated with the given ids
@@ -162,11 +154,10 @@ public class StoryClient : Client {
             /// - Parameters:
             ///   - ids: The id(s) of the backstory question(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryQuestion]?, APIError>)
-            public func get(ids: [Int], completion: @escaping (Result<[BackstoryQuestion]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [BackstoryQuestion]? in
-                    guard let res = json as? [BackstoryQuestion] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(ids: [Int], completion: @escaping RequestCallback<[BackstoryQuestion]>) {
+                _ = self.client.send(request: GetBackstoryQuestions(ids: ids, page: nil, page_size: nil)) { result in
+                    completion(result)
+                }
             }
             
             /// Returns the specified page of paginated information with the given number of entries about backstory questions
@@ -175,11 +166,10 @@ public class StoryClient : Client {
             ///   - page: The page number of paginated information
             ///   - page_size: The number of entries to restrict the page to
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryQuestion]?, APIError>)
-            public func get(page: Int, page_size: Int, completion: @escaping (Result<[BackstoryQuestion]?, APIError>) -> Void) {
-                fetchAsync(with: EStory.backstoryQuestions.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [BackstoryQuestion]? in
-                    guard let res = json as? [BackstoryQuestion] else { return nil }
-                    return res
-                }, completion: completion)
+            public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[BackstoryQuestion]>) {
+                _ = self.client.send(request: GetBackstoryQuestions(ids: nil, page: page, page_size: page_size)) { result in
+                    completion(result)
+                }
             }
         }
     }
@@ -190,11 +180,10 @@ public class StoryClient : Client {
         /// Returns a list of all story season ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EStory.storySeasons.request, decode: { json -> [String]? in
-                guard let res = json as? [String] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetStorySeasonIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the story season associated with the given id
@@ -202,11 +191,10 @@ public class StoryClient : Client {
         /// - Parameters:
         ///   - id: The id of the story season you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<StorySeason?, APIError>)
-        public func get(id: String, completion: @escaping (Result<StorySeason?, APIError>) -> Void) {
-            fetchAsync(with: EStory.storySeasons.idRequest(id: id), decode: { json -> StorySeason? in
-                guard let res = json as? StorySeason else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: String, completion: @escaping RequestCallback<StorySeason>) {
+            _ = self.client.send(request: GetStorySeason(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more story seasons associated with the given ids
@@ -214,11 +202,10 @@ public class StoryClient : Client {
         /// - Parameters:
         ///   - ids: The id(s) of the story season(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[StorySeason]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[StorySeason]?, APIError>) -> Void) {
-            fetchAsync(with: EStory.storySeasons.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [StorySeason]? in
-                guard let res = json as? [StorySeason] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [String], completion: @escaping RequestCallback<[StorySeason]>) {
+            _ = self.client.send(request: GetStorySeasons(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the specified page of paginated information with the given number of entries about story seasons
@@ -227,11 +214,10 @@ public class StoryClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict the page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[StorySeason]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[StorySeason]?, APIError>) -> Void) {
-            fetchAsync(with: EStory.storySeasons.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [StorySeason]? in
-                guard let res = json as? [StorySeason] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[StorySeason]>) {
+            _ = self.client.send(request: GetStorySeasons(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
 }

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
+import Swift_Generic_API_Client
+
 /// The PVP endpoint client: api.guildwars2.com/v2/pvp
 public class PVPClient : Client {
     
@@ -27,11 +29,10 @@ public class PVPClient : Client {
     /// Returns information about the v2/pvp endpoints
     ///
     /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-    public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-        fetchAsync(with: EPVP.pvp.request, decode: { json -> [String]? in
-            guard let res = json as? [String] else { return nil }
-            return res
-        }, completion: completion)
+    public func get(completion: @escaping RequestCallback<[String]>) {
+        _ = self.client.send(request: GetPVPInfo()) { result in
+            completion(result)
+        }
     }
     
     /// The pvp ranks endpoint client: api.guildwars2.com/v2/pvp/ranks
@@ -40,11 +41,10 @@ public class PVPClient : Client {
         /// Returns a list of all pvp rank ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping (Result<[Int]?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.ranks.request, decode: { json -> [Int]? in
-                guard let res = json as? [Int] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[Int]>) {
+            _ = self.client.send(request: GetPVPRankIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the pvp rank corresponding to the given id
@@ -52,11 +52,10 @@ public class PVPClient : Client {
         /// - Parameters:
         ///   - id: The id of the pvp rank you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<PVPRank?, APIError>)
-        public func get(id: Int, completion: @escaping (Result<PVPRank?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.ranks.idRequest(id: String(id)), decode: { json -> PVPRank? in
-                guard let res = json as? PVPRank else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: Int, completion: @escaping RequestCallback<PVPRank>) {
+            _ = self.client.send(request: GetPVPRank(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more pvp ranks corresponding to the given ids
@@ -64,11 +63,10 @@ public class PVPClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the pvp rank(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPRank]?, APIError>)
-        public func get(ids: [Int], completion: @escaping (Result<[PVPRank]?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.ranks.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.intArrToStrList(ids))], decode: { json -> [PVPRank]? in
-                guard let res = json as? [PVPRank] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [Int], completion: @escaping RequestCallback<[PVPRank]>) {
+            _ = self.client.send(request: GetPVPRanks(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated information with the given number of entries about pvp ranks
@@ -77,11 +75,10 @@ public class PVPClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict the page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPRank]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[PVPRank]?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.ranks.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [PVPRank]? in
-                guard let res = json as? [PVPRank] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[PVPRank]>) {
+            _ = self.client.send(request: GetPVPRanks(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
     }
     
@@ -102,11 +99,10 @@ public class PVPClient : Client {
         /// Returns a list of all pvp season ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping (Result<[String]?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.seasons.request, decode: { json -> [String]? in
-                guard let res = json as? [String] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(completion: @escaping RequestCallback<[String]>) {
+            _ = self.client.send(request: GetPVPSeasonIDs()) { result in
+                completion(result)
+            }
         }
         
         /// Returns the pvp season corresponding to the given id
@@ -114,11 +110,10 @@ public class PVPClient : Client {
         /// - Parameters:
         ///   - id: The id of the pvp season you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<PVPSeason?, APIError>)
-        public func get(id: String, completion: @escaping (Result<PVPSeason?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.seasons.idRequest(id: id), decode: { json -> PVPSeason? in
-                guard let res = json as? PVPSeason else { return nil }
-                return res
-            }, completion: completion)
+        public func get(id: String, completion: @escaping RequestCallback<PVPSeason>) {
+            _ = self.client.send(request: GetPVPSeason(id: id)) { result in
+                completion(result)
+            }
         }
         
         /// Returns one or more pvp seasons corresponding to the given ids
@@ -126,11 +121,10 @@ public class PVPClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the pvp season(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeason]?, APIError>)
-        public func get(ids: [String], completion: @escaping (Result<[PVPSeason]?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.seasons.request, parameters: [URLQueryItem(name: "ids", value: APIUtil.strArrToList(ids))], decode: { json -> [PVPSeason]? in
-                guard let res = json as? [PVPSeason] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(ids: [String], completion: @escaping RequestCallback<[PVPSeason]>) {
+            _ = self.client.send(request: GetPVPSeasons(ids: ids, page: nil, page_size: nil)) { result in
+                completion(result)
+            }
         }
         
         /// Returns the given page of paginated information with the given number of entries about pvp seasons
@@ -139,11 +133,10 @@ public class PVPClient : Client {
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict the page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeason]?, APIError>)
-        public func get(page: Int, page_size: Int, completion: @escaping (Result<[PVPSeason]?, APIError>) -> Void) {
-            fetchAsync(with: EPVP.seasons.request, parameters: [URLQueryItem(name: "page", value: String(page)), URLQueryItem(name: "page_size", value: String(page_size))], decode: { json -> [PVPSeason]? in
-                guard let res = json as? [PVPSeason] else { return nil }
-                return res
-            }, completion: completion)
+        public func get(page: Int, page_size: Int, completion: @escaping RequestCallback<[PVPSeason]>) {
+            _ = self.client.send(request: GetPVPSeasons(ids: nil, page: page, page_size: page_size)) { result in
+                completion(result)
+            }
         }
         
         /// The pvp season leaderboard endpoint client: api.guildwars2.com/v2/pvp/seasons/leaderboards
@@ -155,16 +148,17 @@ public class PVPClient : Client {
             ///   - seasonID: The ID of the season you are looking for
             ///   - eu: Mark as true if you want to search for Europe servers, default North America
             ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
-            public func getLegendary(seasonID: String, eu: Bool = false, completion: @escaping (Result<[PVPSeasonLeaderboard]?, APIError>) -> Void) {
-                var request = EPVP.seasonLeaderboardsLegendary.request.url!.absoluteString
-                if eu { request.append("/eu") }
-                else { request.append("/na") }
-                request = request.replacingOccurrences(of: ":seasonID", with: seasonID)
-                guard let url = URL(string: request) else { return }
-                fetchAsync(with: URLRequest(url: url), decode: { json -> [PVPSeasonLeaderboard]? in
-                    guard let res = json as? [PVPSeasonLeaderboard] else { return nil }
-                    return res
-                }, completion: completion)
+            public func getLegendary(seasonID: String, eu: Bool = false, completion: @escaping RequestCallback<[PVPSeasonLeaderboard]>) {
+                if eu {
+                    _ = self.client.send(request: GetEULegendaryLeaderboard(id: seasonID)) { result in
+                        completion(result)
+                    }
+                }
+                else {
+                    _ = self.client.send(request: GetNALegendaryLeaderboard(id: seasonID)) { result in
+                        completion(result)
+                    }
+                }
             }
             
             /// Returns the guild leaderboard for the given season ID **from seasons 1-4**
@@ -173,16 +167,17 @@ public class PVPClient : Client {
             ///   - seasonID: The ID of the season you are looking for
             ///   - eu: Mark as true if you want to search for Europe servers, default North America
             ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
-            public func getGuild(seasonID: String, eu: Bool = false, completion: @escaping (Result<[PVPSeasonLeaderboard]?, APIError>) -> Void) {
-                var request = EPVP.seasonLeaderboardsGuild.request.url!.absoluteString
-                if eu { request.append("/eu") }
-                else { request.append("/na") }
-                request = request.replacingOccurrences(of: ":seasonID", with: seasonID)
-                guard let url = URL(string: request) else { return }
-                fetchAsync(with: URLRequest(url: url), decode: { json -> [PVPSeasonLeaderboard]? in
-                    guard let res = json as? [PVPSeasonLeaderboard] else { return nil }
-                    return res
-                }, completion: completion)
+            public func getGuild(seasonID: String, eu: Bool = false, completion: @escaping RequestCallback<[PVPSeasonLeaderboard]>) {
+                if eu {
+                    _ = self.client.send(request: GetEUGuildLeaderboard(id: seasonID)) { result in
+                        completion(result)
+                    }
+                }
+                else {
+                    _ = self.client.send(request: GetNAGuildLeaderboard(id: seasonID)) { result in
+                        completion(result)
+                    }
+                }
             }
             
             /// Returns the leaderboard for the given season ID **from seasons 5 onward**
@@ -191,16 +186,17 @@ public class PVPClient : Client {
             ///   - seasonID: The ID of the season you are looking for
             ///   - eu: Mark as true if you want to search for Europe servers, default North America
             ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
-            public func getLadder(seasonID: String, eu: Bool = false, completion: @escaping (Result<[PVPSeasonLeaderboard]?, APIError>) -> Void) {
-                var request = EPVP.seasonLeaderboardsLadder.request.url!.absoluteString
-                if eu { request.append("/eu") }
-                else { request.append("/na") }
-                request = request.replacingOccurrences(of: ":seasonID", with: seasonID)
-                guard let url = URL(string: request) else { return }
-                fetchAsync(with: URLRequest(url: url), decode: { json -> [PVPSeasonLeaderboard]? in
-                    guard let res = json as? [PVPSeasonLeaderboard] else { return nil }
-                    return res
-                }, completion: completion)
+            public func getLadder(seasonID: String, eu: Bool = false, completion: @escaping RequestCallback<[PVPSeasonLeaderboard]>) {
+                if eu {
+                    _ = self.client.send(request: GetEULadderLeaderboard(id: seasonID)) { result in
+                        completion(result)
+                    }
+                }
+                else {
+                    _ = self.client.send(request: GetNALadderLeaderboard(id: seasonID)) { result in
+                        completion(result)
+                    }
+                }
             }
         }
     }
