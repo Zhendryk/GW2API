@@ -42,9 +42,9 @@ public struct AccountCharacter: Decodable {
     }
     
     public struct Specializations: Decodable {
-        public let pve: [Specialization]
-        public let pvp: [Specialization]
-        public let wvw: [Specialization]
+        public let pve: [Specialization?]
+        public let pvp: [Specialization?]
+        public let wvw: [Specialization?]
         
         public struct Specialization: Decodable {
             public let id: Int
@@ -58,9 +58,9 @@ public struct AccountCharacter: Decodable {
         public let wvw: Skill
         
         public struct Skill: Decodable {
-            public let heal: Int
-            public let utilities: [Int]
-            public let elite: Int
+            public let heal: Int?
+            public let utilities: [Int?]
+            public let elite: Int?
             public let legends: [String]?
         }
     }

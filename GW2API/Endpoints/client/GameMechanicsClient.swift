@@ -240,11 +240,18 @@ public class GameMechanicsClient : Client {
         /// Returns information on multiple specializations referenced by the given IDs
         ///
         /// - Parameters:
-        ///   - ids: The IDs of the specializations you are looking for "id1, id2, id3... etc"
+        ///   - ids: The IDs of the specializations you are looking for "id1, id2, id3... etc", pass in [] to get all
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMSpecialization]?, APIError>)
         public func get(ids: [Int], completion: @escaping RequestCallback<[Specialization]>) {
-            _ = self.client.send(request: GetSpecializations(lang: self.lang, ids: ids)) { result in
-                completion(result)
+            if ids.isEmpty {
+                _ = self.client.send(request: GetAllSpecializations(lang: self.lang)) { result in
+                    completion(result)
+                }
+            }
+            else {
+                _ = self.client.send(request: GetSpecializations(lang: self.lang, ids: ids)) { result in
+                    completion(result)
+                }
             }
         }
     }

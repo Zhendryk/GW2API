@@ -362,6 +362,26 @@ struct GetSpecializations: APIRequest {
     }
 }
 
+struct GetAllSpecializations: APIRequest {
+    typealias Response = [Specialization]
+    
+    var resource: String { return "/specializations" }
+    var overrideEncoding: Bool { return false }
+    var extraPathComponents: [String] = []
+    
+    private var lang: String?
+    private var ids: String = "all"
+    
+    private enum CodingKeys: String, CodingKey {
+        case lang
+        case ids
+    }
+    
+    init(lang: String? = nil) {
+        self.lang = lang
+    }
+}
+
 struct GetSkillIDs: APIRequest {
     typealias Response = [Int]
     
