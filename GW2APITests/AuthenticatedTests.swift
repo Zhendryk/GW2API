@@ -434,10 +434,19 @@ class AuthenticatedTests: XCTestCase {
     
     func testPVPGames2() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
-        GW2Client.instance.authenticated.account.pvp.games.get(id: "067FDA8C-11B9-4E73-B18C-601FEA26A501") { result in
+        GW2Client.instance.authenticated.account.pvp.games.get() { result in
             switch result {
-            case .success(_):
-                expectation.fulfill()
+            case .success(let data):
+                GW2Client.instance.authenticated.account.pvp.games.get(id: data.first!) { game in
+                    switch game {
+                    case .success(_):
+                        expectation.fulfill()
+                    case .failure(let error):
+                        print("\n\n\nPVP 2 GAMES: ")
+                        print(error)
+                        print("\n\n\n")
+                    }
+                }
             case .failure(let error):
                 print("\n\n\nPVP 2 GAMES: ")
                 print(error)
@@ -449,10 +458,19 @@ class AuthenticatedTests: XCTestCase {
     
     func testPVPGames3() {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
-        GW2Client.instance.authenticated.account.pvp.games.get(ids: ["0D7345FF-1E89-4206-9DB5-E9B6E1A526FE", "1DF4187C-AE0E-430D-A2BE-2FA6235DEC09", "4EC2983E-E244-4C00-8359-6B7981912DDA"]) { result in
+        GW2Client.instance.authenticated.account.pvp.games.get() { result in
             switch result {
-            case .success(_):
-                expectation.fulfill()
+            case .success(let data):
+                GW2Client.instance.authenticated.account.pvp.games.get(ids: data) { game in
+                    switch game {
+                    case .success(_):
+                        expectation.fulfill()
+                    case .failure(let error):
+                        print("\n\n\nPVP 3 GAMES: ")
+                        print(error)
+                        print("\n\n\n")
+                    }
+                }
             case .failure(let error):
                 print("\n\n\nPVP 3 GAMES: ")
                 print(error)

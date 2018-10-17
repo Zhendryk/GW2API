@@ -347,7 +347,7 @@ class WVWTests: XCTestCase {
     
     func testWVWUpgradesID() {
         let expectation = self.expectation(description: "Querying GW2Client/wvw...")
-        GW2Client.instance.wvw.upgrades.get(id: 4) { result in
+        GW2Client.instance.wvw.upgrades.get(id: 5) { result in
             switch result {
             case .success(_):
                 expectation.fulfill()

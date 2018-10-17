@@ -13,7 +13,7 @@ class GuildTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        GW2Client.instance.guild.setGuildID("7EC05420-622A-E811-81A1-1217F5237040")
+        GW2Client.instance.guild.setGuildID("D00D3071-C7CD-E811-81AA-D66D0E22CAB6")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -24,7 +24,7 @@ class GuildTests: XCTestCase {
     
     func testGuildID() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.id.get(id: "7EC05420-622A-E811-81A1-1217F5237040") { result in
+        GW2Client.instance.guild.id.get(id: "D00D3071-C7CD-E811-81AA-D66D0E22CAB6") { result in
             switch result {
             case .success(_):
                 expectation.fulfill()
@@ -37,9 +37,10 @@ class GuildTests: XCTestCase {
     
     func testGuildSearch() {
         let expectation = self.expectation(description: "Querying GW2API/guild...")
-        GW2Client.instance.guild.search(guildName: "Order Of The Blood Eagle") { result in
+        GW2Client.instance.guild.search(guildName: "Crown Of Hysteria") { result in
             switch result {
-            case .success(_):
+            case .success(let id):
+                print(id)
                 expectation.fulfill()
             case .failure(let error):
                 print("\nGUILD SEARCH ERROR: \(error)")

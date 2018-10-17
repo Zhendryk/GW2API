@@ -16,6 +16,6 @@ public struct AccountPVPGame: Decodable {
     public let profession: String
     public let scores: Scores
     public let rating_type: String
-    public let rating_change: Int
+    public let rating_change: Int?
     public let season: String?
 }

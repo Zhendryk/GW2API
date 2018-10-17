@@ -13,7 +13,7 @@ class GuildAuthenticatedTests: XCTestCase {
     override func setUp() {
         super.setUp()
         _ = GW2Client.instance.setAPIKey(key: "4AF24083-8D27-2140-BB05-819E907771A35C4ACBD4-3310-42B6-B626-7FE72DEFF85E")
-        GW2Client.instance.guild.setGuildID("7EC05420-622A-E811-81A1-1217F5237040")
+        GW2Client.instance.guild.setGuildID("D00D3071-C7CD-E811-81AA-D66D0E22CAB6")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
