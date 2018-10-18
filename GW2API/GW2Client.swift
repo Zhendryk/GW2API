@@ -122,6 +122,7 @@ public class GW2Client {
     /// - Parameter id: The ID of the guild you want to query for
     public func setGuildID(id: String) {
         self.guildID = id
+        self.guild.setGuildID(id)
     }
     
     /// Prints all of the current settings of the client to the console and returns it for external use
