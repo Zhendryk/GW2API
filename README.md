@@ -114,3 +114,4 @@ GW2Client.instance.items.finishers.get(id: 1 OR ids: [1, 2, 3] etc.) { result in
     }
 }
 ```
+Any questions feel free to open an issue here!
