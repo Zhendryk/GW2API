@@ -104,6 +104,7 @@ public class GW2Client {
             self.apiKey = key
             self.authenticated.setAPIKey(key)
             self.guild.setAPIKey(key)
+            self.tradingPost.setAPIKey(key)
             return true
         }
         return false

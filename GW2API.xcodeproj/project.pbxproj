@@ -59,6 +59,7 @@
 		1928F27620E7FFAB00D6B43E /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */; };
 		1928F27720E7FFAB00D6B43E /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27220E7FFAA00D6B43E /* CommercePrice.swift */; };
 		1928F27820E7FFAB00D6B43E /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928F27320E7FFAB00D6B43E /* CommerceListing.swift */; };
+		193ACA0E2181F5F60004F72B /* CommerceDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193ACA0D2181F5F60004F72B /* CommerceDelivery.swift */; };
 		19406F9D20EA6C6C004EF0B4 /* GW2APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19406F9C20EA6C6C004EF0B4 /* GW2APIClient.swift */; };
 		19420E8F20F810AC000B7C00 /* APIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19420E8E20F810AC000B7C00 /* APIUtil.swift */; };
 		19420E9120F81D60000B7C00 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19420E9020F81D60000B7C00 /* Floor.swift */; };
@@ -198,6 +199,7 @@
 		1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
 		1928F27220E7FFAA00D6B43E /* CommercePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
 		1928F27320E7FFAB00D6B43E /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
+		193ACA0D2181F5F60004F72B /* CommerceDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceDelivery.swift; sourceTree = "<group>"; };
 		19406F9C20EA6C6C004EF0B4 /* GW2APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APIClient.swift; sourceTree = "<group>"; };
 		19420E8E20F810AC000B7C00 /* APIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUtil.swift; sourceTree = "<group>"; };
 		19420E9020F81D60000B7C00 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 				1928F27120E7FFAA00D6B43E /* CommerceExchange.swift */,
 				1928F27320E7FFAB00D6B43E /* CommerceListing.swift */,
 				1928F27220E7FFAA00D6B43E /* CommercePrice.swift */,
+				193ACA0D2181F5F60004F72B /* CommerceDelivery.swift */,
 			);
 			path = "Trading Post";
 			sourceTree = "<group>";
@@ -716,11 +719,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GW2APITests/Pods-GW2APITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Swift_Generic-API-Client/Swift_Generic_API_Client.framework",
+				"${BUILT_PRODUCTS_DIR}/GenericAPIClient/GenericAPIClient.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swift_Generic_API_Client.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GenericAPIClient.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -790,6 +793,7 @@
 				1928F22D20E7FF5B00D6B43E /* AchievementGroup.swift in Sources */,
 				19406F9D20EA6C6C004EF0B4 /* GW2APIClient.swift in Sources */,
 				1928F24B20E7FF8500D6B43E /* Account.swift in Sources */,
+				193ACA0E2181F5F60004F72B /* CommerceDelivery.swift in Sources */,
 				19865F4A20EAA40D00D4B8CE /* AchievementsClient.swift in Sources */,
 				1928F24E20E7FF8500D6B43E /* AccountCat.swift in Sources */,
 				19C4644520F19F2B00571AD0 /* GuildClient.swift in Sources */,

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 /// The trading post endpoint client: api.guildwars2.com/v2/commerce
 public class TradingPostClient : Client {
@@ -20,6 +20,9 @@ public class TradingPostClient : Client {
     /// The prices endpoint: information about buy and sell listings
     public let prices: PricesClient = PricesClient()
     
+    /// The delivery endpoint: information about current items and coins available for pickup on this account
+    public let delivery: DeliveryClient = DeliveryClient()
+    
     /// Sets the language for every sub endpoint
     ///
     /// - Parameter language: The language to set
@@ -27,6 +30,11 @@ public class TradingPostClient : Client {
         self.listings.setLanguage(language)
         self.exchange.setLanguage(language)
         self.prices.setLanguage(language)
+        self.delivery.setLanguage(language)
+    }
+    
+    override func setAPIKey(_ key: String) {
+        self.delivery.setAPIKey(key)
     }
     
     /// The listings endpoint client: api.guildwars2.com/v2/commerce/listings
@@ -35,7 +43,7 @@ public class TradingPostClient : Client {
         /// Returns a list of all commerce listing ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetListingIDs()) { result in
                 completion(result)
             }
@@ -46,7 +54,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - id: The id of the commerce listing you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommerceListing?, APIError>)
-        public func get(id: Int, completion: @escaping RequestCallback<CommerceListing>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<CommerceListing>) {
             _ = self.client.send(request: GetListing(id: id)) { result in
                 completion(result)
             }
@@ -57,7 +65,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the commerce listing(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommerceListing]?, APIError>)
-        public func get(ids: [Int], completion: @escaping RequestCallback<[CommerceListing]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[CommerceListing]>) {
             _ = self.client.send(request: GetListings(ids: ids)) { result in
                 completion(result)
             }
@@ -72,7 +80,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - quantity: The number of coins you want to know the conversion rate to gems
         ///   - completion: Callback function to handle the data returned from the API (Result<CommerceExchange?, APIError>)
-        public func coinsToGems(quantity: Int, completion: @escaping RequestCallback<CommerceExchange>) {
+        public func coinsToGems(quantity: Int, _ completion: @escaping RequestCallback<CommerceExchange>) {
             _ = self.client.send(request: GetCoinsToGems(quantity: quantity)) { result in
                 completion(result)
             }
@@ -83,7 +91,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - quantity: The number of gems you want to know the conversion rate to coins
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommerceExchange]?, APIError>)
-        public func gemsToCoins(quantity: Int, completion: @escaping RequestCallback<CommerceExchange>) {
+        public func gemsToCoins(quantity: Int, _ completion: @escaping RequestCallback<CommerceExchange>) {
             _ = self.client.send(request: GetGemsToCoins(quantity: quantity)) { result in
                 completion(result)
             }
@@ -96,7 +104,7 @@ public class TradingPostClient : Client {
         /// Returns a list of all commerce pricing ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetPriceIDs()) { result in
                 completion(result)
             }
@@ -107,7 +115,7 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - id: The id of the commerce price you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<CommercePrice?, APIError>)
-        public func get(id: Int, completion: @escaping RequestCallback<CommercePrice>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<CommercePrice>) {
             _ = self.client.send(request: GetPrice(id: id)) { result in
                 completion(result)
             }
@@ -118,8 +126,21 @@ public class TradingPostClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the commerce price(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[CommercePrice]?, APIError>)
-        public func get(ids: [Int], completion: @escaping RequestCallback<[CommercePrice]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[CommercePrice]>) {
             _ = self.client.send(request: GetPrices(ids: ids)) { result in
+                completion(result)
+            }
+        }
+    }
+    
+    /// The delivery endpoint client: api.guildwars2.com/v2/commerce/delivery
+    public class DeliveryClient : Client {
+        
+        /// Returns all of the coins and items available for pickup on this account
+        ///
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<CommerceDelivery?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<CommerceDelivery>) {
+            _ = self.client.send(request: GetDeliveries(access_token: self.apiKey)) { result in
                 completion(result)
             }
         }

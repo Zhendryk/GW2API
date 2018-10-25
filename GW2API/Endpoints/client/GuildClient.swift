@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 /// The guild endpoint client: api.guildwars2.com/v2/guild...
 public class GuildClient : Client {
@@ -46,7 +46,7 @@ public class GuildClient : Client {
     /// - Parameters:
     ///   - guildName: The name of the guild you are searching for
     ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-    public func search(guildName: String, completion: @escaping RequestCallback<[String]>) {
+    public func search(guildName: String, _ completion: @escaping RequestCallback<[String]>) {
         _ = self.client.send(request: SearchGuild(name: guildName)) { result in
             completion(result)
         }
@@ -58,7 +58,7 @@ public class GuildClient : Client {
         /// Returns the details of the guild with the associated ID (guild ID must be set using GW2Client.instance.guild.setGuildID())
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<GuildDetails?, APIError>)
-        public func get(id: String, completion: @escaping RequestCallback<GuildDetails>) {
+        public func get(id: String, _ completion: @escaping RequestCallback<GuildDetails>) {
             _ = self.client.send(request: GetGuildID(id: id)) { result in
                 completion(result)
             }
@@ -80,7 +80,7 @@ public class GuildClient : Client {
             /// Returns a list of emblem foreground ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[Int]>) {
+            public func get(_ completion: @escaping RequestCallback<[Int]>) {
                 _ = self.client.send(request: GetGuildEmblemForegroundIDs()) { result in
                     completion(result)
                 }
@@ -91,7 +91,7 @@ public class GuildClient : Client {
             /// - Parameters:
             ///   - id: The ID of the foreground
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
-            public func get(id: Int, completion: @escaping RequestCallback<GuildEmblem>) {
+            public func get(id: Int, _ completion: @escaping RequestCallback<GuildEmblem>) {
                 _ = self.client.send(request: GetGuildEmblemForeground(id: id)) { result in
                     completion(result)
                 }
@@ -102,7 +102,7 @@ public class GuildClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
-            public func get(ids: [Int], completion: @escaping RequestCallback<[GuildEmblem]>) {
+            public func get(ids: [Int], _ completion: @escaping RequestCallback<[GuildEmblem]>) {
                 _ = self.client.send(request: GetGuildEmblemForegrounds(ids: ids)) { result in
                     completion(result)
                 }
@@ -115,7 +115,7 @@ public class GuildClient : Client {
             /// Returns a list of emblem background ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[Int]>) {
+            public func get(_ completion: @escaping RequestCallback<[Int]>) {
                 _ = self.client.send(request: GetGuildEmblemBackgroundIDs()) { result in
                     completion(result)
                 }
@@ -126,7 +126,7 @@ public class GuildClient : Client {
             /// - Parameters:
             ///   - id: The ID of the background
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
-            public func get(id: Int, completion: @escaping RequestCallback<GuildEmblem>) {
+            public func get(id: Int, _ completion: @escaping RequestCallback<GuildEmblem>) {
                 _ = self.client.send(request: GetGuildEmblemBackground(id: id)) { result in
                     completion(result)
                 }
@@ -137,7 +137,7 @@ public class GuildClient : Client {
             /// - Parameters:
             ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
-            public func get(ids: [Int], completion: @escaping RequestCallback<[GuildEmblem]>) {
+            public func get(ids: [Int], _ completion: @escaping RequestCallback<[GuildEmblem]>) {
                 _ = self.client.send(request: GetGuildEmblemBackgrounds(ids: ids)) { result in
                     completion(result)
                 }
@@ -151,7 +151,7 @@ public class GuildClient : Client {
         /// Returns a list of the different guild permissions available
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[String]>) {
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
             _ = self.client.send(request: GetGuildPermissionIDs()) { result in
                 completion(result)
             }
@@ -162,7 +162,7 @@ public class GuildClient : Client {
         /// - Parameters:
         ///   - id: The id of the permission, URLQueryItem(name: "id", value: "permissionID")
         ///   - completion: Callback function to handle the data returned from the API (Result<Permissions?, APIError>)
-        public func get(id: String, completion: @escaping RequestCallback<Permissions>) {
+        public func get(id: String, _ completion: @escaping RequestCallback<Permissions>) {
             _ = self.client.send(request: GetGuildPermission(id: id)) { result in
                 completion(result)
             }
@@ -173,7 +173,7 @@ public class GuildClient : Client {
         /// - Parameters:
         ///   - ids: The ids of the guild permissions "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[Permissions]?, APIError>)
-        public func get(ids: [String], completion: @escaping RequestCallback<[Permissions]>) {
+        public func get(ids: [String], _ completion: @escaping RequestCallback<[Permissions]>) {
             _ = self.client.send(request: GetGuildPermissions(ids: ids)) { result in
                 completion(result)
             }
@@ -186,7 +186,7 @@ public class GuildClient : Client {
         /// Returns the ids of all available guild upgrades
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetGuildUpgradeIDs()) { result in
                 completion(result)
             }
@@ -197,7 +197,7 @@ public class GuildClient : Client {
         /// - Parameters:
         ///   - id: The id of the guild upgrade
         ///   - completion: Callback function to handle the data returned from the API (Result<GuildUpgrade?, APIError>)
-        public func get(id: Int, completion: @escaping RequestCallback<GuildUpgrade>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<GuildUpgrade>) {
             _ = self.client.send(request: GetGuildUpgrade(id: id)) { result in
                 completion(result)
             }
@@ -208,7 +208,7 @@ public class GuildClient : Client {
         /// - Parameters:
         ///   - ids: The ids of the guild upgrades, URLQueryItem(name: "ids", value: "id1, id2, id3... etc)"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GuildUpgrade]?, APIError>)
-        public func get(ids: [Int], completion: @escaping RequestCallback<[GuildUpgrade]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[GuildUpgrade]>) {
             _ = self.client.send(request: GetGuildUpgrades(ids: ids)) { result in
                 completion(result)
             }
@@ -274,7 +274,7 @@ public class GuildClient : Client {
             /// - Parameters:
             ///   - since: Event ID where you would like the log to start from
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildLog]?, APIError>)
-            public func get(since: Int?, completion: @escaping RequestCallback<[GuildLog]>) {
+            public func get(since: Int?, _ completion: @escaping RequestCallback<[GuildLog]>) {
                 _ = self.client.send(request: GetGuildLog(since: since, guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }
@@ -287,7 +287,7 @@ public class GuildClient : Client {
             /// Returns information about the members of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildMember]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[GuildMember]>) {
+            public func get(_ completion: @escaping RequestCallback<[GuildMember]>) {
                 _ = self.client.send(request: GetGuildMembers(guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }
@@ -300,7 +300,7 @@ public class GuildClient : Client {
             /// Returns information about the ranks in a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildRank]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[GuildRank]>) {
+            public func get(_ completion: @escaping RequestCallback<[GuildRank]>) {
                 _ = self.client.send(request: GetGuildRanks(guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }
@@ -313,7 +313,7 @@ public class GuildClient : Client {
             /// Returns information about the stash of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildStash]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[GuildStash]>) {
+            public func get(_ completion: @escaping RequestCallback<[GuildStash]>) {
                 _ = self.client.send(request: GetGuildStash(guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }
@@ -326,7 +326,7 @@ public class GuildClient : Client {
             /// Returns information about the treasury of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildTreasury]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[GuildTreasury]>) {
+            public func get(_ completion: @escaping RequestCallback<[GuildTreasury]>) {
                 _ = self.client.send(request: GetGuildTreasury(guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }
@@ -339,7 +339,7 @@ public class GuildClient : Client {
             /// Returns information about the teams of a specified guild. Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildTeam]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[GuildTeam]>) {
+            public func get(_ completion: @escaping RequestCallback<[GuildTeam]>) {
                 _ = self.client.send(request: GetGuildTeams(guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }
@@ -352,7 +352,7 @@ public class GuildClient : Client {
             /// Returns information about the upgrades of a specified guild (Resolvable against /v2/guil/upgrades). Requires both a guild ID (set from GW2Client.instance.setGuildID()) and a valid API key from the guild leader's account (set from GW2Client.instance.setAPIKey()
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[Int]>) {
+            public func get(_ completion: @escaping RequestCallback<[Int]>) {
                 _ = self.client.send(request: GetMyGuildUpgrades(guildID: self.guildID, access_token: self.apiKey)) { result in
                     completion(result)
                 }

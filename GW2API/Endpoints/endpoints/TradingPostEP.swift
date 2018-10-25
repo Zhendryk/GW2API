@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 struct GetListingIDs: APIRequest {
     typealias Response = [Int]
@@ -97,6 +97,24 @@ struct GetPrices: APIRequest {
     
     init(ids: [Int]? = nil) {
         self.ids = ids
+    }
+}
+
+struct GetDeliveries: APIRequest {
+    typealias Response = CommerceDelivery
+    
+    var resource: String { return "/commerce/delivery" }
+    var overrideEncoding: Bool { return false }
+    var extraPathComponents: [String] = []
+    
+    var access_token: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case access_token
+    }
+    
+    init(access_token: String?) {
+        self.access_token = access_token
     }
 }
 

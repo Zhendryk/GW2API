@@ -20,20 +20,6 @@
                ReferencedContainer = "container:GW2API.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1928F1EF20E7EFDA00D6B43E"
-               BuildableName = "GW2APITests.xctest"
-               BlueprintName = "GW2APITests"
-               ReferencedContainer = "container:GW2API.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -51,6 +37,41 @@
                BlueprintName = "GW2APITests"
                ReferencedContainer = "container:GW2API.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "AchievementsTests">
+               </Test>
+               <Test
+                  Identifier = "AuthenticatedTests">
+               </Test>
+               <Test
+                  Identifier = "GameMechanicsTests">
+               </Test>
+               <Test
+                  Identifier = "GuildAuthenticatedTests">
+               </Test>
+               <Test
+                  Identifier = "GuildTests">
+               </Test>
+               <Test
+                  Identifier = "ItemsTests">
+               </Test>
+               <Test
+                  Identifier = "MapInfoTests">
+               </Test>
+               <Test
+                  Identifier = "MiscTests">
+               </Test>
+               <Test
+                  Identifier = "PVPTests">
+               </Test>
+               <Test
+                  Identifier = "StoryTests">
+               </Test>
+               <Test
+                  Identifier = "TradingPostTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

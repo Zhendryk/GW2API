@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 /// The protocol for all endpoint clients to conform to
 protocol GW2APIClient {

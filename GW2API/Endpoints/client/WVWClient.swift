@@ -6,7 +6,7 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 /// The wvw endpoint client: api.guildwars2.com/v2/wvw
 public class WVWClient : Client {
@@ -44,7 +44,7 @@ public class WVWClient : Client {
         /// Returns a list of all wvw ability ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetWVWAbilityIDs()) { result in
                 completion(result)
             }
@@ -55,7 +55,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - id: The id of the wvw ability you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<WVWAbility?, APIError>)
-        public func get(id: Int, completion: @escaping RequestCallback<WVWAbility>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<WVWAbility>) {
             _ = self.client.send(request: GetWVWAbility(id: id)) { result in
                 completion(result)
             }
@@ -66,7 +66,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the wvw ability(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[WVWAbility]?, APIError>)
-        public func get(ids: [Int], completion: @escaping RequestCallback<[WVWAbility]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[WVWAbility]>) {
             _ = self.client.send(request: GetWVWAbilities(ids: ids)) { result in
                 completion(result)
             }
@@ -100,7 +100,7 @@ public class WVWClient : Client {
         /// Returns a list of all wvw match ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[String]>) {
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
             _ = self.client.send(request: GetWVWMatchIDs()) { result in
                 completion(result)
             }
@@ -111,7 +111,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - id: The id of the wvw match you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatch?, APIError>)
-        public func get(id: String, completion: @escaping RequestCallback<WVWMatch>) {
+        public func get(id: String, _ completion: @escaping RequestCallback<WVWMatch>) {
             _ = self.client.send(request: GetWVWMatch(id: id)) { result in
                 completion(result)
             }
@@ -122,7 +122,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the wvw match(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[WVWMatch]?, APIError>)
-        public func get(ids: [String], completion: @escaping RequestCallback<[WVWMatch]>) {
+        public func get(ids: [String], _ completion: @escaping RequestCallback<[WVWMatch]>) {
             _ = self.client.send(request: GetWVWMatches(ids: ids)) { result in
                 completion(result)
             }
@@ -134,7 +134,7 @@ public class WVWClient : Client {
             /// Returns a list of all wvw match overview ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[String]>) {
+            public func get(_ completion: @escaping RequestCallback<[String]>) {
                 _ = self.client.send(request: GetWVWMatchOverviewIDs()) { result in
                     completion(result)
                 }
@@ -145,7 +145,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - id: The id of the wvw match overview you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatchOverview?, APIError>)
-            public func get(id: String, completion: @escaping RequestCallback<WVWMatchOverview>) {
+            public func get(id: String, _ completion: @escaping RequestCallback<WVWMatchOverview>) {
                 _ = self.client.send(request: GetWVWMatchOverview(id: id, world: nil)) { result in
                     completion(result)
                 }
@@ -156,7 +156,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - worldID: The ID of the world you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatchOverview?, APIError>)
-            public func get(worldID: Int, completion: @escaping RequestCallback<WVWMatchOverview>) {
+            public func get(worldID: Int, _ completion: @escaping RequestCallback<WVWMatchOverview>) {
                 _ = self.client.send(request: GetWVWMatchOverview(id: nil, world: worldID)) { result in
                     completion(result)
                 }
@@ -167,7 +167,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - ids: the id(s) of the wvw match overview(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[WVWMatchOverview]?, APIError>)
-            public func get(ids: [String], completion: @escaping RequestCallback<[WVWMatchOverview]>) {
+            public func get(ids: [String], _ completion: @escaping RequestCallback<[WVWMatchOverview]>) {
                 _ = self.client.send(request: GetWVWMatchOverviews(ids: ids, world: nil)) { result in
                     completion(result)
                 }
@@ -180,7 +180,7 @@ public class WVWClient : Client {
             /// Returns a list of all wvw match stats ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[String]>) {
+            public func get(_ completion: @escaping RequestCallback<[String]>) {
                 _ = self.client.send(request: GetWVWMatchStatsIDs()) { result in
                     completion(result)
                 }
@@ -191,7 +191,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - id: The id of the wvw match stats you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatchStats?, APIError>)
-            public func get(id: String, completion: @escaping RequestCallback<WVWMatchStats>) {
+            public func get(id: String, _ completion: @escaping RequestCallback<WVWMatchStats>) {
                 _ = self.client.send(request: GetWVWMatchStats(id: id, world: nil)) { result in
                     completion(result)
                 }
@@ -202,7 +202,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - worldID: The ID of the world you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatchStats?, APIError>)
-            public func get(worldID: Int, completion: @escaping RequestCallback<WVWMatchStats>) {
+            public func get(worldID: Int, _ completion: @escaping RequestCallback<WVWMatchStats>) {
                 _ = self.client.send(request: GetWVWMatchStats(id: nil, world: worldID)) { result in
                     completion(result)
                 }
@@ -213,7 +213,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - ids: the id(s) of the wvw match stat(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[WVWMatchStats]?, APIError>)
-            public func get(ids: [String], completion: @escaping RequestCallback<[WVWMatchStats]>) {
+            public func get(ids: [String], _ completion: @escaping RequestCallback<[WVWMatchStats]>) {
                 _ = self.client.send(request: GetWVWMatchesStats(ids: ids, world: nil)) { result in
                     completion(result)
                 }
@@ -226,7 +226,7 @@ public class WVWClient : Client {
             /// Returns a list of all wvw match score ids
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(completion: @escaping RequestCallback<[String]>) {
+            public func get(_ completion: @escaping RequestCallback<[String]>) {
                 _ = self.client.send(request: GetWVWMatchScoreIDs()) { result in
                     completion(result)
                 }
@@ -237,7 +237,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - id: The id of the wvw match score you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatchScore?, APIError>)
-            public func get(id: String, completion: @escaping RequestCallback<WVWMatchScore>) {
+            public func get(id: String, _ completion: @escaping RequestCallback<WVWMatchScore>) {
                 _ = self.client.send(request: GetWVWMatchScore(id: id, world: nil)) { result in
                     completion(result)
                 }
@@ -248,7 +248,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - worldID: The ID of the world you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<WVWMatchScore?, APIError>)
-            public func get(worldID: Int, completion: @escaping RequestCallback<WVWMatchScore>) {
+            public func get(worldID: Int, _ completion: @escaping RequestCallback<WVWMatchScore>) {
                 _ = self.client.send(request: GetWVWMatchScore(id: nil, world: worldID)) { result in
                     completion(result)
                 }
@@ -259,7 +259,7 @@ public class WVWClient : Client {
             /// - Parameters:
             ///   - ids: the id(s) of the wvw match score(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[WVWMatchStats]?, APIError>)
-            public func get(ids: [String], completion: @escaping RequestCallback<[WVWMatchScore]>) {
+            public func get(ids: [String], _ completion: @escaping RequestCallback<[WVWMatchScore]>) {
                 _ = self.client.send(request: GetWVWMatchScores(ids: ids, world: nil)) { result in
                     completion(result)
                 }
@@ -274,7 +274,7 @@ public class WVWClient : Client {
         /// Returns a list of all wvw objective ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[String]>) {
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
             _ = self.client.send(request: GetWVWObjectiveIDs()) { result in
                 completion(result)
             }
@@ -285,7 +285,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - id: The id of the wvw objective you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<WVWObjective?, APIError>)
-        public func get(id: String, completion: @escaping RequestCallback<WVWObjective>) {
+        public func get(id: String, _ completion: @escaping RequestCallback<WVWObjective>) {
             _ = self.client.send(request: GetWVWObjective(id: id)) { result in
                 completion(result)
             }
@@ -296,7 +296,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the wvw objective(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[WVWObjective]?, APIError>)
-        public func get(ids: [String], completion: @escaping RequestCallback<[WVWObjective]>) {
+        public func get(ids: [String], _ completion: @escaping RequestCallback<[WVWObjective]>) {
             _ = self.client.send(request: GetWVWObjectives(ids: ids)) { result in
                 completion(result)
             }
@@ -309,7 +309,7 @@ public class WVWClient : Client {
         /// Returns a list of all wvw rank ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetWVWRankIDs()) { result in
                 completion(result)
             }
@@ -320,7 +320,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - id: The id of the wvw rank you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<WVWRank?, APIError>)
-        public func get(id: Int, completion: @escaping RequestCallback<WVWRank>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<WVWRank>) {
             _ = self.client.send(request: GetWVWRank(id: id)) { result in
                 completion(result)
             }
@@ -331,7 +331,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the wvw rank(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[WVWRank]?, APIError>)
-        public func get(ids: [Int], completion: @escaping RequestCallback<[WVWRank]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[WVWRank]>) {
             _ = self.client.send(request: GetWVWRanks(ids: ids)) { result in
                 completion(result)
             }
@@ -344,7 +344,7 @@ public class WVWClient : Client {
         /// Returns a list of all wvw upgrade ids
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetWVWUpgradeIDs()) { result in
                 completion(result)
             }
@@ -355,7 +355,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - id: The id of the wvw upgrade you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<WVWUpgrade?, APIError>)
-        public func get(id: Int, completion: @escaping RequestCallback<WVWUpgrade>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<WVWUpgrade>) {
             _ = self.client.send(request: GetWVWUpgrade(id: id)) { result in
                 completion(result)
             }
@@ -366,7 +366,7 @@ public class WVWClient : Client {
         /// - Parameters:
         ///   - ids: the id(s) of the wvw upgrade(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[WVWUpgrade]?, APIError>)
-        public func get(ids: [Int], completion: @escaping RequestCallback<[WVWUpgrade]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[WVWUpgrade]>) {
             _ = self.client.send(request: GetWVWUpgrades(ids: ids)) { result in
                 completion(result)
             }

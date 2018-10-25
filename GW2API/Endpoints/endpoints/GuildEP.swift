@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 struct SearchGuild: APIRequest {
     

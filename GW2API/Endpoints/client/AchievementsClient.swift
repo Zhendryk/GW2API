@@ -5,7 +5,7 @@
 //  Created by Zhendryk on 7/2/18.
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
-import Swift_Generic_API_Client
+import GenericAPIClient
 
 /// The achievements endpoint client: api.guildwars2.com/v2/achievements
 public class AchievementsClient: Client {
@@ -27,7 +27,7 @@ public class AchievementsClient: Client {
     /// - Parameters:
     ///   - endpoint: Endpoint to request, default = EAchievements.achievements
     ///   - completion: Callback function to handle the data returned from the API
-    public func get(completion: @escaping RequestCallback<[Int]>) {
+    public func get(_ completion: @escaping RequestCallback<[Int]>) {
         _ = self.client.send(request: GetAchievementIDs()) { result in
             completion(result)
         }
@@ -38,7 +38,7 @@ public class AchievementsClient: Client {
     /// - Parameters:
     ///   - id: The id of the desired achievement
     ///   - completion: Callback function to handle the data returned from the API
-    public func get(id: Int, completion: @escaping RequestCallback<Achievement>) {
+    public func get(id: Int, _ completion: @escaping RequestCallback<Achievement>) {
         _ = self.client.send(request: GetAchievement(id: id)) { result in
             completion(result)
         }
@@ -49,7 +49,7 @@ public class AchievementsClient: Client {
     /// - Parameters:
     ///   - ids: The ids of the desired achievements "id1, id2, id3... etc"
     ///   - completion: Callback function to handle the data returned from the API
-    public func get(ids: [Int], completion: @escaping RequestCallback<[Achievement]>) {
+    public func get(ids: [Int], _ completion: @escaping RequestCallback<[Achievement]>) {
         _ = self.client.send(request: GetAchievements(ids: ids)) { result in
             completion(result)
         }
@@ -59,7 +59,7 @@ public class AchievementsClient: Client {
     /// The daily achievements endpoint client: api.guildwars2.com/v2/achievements/daily
     public class DailyAchievementClient : Client {
         
-        public func get(completion: @escaping RequestCallback<DailyAchievement>) {
+        public func get(_ completion: @escaping RequestCallback<DailyAchievement>) {
             _ = self.client.send(request: GetDailyAchievements()) { result in
                 completion(result)
             }
@@ -73,7 +73,7 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(completion: @escaping RequestCallback<DailyAchievement>) {
+        public func get(_ completion: @escaping RequestCallback<DailyAchievement>) {
             _ = self.client.send(request: GetDailyTomorrowAchievements()) { result in
                 completion(result)
             }
@@ -87,7 +87,7 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(completion: @escaping RequestCallback<[Int]>) {
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
             _ = self.client.send(request: GetAchievementCategoryIDs()) { result in
                 completion(result)
             }
@@ -98,7 +98,7 @@ public class AchievementsClient: Client {
         /// - Parameters:
         ///   - id: The id of the desired achievement category
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(id: Int, completion: @escaping RequestCallback<AchievementCategory>) {
+        public func get(id: Int, _ completion: @escaping RequestCallback<AchievementCategory>) {
             _ = self.client.send(request: GetAchievementCategory(id: id)) { result in
                 completion(result)
             }
@@ -109,7 +109,7 @@ public class AchievementsClient: Client {
         /// - Parameters:
         ///   - ids: The ids of the desired achievement categories "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(ids: [Int], completion: @escaping RequestCallback<[AchievementCategory]>) {
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[AchievementCategory]>) {
             _ = self.client.send(request: GetAchievementCategories(ids: ids)) { result in
                 completion(result)
             }
@@ -123,7 +123,7 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(completion: @escaping RequestCallback<[String]>) {
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
             _ = self.client.send(request: GetAchievementGroupIDs()) { result in
                 completion(result)
             }
@@ -134,7 +134,7 @@ public class AchievementsClient: Client {
         /// - Parameters:
         ///   - id: The id of the desired achievement group
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(id: String, completion: @escaping RequestCallback<AchievementGroup>) {
+        public func get(id: String, _ completion: @escaping RequestCallback<AchievementGroup>) {
             _ = self.client.send(request: GetAchievementGroup(id: id)) { result in
                 completion(result)
             }
@@ -146,7 +146,7 @@ public class AchievementsClient: Client {
         /// - Parameters:
         ///   - ids: The ids of the desired achievement groups "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API
-        public func get(ids: [String], completion: @escaping RequestCallback<[AchievementGroup]>) {
+        public func get(ids: [String], _ completion: @escaping RequestCallback<[AchievementGroup]>) {
             _ = self.client.send(request: GetAchievementGroups(ids: ids)) { result in
                 completion(result)
             }

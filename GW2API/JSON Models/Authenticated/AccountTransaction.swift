@@ -12,5 +12,5 @@ public struct AccountTransaction: Decodable {
     public let price: Int
     public let quantity: Int
     public let created: String
-    public let purchased: String
+    public let purchased: String?
 }
