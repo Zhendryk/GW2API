@@ -27,7 +27,7 @@ public struct GuildLog: Decodable {
     public let coins: Int?
     
     public let action: String?
-    public let upgrade_id: String?
+    public let upgrade_id: Int?
     public let recipe_id: Int?
 
     public let motd: String?
