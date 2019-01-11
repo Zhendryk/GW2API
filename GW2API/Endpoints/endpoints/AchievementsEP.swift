@@ -2,8 +2,8 @@
 //  AchievementsEndpoints.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -26,13 +26,16 @@ struct GetAchievement: APIRequest {
     var extraPathComponents: [String] = []
     
     private let id: Int
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int) {
+    init(id: Int, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -44,13 +47,16 @@ struct GetAchievements: APIRequest {
     var extraPathComponents: [String] = []
     
     private let ids: [Int]
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [Int]) {
+    init(ids: [Int], lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }
 
@@ -92,13 +98,16 @@ struct GetAchievementCategory: APIRequest {
     var extraPathComponents: [String] = []
     
     private let id: Int
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int) {
+    init(id: Int, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -110,13 +119,16 @@ struct GetAchievementCategories: APIRequest {
     var extraPathComponents: [String] = []
     
     private let ids: [Int]
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [Int]) {
+    init(ids: [Int], lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }
 
@@ -138,13 +150,16 @@ struct GetAchievementGroup: APIRequest {
     var extraPathComponents: [String] = []
     
     private let id: String
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: String) {
+    init(id: String, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -156,12 +171,15 @@ struct GetAchievementGroups: APIRequest {
     var extraPathComponents: [String] = []
     
     private let ids: [String]
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [String]) {
+    init(ids: [String], lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }

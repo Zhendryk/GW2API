@@ -2,8 +2,8 @@
 //  ItemsEP.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -25,14 +25,17 @@ struct GetItem: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -43,20 +46,23 @@ struct GetItems: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -77,14 +83,17 @@ struct GetFinisher: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -95,20 +104,23 @@ struct GetFinishers: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -129,14 +141,17 @@ struct GetItemStats: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -147,20 +162,23 @@ struct GetItemsStats: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -181,14 +199,17 @@ struct GetMaterial: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -199,20 +220,23 @@ struct GetMaterials: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -233,14 +257,17 @@ struct GetPVPAmulet: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -251,20 +278,23 @@ struct GetPVPAmulets: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -285,7 +315,7 @@ struct GetRecipe: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -303,9 +333,9 @@ struct GetRecipes: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
     
     private enum CodingKeys: String, CodingKey {
         case ids
@@ -327,8 +357,8 @@ struct SearchRecipes: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var input: Int?
-    var output: Int?
+    private var input: Int?
+    private var output: Int?
     
     private enum CodingKeys: String, CodingKey {
         case input
@@ -358,14 +388,17 @@ struct GetSkin: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var id: Int?
+    private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -376,19 +409,22 @@ struct GetSkins: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var ids: [Int]?
-    var page: Int?
-    var page_size: Int?
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }

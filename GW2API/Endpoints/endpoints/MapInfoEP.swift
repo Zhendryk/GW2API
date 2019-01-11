@@ -2,8 +2,8 @@
 //  MapInfoEP.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -26,13 +26,16 @@ struct GetContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -44,13 +47,16 @@ struct GetContinents: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [Int]? = nil) {
+    init(ids: [Int]? = nil, lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }
 
@@ -75,13 +81,16 @@ struct GetFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(continentID: Int, floorID: Int? = nil) {
+    init(continentID: Int, floorID: Int? = nil, lang: String? = nil) {
         self.id = floorID
+        self.lang = lang
         self.extraPathComponents.append(String(continentID))
         self.extraPathComponents.append("floors")
     }
@@ -95,13 +104,16 @@ struct GetFloorsInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(continentID: Int, floorIDs: [Int]? = nil) {
+    init(continentID: Int, floorIDs: [Int]? = nil, lang: String? = nil) {
         self.ids = floorIDs
+        self.lang = lang
         self.extraPathComponents.append(String(continentID))
         self.extraPathComponents.append("floors")
     }
@@ -130,13 +142,16 @@ struct GetRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int? = nil, lang: String? = nil) {
         self.id = regionID
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -152,13 +167,16 @@ struct GetRegionsInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionIDs: [Int]? = nil) {
+    init(continentID: Int, floorID: Int, regionIDs: [Int]? = nil, lang: String? = nil) {
         self.ids = regionIDs
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -191,13 +209,16 @@ struct GetMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int? = nil, lang: String? = nil) {
         self.id = mapID
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -215,13 +236,16 @@ struct GetMapsInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapIDs: [Int]?) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapIDs: [Int]?, lang: String? = nil) {
         self.ids = mapIDs
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -258,13 +282,16 @@ struct GetSectorInMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorID: Int? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorID: Int? = nil, lang: String? = nil) {
         self.id = sectorID
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -284,13 +311,16 @@ struct GetSectorsInMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorIDs: [Int]? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorIDs: [Int]? = nil, lang: String? = nil) {
         self.ids = sectorIDs
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -329,13 +359,16 @@ struct GetPOIInMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiID: Int? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiID: Int? = nil, lang: String? = nil) {
         self.id = poiID
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -355,13 +388,16 @@ struct GetPOIsInMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiIDs: [Int]? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiIDs: [Int]? = nil, lang: String? = nil) {
         self.ids = poiIDs
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -400,13 +436,16 @@ struct GetTaskInMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskID: Int? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskID: Int? = nil, lang: String? = nil) {
         self.id = taskID
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -426,13 +465,16 @@ struct GetTasksInMapInRegionInFloorInContinent: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskIDs: [Int]? = nil) {
+    init(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskIDs: [Int]? = nil, lang: String? = nil) {
         self.ids = taskIDs
+        self.lang = lang
         self.extraPathComponents.append("\(continentID)")
         self.extraPathComponents.append("floors")
         self.extraPathComponents.append("\(floorID)")
@@ -462,13 +504,16 @@ struct GetSimpleMap: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -480,12 +525,15 @@ struct GetSimpleMaps: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [Int]? = nil) {
+    init(ids: [Int]? = nil, lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }

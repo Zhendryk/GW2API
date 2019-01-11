@@ -16,7 +16,6 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-GW2APITests/
 
 ## Other
 *.moved-aside
@@ -49,8 +48,6 @@ playground.xcworkspace
 #
 Pods/
 *.podspec
-Podfile
-Podfile.lock
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace

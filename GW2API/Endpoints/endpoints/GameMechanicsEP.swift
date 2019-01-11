@@ -2,8 +2,8 @@
 //  GameMechanicsEP.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -42,6 +42,7 @@ struct GetMastery: APIRequest {
     }
     
     init(lang: String? = nil, id: Int? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -101,6 +102,7 @@ struct GetOutfit: APIRequest {
     }
     
     init(lang: String? = nil, id: Int? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -160,6 +162,7 @@ struct GetPet: APIRequest {
     }
     
     init(lang: String? = nil, id: Int? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -219,6 +222,7 @@ struct GetProfession: APIRequest {
     }
     
     init(lang: String? = nil, id: String? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -278,6 +282,7 @@ struct GetRace: APIRequest {
     }
     
     init(lang: String? = nil, id: String? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -337,6 +342,7 @@ struct GetSpecialization: APIRequest {
     }
     
     init(lang: String? = nil, id: Int? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -416,6 +422,7 @@ struct GetSkill: APIRequest {
     }
     
     init(lang: String? = nil, id: Int? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -475,6 +482,7 @@ struct GetTrait: APIRequest {
     }
     
     init(lang: String? = nil, id: Int? = nil) {
+        self.lang = lang
         self.id = id
     }
 }
@@ -534,6 +542,7 @@ struct GetLegend: APIRequest {
     }
     
     init(lang: String? = nil, id: String? = nil) {
+        self.lang = lang
         self.id = id
     }
 }

@@ -13,7 +13,7 @@ public class GW2Client {
     public static let instance = GW2Client()
     
     /// The language of the client, default English(en)
-    private var lang: String = ""
+    private var lang: GW2ClientLanguage = .english
     
     /// The API key assigned to the client, default nil
     private var apiKey: String? = nil
@@ -55,34 +55,34 @@ public class GW2Client {
     public let wvw: WVWClient = WVWClient()
     
     private init() {
-        _ = self.setLanguage(lang: "en")
+        self.setLanguage(lang: .english)
     }
     
     /// Returns the language setting of the GuildWars 2 Client
     ///
-    /// - Returns: Returns a String containing the language setting
-    public func language() -> String {
+    /// - Returns: The language setting of the GuildWars 2 Client
+    public func language() -> GW2ClientLanguage {
         return self.lang
     }
     
     /// Takes a string argument and sets the GuildWars 2 Client's language setting
     ///
     /// - Parameter lang: Any of the following supported language strings: en, es, de, fr, ko, zh
-    public func setLanguage(lang: String) -> Bool {
-        let langLower = lang.lowercased()
-        if APIUtil.isValidLanguage(langLower) {
-            self.lang = langLower
-            self.achievements.setLanguage(langLower)
-            self.authenticated.setLanguage(langLower)
-            self.gameMechanics.setLanguage(langLower)
-            self.guild.setLanguage(langLower)
-            self.items.setLanguage(langLower)
-            self.mapinfo.setLanguage(langLower)
-            self.misc.setLanguage(langLower)
-            self.story.setLanguage(langLower)
-            self.pvp.setLanguage(langLower)
-            self.tradingPost.setLanguage(langLower)
-            self.wvw.setLanguage(langLower)
+    @discardableResult
+    public func setLanguage(lang: GW2ClientLanguage) -> Bool {
+        if APIUtil.isValidLanguage(lang.rawValue) {
+            self.lang = lang
+            self.achievements.setLanguage(lang.rawValue)
+            self.authenticated.setLanguage(lang.rawValue)
+            self.gameMechanics.setLanguage(lang.rawValue)
+            self.guild.setLanguage(lang.rawValue)
+            self.items.setLanguage(lang.rawValue)
+            self.mapinfo.setLanguage(lang.rawValue)
+            self.misc.setLanguage(lang.rawValue)
+            self.story.setLanguage(lang.rawValue)
+            self.pvp.setLanguage(lang.rawValue)
+            self.tradingPost.setLanguage(lang.rawValue)
+            self.wvw.setLanguage(lang.rawValue)
             return true
         }
         return false
@@ -99,6 +99,7 @@ public class GW2Client {
     /// Takes a valid API key as a String and sets it to all authenticated endpoints in the client
     ///
     /// - Parameter key: A valid API key generated from guildwars2.com
+    @discardableResult
     public func setAPIKey(key: String) -> Bool {
         if APIUtil.isValidAPIKey(key) {
             self.apiKey = key
@@ -127,6 +128,7 @@ public class GW2Client {
     }
     
     /// Prints all of the current settings of the client to the console and returns it for external use
+    @discardableResult
     public func settings() -> String {
         var settingsStr = "GW2API Client Settings\n--------------------------\n"
         settingsStr.append("Base URL: https://api.guildwars2.com\n")

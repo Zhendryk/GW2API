@@ -1,0 +1,16 @@
+PODS:
+  - GenericAPIClient (1.0.1)
+
+DEPENDENCIES:
+  - GenericAPIClient (= 1.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GenericAPIClient
+
+SPEC CHECKSUMS:
+  GenericAPIClient: 3955b7a43be0dc096e2a4ef121767d11efd82382
+
+PODFILE CHECKSUM: cc591f95d4c87c24180d2fec6f45d8474c5c3fc1
+
+COCOAPODS: 1.5.3

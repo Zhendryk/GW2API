@@ -37,6 +37,22 @@ public class GameMechanicsClient : Client {
     /// The game mechanics legends endpoint: information about revenant legends
     public let legends: GameMechanicsLegendsClient = GameMechanicsLegendsClient()
     
+    /// Sets the language for every sub endpoint
+    ///
+    /// - Parameter language: The language to set
+    override func setLanguage(_ language: String) {
+        self.lang = language
+        self.legends.setLanguage(language)
+        self.masteries.setLanguage(language)
+        self.outfits.setLanguage(language)
+        self.pets.setLanguage(language)
+        self.professions.setLanguage(language)
+        self.races.setLanguage(language)
+        self.skills.setLanguage(language)
+        self.specializations.setLanguage(language)
+        self.traits.setLanguage(language)
+    }
+    
     /// The game mechanics masteries endpoint client: api.guildwars2.com/v2/masteries
     public class GameMechanicsMasteriesClient : Client {
         
@@ -45,7 +61,7 @@ public class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetMasteryIDs(lang: self.lang)) { result in
+            self.client.send(request: GetMasteryIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -56,7 +72,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the mastery you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMMasteries?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<Mastery>) {
-            _ = self.client.send(request: GetMastery(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetMastery(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -67,7 +83,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The IDs of the masteries you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMMasteries]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[Mastery]>) {
-            _ = self.client.send(request: GetMasteries(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetMasteries(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -80,7 +96,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetOutfitIDs(lang: self.lang)) { result in
+            self.client.send(request: GetOutfitIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -91,7 +107,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the outfit you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMOutfit?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<Outfit>) {
-            _ = self.client.send(request: GetOutfit(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetOutfit(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -102,7 +118,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The IDs of the outfits you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMOutfit]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[Outfit]>) {
-            _ = self.client.send(request: GetOutfits(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetOutfits(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -115,7 +131,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetPetIDs(lang: self.lang)) { result in
+            self.client.send(request: GetPetIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -126,7 +142,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the pet you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMPet?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<Pet>) {
-            _ = self.client.send(request: GetPet(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetPet(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -137,7 +153,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The IDs of the pets you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMPet]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[Pet]>) {
-            _ = self.client.send(request: GetPets(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetPets(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -151,7 +167,7 @@ public class GameMechanicsClient : Client {
         /// - Parameters:
         ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[String]>) {
-            _ = self.client.send(request: GetProfessionIDs(lang: self.lang)) { result in
+            self.client.send(request: GetProfessionIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -162,7 +178,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The name of the profession you are looking for (capitalized)
         ///   - completion: Callback function to handle the data returned from the API (Result<GMProfession?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<Profession>) {
-            _ = self.client.send(request: GetProfession(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetProfession(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -173,7 +189,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The names of the professions you are looking for (capitalized) "Profession1, Profession2... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMProfession]?, APIError>)
         public func get(ids: [String], _ completion: @escaping RequestCallback<[Profession]>) {
-            _ = self.client.send(request: GetProfessions(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetProfessions(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -186,7 +202,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[String]>) {
-            _ = self.client.send(request: GetRaceIDs(lang: self.lang)) { result in
+            self.client.send(request: GetRaceIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -197,7 +213,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The name of the race you are looking for (capitalized)
         ///   - completion: Callback function to handle the data returned from the API (Result<GMRace?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<Race>) {
-            _ = self.client.send(request: GetRace(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetRace(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -208,7 +224,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The names of the races you are looking for (capitalized) "Race1, Race2... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMRace]?, APIError>)
         public func get(ids: [String], _ completion: @escaping RequestCallback<[Race]>) {
-            _ = self.client.send(request: GetRaces(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetRaces(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -221,7 +237,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetSpecializationIDs(lang: self.lang)) { result in
+            self.client.send(request: GetSpecializationIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -232,7 +248,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the specialization you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMSpecialization?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<Specialization>) {
-            _ = self.client.send(request: GetSpecialization(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetSpecialization(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -244,12 +260,12 @@ public class GameMechanicsClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMSpecialization]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[Specialization]>) {
             if ids.isEmpty {
-                _ = self.client.send(request: GetAllSpecializations(lang: self.lang)) { result in
+                self.client.send(request: GetAllSpecializations(lang: lang)) { result in
                     completion(result)
                 }
             }
             else {
-                _ = self.client.send(request: GetSpecializations(lang: self.lang, ids: ids)) { result in
+                self.client.send(request: GetSpecializations(lang: lang, ids: ids)) { result in
                     completion(result)
                 }
             }
@@ -263,7 +279,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetSkillIDs(lang: self.lang)) { result in
+            self.client.send(request: GetSkillIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -274,7 +290,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the skill you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMSkill?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<Skill>) {
-            _ = self.client.send(request: GetSkill(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetSkill(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -285,7 +301,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The IDs of the skills you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMSkill]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[Skill]>) {
-            _ = self.client.send(request: GetSkills(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetSkills(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -298,7 +314,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetTraitIDs(lang: self.lang)) { result in
+            self.client.send(request: GetTraitIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -309,7 +325,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the trait you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMTrait?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<Trait>) {
-            _ = self.client.send(request: GetTrait(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetTrait(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -320,7 +336,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The IDs of the traits you are looking for "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMTrait]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[Trait]>) {
-            _ = self.client.send(request: GetTraits(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetTraits(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }
@@ -333,7 +349,7 @@ public class GameMechanicsClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[String]>) {
-            _ = self.client.send(request: GetLegendIDs(lang: self.lang)) { result in
+            self.client.send(request: GetLegendIDs(lang: lang)) { result in
                 completion(result)
             }
         }
@@ -344,7 +360,7 @@ public class GameMechanicsClient : Client {
         ///   - id: The ID of the legend you are looking for
         ///   - completion: Callback function to handle the data returned from the API (Result<GMLegend?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<Legend>) {
-            _ = self.client.send(request: GetLegend(lang: self.lang, id: id)) { result in
+            self.client.send(request: GetLegend(lang: lang, id: id)) { result in
                 completion(result)
             }
         }
@@ -355,7 +371,7 @@ public class GameMechanicsClient : Client {
         ///   - ids: The IDs of the legends you are looking for "Legend1, Legend2, Legend3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GMLegend]?, APIError>)
         public func get(ids: [String], _ completion: @escaping RequestCallback<[Legend]>) {
-            _ = self.client.send(request: GetLegends(lang: self.lang, ids: ids)) { result in
+            self.client.send(request: GetLegends(lang: lang, ids: ids)) { result in
                 completion(result)
             }
         }

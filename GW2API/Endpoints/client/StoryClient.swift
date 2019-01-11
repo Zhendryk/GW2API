@@ -23,6 +23,8 @@ public class StoryClient : Client {
     override func setLanguage(_ language: String) {
         self.lang = language
         self.backstory.setLanguage(language)
+        self.backstory.answers.setLanguage(language)
+        self.backstory.questions.setLanguage(language)
         self.seasons.setLanguage(language)
     }
     
@@ -30,7 +32,7 @@ public class StoryClient : Client {
     ///
     /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
     public func get(_ completion: @escaping RequestCallback<[Int]>) {
-        _ = self.client.send(request: GetStoryIDs()) { result in
+        self.client.send(request: GetStoryIDs()) { result in
             completion(result)
         }
     }
@@ -41,7 +43,7 @@ public class StoryClient : Client {
     ///   - id: The id of the story you are searching for
     ///   - completion: Callback function to handle the data returned from the API (Result<Story?, APIError>)
     public func get(id: Int, _ completion: @escaping RequestCallback<Story>) {
-        _ = self.client.send(request: GetStory(id: id)) { result in
+        self.client.send(request: GetStory(id: id, lang: lang)) { result in
             completion(result)
         }
     }
@@ -52,7 +54,7 @@ public class StoryClient : Client {
     ///   - ids: The id(s) of the story(s) you are searching for
     ///   - completion: Callback function to handle the data returned from the API (Result<[Story]?, APIError>)
     public func get(ids: [Int], _ completion: @escaping RequestCallback<[Story]>) {
-        _ = self.client.send(request: GetStories(ids: ids, page: nil, page_size: nil)) { result in
+        self.client.send(request: GetStories(ids: ids, page: nil, page_size: nil, lang: lang)) { result in
             completion(result)
         }
     }
@@ -64,7 +66,7 @@ public class StoryClient : Client {
     ///   - page_size: The number of entries to restrict the page to
     ///   - completion: Callback function to handle the data returned from the API (Result<[Story]?, APIError>)
     public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Story]>) {
-        _ = self.client.send(request: GetStories(ids: nil, page: page, page_size: page_size)) { result in
+        self.client.send(request: GetStories(ids: nil, page: page, page_size: page_size, lang: lang)) { result in
             completion(result)
         }
     }
@@ -86,7 +88,7 @@ public class StoryClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[String]>) {
-                _ = self.client.send(request: GetBackstoryAnswerIDs()) { result in
+                self.client.send(request: GetBackstoryAnswerIDs()) { result in
                     completion(result)
                 }
             }
@@ -97,7 +99,7 @@ public class StoryClient : Client {
             ///   - id: The id of the backstory answer you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<BackstoryAnswer?, APIError>)
             public func get(id: String, _ completion: @escaping RequestCallback<BackstoryAnswer>) {
-                _ = self.client.send(request: GetBackstoryAnswer(id: id)) { result in
+                self.client.send(request: GetBackstoryAnswer(id: id, lang: lang)) { result in
                     completion(result)
                 }
             }
@@ -108,7 +110,7 @@ public class StoryClient : Client {
             ///   - ids: The id(s) of the backstory answer(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryAnswer]?, APIError>)
             public func get(ids: [String], _ completion: @escaping RequestCallback<[BackstoryAnswer]>) {
-                _ = self.client.send(request: GetBackstoryAnswers(ids: ids, page: nil, page_size: nil)) { result in
+                self.client.send(request: GetBackstoryAnswers(ids: ids, page: nil, page_size: nil, lang: lang)) { result in
                     completion(result)
                 }
             }
@@ -120,7 +122,7 @@ public class StoryClient : Client {
             ///   - page_size: The number of entries to restrict the page to
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryAnswer]?, APIError>)
             public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[BackstoryAnswer]>) {
-                _ = self.client.send(request: GetBackstoryAnswers(ids: nil, page: page, page_size: page_size)) { result in
+                self.client.send(request: GetBackstoryAnswers(ids: nil, page: page, page_size: page_size, lang: lang)) { result in
                     completion(result)
                 }
             }
@@ -133,7 +135,7 @@ public class StoryClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[Int]>) {
-                _ = self.client.send(request: GetBackstoryQuestionIDs()) { result in
+                self.client.send(request: GetBackstoryQuestionIDs()) { result in
                     completion(result)
                 }
             }
@@ -144,7 +146,7 @@ public class StoryClient : Client {
             ///   - id: The id of the backstory question you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<BackstoryQuestion?, APIError>)
             public func get(id: Int, _ completion: @escaping RequestCallback<BackstoryQuestion>) {
-                _ = self.client.send(request: GetBackstoryQuestion(id: id)) { result in
+                self.client.send(request: GetBackstoryQuestion(id: id, lang: lang)) { result in
                     completion(result)
                 }
             }
@@ -155,7 +157,7 @@ public class StoryClient : Client {
             ///   - ids: The id(s) of the backstory question(s) you are searching for
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryQuestion]?, APIError>)
             public func get(ids: [Int], _ completion: @escaping RequestCallback<[BackstoryQuestion]>) {
-                _ = self.client.send(request: GetBackstoryQuestions(ids: ids, page: nil, page_size: nil)) { result in
+                self.client.send(request: GetBackstoryQuestions(ids: ids, page: nil, page_size: nil, lang: lang)) { result in
                     completion(result)
                 }
             }
@@ -167,7 +169,7 @@ public class StoryClient : Client {
             ///   - page_size: The number of entries to restrict the page to
             ///   - completion: Callback function to handle the data returned from the API (Result<[BackstoryQuestion]?, APIError>)
             public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[BackstoryQuestion]>) {
-                _ = self.client.send(request: GetBackstoryQuestions(ids: nil, page: page, page_size: page_size)) { result in
+                self.client.send(request: GetBackstoryQuestions(ids: nil, page: page, page_size: page_size, lang: lang)) { result in
                     completion(result)
                 }
             }
@@ -181,7 +183,7 @@ public class StoryClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[String]>) {
-            _ = self.client.send(request: GetStorySeasonIDs()) { result in
+            self.client.send(request: GetStorySeasonIDs()) { result in
                 completion(result)
             }
         }
@@ -192,7 +194,7 @@ public class StoryClient : Client {
         ///   - id: The id of the story season you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<StorySeason?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<StorySeason>) {
-            _ = self.client.send(request: GetStorySeason(id: id)) { result in
+            self.client.send(request: GetStorySeason(id: id, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -203,7 +205,7 @@ public class StoryClient : Client {
         ///   - ids: The id(s) of the story season(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[StorySeason]?, APIError>)
         public func get(ids: [String], _ completion: @escaping RequestCallback<[StorySeason]>) {
-            _ = self.client.send(request: GetStorySeasons(ids: ids, page: nil, page_size: nil)) { result in
+            self.client.send(request: GetStorySeasons(ids: ids, page: nil, page_size: nil, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -215,7 +217,7 @@ public class StoryClient : Client {
         ///   - page_size: The number of entries to restrict the page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[StorySeason]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[StorySeason]>) {
-            _ = self.client.send(request: GetStorySeasons(ids: nil, page: page, page_size: page_size)) { result in
+            self.client.send(request: GetStorySeasons(ids: nil, page: page, page_size: page_size, lang: lang)) { result in
                 completion(result)
             }
         }

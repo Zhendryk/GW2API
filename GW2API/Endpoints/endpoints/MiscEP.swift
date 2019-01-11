@@ -2,8 +2,8 @@
 //  MiscEP.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -36,13 +36,16 @@ struct GetColor: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -56,17 +59,20 @@ struct GetColors: APIRequest {
     private var ids: [Int]?
     private var page: Int?
     private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -88,13 +94,16 @@ struct GetCurrency: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -108,17 +117,20 @@ struct GetCurrencies: APIRequest {
     private var ids: [Int]?
     private var page: Int?
     private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -297,13 +309,16 @@ struct GetMini: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -317,17 +332,20 @@ struct GetMinis: APIRequest {
     private var ids: [Int]?
     private var page: Int?
     private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -402,13 +420,16 @@ struct GetTitle: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -422,17 +443,20 @@ struct GetTitles: APIRequest {
     private var ids: [Int]?
     private var page: Int?
     private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
     }
 }
 
@@ -454,13 +478,16 @@ struct GetWorld: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -474,16 +501,145 @@ struct GetWorlds: APIRequest {
     private var ids: [Int]?
     private var page: Int?
     private var page_size: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
         case page
         case page_size
+        case lang
     }
     
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
         self.ids = ids
         self.page = page
         self.page_size = page_size
+        self.lang = lang
+    }
+}
+
+struct GetMounts: APIRequest {
+    typealias Response = [String]
+    
+    var resource: String { return "/mounts" }
+    var overrideEncoding: Bool { return true }
+    var extraPathComponents: [String] = []
+    
+    init(){}
+}
+
+struct GetMountTypeIDs: APIRequest {
+    typealias Response = [String]
+    
+    var resource: String { return "/mounts/types" }
+    var overrideEncoding: Bool { return true }
+    var extraPathComponents: [String] = []
+    
+    init() {}
+}
+
+struct GetMountType: APIRequest {
+    typealias Response = MountType
+    
+    var resource: String { return "/mounts/types" }
+    var overrideEncoding: Bool { return false }
+    var extraPathComponents: [String] = []
+    
+    private var id: String?
+    private var lang: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case lang
+    }
+    
+    init(id: String? = nil, lang: String? = nil) {
+        self.id = id
+        self.lang = lang
+    }
+}
+
+struct GetMountTypes: APIRequest {
+    typealias Response = [MountType]
+    
+    var resource: String { return "/mounts/types" }
+    var overrideEncoding: Bool { return false }
+    var extraPathComponents: [String] = []
+    
+    private var ids: [String]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case ids
+        case page
+        case page_size
+        case lang
+    }
+    
+    init(ids: [String]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
+        self.ids = ids
+        self.page = page
+        self.page_size = page_size
+        self.lang = lang
+    }
+}
+
+struct GetMountSkinIDs: APIRequest {
+    typealias Response = [Int]
+    
+    var resource: String { return "/mounts/skins" }
+    var overrideEncoding: Bool { return true }
+    var extraPathComponents: [String] = []
+    
+    init() {}
+}
+
+struct GetMountSkin: APIRequest {
+    typealias Response = MountSkin
+    
+    var resource: String { return "/mounts/skins" }
+    var overrideEncoding: Bool { return false }
+    var extraPathComponents: [String] = []
+    
+    private var id: Int?
+    private var lang: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case lang
+    }
+    
+    init(id: Int? = nil, lang: String? = nil) {
+        self.id = id
+        self.lang = lang
+    }
+}
+
+struct GetMountSkins: APIRequest {
+    typealias Response = [MountSkin]
+    
+    var resource: String { return "/mounts/skins" }
+    var overrideEncoding: Bool { return false }
+    var extraPathComponents: [String] = []
+    
+    private var ids: [Int]?
+    private var page: Int?
+    private var page_size: Int?
+    private var lang: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case ids
+        case page
+        case page_size
+        case lang
+    }
+    
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
+        self.ids = ids
+        self.page = page
+        self.page_size = page_size
+        self.lang = lang
     }
 }

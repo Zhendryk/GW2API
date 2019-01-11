@@ -2,8 +2,8 @@
 //  GuildEP.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -149,13 +149,16 @@ struct GetGuildPermission: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: String?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: String? = nil) {
+    init(id: String? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -167,13 +170,16 @@ struct GetGuildPermissions: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [String]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [String]? = nil) {
+    init(ids: [String]? = nil, lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }
 
@@ -195,13 +201,16 @@ struct GetGuildUpgrade: APIRequest {
     var extraPathComponents: [String] = []
     
     private var id: Int?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
+        case lang
     }
     
-    init(id: Int? = nil) {
+    init(id: Int? = nil, lang: String? = nil) {
         self.id = id
+        self.lang = lang
     }
 }
 
@@ -213,13 +222,16 @@ struct GetGuildUpgrades: APIRequest {
     var extraPathComponents: [String] = []
     
     private var ids: [Int]?
+    private var lang: String?
     
     private enum CodingKeys: String, CodingKey {
         case ids
+        case lang
     }
     
-    init(ids: [Int]? = nil) {
+    init(ids: [Int]? = nil, lang: String? = nil) {
         self.ids = ids
+        self.lang = lang
     }
 }
 

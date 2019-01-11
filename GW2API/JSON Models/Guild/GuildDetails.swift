@@ -15,7 +15,7 @@ public struct GuildDetails: Decodable {
     public let id: String
     public let name: String
     public let tag: String
-    public let emblem: emblem
+    public let emblem: emblem?
     public let flags: [String]?
 }
 

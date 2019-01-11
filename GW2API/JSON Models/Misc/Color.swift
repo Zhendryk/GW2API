@@ -6,8 +6,11 @@
 //  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
-//colors
-//lang, id, ids
+public typealias Cloth = DyeMaterial
+public typealias Leather = DyeMaterial
+public typealias Metal = DyeMaterial
+public typealias Fur = DyeMaterial
+
 public struct Color: Decodable {
     public let id: Int
     public let name: String
@@ -15,29 +18,12 @@ public struct Color: Decodable {
     public let cloth: Cloth
     public let leather: Leather
     public let metal: Metal
+    public let fur: Fur?
     public let item: Int?
     public let categories: [String]
 }
 
-public struct Cloth: Decodable {
-    public let brightness: Int
-    public let contrast: Float
-    public let hue: Int
-    public let saturation: Float
-    public let lightness: Float
-    public let rgb: [Int]
-}
-
-public struct Leather: Decodable {
-    public let brightness: Int
-    public let contrast: Float
-    public let hue: Int
-    public let saturation: Float
-    public let lightness: Float
-    public let rgb: [Int]
-}
-
-public struct Metal: Decodable {
+public struct DyeMaterial: Decodable {
     public let brightness: Int
     public let contrast: Float
     public let hue: Int

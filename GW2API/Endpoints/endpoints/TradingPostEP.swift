@@ -2,8 +2,8 @@
 //  TradingPostEP.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 9/7/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 9/7/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import GenericAPIClient
@@ -107,13 +107,13 @@ struct GetDeliveries: APIRequest {
     var overrideEncoding: Bool { return false }
     var extraPathComponents: [String] = []
     
-    var access_token: String?
+    private var access_token: String?
     
     private enum CodingKeys: String, CodingKey {
         case access_token
     }
     
-    init(access_token: String?) {
+    init(access_token: String? = nil) {
         self.access_token = access_token
     }
 }

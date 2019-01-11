@@ -2,8 +2,8 @@
 //  CommerceDelivery.swift
 //  GW2API
 //
-//  Created by Jonathan Bailey on 10/25/18.
-//  Copyright © 2018 Jonathan Bailey. All rights reserved.
+//  Created by Zhendryk on 10/25/18.
+//  Copyright © 2018 Zhendryk. All rights reserved.
 //
 
 import Foundation

@@ -30,7 +30,7 @@ public class PVPClient : Client {
     ///
     /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
     public func get(_ completion: @escaping RequestCallback<[String]>) {
-        _ = self.client.send(request: GetPVPInfo()) { result in
+        self.client.send(request: GetPVPInfo()) { result in
             completion(result)
         }
     }
@@ -42,7 +42,7 @@ public class PVPClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            _ = self.client.send(request: GetPVPRankIDs()) { result in
+            self.client.send(request: GetPVPRankIDs()) { result in
                 completion(result)
             }
         }
@@ -53,7 +53,7 @@ public class PVPClient : Client {
         ///   - id: The id of the pvp rank you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<PVPRank?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<PVPRank>) {
-            _ = self.client.send(request: GetPVPRank(id: id)) { result in
+            self.client.send(request: GetPVPRank(id: id, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -64,7 +64,7 @@ public class PVPClient : Client {
         ///   - ids: the id(s) of the pvp rank(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPRank]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[PVPRank]>) {
-            _ = self.client.send(request: GetPVPRanks(ids: ids, page: nil, page_size: nil)) { result in
+            self.client.send(request: GetPVPRanks(ids: ids, page: nil, page_size: nil, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -76,7 +76,7 @@ public class PVPClient : Client {
         ///   - page_size: The number of entries to restrict the page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPRank]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[PVPRank]>) {
-            _ = self.client.send(request: GetPVPRanks(ids: nil, page: page, page_size: page_size)) { result in
+            self.client.send(request: GetPVPRanks(ids: nil, page: page, page_size: page_size, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -100,7 +100,7 @@ public class PVPClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[String]>) {
-            _ = self.client.send(request: GetPVPSeasonIDs()) { result in
+            self.client.send(request: GetPVPSeasonIDs()) { result in
                 completion(result)
             }
         }
@@ -111,7 +111,7 @@ public class PVPClient : Client {
         ///   - id: The id of the pvp season you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<PVPSeason?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<PVPSeason>) {
-            _ = self.client.send(request: GetPVPSeason(id: id)) { result in
+            self.client.send(request: GetPVPSeason(id: id, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -122,7 +122,7 @@ public class PVPClient : Client {
         ///   - ids: the id(s) of the pvp season(s) you are searching for
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeason]?, APIError>)
         public func get(ids: [String], _ completion: @escaping RequestCallback<[PVPSeason]>) {
-            _ = self.client.send(request: GetPVPSeasons(ids: ids, page: nil, page_size: nil)) { result in
+            self.client.send(request: GetPVPSeasons(ids: ids, page: nil, page_size: nil, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -134,7 +134,7 @@ public class PVPClient : Client {
         ///   - page_size: The number of entries to restrict the page to
         ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeason]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[PVPSeason]>) {
-            _ = self.client.send(request: GetPVPSeasons(ids: nil, page: page, page_size: page_size)) { result in
+            self.client.send(request: GetPVPSeasons(ids: nil, page: page, page_size: page_size, lang: lang)) { result in
                 completion(result)
             }
         }
@@ -150,12 +150,12 @@ public class PVPClient : Client {
             ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
             public func getLegendary(seasonID: String, eu: Bool = false, _ completion: @escaping RequestCallback<[PVPSeasonLeaderboard]>) {
                 if eu {
-                    _ = self.client.send(request: GetEULegendaryLeaderboard(id: seasonID)) { result in
+                    self.client.send(request: GetEULegendaryLeaderboard(id: seasonID, lang: lang)) { result in
                         completion(result)
                     }
                 }
                 else {
-                    _ = self.client.send(request: GetNALegendaryLeaderboard(id: seasonID)) { result in
+                    self.client.send(request: GetNALegendaryLeaderboard(id: seasonID, lang: lang)) { result in
                         completion(result)
                     }
                 }
@@ -169,12 +169,12 @@ public class PVPClient : Client {
             ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
             public func getGuild(seasonID: String, eu: Bool = false, _ completion: @escaping RequestCallback<[PVPSeasonLeaderboard]>) {
                 if eu {
-                    _ = self.client.send(request: GetEUGuildLeaderboard(id: seasonID)) { result in
+                    self.client.send(request: GetEUGuildLeaderboard(id: seasonID, lang: lang)) { result in
                         completion(result)
                     }
                 }
                 else {
-                    _ = self.client.send(request: GetNAGuildLeaderboard(id: seasonID)) { result in
+                    self.client.send(request: GetNAGuildLeaderboard(id: seasonID, lang: lang)) { result in
                         completion(result)
                     }
                 }
@@ -188,12 +188,12 @@ public class PVPClient : Client {
             ///   - completion: Callback function to handle the data returned from the API (Result<[PVPSeasonLeaderboard]?, APIError>)
             public func getLadder(seasonID: String, eu: Bool = false, _ completion: @escaping RequestCallback<[PVPSeasonLeaderboard]>) {
                 if eu {
-                    _ = self.client.send(request: GetEULadderLeaderboard(id: seasonID)) { result in
+                    self.client.send(request: GetEULadderLeaderboard(id: seasonID, lang: lang)) { result in
                         completion(result)
                     }
                 }
                 else {
-                    _ = self.client.send(request: GetNALadderLeaderboard(id: seasonID)) { result in
+                    self.client.send(request: GetNALadderLeaderboard(id: seasonID, lang: lang)) { result in
                         completion(result)
                     }
                 }

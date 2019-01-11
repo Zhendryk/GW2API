@@ -2,8 +2,8 @@
 //  GW2API.h
 //  GW2API
 //
-//  Created by Zhendryk on 6/30/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Zhendryk on 1/10/19.
+//  Copyright © 2019 Zhendryk. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
