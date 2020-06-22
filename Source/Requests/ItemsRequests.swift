@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
+import Foundation
 import APIClient
 
 class GetItemIDs: GetRequest<[Int]> {

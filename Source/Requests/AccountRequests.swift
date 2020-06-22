@@ -6,6 +6,7 @@
 //  Copyright © 2020 Jonathan Bailey. All rights reserved.
 //
 
+import Foundation
 import APIClient
 
 class GetAccount: GetRequest<Account> {

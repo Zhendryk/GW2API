@@ -3,1120 +3,1371 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"GW2API::GW2APIPackageTests::ProductTarget" /* GW2APIPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_329 /* Build configuration list for PBXAggregateTarget "GW2APIPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_332 /* PBXTargetDependency */,
+			);
+			name = GW2APIPackageTests;
+			productName = GW2APIPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		19878490249EE2CF00162778 /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19878486249EE2CF00162778 /* GW2API.framework */; };
-		19878497249EE2CF00162778 /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = 19878489249EE2CF00162778 /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1987851F249EE31100162778 /* String+regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A1249EE31000162778 /* String+regex.swift */; };
-		19878520249EE31100162778 /* ItemsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A3249EE31000162778 /* ItemsClient.swift */; };
-		19878521249EE31100162778 /* StoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A4249EE31000162778 /* StoryClient.swift */; };
-		19878522249EE31100162778 /* AuthenticatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A5249EE31000162778 /* AuthenticatedClient.swift */; };
-		19878523249EE31100162778 /* PVPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A6249EE31000162778 /* PVPClient.swift */; };
-		19878524249EE31100162778 /* GuildClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A7249EE31000162778 /* GuildClient.swift */; };
-		19878525249EE31100162778 /* GW2APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A8249EE31000162778 /* GW2APIClient.swift */; };
-		19878526249EE31100162778 /* MapInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A9249EE31000162778 /* MapInfoClient.swift */; };
-		19878527249EE31100162778 /* MiscClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AA249EE31000162778 /* MiscClient.swift */; };
-		19878528249EE31100162778 /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AB249EE31000162778 /* AchievementsClient.swift */; };
-		19878529249EE31100162778 /* GameMechanicsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AC249EE31000162778 /* GameMechanicsClient.swift */; };
-		1987852A249EE31100162778 /* TradingPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AD249EE31000162778 /* TradingPostClient.swift */; };
-		1987852B249EE31100162778 /* WVWClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AE249EE31000162778 /* WVWClient.swift */; };
-		1987852C249EE31100162778 /* GW2ClientLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B0249EE31000162778 /* GW2ClientLanguage.swift */; };
-		1987852D249EE31100162778 /* APIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B1249EE31000162778 /* APIUtil.swift */; };
-		1987852E249EE31100162778 /* StoryRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B3249EE31000162778 /* StoryRequests.swift */; };
-		1987852F249EE31100162778 /* TradingPostRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B4249EE31000162778 /* TradingPostRequests.swift */; };
-		19878530249EE31100162778 /* WVWRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B5249EE31000162778 /* WVWRequests.swift */; };
-		19878531249EE31100162778 /* ItemsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B6249EE31000162778 /* ItemsRequests.swift */; };
-		19878532249EE31100162778 /* MiscRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B7249EE31000162778 /* MiscRequests.swift */; };
-		19878533249EE31100162778 /* GuildRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B8249EE31000162778 /* GuildRequests.swift */; };
-		19878534249EE31100162778 /* MapInfoRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B9249EE31000162778 /* MapInfoRequests.swift */; };
-		19878535249EE31100162778 /* PVPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784BA249EE31000162778 /* PVPRequests.swift */; };
-		19878537249EE31100162778 /* GameMechanicsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784BC249EE31000162778 /* GameMechanicsRequests.swift */; };
-		19878538249EE31100162778 /* AchievementsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784BD249EE31000162778 /* AchievementsRequests.swift */; };
-		19878539249EE31100162778 /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C0249EE31000162778 /* Raid.swift */; };
-		1987853A249EE31100162778 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C1249EE31000162778 /* Dungeon.swift */; };
-		1987853B249EE31100162778 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C2249EE31000162778 /* Currency.swift */; };
-		1987853C249EE31100162778 /* Mount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C3249EE31000162778 /* Mount.swift */; };
-		1987853D249EE31100162778 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C4249EE31000162778 /* Title.swift */; };
-		1987853E249EE31100162778 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C5249EE31000162778 /* File.swift */; };
-		1987853F249EE31100162778 /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C6249EE31000162778 /* Build.swift */; };
-		19878540249EE31100162778 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C7249EE31000162778 /* World.swift */; };
-		19878541249EE31100162778 /* Minipet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C8249EE31000162778 /* Minipet.swift */; };
-		19878542249EE31100162778 /* Quaggan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C9249EE31000162778 /* Quaggan.swift */; };
-		19878543249EE31100162778 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CA249EE31000162778 /* Color.swift */; };
-		19878544249EE31100162778 /* AchievementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CC249EE31000162778 /* AchievementCategory.swift */; };
-		19878545249EE31100162778 /* DailyAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CD249EE31000162778 /* DailyAchievement.swift */; };
-		19878546249EE31100162778 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CE249EE31000162778 /* Achievement.swift */; };
-		19878547249EE31100162778 /* AchievementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CF249EE31000162778 /* AchievementGroup.swift */; };
-		19878548249EE31100162778 /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D1249EE31000162778 /* CommercePrice.swift */; };
-		19878549249EE31100162778 /* CommerceDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D2249EE31000162778 /* CommerceDelivery.swift */; };
-		1987854A249EE31100162778 /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D3249EE31000162778 /* CommerceListing.swift */; };
-		1987854B249EE31100162778 /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D4249EE31000162778 /* CommerceExchange.swift */; };
-		1987854C249EE31100162778 /* AccountPVPStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D6249EE31000162778 /* AccountPVPStats.swift */; };
-		1987854D249EE31100162778 /* AccountMasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D7249EE31000162778 /* AccountMasteryPoints.swift */; };
-		1987854E249EE31100162778 /* AccountPVPGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D8249EE31000162778 /* AccountPVPGame.swift */; };
-		1987854F249EE31100162778 /* AccountInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D9249EE31000162778 /* AccountInventoryItem.swift */; };
-		19878550249EE31100162778 /* AccountCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DA249EE31000162778 /* AccountCharacter.swift */; };
-		19878551249EE31100162778 /* AccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DB249EE31000162778 /* AccountTransaction.swift */; };
-		19878552249EE31100162778 /* AccountAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DC249EE31000162778 /* AccountAchievement.swift */; };
-		19878553249EE31100162778 /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DD249EE31000162778 /* AccountWalletItem.swift */; };
-		19878554249EE31100162778 /* AccountPVPStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DE249EE31000162778 /* AccountPVPStandings.swift */; };
-		19878555249EE31100162778 /* AccountToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DF249EE31000162778 /* AccountToken.swift */; };
-		19878556249EE31100162778 /* AccountBankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E0249EE31000162778 /* AccountBankItem.swift */; };
-		19878557249EE31100162778 /* AccountCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E1249EE31000162778 /* AccountCat.swift */; };
-		19878558249EE31100162778 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E2249EE31000162778 /* Account.swift */; };
-		19878559249EE31100162778 /* AccountFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E3249EE31000162778 /* AccountFinisher.swift */; };
-		1987855A249EE31100162778 /* AccountMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E4249EE31000162778 /* AccountMaterial.swift */; };
-		1987855B249EE31100162778 /* AccountMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E5249EE31000162778 /* AccountMastery.swift */; };
-		1987855C249EE31100162778 /* PVPSeasonLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E7249EE31000162778 /* PVPSeasonLeaderboard.swift */; };
-		1987855D249EE31100162778 /* PVPSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E8249EE31000162778 /* PVPSeason.swift */; };
-		1987855E249EE31100162778 /* PVPRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E9249EE31000162778 /* PVPRank.swift */; };
-		1987855F249EE31100162778 /* DetailedMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EB249EE31000162778 /* DetailedMap.swift */; };
-		19878560249EE31100162778 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EC249EE31000162778 /* Continent.swift */; };
-		19878561249EE31100162778 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784ED249EE31000162778 /* Region.swift */; };
-		19878562249EE31100162778 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EE249EE31000162778 /* Sector.swift */; };
-		19878563249EE31100162778 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EF249EE31000162778 /* POI.swift */; };
-		19878564249EE31100162778 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F0249EE31000162778 /* Map.swift */; };
-		19878565249EE31100162778 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F1249EE31000162778 /* Task.swift */; };
-		19878566249EE31100162778 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F2249EE31000162778 /* Floor.swift */; };
-		19878567249EE31100162778 /* Specialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F4249EE31000162778 /* Specialization.swift */; };
-		19878568249EE31100162778 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F5249EE31000162778 /* Race.swift */; };
-		19878569249EE31100162778 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F6249EE31000162778 /* Legend.swift */; };
-		1987856A249EE31100162778 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F7249EE31000162778 /* Trait.swift */; };
-		1987856B249EE31100162778 /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F8249EE31000162778 /* Profession.swift */; };
-		1987856C249EE31100162778 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F9249EE31000162778 /* Outfit.swift */; };
-		1987856D249EE31100162778 /* Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FA249EE31000162778 /* Mastery.swift */; };
-		1987856E249EE31100162778 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FB249EE31000162778 /* Pet.swift */; };
-		1987856F249EE31100162778 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FC249EE31000162778 /* Skill.swift */; };
-		19878570249EE31100162778 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FE249EE31000162778 /* Recipe.swift */; };
-		19878571249EE31100162778 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FF249EE31000162778 /* Item.swift */; };
-		19878572249EE31100162778 /* PVPAmulet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878500249EE31000162778 /* PVPAmulet.swift */; };
-		19878573249EE31100162778 /* ItemStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878501249EE31000162778 /* ItemStats.swift */; };
-		19878574249EE31100162778 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878502249EE31000162778 /* Skin.swift */; };
-		19878575249EE31100162778 /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878503249EE31000162778 /* Finisher.swift */; };
-		19878576249EE31100162778 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878504249EE31000162778 /* Material.swift */; };
-		19878577249EE31100162778 /* BackstoryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878506249EE31000162778 /* BackstoryQuestion.swift */; };
-		19878578249EE31100162778 /* StorySeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878507249EE31000162778 /* StorySeason.swift */; };
-		19878579249EE31100162778 /* BackstoryAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878508249EE31000162778 /* BackstoryAnswer.swift */; };
-		1987857A249EE31100162778 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878509249EE31000162778 /* Story.swift */; };
-		1987857B249EE31100162778 /* WVWAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850B249EE31100162778 /* WVWAbility.swift */; };
-		1987857C249EE31100162778 /* WVWMatchScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850C249EE31100162778 /* WVWMatchScore.swift */; };
-		1987857D249EE31100162778 /* WVWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850D249EE31100162778 /* WVWMatch.swift */; };
-		1987857E249EE31100162778 /* WVWMatchStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850E249EE31100162778 /* WVWMatchStats.swift */; };
-		1987857F249EE31100162778 /* WVWUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850F249EE31100162778 /* WVWUpgrade.swift */; };
-		19878580249EE31100162778 /* WVWObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878510249EE31100162778 /* WVWObjective.swift */; };
-		19878581249EE31100162778 /* WVWRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878511249EE31100162778 /* WVWRank.swift */; };
-		19878582249EE31100162778 /* WVWMatchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878512249EE31100162778 /* WVWMatchOverview.swift */; };
-		19878583249EE31100162778 /* GuildDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878514249EE31100162778 /* GuildDetails.swift */; };
-		19878584249EE31100162778 /* GuildEmblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878515249EE31100162778 /* GuildEmblem.swift */; };
-		19878585249EE31100162778 /* GuildStash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878516249EE31100162778 /* GuildStash.swift */; };
-		19878586249EE31100162778 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878517249EE31100162778 /* Permissions.swift */; };
-		19878587249EE31100162778 /* GuildLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878518249EE31100162778 /* GuildLog.swift */; };
-		19878588249EE31100162778 /* GuildMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878519249EE31100162778 /* GuildMember.swift */; };
-		19878589249EE31100162778 /* GuildUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851A249EE31100162778 /* GuildUpgrade.swift */; };
-		1987858A249EE31100162778 /* GuildRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851B249EE31100162778 /* GuildRank.swift */; };
-		1987858B249EE31100162778 /* GuildTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851C249EE31100162778 /* GuildTreasury.swift */; };
-		1987858C249EE31100162778 /* GuildTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851D249EE31100162778 /* GuildTeam.swift */; };
-		1987858D249EE31100162778 /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851E249EE31100162778 /* GW2Client.swift */; };
-		1987859D249EE32F00162778 /* GameMechanicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987858F249EE32F00162778 /* GameMechanicsTests.swift */; };
-		1987859E249EE32F00162778 /* WVWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878590249EE32F00162778 /* WVWTests.swift */; };
-		1987859F249EE32F00162778 /* PVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878591249EE32F00162778 /* PVPTests.swift */; };
-		198785A0249EE32F00162778 /* ItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878592249EE32F00162778 /* ItemsTests.swift */; };
-		198785A1249EE32F00162778 /* TradingPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878593249EE32F00162778 /* TradingPostTests.swift */; };
-		198785A2249EE32F00162778 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878594249EE32F00162778 /* MiscTests.swift */; };
-		198785A3249EE32F00162778 /* StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878595249EE32F00162778 /* StoryTests.swift */; };
-		198785A4249EE32F00162778 /* GuildAuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878596249EE32F00162778 /* GuildAuthenticatedTests.swift */; };
-		198785A5249EE32F00162778 /* GW2APITestVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878597249EE32F00162778 /* GW2APITestVariables.swift */; };
-		198785A6249EE32F00162778 /* AuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878598249EE32F00162778 /* AuthenticatedTests.swift */; };
-		198785A7249EE32F00162778 /* MapInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878599249EE32F00162778 /* MapInfoTests.swift */; };
-		198785A8249EE32F00162778 /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987859A249EE32F00162778 /* AchievementsTests.swift */; };
-		198785AA249EE32F00162778 /* GuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987859C249EE32F00162778 /* GuildTests.swift */; };
-		198785AD249EE37C00162778 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 198785AC249EE37C00162778 /* APIClient */; };
-		198785AF24A0505100162778 /* AccountRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198785AE24A0505100162778 /* AccountRequests.swift */; };
-		198785B324A050E000162778 /* CharacterRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198785B224A050E000162778 /* CharacterRequests.swift */; };
-		198785D324A05E3E00162778 /* GW2ClientVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198785D224A05E3E00162778 /* GW2ClientVersion.swift */; };
-		198785E024A07B7D00162778 /* test_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 198785DF24A07B7D00162778 /* test_data.json */; };
+		OBJ_183 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_158 /* APIClient.swift */; };
+		OBJ_184 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_159 /* APIClientError.swift */; };
+		OBJ_185 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_160 /* APIRequest.swift */; };
+		OBJ_186 /* APIRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_161 /* APIRequestResult.swift */; };
+		OBJ_187 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_164 /* Post.swift */; };
+		OBJ_188 /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_166 /* CreateNewPost.swift */; };
+		OBJ_189 /* DeletePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_167 /* DeletePost.swift */; };
+		OBJ_190 /* GetPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_168 /* GetPosts.swift */; };
+		OBJ_191 /* UpdatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_169 /* UpdatePost.swift */; };
+		OBJ_192 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_170 /* HTTPMethod.swift */; };
+		OBJ_193 /* HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_171 /* HTTPParameter.swift */; };
+		OBJ_200 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_157 /* Package.swift */; };
+		OBJ_206 /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AchievementsClient.swift */; };
+		OBJ_207 /* AuthenticatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* AuthenticatedClient.swift */; };
+		OBJ_208 /* GW2APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GW2APIClient.swift */; };
+		OBJ_209 /* GameMechanicsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GameMechanicsClient.swift */; };
+		OBJ_210 /* GuildClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GuildClient.swift */; };
+		OBJ_211 /* ItemsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* ItemsClient.swift */; };
+		OBJ_212 /* MapInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* MapInfoClient.swift */; };
+		OBJ_213 /* MiscClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* MiscClient.swift */; };
+		OBJ_214 /* PVPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* PVPClient.swift */; };
+		OBJ_215 /* StoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* StoryClient.swift */; };
+		OBJ_216 /* TradingPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TradingPostClient.swift */; };
+		OBJ_217 /* WVWClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* WVWClient.swift */; };
+		OBJ_218 /* String+regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* String+regex.swift */; };
+		OBJ_219 /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* GW2Client.swift */; };
+		OBJ_220 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Achievement.swift */; };
+		OBJ_221 /* AchievementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* AchievementCategory.swift */; };
+		OBJ_222 /* AchievementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* AchievementGroup.swift */; };
+		OBJ_223 /* DailyAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* DailyAchievement.swift */; };
+		OBJ_224 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Account.swift */; };
+		OBJ_225 /* AccountAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* AccountAchievement.swift */; };
+		OBJ_226 /* AccountBankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* AccountBankItem.swift */; };
+		OBJ_227 /* AccountCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* AccountCat.swift */; };
+		OBJ_228 /* AccountCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* AccountCharacter.swift */; };
+		OBJ_229 /* AccountFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* AccountFinisher.swift */; };
+		OBJ_230 /* AccountInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* AccountInventoryItem.swift */; };
+		OBJ_231 /* AccountMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* AccountMastery.swift */; };
+		OBJ_232 /* AccountMasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* AccountMasteryPoints.swift */; };
+		OBJ_233 /* AccountMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* AccountMaterial.swift */; };
+		OBJ_234 /* AccountPVPGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* AccountPVPGame.swift */; };
+		OBJ_235 /* AccountPVPStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* AccountPVPStandings.swift */; };
+		OBJ_236 /* AccountPVPStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* AccountPVPStats.swift */; };
+		OBJ_237 /* AccountToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* AccountToken.swift */; };
+		OBJ_238 /* AccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* AccountTransaction.swift */; };
+		OBJ_239 /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* AccountWalletItem.swift */; };
+		OBJ_240 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Legend.swift */; };
+		OBJ_241 /* Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Mastery.swift */; };
+		OBJ_242 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Outfit.swift */; };
+		OBJ_243 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Pet.swift */; };
+		OBJ_244 /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Profession.swift */; };
+		OBJ_245 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Race.swift */; };
+		OBJ_246 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Skill.swift */; };
+		OBJ_247 /* Specialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Specialization.swift */; };
+		OBJ_248 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Trait.swift */; };
+		OBJ_249 /* GuildDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* GuildDetails.swift */; };
+		OBJ_250 /* GuildEmblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* GuildEmblem.swift */; };
+		OBJ_251 /* GuildLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* GuildLog.swift */; };
+		OBJ_252 /* GuildMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* GuildMember.swift */; };
+		OBJ_253 /* GuildRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* GuildRank.swift */; };
+		OBJ_254 /* GuildStash.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* GuildStash.swift */; };
+		OBJ_255 /* GuildTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* GuildTeam.swift */; };
+		OBJ_256 /* GuildTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* GuildTreasury.swift */; };
+		OBJ_257 /* GuildUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* GuildUpgrade.swift */; };
+		OBJ_258 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Permissions.swift */; };
+		OBJ_259 /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Finisher.swift */; };
+		OBJ_260 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Item.swift */; };
+		OBJ_261 /* ItemStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* ItemStats.swift */; };
+		OBJ_262 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Material.swift */; };
+		OBJ_263 /* PVPAmulet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* PVPAmulet.swift */; };
+		OBJ_264 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Recipe.swift */; };
+		OBJ_265 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Skin.swift */; };
+		OBJ_266 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Continent.swift */; };
+		OBJ_267 /* DetailedMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* DetailedMap.swift */; };
+		OBJ_268 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Floor.swift */; };
+		OBJ_269 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Map.swift */; };
+		OBJ_270 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* POI.swift */; };
+		OBJ_271 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Region.swift */; };
+		OBJ_272 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Sector.swift */; };
+		OBJ_273 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Task.swift */; };
+		OBJ_274 /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Build.swift */; };
+		OBJ_275 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Color.swift */; };
+		OBJ_276 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* Currency.swift */; };
+		OBJ_277 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* Dungeon.swift */; };
+		OBJ_278 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* File.swift */; };
+		OBJ_279 /* Minipet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* Minipet.swift */; };
+		OBJ_280 /* Mount.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* Mount.swift */; };
+		OBJ_281 /* Quaggan.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* Quaggan.swift */; };
+		OBJ_282 /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* Raid.swift */; };
+		OBJ_283 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* Title.swift */; };
+		OBJ_284 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* World.swift */; };
+		OBJ_285 /* BackstoryAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* BackstoryAnswer.swift */; };
+		OBJ_286 /* BackstoryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* BackstoryQuestion.swift */; };
+		OBJ_287 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* Story.swift */; };
+		OBJ_288 /* StorySeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* StorySeason.swift */; };
+		OBJ_289 /* PVPRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* PVPRank.swift */; };
+		OBJ_290 /* PVPSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* PVPSeason.swift */; };
+		OBJ_291 /* PVPSeasonLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* PVPSeasonLeaderboard.swift */; };
+		OBJ_292 /* CommerceDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* CommerceDelivery.swift */; };
+		OBJ_293 /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* CommerceExchange.swift */; };
+		OBJ_294 /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* CommerceListing.swift */; };
+		OBJ_295 /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* CommercePrice.swift */; };
+		OBJ_296 /* WVWAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* WVWAbility.swift */; };
+		OBJ_297 /* WVWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* WVWMatch.swift */; };
+		OBJ_298 /* WVWMatchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* WVWMatchOverview.swift */; };
+		OBJ_299 /* WVWMatchScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* WVWMatchScore.swift */; };
+		OBJ_300 /* WVWMatchStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* WVWMatchStats.swift */; };
+		OBJ_301 /* WVWObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* WVWObjective.swift */; };
+		OBJ_302 /* WVWRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* WVWRank.swift */; };
+		OBJ_303 /* WVWUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* WVWUpgrade.swift */; };
+		OBJ_304 /* AccountRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* AccountRequests.swift */; };
+		OBJ_305 /* AchievementsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* AchievementsRequests.swift */; };
+		OBJ_306 /* CharacterRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* CharacterRequests.swift */; };
+		OBJ_307 /* GameMechanicsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* GameMechanicsRequests.swift */; };
+		OBJ_308 /* GuildRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* GuildRequests.swift */; };
+		OBJ_309 /* ItemsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* ItemsRequests.swift */; };
+		OBJ_310 /* MapInfoRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* MapInfoRequests.swift */; };
+		OBJ_311 /* MiscRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* MiscRequests.swift */; };
+		OBJ_312 /* PVPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* PVPRequests.swift */; };
+		OBJ_313 /* StoryRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* StoryRequests.swift */; };
+		OBJ_314 /* TradingPostRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_133 /* TradingPostRequests.swift */; };
+		OBJ_315 /* WVWRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* WVWRequests.swift */; };
+		OBJ_316 /* APIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* APIUtil.swift */; };
+		OBJ_317 /* GW2ClientLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* GW2ClientLanguage.swift */; };
+		OBJ_318 /* GW2ClientVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_138 /* GW2ClientVersion.swift */; };
+		OBJ_320 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "APIClient::APIClient::Product" /* APIClient.framework */; };
+		OBJ_327 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_338 /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* AchievementsTests.swift */; };
+		OBJ_339 /* AuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* AuthenticatedTests.swift */; };
+		OBJ_340 /* GW2APITestVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* GW2APITestVariables.swift */; };
+		OBJ_341 /* GameMechanicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* GameMechanicsTests.swift */; };
+		OBJ_342 /* GuildAuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* GuildAuthenticatedTests.swift */; };
+		OBJ_343 /* GuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* GuildTests.swift */; };
+		OBJ_344 /* ItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_148 /* ItemsTests.swift */; };
+		OBJ_345 /* MapInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_149 /* MapInfoTests.swift */; };
+		OBJ_346 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_150 /* MiscTests.swift */; };
+		OBJ_347 /* PVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_151 /* PVPTests.swift */; };
+		OBJ_348 /* StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_152 /* StoryTests.swift */; };
+		OBJ_349 /* TradingPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_153 /* TradingPostTests.swift */; };
+		OBJ_350 /* WVWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_154 /* WVWTests.swift */; };
+		OBJ_352 /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "GW2API::GW2API::Product" /* GW2API.framework */; };
+		OBJ_353 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "APIClient::APIClient::Product" /* APIClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		19878491249EE2CF00162778 /* PBXContainerItemProxy */ = {
+		198785E124A081FE00162778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1987847D249EE2CF00162778 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19878485249EE2CF00162778;
+			remoteGlobalIDString = "APIClient::APIClient";
+			remoteInfo = APIClient;
+		};
+		198785E224A081FE00162778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "GW2API::GW2API";
 			remoteInfo = GW2API;
+		};
+		198785E324A081FE00162778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "APIClient::APIClient";
+			remoteInfo = APIClient;
+		};
+		198785E424A081FE00162778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "GW2API::GW2APITests";
+			remoteInfo = GW2APITests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19878486249EE2CF00162778 /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19878489249EE2CF00162778 /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
-		1987848A249EE2CF00162778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1987848F249EE2CF00162778 /* GW2APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19878496249EE2CF00162778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		198784A1249EE31000162778 /* String+regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+regex.swift"; sourceTree = "<group>"; };
-		198784A3249EE31000162778 /* ItemsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsClient.swift; sourceTree = "<group>"; };
-		198784A4249EE31000162778 /* StoryClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryClient.swift; sourceTree = "<group>"; };
-		198784A5249EE31000162778 /* AuthenticatedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedClient.swift; sourceTree = "<group>"; };
-		198784A6249EE31000162778 /* PVPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPClient.swift; sourceTree = "<group>"; };
-		198784A7249EE31000162778 /* GuildClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildClient.swift; sourceTree = "<group>"; };
-		198784A8249EE31000162778 /* GW2APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2APIClient.swift; sourceTree = "<group>"; };
-		198784A9249EE31000162778 /* MapInfoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoClient.swift; sourceTree = "<group>"; };
-		198784AA249EE31000162778 /* MiscClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscClient.swift; sourceTree = "<group>"; };
-		198784AB249EE31000162778 /* AchievementsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
-		198784AC249EE31000162778 /* GameMechanicsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsClient.swift; sourceTree = "<group>"; };
-		198784AD249EE31000162778 /* TradingPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostClient.swift; sourceTree = "<group>"; };
-		198784AE249EE31000162778 /* WVWClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWClient.swift; sourceTree = "<group>"; };
-		198784B0249EE31000162778 /* GW2ClientLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2ClientLanguage.swift; sourceTree = "<group>"; };
-		198784B1249EE31000162778 /* APIUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtil.swift; sourceTree = "<group>"; };
-		198784B3249EE31000162778 /* StoryRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryRequests.swift; sourceTree = "<group>"; };
-		198784B4249EE31000162778 /* TradingPostRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostRequests.swift; sourceTree = "<group>"; };
-		198784B5249EE31000162778 /* WVWRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWRequests.swift; sourceTree = "<group>"; };
-		198784B6249EE31000162778 /* ItemsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsRequests.swift; sourceTree = "<group>"; };
-		198784B7249EE31000162778 /* MiscRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscRequests.swift; sourceTree = "<group>"; };
-		198784B8249EE31000162778 /* GuildRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildRequests.swift; sourceTree = "<group>"; };
-		198784B9249EE31000162778 /* MapInfoRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoRequests.swift; sourceTree = "<group>"; };
-		198784BA249EE31000162778 /* PVPRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPRequests.swift; sourceTree = "<group>"; };
-		198784BC249EE31000162778 /* GameMechanicsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsRequests.swift; sourceTree = "<group>"; };
-		198784BD249EE31000162778 /* AchievementsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsRequests.swift; sourceTree = "<group>"; };
-		198784C0249EE31000162778 /* Raid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
-		198784C1249EE31000162778 /* Dungeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
-		198784C2249EE31000162778 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		198784C3249EE31000162778 /* Mount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mount.swift; sourceTree = "<group>"; };
-		198784C4249EE31000162778 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		198784C5249EE31000162778 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		198784C6249EE31000162778 /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
-		198784C7249EE31000162778 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
-		198784C8249EE31000162778 /* Minipet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minipet.swift; sourceTree = "<group>"; };
-		198784C9249EE31000162778 /* Quaggan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quaggan.swift; sourceTree = "<group>"; };
-		198784CA249EE31000162778 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		198784CC249EE31000162778 /* AchievementCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCategory.swift; sourceTree = "<group>"; };
-		198784CD249EE31000162778 /* DailyAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyAchievement.swift; sourceTree = "<group>"; };
-		198784CE249EE31000162778 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		198784CF249EE31000162778 /* AchievementGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementGroup.swift; sourceTree = "<group>"; };
-		198784D1249EE31000162778 /* CommercePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
-		198784D2249EE31000162778 /* CommerceDelivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceDelivery.swift; sourceTree = "<group>"; };
-		198784D3249EE31000162778 /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
-		198784D4249EE31000162778 /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
-		198784D6249EE31000162778 /* AccountPVPStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPStats.swift; sourceTree = "<group>"; };
-		198784D7249EE31000162778 /* AccountMasteryPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMasteryPoints.swift; sourceTree = "<group>"; };
-		198784D8249EE31000162778 /* AccountPVPGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPGame.swift; sourceTree = "<group>"; };
-		198784D9249EE31000162778 /* AccountInventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInventoryItem.swift; sourceTree = "<group>"; };
-		198784DA249EE31000162778 /* AccountCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCharacter.swift; sourceTree = "<group>"; };
-		198784DB249EE31000162778 /* AccountTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTransaction.swift; sourceTree = "<group>"; };
-		198784DC249EE31000162778 /* AccountAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAchievement.swift; sourceTree = "<group>"; };
-		198784DD249EE31000162778 /* AccountWalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
-		198784DE249EE31000162778 /* AccountPVPStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPStandings.swift; sourceTree = "<group>"; };
-		198784DF249EE31000162778 /* AccountToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountToken.swift; sourceTree = "<group>"; };
-		198784E0249EE31000162778 /* AccountBankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBankItem.swift; sourceTree = "<group>"; };
-		198784E1249EE31000162778 /* AccountCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCat.swift; sourceTree = "<group>"; };
-		198784E2249EE31000162778 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		198784E3249EE31000162778 /* AccountFinisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountFinisher.swift; sourceTree = "<group>"; };
-		198784E4249EE31000162778 /* AccountMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMaterial.swift; sourceTree = "<group>"; };
-		198784E5249EE31000162778 /* AccountMastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMastery.swift; sourceTree = "<group>"; };
-		198784E7249EE31000162778 /* PVPSeasonLeaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPSeasonLeaderboard.swift; sourceTree = "<group>"; };
-		198784E8249EE31000162778 /* PVPSeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPSeason.swift; sourceTree = "<group>"; };
-		198784E9249EE31000162778 /* PVPRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPRank.swift; sourceTree = "<group>"; };
-		198784EB249EE31000162778 /* DetailedMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedMap.swift; sourceTree = "<group>"; };
-		198784EC249EE31000162778 /* Continent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
-		198784ED249EE31000162778 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
-		198784EE249EE31000162778 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
-		198784EF249EE31000162778 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
-		198784F0249EE31000162778 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		198784F1249EE31000162778 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		198784F2249EE31000162778 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
-		198784F4249EE31000162778 /* Specialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specialization.swift; sourceTree = "<group>"; };
-		198784F5249EE31000162778 /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
-		198784F6249EE31000162778 /* Legend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
-		198784F7249EE31000162778 /* Trait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
-		198784F8249EE31000162778 /* Profession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
-		198784F9249EE31000162778 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
-		198784FA249EE31000162778 /* Mastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mastery.swift; sourceTree = "<group>"; };
-		198784FB249EE31000162778 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		198784FC249EE31000162778 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
-		198784FE249EE31000162778 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		198784FF249EE31000162778 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		19878500249EE31000162778 /* PVPAmulet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPAmulet.swift; sourceTree = "<group>"; };
-		19878501249EE31000162778 /* ItemStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStats.swift; sourceTree = "<group>"; };
-		19878502249EE31000162778 /* Skin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
-		19878503249EE31000162778 /* Finisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
-		19878504249EE31000162778 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
-		19878506249EE31000162778 /* BackstoryQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstoryQuestion.swift; sourceTree = "<group>"; };
-		19878507249EE31000162778 /* StorySeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySeason.swift; sourceTree = "<group>"; };
-		19878508249EE31000162778 /* BackstoryAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstoryAnswer.swift; sourceTree = "<group>"; };
-		19878509249EE31000162778 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		1987850B249EE31100162778 /* WVWAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWAbility.swift; sourceTree = "<group>"; };
-		1987850C249EE31100162778 /* WVWMatchScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchScore.swift; sourceTree = "<group>"; };
-		1987850D249EE31100162778 /* WVWMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatch.swift; sourceTree = "<group>"; };
-		1987850E249EE31100162778 /* WVWMatchStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchStats.swift; sourceTree = "<group>"; };
-		1987850F249EE31100162778 /* WVWUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWUpgrade.swift; sourceTree = "<group>"; };
-		19878510249EE31100162778 /* WVWObjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWObjective.swift; sourceTree = "<group>"; };
-		19878511249EE31100162778 /* WVWRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWRank.swift; sourceTree = "<group>"; };
-		19878512249EE31100162778 /* WVWMatchOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchOverview.swift; sourceTree = "<group>"; };
-		19878514249EE31100162778 /* GuildDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildDetails.swift; sourceTree = "<group>"; };
-		19878515249EE31100162778 /* GuildEmblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildEmblem.swift; sourceTree = "<group>"; };
-		19878516249EE31100162778 /* GuildStash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildStash.swift; sourceTree = "<group>"; };
-		19878517249EE31100162778 /* Permissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
-		19878518249EE31100162778 /* GuildLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildLog.swift; sourceTree = "<group>"; };
-		19878519249EE31100162778 /* GuildMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildMember.swift; sourceTree = "<group>"; };
-		1987851A249EE31100162778 /* GuildUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildUpgrade.swift; sourceTree = "<group>"; };
-		1987851B249EE31100162778 /* GuildRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildRank.swift; sourceTree = "<group>"; };
-		1987851C249EE31100162778 /* GuildTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTreasury.swift; sourceTree = "<group>"; };
-		1987851D249EE31100162778 /* GuildTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTeam.swift; sourceTree = "<group>"; };
-		1987851E249EE31100162778 /* GW2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
-		1987858F249EE32F00162778 /* GameMechanicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsTests.swift; sourceTree = "<group>"; };
-		19878590249EE32F00162778 /* WVWTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWTests.swift; sourceTree = "<group>"; };
-		19878591249EE32F00162778 /* PVPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPTests.swift; sourceTree = "<group>"; };
-		19878592249EE32F00162778 /* ItemsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTests.swift; sourceTree = "<group>"; };
-		19878593249EE32F00162778 /* TradingPostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostTests.swift; sourceTree = "<group>"; };
-		19878594249EE32F00162778 /* MiscTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
-		19878595249EE32F00162778 /* StoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTests.swift; sourceTree = "<group>"; };
-		19878596249EE32F00162778 /* GuildAuthenticatedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildAuthenticatedTests.swift; sourceTree = "<group>"; };
-		19878597249EE32F00162778 /* GW2APITestVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2APITestVariables.swift; sourceTree = "<group>"; };
-		19878598249EE32F00162778 /* AuthenticatedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedTests.swift; sourceTree = "<group>"; };
-		19878599249EE32F00162778 /* MapInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoTests.swift; sourceTree = "<group>"; };
-		1987859A249EE32F00162778 /* AchievementsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
-		1987859C249EE32F00162778 /* GuildTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTests.swift; sourceTree = "<group>"; };
-		198785AE24A0505100162778 /* AccountRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequests.swift; sourceTree = "<group>"; };
-		198785B224A050E000162778 /* CharacterRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequests.swift; sourceTree = "<group>"; };
-		198785D224A05E3E00162778 /* GW2ClientVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2ClientVersion.swift; sourceTree = "<group>"; };
-		198785DF24A07B7D00162778 /* test_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_data.json; sourceTree = "<group>"; };
+		198785E524A082B800162778 /* guildwars2banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guildwars2banner.jpg; sourceTree = "<group>"; };
+		"APIClient::APIClient::Product" /* APIClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GW2API::GW2API::Product" /* GW2API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GW2API::GW2APITests::Product" /* GW2APITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_100 /* BackstoryAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackstoryAnswer.swift; sourceTree = "<group>"; };
+		OBJ_101 /* BackstoryQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackstoryQuestion.swift; sourceTree = "<group>"; };
+		OBJ_102 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		OBJ_103 /* StorySeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySeason.swift; sourceTree = "<group>"; };
+		OBJ_105 /* PVPRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPRank.swift; sourceTree = "<group>"; };
+		OBJ_106 /* PVPSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPSeason.swift; sourceTree = "<group>"; };
+		OBJ_107 /* PVPSeasonLeaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPSeasonLeaderboard.swift; sourceTree = "<group>"; };
+		OBJ_109 /* CommerceDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceDelivery.swift; sourceTree = "<group>"; };
+		OBJ_11 /* AchievementsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
+		OBJ_110 /* CommerceExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
+		OBJ_111 /* CommerceListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
+		OBJ_112 /* CommercePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
+		OBJ_114 /* WVWAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWAbility.swift; sourceTree = "<group>"; };
+		OBJ_115 /* WVWMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatch.swift; sourceTree = "<group>"; };
+		OBJ_116 /* WVWMatchOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatchOverview.swift; sourceTree = "<group>"; };
+		OBJ_117 /* WVWMatchScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatchScore.swift; sourceTree = "<group>"; };
+		OBJ_118 /* WVWMatchStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWMatchStats.swift; sourceTree = "<group>"; };
+		OBJ_119 /* WVWObjective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWObjective.swift; sourceTree = "<group>"; };
+		OBJ_12 /* AuthenticatedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedClient.swift; sourceTree = "<group>"; };
+		OBJ_120 /* WVWRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWRank.swift; sourceTree = "<group>"; };
+		OBJ_121 /* WVWUpgrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWUpgrade.swift; sourceTree = "<group>"; };
+		OBJ_123 /* AccountRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequests.swift; sourceTree = "<group>"; };
+		OBJ_124 /* AchievementsRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRequests.swift; sourceTree = "<group>"; };
+		OBJ_125 /* CharacterRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequests.swift; sourceTree = "<group>"; };
+		OBJ_126 /* GameMechanicsRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanicsRequests.swift; sourceTree = "<group>"; };
+		OBJ_127 /* GuildRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildRequests.swift; sourceTree = "<group>"; };
+		OBJ_128 /* ItemsRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsRequests.swift; sourceTree = "<group>"; };
+		OBJ_129 /* MapInfoRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoRequests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* GW2APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APIClient.swift; sourceTree = "<group>"; };
+		OBJ_130 /* MiscRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscRequests.swift; sourceTree = "<group>"; };
+		OBJ_131 /* PVPRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPRequests.swift; sourceTree = "<group>"; };
+		OBJ_132 /* StoryRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRequests.swift; sourceTree = "<group>"; };
+		OBJ_133 /* TradingPostRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPostRequests.swift; sourceTree = "<group>"; };
+		OBJ_134 /* WVWRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWRequests.swift; sourceTree = "<group>"; };
+		OBJ_136 /* APIUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUtil.swift; sourceTree = "<group>"; };
+		OBJ_137 /* GW2ClientLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2ClientLanguage.swift; sourceTree = "<group>"; };
+		OBJ_138 /* GW2ClientVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2ClientVersion.swift; sourceTree = "<group>"; };
+		OBJ_14 /* GameMechanicsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanicsClient.swift; sourceTree = "<group>"; };
+		OBJ_140 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_142 /* AchievementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
+		OBJ_143 /* AuthenticatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedTests.swift; sourceTree = "<group>"; };
+		OBJ_144 /* GW2APITestVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APITestVariables.swift; sourceTree = "<group>"; };
+		OBJ_145 /* GameMechanicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMechanicsTests.swift; sourceTree = "<group>"; };
+		OBJ_146 /* GuildAuthenticatedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildAuthenticatedTests.swift; sourceTree = "<group>"; };
+		OBJ_147 /* GuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTests.swift; sourceTree = "<group>"; };
+		OBJ_148 /* ItemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTests.swift; sourceTree = "<group>"; };
+		OBJ_149 /* MapInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoTests.swift; sourceTree = "<group>"; };
+		OBJ_15 /* GuildClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildClient.swift; sourceTree = "<group>"; };
+		OBJ_150 /* MiscTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
+		OBJ_151 /* PVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPTests.swift; sourceTree = "<group>"; };
+		OBJ_152 /* StoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTests.swift; sourceTree = "<group>"; };
+		OBJ_153 /* TradingPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPostTests.swift; sourceTree = "<group>"; };
+		OBJ_154 /* WVWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWTests.swift; sourceTree = "<group>"; };
+		OBJ_157 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/jb1039876/Desktop/GW2API/.build/checkouts/APIClient/Package.swift; sourceTree = "<group>"; };
+		OBJ_158 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		OBJ_159 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
+		OBJ_16 /* ItemsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsClient.swift; sourceTree = "<group>"; };
+		OBJ_160 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		OBJ_161 /* APIRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestResult.swift; sourceTree = "<group>"; };
+		OBJ_164 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		OBJ_166 /* CreateNewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
+		OBJ_167 /* DeletePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePost.swift; sourceTree = "<group>"; };
+		OBJ_168 /* GetPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosts.swift; sourceTree = "<group>"; };
+		OBJ_169 /* UpdatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePost.swift; sourceTree = "<group>"; };
+		OBJ_17 /* MapInfoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoClient.swift; sourceTree = "<group>"; };
+		OBJ_170 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		OBJ_171 /* HTTPParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameter.swift; sourceTree = "<group>"; };
+		OBJ_176 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_177 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_18 /* MiscClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscClient.swift; sourceTree = "<group>"; };
+		OBJ_19 /* PVPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPClient.swift; sourceTree = "<group>"; };
+		OBJ_20 /* StoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryClient.swift; sourceTree = "<group>"; };
+		OBJ_21 /* TradingPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPostClient.swift; sourceTree = "<group>"; };
+		OBJ_22 /* WVWClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVWClient.swift; sourceTree = "<group>"; };
+		OBJ_24 /* String+regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+regex.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* GW2Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
+		OBJ_28 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		OBJ_29 /* AchievementCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCategory.swift; sourceTree = "<group>"; };
+		OBJ_30 /* AchievementGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementGroup.swift; sourceTree = "<group>"; };
+		OBJ_31 /* DailyAchievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAchievement.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		OBJ_34 /* AccountAchievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAchievement.swift; sourceTree = "<group>"; };
+		OBJ_35 /* AccountBankItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBankItem.swift; sourceTree = "<group>"; };
+		OBJ_36 /* AccountCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCat.swift; sourceTree = "<group>"; };
+		OBJ_37 /* AccountCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCharacter.swift; sourceTree = "<group>"; };
+		OBJ_38 /* AccountFinisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFinisher.swift; sourceTree = "<group>"; };
+		OBJ_39 /* AccountInventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInventoryItem.swift; sourceTree = "<group>"; };
+		OBJ_40 /* AccountMastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMastery.swift; sourceTree = "<group>"; };
+		OBJ_41 /* AccountMasteryPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMasteryPoints.swift; sourceTree = "<group>"; };
+		OBJ_42 /* AccountMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMaterial.swift; sourceTree = "<group>"; };
+		OBJ_43 /* AccountPVPGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPVPGame.swift; sourceTree = "<group>"; };
+		OBJ_44 /* AccountPVPStandings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPVPStandings.swift; sourceTree = "<group>"; };
+		OBJ_45 /* AccountPVPStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPVPStats.swift; sourceTree = "<group>"; };
+		OBJ_46 /* AccountToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountToken.swift; sourceTree = "<group>"; };
+		OBJ_47 /* AccountTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTransaction.swift; sourceTree = "<group>"; };
+		OBJ_48 /* AccountWalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Legend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Mastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mastery.swift; sourceTree = "<group>"; };
+		OBJ_52 /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		OBJ_53 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Profession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		OBJ_57 /* Specialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialization.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* GuildDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildDetails.swift; sourceTree = "<group>"; };
+		OBJ_61 /* GuildEmblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildEmblem.swift; sourceTree = "<group>"; };
+		OBJ_62 /* GuildLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildLog.swift; sourceTree = "<group>"; };
+		OBJ_63 /* GuildMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildMember.swift; sourceTree = "<group>"; };
+		OBJ_64 /* GuildRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildRank.swift; sourceTree = "<group>"; };
+		OBJ_65 /* GuildStash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildStash.swift; sourceTree = "<group>"; };
+		OBJ_66 /* GuildTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTeam.swift; sourceTree = "<group>"; };
+		OBJ_67 /* GuildTreasury.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildTreasury.swift; sourceTree = "<group>"; };
+		OBJ_68 /* GuildUpgrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildUpgrade.swift; sourceTree = "<group>"; };
+		OBJ_69 /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
+		OBJ_71 /* Finisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
+		OBJ_72 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		OBJ_73 /* ItemStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStats.swift; sourceTree = "<group>"; };
+		OBJ_74 /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		OBJ_75 /* PVPAmulet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPAmulet.swift; sourceTree = "<group>"; };
+		OBJ_76 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		OBJ_77 /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
+		OBJ_79 /* Continent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
+		OBJ_8 /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
+		OBJ_80 /* DetailedMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMap.swift; sourceTree = "<group>"; };
+		OBJ_81 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		OBJ_83 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		OBJ_84 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		OBJ_85 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		OBJ_86 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		OBJ_88 /* Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		OBJ_89 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_90 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		OBJ_91 /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
+		OBJ_92 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		OBJ_93 /* Minipet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minipet.swift; sourceTree = "<group>"; };
+		OBJ_94 /* Mount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mount.swift; sourceTree = "<group>"; };
+		OBJ_95 /* Quaggan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quaggan.swift; sourceTree = "<group>"; };
+		OBJ_96 /* Raid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
+		OBJ_97 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		OBJ_98 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		19878483249EE2CF00162778 /* Frameworks */ = {
+		OBJ_194 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				198785AD249EE37C00162778 /* APIClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1987848C249EE2CF00162778 /* Frameworks */ = {
+		OBJ_319 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				19878490249EE2CF00162778 /* GW2API.framework in Frameworks */,
+				OBJ_320 /* APIClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_351 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_352 /* GW2API.framework in Frameworks */,
+				OBJ_353 /* APIClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1987847C249EE2CF00162778 = {
+		OBJ_10 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				19878488249EE2CF00162778 /* Source */,
-				19878493249EE2CF00162778 /* Tests */,
-				19878487249EE2CF00162778 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		19878487249EE2CF00162778 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				19878486249EE2CF00162778 /* GW2API.framework */,
-				1987848F249EE2CF00162778 /* GW2APITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		19878488249EE2CF00162778 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				1987848A249EE2CF00162778 /* Info.plist */,
-				19878489249EE2CF00162778 /* GW2API.h */,
-				1987851E249EE31100162778 /* GW2Client.swift */,
-				198784A2249EE31000162778 /* Clients */,
-				198784B2249EE31000162778 /* Requests */,
-				198784A0249EE31000162778 /* Extensions */,
-				198784BE249EE31000162778 /* JSON Models */,
-				198784AF249EE31000162778 /* Util */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		19878493249EE2CF00162778 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				198785DF24A07B7D00162778 /* test_data.json */,
-				19878597249EE32F00162778 /* GW2APITestVariables.swift */,
-				1987859A249EE32F00162778 /* AchievementsTests.swift */,
-				19878598249EE32F00162778 /* AuthenticatedTests.swift */,
-				1987858F249EE32F00162778 /* GameMechanicsTests.swift */,
-				1987859C249EE32F00162778 /* GuildTests.swift */,
-				19878596249EE32F00162778 /* GuildAuthenticatedTests.swift */,
-				19878592249EE32F00162778 /* ItemsTests.swift */,
-				19878599249EE32F00162778 /* MapInfoTests.swift */,
-				19878594249EE32F00162778 /* MiscTests.swift */,
-				19878591249EE32F00162778 /* PVPTests.swift */,
-				19878595249EE32F00162778 /* StoryTests.swift */,
-				19878593249EE32F00162778 /* TradingPostTests.swift */,
-				19878590249EE32F00162778 /* WVWTests.swift */,
-				19878496249EE2CF00162778 /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		198784A0249EE31000162778 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				198784A1249EE31000162778 /* String+regex.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		198784A2249EE31000162778 /* Clients */ = {
-			isa = PBXGroup;
-			children = (
-				198784A3249EE31000162778 /* ItemsClient.swift */,
-				198784A4249EE31000162778 /* StoryClient.swift */,
-				198784A5249EE31000162778 /* AuthenticatedClient.swift */,
-				198784A6249EE31000162778 /* PVPClient.swift */,
-				198784A7249EE31000162778 /* GuildClient.swift */,
-				198784A8249EE31000162778 /* GW2APIClient.swift */,
-				198784A9249EE31000162778 /* MapInfoClient.swift */,
-				198784AA249EE31000162778 /* MiscClient.swift */,
-				198784AB249EE31000162778 /* AchievementsClient.swift */,
-				198784AC249EE31000162778 /* GameMechanicsClient.swift */,
-				198784AD249EE31000162778 /* TradingPostClient.swift */,
-				198784AE249EE31000162778 /* WVWClient.swift */,
+				OBJ_11 /* AchievementsClient.swift */,
+				OBJ_12 /* AuthenticatedClient.swift */,
+				OBJ_13 /* GW2APIClient.swift */,
+				OBJ_14 /* GameMechanicsClient.swift */,
+				OBJ_15 /* GuildClient.swift */,
+				OBJ_16 /* ItemsClient.swift */,
+				OBJ_17 /* MapInfoClient.swift */,
+				OBJ_18 /* MiscClient.swift */,
+				OBJ_19 /* PVPClient.swift */,
+				OBJ_20 /* StoryClient.swift */,
+				OBJ_21 /* TradingPostClient.swift */,
+				OBJ_22 /* WVWClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
 		};
-		198784AF249EE31000162778 /* Util */ = {
+		OBJ_104 /* Structured PVP */ = {
 			isa = PBXGroup;
 			children = (
-				198784B0249EE31000162778 /* GW2ClientLanguage.swift */,
-				198785D224A05E3E00162778 /* GW2ClientVersion.swift */,
-				198784B1249EE31000162778 /* APIUtil.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		198784B2249EE31000162778 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				198785AE24A0505100162778 /* AccountRequests.swift */,
-				198784BD249EE31000162778 /* AchievementsRequests.swift */,
-				198785B224A050E000162778 /* CharacterRequests.swift */,
-				198784B8249EE31000162778 /* GuildRequests.swift */,
-				198784B6249EE31000162778 /* ItemsRequests.swift */,
-				198784B3249EE31000162778 /* StoryRequests.swift */,
-				198784B4249EE31000162778 /* TradingPostRequests.swift */,
-				198784B5249EE31000162778 /* WVWRequests.swift */,
-				198784B7249EE31000162778 /* MiscRequests.swift */,
-				198784B9249EE31000162778 /* MapInfoRequests.swift */,
-				198784BA249EE31000162778 /* PVPRequests.swift */,
-				198784BC249EE31000162778 /* GameMechanicsRequests.swift */,
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
-		198784BE249EE31000162778 /* JSON Models */ = {
-			isa = PBXGroup;
-			children = (
-				198784BF249EE31000162778 /* Misc */,
-				198784CB249EE31000162778 /* Achievements */,
-				198784D0249EE31000162778 /* Trading Post */,
-				198784D5249EE31000162778 /* Authenticated */,
-				198784E6249EE31000162778 /* Structured PVP */,
-				198784EA249EE31000162778 /* Map Information */,
-				198784F3249EE31000162778 /* Game Mechanics */,
-				198784FD249EE31000162778 /* Items */,
-				19878505249EE31000162778 /* Story */,
-				1987850A249EE31100162778 /* World vs. World */,
-				19878513249EE31100162778 /* Guild */,
-			);
-			path = "JSON Models";
-			sourceTree = "<group>";
-		};
-		198784BF249EE31000162778 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				198784C0249EE31000162778 /* Raid.swift */,
-				198784C1249EE31000162778 /* Dungeon.swift */,
-				198784C2249EE31000162778 /* Currency.swift */,
-				198784C3249EE31000162778 /* Mount.swift */,
-				198784C4249EE31000162778 /* Title.swift */,
-				198784C5249EE31000162778 /* File.swift */,
-				198784C6249EE31000162778 /* Build.swift */,
-				198784C7249EE31000162778 /* World.swift */,
-				198784C8249EE31000162778 /* Minipet.swift */,
-				198784C9249EE31000162778 /* Quaggan.swift */,
-				198784CA249EE31000162778 /* Color.swift */,
-			);
-			path = Misc;
-			sourceTree = "<group>";
-		};
-		198784CB249EE31000162778 /* Achievements */ = {
-			isa = PBXGroup;
-			children = (
-				198784CC249EE31000162778 /* AchievementCategory.swift */,
-				198784CD249EE31000162778 /* DailyAchievement.swift */,
-				198784CE249EE31000162778 /* Achievement.swift */,
-				198784CF249EE31000162778 /* AchievementGroup.swift */,
-			);
-			path = Achievements;
-			sourceTree = "<group>";
-		};
-		198784D0249EE31000162778 /* Trading Post */ = {
-			isa = PBXGroup;
-			children = (
-				198784D1249EE31000162778 /* CommercePrice.swift */,
-				198784D2249EE31000162778 /* CommerceDelivery.swift */,
-				198784D3249EE31000162778 /* CommerceListing.swift */,
-				198784D4249EE31000162778 /* CommerceExchange.swift */,
-			);
-			path = "Trading Post";
-			sourceTree = "<group>";
-		};
-		198784D5249EE31000162778 /* Authenticated */ = {
-			isa = PBXGroup;
-			children = (
-				198784D6249EE31000162778 /* AccountPVPStats.swift */,
-				198784D7249EE31000162778 /* AccountMasteryPoints.swift */,
-				198784D8249EE31000162778 /* AccountPVPGame.swift */,
-				198784D9249EE31000162778 /* AccountInventoryItem.swift */,
-				198784DA249EE31000162778 /* AccountCharacter.swift */,
-				198784DB249EE31000162778 /* AccountTransaction.swift */,
-				198784DC249EE31000162778 /* AccountAchievement.swift */,
-				198784DD249EE31000162778 /* AccountWalletItem.swift */,
-				198784DE249EE31000162778 /* AccountPVPStandings.swift */,
-				198784DF249EE31000162778 /* AccountToken.swift */,
-				198784E0249EE31000162778 /* AccountBankItem.swift */,
-				198784E1249EE31000162778 /* AccountCat.swift */,
-				198784E2249EE31000162778 /* Account.swift */,
-				198784E3249EE31000162778 /* AccountFinisher.swift */,
-				198784E4249EE31000162778 /* AccountMaterial.swift */,
-				198784E5249EE31000162778 /* AccountMastery.swift */,
-			);
-			path = Authenticated;
-			sourceTree = "<group>";
-		};
-		198784E6249EE31000162778 /* Structured PVP */ = {
-			isa = PBXGroup;
-			children = (
-				198784E7249EE31000162778 /* PVPSeasonLeaderboard.swift */,
-				198784E8249EE31000162778 /* PVPSeason.swift */,
-				198784E9249EE31000162778 /* PVPRank.swift */,
+				OBJ_105 /* PVPRank.swift */,
+				OBJ_106 /* PVPSeason.swift */,
+				OBJ_107 /* PVPSeasonLeaderboard.swift */,
 			);
 			path = "Structured PVP";
 			sourceTree = "<group>";
 		};
-		198784EA249EE31000162778 /* Map Information */ = {
+		OBJ_108 /* Trading Post */ = {
 			isa = PBXGroup;
 			children = (
-				198784EB249EE31000162778 /* DetailedMap.swift */,
-				198784EC249EE31000162778 /* Continent.swift */,
-				198784ED249EE31000162778 /* Region.swift */,
-				198784EE249EE31000162778 /* Sector.swift */,
-				198784EF249EE31000162778 /* POI.swift */,
-				198784F0249EE31000162778 /* Map.swift */,
-				198784F1249EE31000162778 /* Task.swift */,
-				198784F2249EE31000162778 /* Floor.swift */,
+				OBJ_109 /* CommerceDelivery.swift */,
+				OBJ_110 /* CommerceExchange.swift */,
+				OBJ_111 /* CommerceListing.swift */,
+				OBJ_112 /* CommercePrice.swift */,
 			);
-			path = "Map Information";
+			path = "Trading Post";
 			sourceTree = "<group>";
 		};
-		198784F3249EE31000162778 /* Game Mechanics */ = {
+		OBJ_113 /* World vs. World */ = {
 			isa = PBXGroup;
 			children = (
-				198784F4249EE31000162778 /* Specialization.swift */,
-				198784F5249EE31000162778 /* Race.swift */,
-				198784F6249EE31000162778 /* Legend.swift */,
-				198784F7249EE31000162778 /* Trait.swift */,
-				198784F8249EE31000162778 /* Profession.swift */,
-				198784F9249EE31000162778 /* Outfit.swift */,
-				198784FA249EE31000162778 /* Mastery.swift */,
-				198784FB249EE31000162778 /* Pet.swift */,
-				198784FC249EE31000162778 /* Skill.swift */,
-			);
-			path = "Game Mechanics";
-			sourceTree = "<group>";
-		};
-		198784FD249EE31000162778 /* Items */ = {
-			isa = PBXGroup;
-			children = (
-				198784FE249EE31000162778 /* Recipe.swift */,
-				198784FF249EE31000162778 /* Item.swift */,
-				19878500249EE31000162778 /* PVPAmulet.swift */,
-				19878501249EE31000162778 /* ItemStats.swift */,
-				19878502249EE31000162778 /* Skin.swift */,
-				19878503249EE31000162778 /* Finisher.swift */,
-				19878504249EE31000162778 /* Material.swift */,
-			);
-			path = Items;
-			sourceTree = "<group>";
-		};
-		19878505249EE31000162778 /* Story */ = {
-			isa = PBXGroup;
-			children = (
-				19878506249EE31000162778 /* BackstoryQuestion.swift */,
-				19878507249EE31000162778 /* StorySeason.swift */,
-				19878508249EE31000162778 /* BackstoryAnswer.swift */,
-				19878509249EE31000162778 /* Story.swift */,
-			);
-			path = Story;
-			sourceTree = "<group>";
-		};
-		1987850A249EE31100162778 /* World vs. World */ = {
-			isa = PBXGroup;
-			children = (
-				1987850B249EE31100162778 /* WVWAbility.swift */,
-				1987850C249EE31100162778 /* WVWMatchScore.swift */,
-				1987850D249EE31100162778 /* WVWMatch.swift */,
-				1987850E249EE31100162778 /* WVWMatchStats.swift */,
-				1987850F249EE31100162778 /* WVWUpgrade.swift */,
-				19878510249EE31100162778 /* WVWObjective.swift */,
-				19878511249EE31100162778 /* WVWRank.swift */,
-				19878512249EE31100162778 /* WVWMatchOverview.swift */,
+				OBJ_114 /* WVWAbility.swift */,
+				OBJ_115 /* WVWMatch.swift */,
+				OBJ_116 /* WVWMatchOverview.swift */,
+				OBJ_117 /* WVWMatchScore.swift */,
+				OBJ_118 /* WVWMatchStats.swift */,
+				OBJ_119 /* WVWObjective.swift */,
+				OBJ_120 /* WVWRank.swift */,
+				OBJ_121 /* WVWUpgrade.swift */,
 			);
 			path = "World vs. World";
 			sourceTree = "<group>";
 		};
-		19878513249EE31100162778 /* Guild */ = {
+		OBJ_122 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				19878514249EE31100162778 /* GuildDetails.swift */,
-				19878515249EE31100162778 /* GuildEmblem.swift */,
-				19878516249EE31100162778 /* GuildStash.swift */,
-				19878517249EE31100162778 /* Permissions.swift */,
-				19878518249EE31100162778 /* GuildLog.swift */,
-				19878519249EE31100162778 /* GuildMember.swift */,
-				1987851A249EE31100162778 /* GuildUpgrade.swift */,
-				1987851B249EE31100162778 /* GuildRank.swift */,
-				1987851C249EE31100162778 /* GuildTreasury.swift */,
-				1987851D249EE31100162778 /* GuildTeam.swift */,
+				OBJ_123 /* AccountRequests.swift */,
+				OBJ_124 /* AchievementsRequests.swift */,
+				OBJ_125 /* CharacterRequests.swift */,
+				OBJ_126 /* GameMechanicsRequests.swift */,
+				OBJ_127 /* GuildRequests.swift */,
+				OBJ_128 /* ItemsRequests.swift */,
+				OBJ_129 /* MapInfoRequests.swift */,
+				OBJ_130 /* MiscRequests.swift */,
+				OBJ_131 /* PVPRequests.swift */,
+				OBJ_132 /* StoryRequests.swift */,
+				OBJ_133 /* TradingPostRequests.swift */,
+				OBJ_134 /* WVWRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		OBJ_135 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_136 /* APIUtil.swift */,
+				OBJ_137 /* GW2ClientLanguage.swift */,
+				OBJ_138 /* GW2ClientVersion.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		OBJ_139 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_140 /* README.md */,
+				OBJ_141 /* Info.plist */,
+				OBJ_142 /* AchievementsTests.swift */,
+				OBJ_143 /* AuthenticatedTests.swift */,
+				OBJ_144 /* GW2APITestVariables.swift */,
+				OBJ_145 /* GameMechanicsTests.swift */,
+				OBJ_146 /* GuildAuthenticatedTests.swift */,
+				OBJ_147 /* GuildTests.swift */,
+				OBJ_148 /* ItemsTests.swift */,
+				OBJ_149 /* MapInfoTests.swift */,
+				OBJ_150 /* MiscTests.swift */,
+				OBJ_151 /* PVPTests.swift */,
+				OBJ_152 /* StoryTests.swift */,
+				OBJ_153 /* TradingPostTests.swift */,
+				OBJ_154 /* WVWTests.swift */,
+			);
+			path = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_155 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_156 /* APIClient 1.3.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_156 /* APIClient 1.3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_157 /* Package.swift */,
+				OBJ_158 /* APIClient.swift */,
+				OBJ_159 /* APIClientError.swift */,
+				OBJ_160 /* APIRequest.swift */,
+				OBJ_161 /* APIRequestResult.swift */,
+				OBJ_162 /* Examples */,
+				OBJ_170 /* HTTPMethod.swift */,
+				OBJ_171 /* HTTPParameter.swift */,
+			);
+			name = "APIClient 1.3.0";
+			path = .build/checkouts/APIClient/Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_162 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_163 /* Data Structures */,
+				OBJ_165 /* Requests */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		OBJ_163 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_164 /* Post.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		OBJ_165 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_166 /* CreateNewPost.swift */,
+				OBJ_167 /* DeletePost.swift */,
+				OBJ_168 /* GetPosts.swift */,
+				OBJ_169 /* UpdatePost.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		OBJ_172 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"GW2API::GW2APITests::Product" /* GW2APITests.xctest */,
+				"APIClient::APIClient::Product" /* APIClient.framework */,
+				"GW2API::GW2API::Product" /* GW2API.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* String+regex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* JSON Models */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* Achievements */,
+				OBJ_32 /* Authenticated */,
+				OBJ_49 /* Game Mechanics */,
+				OBJ_59 /* Guild */,
+				OBJ_70 /* Items */,
+				OBJ_78 /* Map Information */,
+				OBJ_87 /* Misc */,
+				OBJ_99 /* Story */,
+				OBJ_104 /* Structured PVP */,
+				OBJ_108 /* Trading Post */,
+				OBJ_113 /* World vs. World */,
+			);
+			path = "JSON Models";
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* Achievement.swift */,
+				OBJ_29 /* AchievementCategory.swift */,
+				OBJ_30 /* AchievementGroup.swift */,
+				OBJ_31 /* DailyAchievement.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* Authenticated */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Account.swift */,
+				OBJ_34 /* AccountAchievement.swift */,
+				OBJ_35 /* AccountBankItem.swift */,
+				OBJ_36 /* AccountCat.swift */,
+				OBJ_37 /* AccountCharacter.swift */,
+				OBJ_38 /* AccountFinisher.swift */,
+				OBJ_39 /* AccountInventoryItem.swift */,
+				OBJ_40 /* AccountMastery.swift */,
+				OBJ_41 /* AccountMasteryPoints.swift */,
+				OBJ_42 /* AccountMaterial.swift */,
+				OBJ_43 /* AccountPVPGame.swift */,
+				OBJ_44 /* AccountPVPStandings.swift */,
+				OBJ_45 /* AccountPVPStats.swift */,
+				OBJ_46 /* AccountToken.swift */,
+				OBJ_47 /* AccountTransaction.swift */,
+				OBJ_48 /* AccountWalletItem.swift */,
+			);
+			path = Authenticated;
+			sourceTree = "<group>";
+		};
+		OBJ_49 /* Game Mechanics */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_50 /* Legend.swift */,
+				OBJ_51 /* Mastery.swift */,
+				OBJ_52 /* Outfit.swift */,
+				OBJ_53 /* Pet.swift */,
+				OBJ_54 /* Profession.swift */,
+				OBJ_55 /* Race.swift */,
+				OBJ_56 /* Skill.swift */,
+				OBJ_57 /* Specialization.swift */,
+				OBJ_58 /* Trait.swift */,
+			);
+			path = "Game Mechanics";
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				198785E524A082B800162778 /* guildwars2banner.jpg */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_139 /* Tests */,
+				OBJ_155 /* Dependencies */,
+				OBJ_172 /* Products */,
+				OBJ_176 /* LICENSE */,
+				OBJ_177 /* README.md */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_59 /* Guild */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_60 /* GuildDetails.swift */,
+				OBJ_61 /* GuildEmblem.swift */,
+				OBJ_62 /* GuildLog.swift */,
+				OBJ_63 /* GuildMember.swift */,
+				OBJ_64 /* GuildRank.swift */,
+				OBJ_65 /* GuildStash.swift */,
+				OBJ_66 /* GuildTeam.swift */,
+				OBJ_67 /* GuildTreasury.swift */,
+				OBJ_68 /* GuildUpgrade.swift */,
+				OBJ_69 /* Permissions.swift */,
 			);
 			path = Guild;
 			sourceTree = "<group>";
 		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* GW2API.h */,
+				OBJ_9 /* Info.plist */,
+				OBJ_10 /* Clients */,
+				OBJ_23 /* Extensions */,
+				OBJ_25 /* GW2Client.swift */,
+				OBJ_26 /* JSON Models */,
+				OBJ_122 /* Requests */,
+				OBJ_135 /* Util */,
+			);
+			name = Sources;
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_70 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_71 /* Finisher.swift */,
+				OBJ_72 /* Item.swift */,
+				OBJ_73 /* ItemStats.swift */,
+				OBJ_74 /* Material.swift */,
+				OBJ_75 /* PVPAmulet.swift */,
+				OBJ_76 /* Recipe.swift */,
+				OBJ_77 /* Skin.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		OBJ_78 /* Map Information */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_79 /* Continent.swift */,
+				OBJ_80 /* DetailedMap.swift */,
+				OBJ_81 /* Floor.swift */,
+				OBJ_82 /* Map.swift */,
+				OBJ_83 /* POI.swift */,
+				OBJ_84 /* Region.swift */,
+				OBJ_85 /* Sector.swift */,
+				OBJ_86 /* Task.swift */,
+			);
+			path = "Map Information";
+			sourceTree = "<group>";
+		};
+		OBJ_87 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_88 /* Build.swift */,
+				OBJ_89 /* Color.swift */,
+				OBJ_90 /* Currency.swift */,
+				OBJ_91 /* Dungeon.swift */,
+				OBJ_92 /* File.swift */,
+				OBJ_93 /* Minipet.swift */,
+				OBJ_94 /* Mount.swift */,
+				OBJ_95 /* Quaggan.swift */,
+				OBJ_96 /* Raid.swift */,
+				OBJ_97 /* Title.swift */,
+				OBJ_98 /* World.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		OBJ_99 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_100 /* BackstoryAnswer.swift */,
+				OBJ_101 /* BackstoryQuestion.swift */,
+				OBJ_102 /* Story.swift */,
+				OBJ_103 /* StorySeason.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		19878481249EE2CF00162778 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19878497249EE2CF00162778 /* GW2API.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		19878485249EE2CF00162778 /* GW2API */ = {
+		"APIClient::APIClient" /* APIClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1987849A249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2API" */;
+			buildConfigurationList = OBJ_179 /* Build configuration list for PBXNativeTarget "APIClient" */;
 			buildPhases = (
-				19878481249EE2CF00162778 /* Headers */,
-				19878482249EE2CF00162778 /* Sources */,
-				19878483249EE2CF00162778 /* Frameworks */,
-				19878484249EE2CF00162778 /* Resources */,
+				OBJ_182 /* Sources */,
+				OBJ_194 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GW2API;
-			packageProductDependencies = (
-				198785AC249EE37C00162778 /* APIClient */,
-			);
-			productName = GW2API;
-			productReference = 19878486249EE2CF00162778 /* GW2API.framework */;
+			name = APIClient;
+			productName = APIClient;
+			productReference = "APIClient::APIClient::Product" /* APIClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1987848E249EE2CF00162778 /* GW2APITests */ = {
+		"APIClient::SwiftPMPackageDescription" /* APIClientPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1987849D249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2APITests" */;
+			buildConfigurationList = OBJ_196 /* Build configuration list for PBXNativeTarget "APIClientPackageDescription" */;
 			buildPhases = (
-				1987848B249EE2CF00162778 /* Sources */,
-				1987848C249EE2CF00162778 /* Frameworks */,
-				1987848D249EE2CF00162778 /* Resources */,
+				OBJ_199 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				19878492249EE2CF00162778 /* PBXTargetDependency */,
+			);
+			name = APIClientPackageDescription;
+			productName = APIClientPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"GW2API::GW2API" /* GW2API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_202 /* Build configuration list for PBXNativeTarget "GW2API" */;
+			buildPhases = (
+				OBJ_205 /* Sources */,
+				OBJ_319 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_321 /* PBXTargetDependency */,
+			);
+			name = GW2API;
+			productName = GW2API;
+			productReference = "GW2API::GW2API::Product" /* GW2API.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"GW2API::GW2APITests" /* GW2APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_334 /* Build configuration list for PBXNativeTarget "GW2APITests" */;
+			buildPhases = (
+				OBJ_337 /* Sources */,
+				OBJ_351 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_354 /* PBXTargetDependency */,
+				OBJ_355 /* PBXTargetDependency */,
 			);
 			name = GW2APITests;
 			productName = GW2APITests;
-			productReference = 1987848F249EE2CF00162778 /* GW2APITests.xctest */;
+			productReference = "GW2API::GW2APITests::Product" /* GW2APITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"GW2API::SwiftPMPackageDescription" /* GW2APIPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_323 /* Build configuration list for PBXNativeTarget "GW2APIPackageDescription" */;
+			buildPhases = (
+				OBJ_326 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GW2APIPackageDescription;
+			productName = GW2APIPackageDescription;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1987847D249EE2CF00162778 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
-				ORGANIZATIONNAME = "Jonathan Bailey";
-				TargetAttributes = {
-					19878485249EE2CF00162778 = {
-						CreatedOnToolsVersion = 11.1;
-						LastSwiftMigration = 1110;
-					};
-					1987848E249EE2CF00162778 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 19878480249EE2CF00162778 /* Build configuration list for PBXProject "GW2API" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "GW2API" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 1987847C249EE2CF00162778;
-			packageReferences = (
-				198785AB249EE37C00162778 /* XCRemoteSwiftPackageReference "APIClient" */,
-			);
-			productRefGroup = 19878487249EE2CF00162778 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_172 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19878485249EE2CF00162778 /* GW2API */,
-				1987848E249EE2CF00162778 /* GW2APITests */,
+				"APIClient::APIClient" /* APIClient */,
+				"APIClient::SwiftPMPackageDescription" /* APIClientPackageDescription */,
+				"GW2API::GW2API" /* GW2API */,
+				"GW2API::SwiftPMPackageDescription" /* GW2APIPackageDescription */,
+				"GW2API::GW2APIPackageTests::ProductTarget" /* GW2APIPackageTests */,
+				"GW2API::GW2APITests" /* GW2APITests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		19878484249EE2CF00162778 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1987848D249EE2CF00162778 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				198785E024A07B7D00162778 /* test_data.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		19878482249EE2CF00162778 /* Sources */ = {
+		OBJ_182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				19878566249EE31100162778 /* Floor.swift in Sources */,
-				19878554249EE31100162778 /* AccountPVPStandings.swift in Sources */,
-				1987858C249EE31100162778 /* GuildTeam.swift in Sources */,
-				19878549249EE31100162778 /* CommerceDelivery.swift in Sources */,
-				19878553249EE31100162778 /* AccountWalletItem.swift in Sources */,
-				19878577249EE31100162778 /* BackstoryQuestion.swift in Sources */,
-				1987854A249EE31100162778 /* CommerceListing.swift in Sources */,
-				19878561249EE31100162778 /* Region.swift in Sources */,
-				1987852A249EE31100162778 /* TradingPostClient.swift in Sources */,
-				198785B324A050E000162778 /* CharacterRequests.swift in Sources */,
-				1987853C249EE31100162778 /* Mount.swift in Sources */,
-				19878576249EE31100162778 /* Material.swift in Sources */,
-				19878557249EE31100162778 /* AccountCat.swift in Sources */,
-				1987858A249EE31100162778 /* GuildRank.swift in Sources */,
-				19878570249EE31100162778 /* Recipe.swift in Sources */,
-				19878571249EE31100162778 /* Item.swift in Sources */,
-				1987858D249EE31100162778 /* GW2Client.swift in Sources */,
-				19878548249EE31100162778 /* CommercePrice.swift in Sources */,
-				19878528249EE31100162778 /* AchievementsClient.swift in Sources */,
-				19878579249EE31100162778 /* BackstoryAnswer.swift in Sources */,
-				19878564249EE31100162778 /* Map.swift in Sources */,
-				1987857C249EE31100162778 /* WVWMatchScore.swift in Sources */,
-				19878558249EE31100162778 /* Account.swift in Sources */,
-				19878556249EE31100162778 /* AccountBankItem.swift in Sources */,
-				19878521249EE31100162778 /* StoryClient.swift in Sources */,
-				19878525249EE31100162778 /* GW2APIClient.swift in Sources */,
-				1987853F249EE31100162778 /* Build.swift in Sources */,
-				1987853E249EE31100162778 /* File.swift in Sources */,
-				1987857D249EE31100162778 /* WVWMatch.swift in Sources */,
-				19878523249EE31100162778 /* PVPClient.swift in Sources */,
-				1987855D249EE31100162778 /* PVPSeason.swift in Sources */,
-				19878578249EE31100162778 /* StorySeason.swift in Sources */,
-				1987855A249EE31100162778 /* AccountMaterial.swift in Sources */,
-				1987853B249EE31100162778 /* Currency.swift in Sources */,
-				1987854F249EE31100162778 /* AccountInventoryItem.swift in Sources */,
-				19878527249EE31100162778 /* MiscClient.swift in Sources */,
-				19878586249EE31100162778 /* Permissions.swift in Sources */,
-				198785D324A05E3E00162778 /* GW2ClientVersion.swift in Sources */,
-				19878543249EE31100162778 /* Color.swift in Sources */,
-				1987854D249EE31100162778 /* AccountMasteryPoints.swift in Sources */,
-				1987852D249EE31100162778 /* APIUtil.swift in Sources */,
-				19878583249EE31100162778 /* GuildDetails.swift in Sources */,
-				19878575249EE31100162778 /* Finisher.swift in Sources */,
-				19878535249EE31100162778 /* PVPRequests.swift in Sources */,
-				1987852B249EE31100162778 /* WVWClient.swift in Sources */,
-				19878560249EE31100162778 /* Continent.swift in Sources */,
-				19878541249EE31100162778 /* Minipet.swift in Sources */,
-				19878569249EE31100162778 /* Legend.swift in Sources */,
-				1987856C249EE31100162778 /* Outfit.swift in Sources */,
-				19878551249EE31100162778 /* AccountTransaction.swift in Sources */,
-				19878559249EE31100162778 /* AccountFinisher.swift in Sources */,
-				19878524249EE31100162778 /* GuildClient.swift in Sources */,
-				19878550249EE31100162778 /* AccountCharacter.swift in Sources */,
-				19878567249EE31100162778 /* Specialization.swift in Sources */,
-				19878529249EE31100162778 /* GameMechanicsClient.swift in Sources */,
-				19878580249EE31100162778 /* WVWObjective.swift in Sources */,
-				1987856F249EE31100162778 /* Skill.swift in Sources */,
-				19878531249EE31100162778 /* ItemsRequests.swift in Sources */,
-				19878568249EE31100162778 /* Race.swift in Sources */,
-				1987853A249EE31100162778 /* Dungeon.swift in Sources */,
-				19878582249EE31100162778 /* WVWMatchOverview.swift in Sources */,
-				19878534249EE31100162778 /* MapInfoRequests.swift in Sources */,
-				19878563249EE31100162778 /* POI.swift in Sources */,
-				1987855F249EE31100162778 /* DetailedMap.swift in Sources */,
-				19878589249EE31100162778 /* GuildUpgrade.swift in Sources */,
-				1987856E249EE31100162778 /* Pet.swift in Sources */,
-				1987858B249EE31100162778 /* GuildTreasury.swift in Sources */,
-				19878540249EE31100162778 /* World.swift in Sources */,
-				19878562249EE31100162778 /* Sector.swift in Sources */,
-				1987855B249EE31100162778 /* AccountMastery.swift in Sources */,
-				19878547249EE31100162778 /* AchievementGroup.swift in Sources */,
-				19878542249EE31100162778 /* Quaggan.swift in Sources */,
-				19878573249EE31100162778 /* ItemStats.swift in Sources */,
-				1987851F249EE31100162778 /* String+regex.swift in Sources */,
-				19878544249EE31100162778 /* AchievementCategory.swift in Sources */,
-				1987857F249EE31100162778 /* WVWUpgrade.swift in Sources */,
-				19878532249EE31100162778 /* MiscRequests.swift in Sources */,
-				1987856B249EE31100162778 /* Profession.swift in Sources */,
-				1987855E249EE31100162778 /* PVPRank.swift in Sources */,
-				19878522249EE31100162778 /* AuthenticatedClient.swift in Sources */,
-				19878572249EE31100162778 /* PVPAmulet.swift in Sources */,
-				19878588249EE31100162778 /* GuildMember.swift in Sources */,
-				19878587249EE31100162778 /* GuildLog.swift in Sources */,
-				19878520249EE31100162778 /* ItemsClient.swift in Sources */,
-				19878537249EE31100162778 /* GameMechanicsRequests.swift in Sources */,
-				19878546249EE31100162778 /* Achievement.swift in Sources */,
-				19878574249EE31100162778 /* Skin.swift in Sources */,
-				1987854B249EE31100162778 /* CommerceExchange.swift in Sources */,
-				19878526249EE31100162778 /* MapInfoClient.swift in Sources */,
-				1987852E249EE31100162778 /* StoryRequests.swift in Sources */,
-				19878555249EE31100162778 /* AccountToken.swift in Sources */,
-				19878585249EE31100162778 /* GuildStash.swift in Sources */,
-				1987857E249EE31100162778 /* WVWMatchStats.swift in Sources */,
-				1987857B249EE31100162778 /* WVWAbility.swift in Sources */,
-				19878533249EE31100162778 /* GuildRequests.swift in Sources */,
-				1987855C249EE31100162778 /* PVPSeasonLeaderboard.swift in Sources */,
-				19878565249EE31100162778 /* Task.swift in Sources */,
-				1987857A249EE31100162778 /* Story.swift in Sources */,
-				19878545249EE31100162778 /* DailyAchievement.swift in Sources */,
-				19878538249EE31100162778 /* AchievementsRequests.swift in Sources */,
-				1987852F249EE31100162778 /* TradingPostRequests.swift in Sources */,
-				1987856D249EE31100162778 /* Mastery.swift in Sources */,
-				19878539249EE31100162778 /* Raid.swift in Sources */,
-				1987852C249EE31100162778 /* GW2ClientLanguage.swift in Sources */,
-				1987856A249EE31100162778 /* Trait.swift in Sources */,
-				19878584249EE31100162778 /* GuildEmblem.swift in Sources */,
-				198785AF24A0505100162778 /* AccountRequests.swift in Sources */,
-				19878581249EE31100162778 /* WVWRank.swift in Sources */,
-				1987854E249EE31100162778 /* AccountPVPGame.swift in Sources */,
-				19878530249EE31100162778 /* WVWRequests.swift in Sources */,
-				19878552249EE31100162778 /* AccountAchievement.swift in Sources */,
-				1987854C249EE31100162778 /* AccountPVPStats.swift in Sources */,
-				1987853D249EE31100162778 /* Title.swift in Sources */,
+				OBJ_183 /* APIClient.swift in Sources */,
+				OBJ_184 /* APIClientError.swift in Sources */,
+				OBJ_185 /* APIRequest.swift in Sources */,
+				OBJ_186 /* APIRequestResult.swift in Sources */,
+				OBJ_187 /* Post.swift in Sources */,
+				OBJ_188 /* CreateNewPost.swift in Sources */,
+				OBJ_189 /* DeletePost.swift in Sources */,
+				OBJ_190 /* GetPosts.swift in Sources */,
+				OBJ_191 /* UpdatePost.swift in Sources */,
+				OBJ_192 /* HTTPMethod.swift in Sources */,
+				OBJ_193 /* HTTPParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1987848B249EE2CF00162778 /* Sources */ = {
+		OBJ_199 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				198785A1249EE32F00162778 /* TradingPostTests.swift in Sources */,
-				198785A2249EE32F00162778 /* MiscTests.swift in Sources */,
-				198785A0249EE32F00162778 /* ItemsTests.swift in Sources */,
-				198785A4249EE32F00162778 /* GuildAuthenticatedTests.swift in Sources */,
-				198785A3249EE32F00162778 /* StoryTests.swift in Sources */,
-				1987859E249EE32F00162778 /* WVWTests.swift in Sources */,
-				1987859F249EE32F00162778 /* PVPTests.swift in Sources */,
-				198785A6249EE32F00162778 /* AuthenticatedTests.swift in Sources */,
-				198785A5249EE32F00162778 /* GW2APITestVariables.swift in Sources */,
-				198785A8249EE32F00162778 /* AchievementsTests.swift in Sources */,
-				198785AA249EE32F00162778 /* GuildTests.swift in Sources */,
-				1987859D249EE32F00162778 /* GameMechanicsTests.swift in Sources */,
-				198785A7249EE32F00162778 /* MapInfoTests.swift in Sources */,
+				OBJ_200 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_206 /* AchievementsClient.swift in Sources */,
+				OBJ_207 /* AuthenticatedClient.swift in Sources */,
+				OBJ_208 /* GW2APIClient.swift in Sources */,
+				OBJ_209 /* GameMechanicsClient.swift in Sources */,
+				OBJ_210 /* GuildClient.swift in Sources */,
+				OBJ_211 /* ItemsClient.swift in Sources */,
+				OBJ_212 /* MapInfoClient.swift in Sources */,
+				OBJ_213 /* MiscClient.swift in Sources */,
+				OBJ_214 /* PVPClient.swift in Sources */,
+				OBJ_215 /* StoryClient.swift in Sources */,
+				OBJ_216 /* TradingPostClient.swift in Sources */,
+				OBJ_217 /* WVWClient.swift in Sources */,
+				OBJ_218 /* String+regex.swift in Sources */,
+				OBJ_219 /* GW2Client.swift in Sources */,
+				OBJ_220 /* Achievement.swift in Sources */,
+				OBJ_221 /* AchievementCategory.swift in Sources */,
+				OBJ_222 /* AchievementGroup.swift in Sources */,
+				OBJ_223 /* DailyAchievement.swift in Sources */,
+				OBJ_224 /* Account.swift in Sources */,
+				OBJ_225 /* AccountAchievement.swift in Sources */,
+				OBJ_226 /* AccountBankItem.swift in Sources */,
+				OBJ_227 /* AccountCat.swift in Sources */,
+				OBJ_228 /* AccountCharacter.swift in Sources */,
+				OBJ_229 /* AccountFinisher.swift in Sources */,
+				OBJ_230 /* AccountInventoryItem.swift in Sources */,
+				OBJ_231 /* AccountMastery.swift in Sources */,
+				OBJ_232 /* AccountMasteryPoints.swift in Sources */,
+				OBJ_233 /* AccountMaterial.swift in Sources */,
+				OBJ_234 /* AccountPVPGame.swift in Sources */,
+				OBJ_235 /* AccountPVPStandings.swift in Sources */,
+				OBJ_236 /* AccountPVPStats.swift in Sources */,
+				OBJ_237 /* AccountToken.swift in Sources */,
+				OBJ_238 /* AccountTransaction.swift in Sources */,
+				OBJ_239 /* AccountWalletItem.swift in Sources */,
+				OBJ_240 /* Legend.swift in Sources */,
+				OBJ_241 /* Mastery.swift in Sources */,
+				OBJ_242 /* Outfit.swift in Sources */,
+				OBJ_243 /* Pet.swift in Sources */,
+				OBJ_244 /* Profession.swift in Sources */,
+				OBJ_245 /* Race.swift in Sources */,
+				OBJ_246 /* Skill.swift in Sources */,
+				OBJ_247 /* Specialization.swift in Sources */,
+				OBJ_248 /* Trait.swift in Sources */,
+				OBJ_249 /* GuildDetails.swift in Sources */,
+				OBJ_250 /* GuildEmblem.swift in Sources */,
+				OBJ_251 /* GuildLog.swift in Sources */,
+				OBJ_252 /* GuildMember.swift in Sources */,
+				OBJ_253 /* GuildRank.swift in Sources */,
+				OBJ_254 /* GuildStash.swift in Sources */,
+				OBJ_255 /* GuildTeam.swift in Sources */,
+				OBJ_256 /* GuildTreasury.swift in Sources */,
+				OBJ_257 /* GuildUpgrade.swift in Sources */,
+				OBJ_258 /* Permissions.swift in Sources */,
+				OBJ_259 /* Finisher.swift in Sources */,
+				OBJ_260 /* Item.swift in Sources */,
+				OBJ_261 /* ItemStats.swift in Sources */,
+				OBJ_262 /* Material.swift in Sources */,
+				OBJ_263 /* PVPAmulet.swift in Sources */,
+				OBJ_264 /* Recipe.swift in Sources */,
+				OBJ_265 /* Skin.swift in Sources */,
+				OBJ_266 /* Continent.swift in Sources */,
+				OBJ_267 /* DetailedMap.swift in Sources */,
+				OBJ_268 /* Floor.swift in Sources */,
+				OBJ_269 /* Map.swift in Sources */,
+				OBJ_270 /* POI.swift in Sources */,
+				OBJ_271 /* Region.swift in Sources */,
+				OBJ_272 /* Sector.swift in Sources */,
+				OBJ_273 /* Task.swift in Sources */,
+				OBJ_274 /* Build.swift in Sources */,
+				OBJ_275 /* Color.swift in Sources */,
+				OBJ_276 /* Currency.swift in Sources */,
+				OBJ_277 /* Dungeon.swift in Sources */,
+				OBJ_278 /* File.swift in Sources */,
+				OBJ_279 /* Minipet.swift in Sources */,
+				OBJ_280 /* Mount.swift in Sources */,
+				OBJ_281 /* Quaggan.swift in Sources */,
+				OBJ_282 /* Raid.swift in Sources */,
+				OBJ_283 /* Title.swift in Sources */,
+				OBJ_284 /* World.swift in Sources */,
+				OBJ_285 /* BackstoryAnswer.swift in Sources */,
+				OBJ_286 /* BackstoryQuestion.swift in Sources */,
+				OBJ_287 /* Story.swift in Sources */,
+				OBJ_288 /* StorySeason.swift in Sources */,
+				OBJ_289 /* PVPRank.swift in Sources */,
+				OBJ_290 /* PVPSeason.swift in Sources */,
+				OBJ_291 /* PVPSeasonLeaderboard.swift in Sources */,
+				OBJ_292 /* CommerceDelivery.swift in Sources */,
+				OBJ_293 /* CommerceExchange.swift in Sources */,
+				OBJ_294 /* CommerceListing.swift in Sources */,
+				OBJ_295 /* CommercePrice.swift in Sources */,
+				OBJ_296 /* WVWAbility.swift in Sources */,
+				OBJ_297 /* WVWMatch.swift in Sources */,
+				OBJ_298 /* WVWMatchOverview.swift in Sources */,
+				OBJ_299 /* WVWMatchScore.swift in Sources */,
+				OBJ_300 /* WVWMatchStats.swift in Sources */,
+				OBJ_301 /* WVWObjective.swift in Sources */,
+				OBJ_302 /* WVWRank.swift in Sources */,
+				OBJ_303 /* WVWUpgrade.swift in Sources */,
+				OBJ_304 /* AccountRequests.swift in Sources */,
+				OBJ_305 /* AchievementsRequests.swift in Sources */,
+				OBJ_306 /* CharacterRequests.swift in Sources */,
+				OBJ_307 /* GameMechanicsRequests.swift in Sources */,
+				OBJ_308 /* GuildRequests.swift in Sources */,
+				OBJ_309 /* ItemsRequests.swift in Sources */,
+				OBJ_310 /* MapInfoRequests.swift in Sources */,
+				OBJ_311 /* MiscRequests.swift in Sources */,
+				OBJ_312 /* PVPRequests.swift in Sources */,
+				OBJ_313 /* StoryRequests.swift in Sources */,
+				OBJ_314 /* TradingPostRequests.swift in Sources */,
+				OBJ_315 /* WVWRequests.swift in Sources */,
+				OBJ_316 /* APIUtil.swift in Sources */,
+				OBJ_317 /* GW2ClientLanguage.swift in Sources */,
+				OBJ_318 /* GW2ClientVersion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_326 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_327 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_338 /* AchievementsTests.swift in Sources */,
+				OBJ_339 /* AuthenticatedTests.swift in Sources */,
+				OBJ_340 /* GW2APITestVariables.swift in Sources */,
+				OBJ_341 /* GameMechanicsTests.swift in Sources */,
+				OBJ_342 /* GuildAuthenticatedTests.swift in Sources */,
+				OBJ_343 /* GuildTests.swift in Sources */,
+				OBJ_344 /* ItemsTests.swift in Sources */,
+				OBJ_345 /* MapInfoTests.swift in Sources */,
+				OBJ_346 /* MiscTests.swift in Sources */,
+				OBJ_347 /* PVPTests.swift in Sources */,
+				OBJ_348 /* StoryTests.swift in Sources */,
+				OBJ_349 /* TradingPostTests.swift in Sources */,
+				OBJ_350 /* WVWTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		19878492249EE2CF00162778 /* PBXTargetDependency */ = {
+		OBJ_321 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19878485249EE2CF00162778 /* GW2API */;
-			targetProxy = 19878491249EE2CF00162778 /* PBXContainerItemProxy */;
+			target = "APIClient::APIClient" /* APIClient */;
+			targetProxy = 198785E124A081FE00162778 /* PBXContainerItemProxy */;
+		};
+		OBJ_332 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "GW2API::GW2APITests" /* GW2APITests */;
+			targetProxy = 198785E424A081FE00162778 /* PBXContainerItemProxy */;
+		};
+		OBJ_354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "GW2API::GW2API" /* GW2API */;
+			targetProxy = 198785E224A081FE00162778 /* PBXContainerItemProxy */;
+		};
+		OBJ_355 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "APIClient::APIClient" /* APIClient */;
+			targetProxy = 198785E324A081FE00162778 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		19878498249EE2CF00162778 /* Debug */ = {
+		OBJ_180 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GW2API.xcodeproj/APIClient_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = APIClient;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = APIClient;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GW2API.xcodeproj/APIClient_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = APIClient;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = APIClient;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GW2API.xcodeproj/GW2API_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GW2API;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = GW2API;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GW2API.xcodeproj/GW2API_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GW2API;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = GW2API;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		19878499249EE2CF00162778 /* Release */ = {
+		OBJ_324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_325 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GW2API.xcodeproj/GW2APITests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = GW2APITests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GW2API.xcodeproj/GW2APITests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = GW2APITests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1987849B249EE2CF00162778 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 49J6GMFE89;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"SWIFT_PACKAGE=1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2API;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1987849C249EE2CF00162778 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 49J6GMFE89;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2API;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		1987849E249EE2CF00162778 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 49J6GMFE89;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2APITests;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1987849F249EE2CF00162778 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 49J6GMFE89;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2APITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19878480249EE2CF00162778 /* Build configuration list for PBXProject "GW2API" */ = {
+		OBJ_179 /* Build configuration list for PBXNativeTarget "APIClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19878498249EE2CF00162778 /* Debug */,
-				19878499249EE2CF00162778 /* Release */,
+				OBJ_180 /* Debug */,
+				OBJ_181 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1987849A249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2API" */ = {
+		OBJ_196 /* Build configuration list for PBXNativeTarget "APIClientPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1987849B249EE2CF00162778 /* Debug */,
-				1987849C249EE2CF00162778 /* Release */,
+				OBJ_197 /* Debug */,
+				OBJ_198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1987849D249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2APITests" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "GW2API" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1987849E249EE2CF00162778 /* Debug */,
-				1987849F249EE2CF00162778 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_202 /* Build configuration list for PBXNativeTarget "GW2API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_203 /* Debug */,
+				OBJ_204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_323 /* Build configuration list for PBXNativeTarget "GW2APIPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_324 /* Debug */,
+				OBJ_325 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_329 /* Build configuration list for PBXAggregateTarget "GW2APIPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_330 /* Debug */,
+				OBJ_331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_334 /* Build configuration list for PBXNativeTarget "GW2APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_335 /* Debug */,
+				OBJ_336 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		198785AB249EE37C00162778 /* XCRemoteSwiftPackageReference "APIClient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Zhendryk/APIClient";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		198785AC249EE37C00162778 /* APIClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 198785AB249EE37C00162778 /* XCRemoteSwiftPackageReference "APIClient" */;
-			productName = APIClient;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1987847D249EE2CF00162778 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

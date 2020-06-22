@@ -15,3 +15,4 @@ test_data.json
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
+Package.resolved
