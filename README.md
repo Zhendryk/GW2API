@@ -1,12 +1,15 @@
+<div align="center">
+<img width="120%" src="guildwars2banner.jpg">
+</div>
+___
+
 # GW2API
 
-#### A simple Swift wrapper for the Guild Wars 2 API (Version 2).
-
-#### This library is made available as a Swift Package. To use it as a dependency in your project [see this documentation from Apple.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
-
-![Guild Wars 2 Banner](guildwars2banner.jpg)
+> A simple Swift wrapper for the [Guild Wars 2 API (Version 2)](https://wiki.guildwars2.com/wiki/API:Main)
 
 ## Usage
+
+> This library is made available as a Swift Package. To use it as a dependency in your project [see this documentation from Apple.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
 
 The GW2API client is initialized as a singleton, so all you need to do is import the package (`import GW2API`) and you will then have full access to the API through the instance variable `GW2Client.instance`
 
@@ -93,4 +96,4 @@ GW2Client.instance.items.finishers.get(id: 1 OR ids: [1, 2, 3] etc.) { result in
     }
 }
 ```
-Any questions feel free to open an issue here!
+If you have any questions or problems, feel free to open an issue in this repository!
