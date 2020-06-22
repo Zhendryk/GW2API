@@ -3,933 +3,862 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		194E0D1421E7E5710037D6C7 /* GW2ClientLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E0D1321E7E5710037D6C7 /* GW2ClientLanguage.swift */; };
-		194E0D1621E7EBD60037D6C7 /* Mount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E0D1521E7EBD60037D6C7 /* Mount.swift */; };
-		1984C2A021E7BBA000C9155A /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1984C29621E7BBA000C9155A /* GW2API.framework */; };
-		1984C2A721E7BBA000C9155A /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = 1984C29921E7BBA000C9155A /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1984C32C21E7BBB300C9155A /* GW2APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B121E7BBB300C9155A /* GW2APIClient.swift */; };
-		1984C32D21E7BBB300C9155A /* APIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B221E7BBB300C9155A /* APIUtil.swift */; };
-		1984C32E21E7BBB300C9155A /* StoryEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B521E7BBB300C9155A /* StoryEP.swift */; };
-		1984C32F21E7BBB300C9155A /* TradingPostEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B621E7BBB300C9155A /* TradingPostEP.swift */; };
-		1984C33021E7BBB300C9155A /* WVWEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B721E7BBB300C9155A /* WVWEP.swift */; };
-		1984C33121E7BBB300C9155A /* ItemsEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B821E7BBB300C9155A /* ItemsEP.swift */; };
-		1984C33221E7BBB300C9155A /* MiscEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2B921E7BBB300C9155A /* MiscEP.swift */; };
-		1984C33321E7BBB300C9155A /* GuildEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2BA21E7BBB300C9155A /* GuildEP.swift */; };
-		1984C33421E7BBB300C9155A /* MapInfoEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2BB21E7BBB300C9155A /* MapInfoEP.swift */; };
-		1984C33521E7BBB300C9155A /* PVPEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2BC21E7BBB300C9155A /* PVPEP.swift */; };
-		1984C33621E7BBB300C9155A /* AuthenticatedEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2BD21E7BBB300C9155A /* AuthenticatedEP.swift */; };
-		1984C33721E7BBB300C9155A /* GameMechanicsEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2BE21E7BBB300C9155A /* GameMechanicsEP.swift */; };
-		1984C33821E7BBB300C9155A /* AchievementsEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2BF21E7BBB300C9155A /* AchievementsEP.swift */; };
-		1984C33921E7BBB300C9155A /* ItemsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C121E7BBB300C9155A /* ItemsClient.swift */; };
-		1984C33A21E7BBB300C9155A /* StoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C221E7BBB300C9155A /* StoryClient.swift */; };
-		1984C33B21E7BBB300C9155A /* AuthenticatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C321E7BBB300C9155A /* AuthenticatedClient.swift */; };
-		1984C33C21E7BBB300C9155A /* PVPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C421E7BBB300C9155A /* PVPClient.swift */; };
-		1984C33D21E7BBB300C9155A /* GuildClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C521E7BBB300C9155A /* GuildClient.swift */; };
-		1984C33E21E7BBB300C9155A /* MapInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C621E7BBB300C9155A /* MapInfoClient.swift */; };
-		1984C33F21E7BBB300C9155A /* MiscClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C721E7BBB300C9155A /* MiscClient.swift */; };
-		1984C34021E7BBB300C9155A /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C821E7BBB300C9155A /* AchievementsClient.swift */; };
-		1984C34121E7BBB300C9155A /* GameMechanicsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2C921E7BBB300C9155A /* GameMechanicsClient.swift */; };
-		1984C34221E7BBB300C9155A /* TradingPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2CA21E7BBB300C9155A /* TradingPostClient.swift */; };
-		1984C34321E7BBB300C9155A /* WVWClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2CB21E7BBB300C9155A /* WVWClient.swift */; };
-		1984C34421E7BBB300C9155A /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2CE21E7BBB300C9155A /* Raid.swift */; };
-		1984C34521E7BBB300C9155A /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2CF21E7BBB300C9155A /* Dungeon.swift */; };
-		1984C34621E7BBB300C9155A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D021E7BBB300C9155A /* Currency.swift */; };
-		1984C34721E7BBB300C9155A /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D121E7BBB300C9155A /* Title.swift */; };
-		1984C34821E7BBB300C9155A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D221E7BBB300C9155A /* File.swift */; };
-		1984C34921E7BBB300C9155A /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D321E7BBB300C9155A /* Build.swift */; };
-		1984C34A21E7BBB300C9155A /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D421E7BBB300C9155A /* World.swift */; };
-		1984C34B21E7BBB300C9155A /* Minipet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D521E7BBB300C9155A /* Minipet.swift */; };
-		1984C34C21E7BBB300C9155A /* Quaggan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D621E7BBB300C9155A /* Quaggan.swift */; };
-		1984C34D21E7BBB300C9155A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D721E7BBB300C9155A /* Color.swift */; };
-		1984C34E21E7BBB300C9155A /* AchievementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2D921E7BBB300C9155A /* AchievementCategory.swift */; };
-		1984C34F21E7BBB300C9155A /* DailyAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2DA21E7BBB300C9155A /* DailyAchievement.swift */; };
-		1984C35021E7BBB300C9155A /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2DB21E7BBB300C9155A /* Achievement.swift */; };
-		1984C35121E7BBB300C9155A /* AchievementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2DC21E7BBB300C9155A /* AchievementGroup.swift */; };
-		1984C35221E7BBB300C9155A /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2DE21E7BBB300C9155A /* CommercePrice.swift */; };
-		1984C35321E7BBB300C9155A /* CommerceDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2DF21E7BBB300C9155A /* CommerceDelivery.swift */; };
-		1984C35421E7BBB300C9155A /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E021E7BBB300C9155A /* CommerceListing.swift */; };
-		1984C35521E7BBB300C9155A /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E121E7BBB300C9155A /* CommerceExchange.swift */; };
-		1984C35621E7BBB300C9155A /* AccountPVPStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E321E7BBB300C9155A /* AccountPVPStats.swift */; };
-		1984C35721E7BBB300C9155A /* AccountMasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E421E7BBB300C9155A /* AccountMasteryPoints.swift */; };
-		1984C35821E7BBB300C9155A /* AccountPVPGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E521E7BBB300C9155A /* AccountPVPGame.swift */; };
-		1984C35921E7BBB300C9155A /* AccountInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E621E7BBB300C9155A /* AccountInventoryItem.swift */; };
-		1984C35A21E7BBB300C9155A /* AccountCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E721E7BBB300C9155A /* AccountCharacter.swift */; };
-		1984C35B21E7BBB300C9155A /* AccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E821E7BBB300C9155A /* AccountTransaction.swift */; };
-		1984C35C21E7BBB300C9155A /* AccountAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2E921E7BBB300C9155A /* AccountAchievement.swift */; };
-		1984C35D21E7BBB300C9155A /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2EA21E7BBB300C9155A /* AccountWalletItem.swift */; };
-		1984C35E21E7BBB300C9155A /* AccountPVPStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2EB21E7BBB300C9155A /* AccountPVPStandings.swift */; };
-		1984C35F21E7BBB300C9155A /* AccountToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2EC21E7BBB300C9155A /* AccountToken.swift */; };
-		1984C36021E7BBB300C9155A /* AccountBankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2ED21E7BBB300C9155A /* AccountBankItem.swift */; };
-		1984C36121E7BBB300C9155A /* AccountCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2EE21E7BBB300C9155A /* AccountCat.swift */; };
-		1984C36221E7BBB300C9155A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2EF21E7BBB300C9155A /* Account.swift */; };
-		1984C36321E7BBB300C9155A /* AccountFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F021E7BBB300C9155A /* AccountFinisher.swift */; };
-		1984C36421E7BBB300C9155A /* AccountMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F121E7BBB300C9155A /* AccountMaterial.swift */; };
-		1984C36521E7BBB300C9155A /* AccountMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F221E7BBB300C9155A /* AccountMastery.swift */; };
-		1984C36621E7BBB300C9155A /* PVPSeasonLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F421E7BBB300C9155A /* PVPSeasonLeaderboard.swift */; };
-		1984C36721E7BBB300C9155A /* PVPSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F521E7BBB300C9155A /* PVPSeason.swift */; };
-		1984C36821E7BBB300C9155A /* PVPRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F621E7BBB300C9155A /* PVPRank.swift */; };
-		1984C36921E7BBB300C9155A /* DetailedMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F821E7BBB300C9155A /* DetailedMap.swift */; };
-		1984C36A21E7BBB300C9155A /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2F921E7BBB300C9155A /* Continent.swift */; };
-		1984C36B21E7BBB300C9155A /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2FA21E7BBB300C9155A /* Region.swift */; };
-		1984C36C21E7BBB300C9155A /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2FB21E7BBB300C9155A /* Sector.swift */; };
-		1984C36D21E7BBB300C9155A /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2FC21E7BBB300C9155A /* POI.swift */; };
-		1984C36E21E7BBB300C9155A /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2FD21E7BBB300C9155A /* Map.swift */; };
-		1984C36F21E7BBB300C9155A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2FE21E7BBB300C9155A /* Task.swift */; };
-		1984C37021E7BBB300C9155A /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C2FF21E7BBB300C9155A /* Floor.swift */; };
-		1984C37121E7BBB300C9155A /* Specialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30121E7BBB300C9155A /* Specialization.swift */; };
-		1984C37221E7BBB300C9155A /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30221E7BBB300C9155A /* Race.swift */; };
-		1984C37321E7BBB300C9155A /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30321E7BBB300C9155A /* Legend.swift */; };
-		1984C37421E7BBB300C9155A /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30421E7BBB300C9155A /* Trait.swift */; };
-		1984C37521E7BBB300C9155A /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30521E7BBB300C9155A /* Profession.swift */; };
-		1984C37621E7BBB300C9155A /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30621E7BBB300C9155A /* Outfit.swift */; };
-		1984C37721E7BBB300C9155A /* Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30721E7BBB300C9155A /* Mastery.swift */; };
-		1984C37821E7BBB300C9155A /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30821E7BBB300C9155A /* Pet.swift */; };
-		1984C37921E7BBB300C9155A /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30921E7BBB300C9155A /* Skill.swift */; };
-		1984C37A21E7BBB300C9155A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30B21E7BBB300C9155A /* Recipe.swift */; };
-		1984C37B21E7BBB300C9155A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30C21E7BBB300C9155A /* Item.swift */; };
-		1984C37C21E7BBB300C9155A /* PVPAmulet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30D21E7BBB300C9155A /* PVPAmulet.swift */; };
-		1984C37D21E7BBB300C9155A /* ItemStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30E21E7BBB300C9155A /* ItemStats.swift */; };
-		1984C37E21E7BBB300C9155A /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C30F21E7BBB300C9155A /* Skin.swift */; };
-		1984C37F21E7BBB300C9155A /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31021E7BBB300C9155A /* Finisher.swift */; };
-		1984C38021E7BBB300C9155A /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31121E7BBB300C9155A /* Material.swift */; };
-		1984C38121E7BBB300C9155A /* BackstoryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31321E7BBB300C9155A /* BackstoryQuestion.swift */; };
-		1984C38221E7BBB300C9155A /* StorySeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31421E7BBB300C9155A /* StorySeason.swift */; };
-		1984C38321E7BBB300C9155A /* BackstoryAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31521E7BBB300C9155A /* BackstoryAnswer.swift */; };
-		1984C38421E7BBB300C9155A /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31621E7BBB300C9155A /* Story.swift */; };
-		1984C38521E7BBB300C9155A /* WVWAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31821E7BBB300C9155A /* WVWAbility.swift */; };
-		1984C38621E7BBB300C9155A /* WVWMatchScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31921E7BBB300C9155A /* WVWMatchScore.swift */; };
-		1984C38721E7BBB300C9155A /* WVWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31A21E7BBB300C9155A /* WVWMatch.swift */; };
-		1984C38821E7BBB300C9155A /* WVWMatchStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31B21E7BBB300C9155A /* WVWMatchStats.swift */; };
-		1984C38921E7BBB300C9155A /* WVWUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31C21E7BBB300C9155A /* WVWUpgrade.swift */; };
-		1984C38A21E7BBB300C9155A /* WVWObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31D21E7BBB300C9155A /* WVWObjective.swift */; };
-		1984C38B21E7BBB300C9155A /* WVWRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31E21E7BBB300C9155A /* WVWRank.swift */; };
-		1984C38C21E7BBB300C9155A /* WVWMatchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C31F21E7BBB300C9155A /* WVWMatchOverview.swift */; };
-		1984C38D21E7BBB300C9155A /* GuildDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32121E7BBB300C9155A /* GuildDetails.swift */; };
-		1984C38E21E7BBB300C9155A /* GuildEmblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32221E7BBB300C9155A /* GuildEmblem.swift */; };
-		1984C38F21E7BBB300C9155A /* GuildStash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32321E7BBB300C9155A /* GuildStash.swift */; };
-		1984C39021E7BBB300C9155A /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32421E7BBB300C9155A /* Permissions.swift */; };
-		1984C39121E7BBB300C9155A /* GuildLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32521E7BBB300C9155A /* GuildLog.swift */; };
-		1984C39221E7BBB300C9155A /* GuildMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32621E7BBB300C9155A /* GuildMember.swift */; };
-		1984C39321E7BBB300C9155A /* GuildUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32721E7BBB300C9155A /* GuildUpgrade.swift */; };
-		1984C39421E7BBB300C9155A /* GuildRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32821E7BBB300C9155A /* GuildRank.swift */; };
-		1984C39521E7BBB300C9155A /* GuildTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32921E7BBB300C9155A /* GuildTreasury.swift */; };
-		1984C39621E7BBB300C9155A /* GuildTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32A21E7BBB300C9155A /* GuildTeam.swift */; };
-		1984C39721E7BBB300C9155A /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C32B21E7BBB300C9155A /* GW2Client.swift */; };
-		1984C3A421E7BBC500C9155A /* TradingPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39821E7BBC400C9155A /* TradingPostTests.swift */; };
-		1984C3A521E7BBC500C9155A /* GuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39921E7BBC400C9155A /* GuildTests.swift */; };
-		1984C3A621E7BBC500C9155A /* GameMechanicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39A21E7BBC400C9155A /* GameMechanicsTests.swift */; };
-		1984C3A721E7BBC500C9155A /* WVWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39B21E7BBC400C9155A /* WVWTests.swift */; };
-		1984C3A821E7BBC500C9155A /* AuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39C21E7BBC500C9155A /* AuthenticatedTests.swift */; };
-		1984C3A921E7BBC500C9155A /* GuildAuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39D21E7BBC500C9155A /* GuildAuthenticatedTests.swift */; };
-		1984C3AA21E7BBC500C9155A /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39E21E7BBC500C9155A /* AchievementsTests.swift */; };
-		1984C3AB21E7BBC500C9155A /* StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C39F21E7BBC500C9155A /* StoryTests.swift */; };
-		1984C3AC21E7BBC500C9155A /* ItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C3A021E7BBC500C9155A /* ItemsTests.swift */; };
-		1984C3AD21E7BBC500C9155A /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C3A121E7BBC500C9155A /* MiscTests.swift */; };
-		1984C3AE21E7BBC500C9155A /* MapInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C3A221E7BBC500C9155A /* MapInfoTests.swift */; };
-		1984C3AF21E7BBC500C9155A /* PVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984C3A321E7BBC500C9155A /* PVPTests.swift */; };
-		1984C3B121E7BC4500C9155A /* GenericAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1984C3B021E7BC4500C9155A /* GenericAPIClient.framework */; };
-		19F5592C21E80A8A007F570D /* GW2APITestVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5592B21E80A8A007F570D /* GW2APITestVariables.swift */; };
-		633DE8EC3FED855D76882323 /* Pods_GW2APITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCB8CE190133CA679A1759F /* Pods_GW2APITests.framework */; };
-		DEF4120A02AEDD31D7B82178 /* Pods_GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6637D657F28E7CEA194E434 /* Pods_GW2API.framework */; };
+		19878490249EE2CF00162778 /* GW2API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19878486249EE2CF00162778 /* GW2API.framework */; };
+		19878497249EE2CF00162778 /* GW2API.h in Headers */ = {isa = PBXBuildFile; fileRef = 19878489249EE2CF00162778 /* GW2API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1987851F249EE31100162778 /* String+regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A1249EE31000162778 /* String+regex.swift */; };
+		19878520249EE31100162778 /* ItemsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A3249EE31000162778 /* ItemsClient.swift */; };
+		19878521249EE31100162778 /* StoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A4249EE31000162778 /* StoryClient.swift */; };
+		19878522249EE31100162778 /* AuthenticatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A5249EE31000162778 /* AuthenticatedClient.swift */; };
+		19878523249EE31100162778 /* PVPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A6249EE31000162778 /* PVPClient.swift */; };
+		19878524249EE31100162778 /* GuildClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A7249EE31000162778 /* GuildClient.swift */; };
+		19878525249EE31100162778 /* GW2APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A8249EE31000162778 /* GW2APIClient.swift */; };
+		19878526249EE31100162778 /* MapInfoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784A9249EE31000162778 /* MapInfoClient.swift */; };
+		19878527249EE31100162778 /* MiscClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AA249EE31000162778 /* MiscClient.swift */; };
+		19878528249EE31100162778 /* AchievementsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AB249EE31000162778 /* AchievementsClient.swift */; };
+		19878529249EE31100162778 /* GameMechanicsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AC249EE31000162778 /* GameMechanicsClient.swift */; };
+		1987852A249EE31100162778 /* TradingPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AD249EE31000162778 /* TradingPostClient.swift */; };
+		1987852B249EE31100162778 /* WVWClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784AE249EE31000162778 /* WVWClient.swift */; };
+		1987852C249EE31100162778 /* GW2ClientLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B0249EE31000162778 /* GW2ClientLanguage.swift */; };
+		1987852D249EE31100162778 /* APIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B1249EE31000162778 /* APIUtil.swift */; };
+		1987852E249EE31100162778 /* StoryRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B3249EE31000162778 /* StoryRequests.swift */; };
+		1987852F249EE31100162778 /* TradingPostRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B4249EE31000162778 /* TradingPostRequests.swift */; };
+		19878530249EE31100162778 /* WVWRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B5249EE31000162778 /* WVWRequests.swift */; };
+		19878531249EE31100162778 /* ItemsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B6249EE31000162778 /* ItemsRequests.swift */; };
+		19878532249EE31100162778 /* MiscRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B7249EE31000162778 /* MiscRequests.swift */; };
+		19878533249EE31100162778 /* GuildRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B8249EE31000162778 /* GuildRequests.swift */; };
+		19878534249EE31100162778 /* MapInfoRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784B9249EE31000162778 /* MapInfoRequests.swift */; };
+		19878535249EE31100162778 /* PVPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784BA249EE31000162778 /* PVPRequests.swift */; };
+		19878537249EE31100162778 /* GameMechanicsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784BC249EE31000162778 /* GameMechanicsRequests.swift */; };
+		19878538249EE31100162778 /* AchievementsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784BD249EE31000162778 /* AchievementsRequests.swift */; };
+		19878539249EE31100162778 /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C0249EE31000162778 /* Raid.swift */; };
+		1987853A249EE31100162778 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C1249EE31000162778 /* Dungeon.swift */; };
+		1987853B249EE31100162778 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C2249EE31000162778 /* Currency.swift */; };
+		1987853C249EE31100162778 /* Mount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C3249EE31000162778 /* Mount.swift */; };
+		1987853D249EE31100162778 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C4249EE31000162778 /* Title.swift */; };
+		1987853E249EE31100162778 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C5249EE31000162778 /* File.swift */; };
+		1987853F249EE31100162778 /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C6249EE31000162778 /* Build.swift */; };
+		19878540249EE31100162778 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C7249EE31000162778 /* World.swift */; };
+		19878541249EE31100162778 /* Minipet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C8249EE31000162778 /* Minipet.swift */; };
+		19878542249EE31100162778 /* Quaggan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784C9249EE31000162778 /* Quaggan.swift */; };
+		19878543249EE31100162778 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CA249EE31000162778 /* Color.swift */; };
+		19878544249EE31100162778 /* AchievementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CC249EE31000162778 /* AchievementCategory.swift */; };
+		19878545249EE31100162778 /* DailyAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CD249EE31000162778 /* DailyAchievement.swift */; };
+		19878546249EE31100162778 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CE249EE31000162778 /* Achievement.swift */; };
+		19878547249EE31100162778 /* AchievementGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784CF249EE31000162778 /* AchievementGroup.swift */; };
+		19878548249EE31100162778 /* CommercePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D1249EE31000162778 /* CommercePrice.swift */; };
+		19878549249EE31100162778 /* CommerceDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D2249EE31000162778 /* CommerceDelivery.swift */; };
+		1987854A249EE31100162778 /* CommerceListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D3249EE31000162778 /* CommerceListing.swift */; };
+		1987854B249EE31100162778 /* CommerceExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D4249EE31000162778 /* CommerceExchange.swift */; };
+		1987854C249EE31100162778 /* AccountPVPStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D6249EE31000162778 /* AccountPVPStats.swift */; };
+		1987854D249EE31100162778 /* AccountMasteryPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D7249EE31000162778 /* AccountMasteryPoints.swift */; };
+		1987854E249EE31100162778 /* AccountPVPGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D8249EE31000162778 /* AccountPVPGame.swift */; };
+		1987854F249EE31100162778 /* AccountInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784D9249EE31000162778 /* AccountInventoryItem.swift */; };
+		19878550249EE31100162778 /* AccountCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DA249EE31000162778 /* AccountCharacter.swift */; };
+		19878551249EE31100162778 /* AccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DB249EE31000162778 /* AccountTransaction.swift */; };
+		19878552249EE31100162778 /* AccountAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DC249EE31000162778 /* AccountAchievement.swift */; };
+		19878553249EE31100162778 /* AccountWalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DD249EE31000162778 /* AccountWalletItem.swift */; };
+		19878554249EE31100162778 /* AccountPVPStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DE249EE31000162778 /* AccountPVPStandings.swift */; };
+		19878555249EE31100162778 /* AccountToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784DF249EE31000162778 /* AccountToken.swift */; };
+		19878556249EE31100162778 /* AccountBankItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E0249EE31000162778 /* AccountBankItem.swift */; };
+		19878557249EE31100162778 /* AccountCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E1249EE31000162778 /* AccountCat.swift */; };
+		19878558249EE31100162778 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E2249EE31000162778 /* Account.swift */; };
+		19878559249EE31100162778 /* AccountFinisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E3249EE31000162778 /* AccountFinisher.swift */; };
+		1987855A249EE31100162778 /* AccountMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E4249EE31000162778 /* AccountMaterial.swift */; };
+		1987855B249EE31100162778 /* AccountMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E5249EE31000162778 /* AccountMastery.swift */; };
+		1987855C249EE31100162778 /* PVPSeasonLeaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E7249EE31000162778 /* PVPSeasonLeaderboard.swift */; };
+		1987855D249EE31100162778 /* PVPSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E8249EE31000162778 /* PVPSeason.swift */; };
+		1987855E249EE31100162778 /* PVPRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784E9249EE31000162778 /* PVPRank.swift */; };
+		1987855F249EE31100162778 /* DetailedMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EB249EE31000162778 /* DetailedMap.swift */; };
+		19878560249EE31100162778 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EC249EE31000162778 /* Continent.swift */; };
+		19878561249EE31100162778 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784ED249EE31000162778 /* Region.swift */; };
+		19878562249EE31100162778 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EE249EE31000162778 /* Sector.swift */; };
+		19878563249EE31100162778 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784EF249EE31000162778 /* POI.swift */; };
+		19878564249EE31100162778 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F0249EE31000162778 /* Map.swift */; };
+		19878565249EE31100162778 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F1249EE31000162778 /* Task.swift */; };
+		19878566249EE31100162778 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F2249EE31000162778 /* Floor.swift */; };
+		19878567249EE31100162778 /* Specialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F4249EE31000162778 /* Specialization.swift */; };
+		19878568249EE31100162778 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F5249EE31000162778 /* Race.swift */; };
+		19878569249EE31100162778 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F6249EE31000162778 /* Legend.swift */; };
+		1987856A249EE31100162778 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F7249EE31000162778 /* Trait.swift */; };
+		1987856B249EE31100162778 /* Profession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F8249EE31000162778 /* Profession.swift */; };
+		1987856C249EE31100162778 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784F9249EE31000162778 /* Outfit.swift */; };
+		1987856D249EE31100162778 /* Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FA249EE31000162778 /* Mastery.swift */; };
+		1987856E249EE31100162778 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FB249EE31000162778 /* Pet.swift */; };
+		1987856F249EE31100162778 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FC249EE31000162778 /* Skill.swift */; };
+		19878570249EE31100162778 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FE249EE31000162778 /* Recipe.swift */; };
+		19878571249EE31100162778 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198784FF249EE31000162778 /* Item.swift */; };
+		19878572249EE31100162778 /* PVPAmulet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878500249EE31000162778 /* PVPAmulet.swift */; };
+		19878573249EE31100162778 /* ItemStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878501249EE31000162778 /* ItemStats.swift */; };
+		19878574249EE31100162778 /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878502249EE31000162778 /* Skin.swift */; };
+		19878575249EE31100162778 /* Finisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878503249EE31000162778 /* Finisher.swift */; };
+		19878576249EE31100162778 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878504249EE31000162778 /* Material.swift */; };
+		19878577249EE31100162778 /* BackstoryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878506249EE31000162778 /* BackstoryQuestion.swift */; };
+		19878578249EE31100162778 /* StorySeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878507249EE31000162778 /* StorySeason.swift */; };
+		19878579249EE31100162778 /* BackstoryAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878508249EE31000162778 /* BackstoryAnswer.swift */; };
+		1987857A249EE31100162778 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878509249EE31000162778 /* Story.swift */; };
+		1987857B249EE31100162778 /* WVWAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850B249EE31100162778 /* WVWAbility.swift */; };
+		1987857C249EE31100162778 /* WVWMatchScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850C249EE31100162778 /* WVWMatchScore.swift */; };
+		1987857D249EE31100162778 /* WVWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850D249EE31100162778 /* WVWMatch.swift */; };
+		1987857E249EE31100162778 /* WVWMatchStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850E249EE31100162778 /* WVWMatchStats.swift */; };
+		1987857F249EE31100162778 /* WVWUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987850F249EE31100162778 /* WVWUpgrade.swift */; };
+		19878580249EE31100162778 /* WVWObjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878510249EE31100162778 /* WVWObjective.swift */; };
+		19878581249EE31100162778 /* WVWRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878511249EE31100162778 /* WVWRank.swift */; };
+		19878582249EE31100162778 /* WVWMatchOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878512249EE31100162778 /* WVWMatchOverview.swift */; };
+		19878583249EE31100162778 /* GuildDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878514249EE31100162778 /* GuildDetails.swift */; };
+		19878584249EE31100162778 /* GuildEmblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878515249EE31100162778 /* GuildEmblem.swift */; };
+		19878585249EE31100162778 /* GuildStash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878516249EE31100162778 /* GuildStash.swift */; };
+		19878586249EE31100162778 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878517249EE31100162778 /* Permissions.swift */; };
+		19878587249EE31100162778 /* GuildLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878518249EE31100162778 /* GuildLog.swift */; };
+		19878588249EE31100162778 /* GuildMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878519249EE31100162778 /* GuildMember.swift */; };
+		19878589249EE31100162778 /* GuildUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851A249EE31100162778 /* GuildUpgrade.swift */; };
+		1987858A249EE31100162778 /* GuildRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851B249EE31100162778 /* GuildRank.swift */; };
+		1987858B249EE31100162778 /* GuildTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851C249EE31100162778 /* GuildTreasury.swift */; };
+		1987858C249EE31100162778 /* GuildTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851D249EE31100162778 /* GuildTeam.swift */; };
+		1987858D249EE31100162778 /* GW2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987851E249EE31100162778 /* GW2Client.swift */; };
+		1987859D249EE32F00162778 /* GameMechanicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987858F249EE32F00162778 /* GameMechanicsTests.swift */; };
+		1987859E249EE32F00162778 /* WVWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878590249EE32F00162778 /* WVWTests.swift */; };
+		1987859F249EE32F00162778 /* PVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878591249EE32F00162778 /* PVPTests.swift */; };
+		198785A0249EE32F00162778 /* ItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878592249EE32F00162778 /* ItemsTests.swift */; };
+		198785A1249EE32F00162778 /* TradingPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878593249EE32F00162778 /* TradingPostTests.swift */; };
+		198785A2249EE32F00162778 /* MiscTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878594249EE32F00162778 /* MiscTests.swift */; };
+		198785A3249EE32F00162778 /* StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878595249EE32F00162778 /* StoryTests.swift */; };
+		198785A4249EE32F00162778 /* GuildAuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878596249EE32F00162778 /* GuildAuthenticatedTests.swift */; };
+		198785A5249EE32F00162778 /* GW2APITestVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878597249EE32F00162778 /* GW2APITestVariables.swift */; };
+		198785A6249EE32F00162778 /* AuthenticatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878598249EE32F00162778 /* AuthenticatedTests.swift */; };
+		198785A7249EE32F00162778 /* MapInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19878599249EE32F00162778 /* MapInfoTests.swift */; };
+		198785A8249EE32F00162778 /* AchievementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987859A249EE32F00162778 /* AchievementsTests.swift */; };
+		198785AA249EE32F00162778 /* GuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987859C249EE32F00162778 /* GuildTests.swift */; };
+		198785AD249EE37C00162778 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 198785AC249EE37C00162778 /* APIClient */; };
+		198785AF24A0505100162778 /* AccountRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198785AE24A0505100162778 /* AccountRequests.swift */; };
+		198785B324A050E000162778 /* CharacterRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198785B224A050E000162778 /* CharacterRequests.swift */; };
+		198785D324A05E3E00162778 /* GW2ClientVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198785D224A05E3E00162778 /* GW2ClientVersion.swift */; };
+		198785E024A07B7D00162778 /* test_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 198785DF24A07B7D00162778 /* test_data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1984C2A121E7BBA000C9155A /* PBXContainerItemProxy */ = {
+		19878491249EE2CF00162778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1984C28D21E7BBA000C9155A /* Project object */;
+			containerPortal = 1987847D249EE2CF00162778 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1984C29521E7BBA000C9155A;
+			remoteGlobalIDString = 19878485249EE2CF00162778;
 			remoteInfo = GW2API;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FCB8CE190133CA679A1759F /* Pods_GW2APITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GW2APITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		16A8D7BE7478334F87A8EE88 /* Pods-GW2APITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2APITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2APITests/Pods-GW2APITests.debug.xcconfig"; sourceTree = "<group>"; };
-		194E0D1321E7E5710037D6C7 /* GW2ClientLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2ClientLanguage.swift; sourceTree = "<group>"; };
-		194E0D1521E7EBD60037D6C7 /* Mount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mount.swift; sourceTree = "<group>"; };
-		1984C29621E7BBA000C9155A /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1984C29921E7BBA000C9155A /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
-		1984C29A21E7BBA000C9155A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1984C29F21E7BBA000C9155A /* GW2APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1984C2A621E7BBA000C9155A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1984C2B121E7BBB300C9155A /* GW2APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2APIClient.swift; sourceTree = "<group>"; };
-		1984C2B221E7BBB300C9155A /* APIUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtil.swift; sourceTree = "<group>"; };
-		1984C2B521E7BBB300C9155A /* StoryEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryEP.swift; sourceTree = "<group>"; };
-		1984C2B621E7BBB300C9155A /* TradingPostEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostEP.swift; sourceTree = "<group>"; };
-		1984C2B721E7BBB300C9155A /* WVWEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWEP.swift; sourceTree = "<group>"; };
-		1984C2B821E7BBB300C9155A /* ItemsEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsEP.swift; sourceTree = "<group>"; };
-		1984C2B921E7BBB300C9155A /* MiscEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscEP.swift; sourceTree = "<group>"; };
-		1984C2BA21E7BBB300C9155A /* GuildEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildEP.swift; sourceTree = "<group>"; };
-		1984C2BB21E7BBB300C9155A /* MapInfoEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoEP.swift; sourceTree = "<group>"; };
-		1984C2BC21E7BBB300C9155A /* PVPEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPEP.swift; sourceTree = "<group>"; };
-		1984C2BD21E7BBB300C9155A /* AuthenticatedEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedEP.swift; sourceTree = "<group>"; };
-		1984C2BE21E7BBB300C9155A /* GameMechanicsEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsEP.swift; sourceTree = "<group>"; };
-		1984C2BF21E7BBB300C9155A /* AchievementsEP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsEP.swift; sourceTree = "<group>"; };
-		1984C2C121E7BBB300C9155A /* ItemsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsClient.swift; sourceTree = "<group>"; };
-		1984C2C221E7BBB300C9155A /* StoryClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryClient.swift; sourceTree = "<group>"; };
-		1984C2C321E7BBB300C9155A /* AuthenticatedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedClient.swift; sourceTree = "<group>"; };
-		1984C2C421E7BBB300C9155A /* PVPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPClient.swift; sourceTree = "<group>"; };
-		1984C2C521E7BBB300C9155A /* GuildClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildClient.swift; sourceTree = "<group>"; };
-		1984C2C621E7BBB300C9155A /* MapInfoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoClient.swift; sourceTree = "<group>"; };
-		1984C2C721E7BBB300C9155A /* MiscClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscClient.swift; sourceTree = "<group>"; };
-		1984C2C821E7BBB300C9155A /* AchievementsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
-		1984C2C921E7BBB300C9155A /* GameMechanicsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsClient.swift; sourceTree = "<group>"; };
-		1984C2CA21E7BBB300C9155A /* TradingPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostClient.swift; sourceTree = "<group>"; };
-		1984C2CB21E7BBB300C9155A /* WVWClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWClient.swift; sourceTree = "<group>"; };
-		1984C2CE21E7BBB300C9155A /* Raid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
-		1984C2CF21E7BBB300C9155A /* Dungeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
-		1984C2D021E7BBB300C9155A /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		1984C2D121E7BBB300C9155A /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		1984C2D221E7BBB300C9155A /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		1984C2D321E7BBB300C9155A /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
-		1984C2D421E7BBB300C9155A /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
-		1984C2D521E7BBB300C9155A /* Minipet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minipet.swift; sourceTree = "<group>"; };
-		1984C2D621E7BBB300C9155A /* Quaggan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quaggan.swift; sourceTree = "<group>"; };
-		1984C2D721E7BBB300C9155A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		1984C2D921E7BBB300C9155A /* AchievementCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCategory.swift; sourceTree = "<group>"; };
-		1984C2DA21E7BBB300C9155A /* DailyAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyAchievement.swift; sourceTree = "<group>"; };
-		1984C2DB21E7BBB300C9155A /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		1984C2DC21E7BBB300C9155A /* AchievementGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementGroup.swift; sourceTree = "<group>"; };
-		1984C2DE21E7BBB300C9155A /* CommercePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
-		1984C2DF21E7BBB300C9155A /* CommerceDelivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceDelivery.swift; sourceTree = "<group>"; };
-		1984C2E021E7BBB300C9155A /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
-		1984C2E121E7BBB300C9155A /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
-		1984C2E321E7BBB300C9155A /* AccountPVPStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPStats.swift; sourceTree = "<group>"; };
-		1984C2E421E7BBB300C9155A /* AccountMasteryPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMasteryPoints.swift; sourceTree = "<group>"; };
-		1984C2E521E7BBB300C9155A /* AccountPVPGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPGame.swift; sourceTree = "<group>"; };
-		1984C2E621E7BBB300C9155A /* AccountInventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInventoryItem.swift; sourceTree = "<group>"; };
-		1984C2E721E7BBB300C9155A /* AccountCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCharacter.swift; sourceTree = "<group>"; };
-		1984C2E821E7BBB300C9155A /* AccountTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTransaction.swift; sourceTree = "<group>"; };
-		1984C2E921E7BBB300C9155A /* AccountAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAchievement.swift; sourceTree = "<group>"; };
-		1984C2EA21E7BBB300C9155A /* AccountWalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
-		1984C2EB21E7BBB300C9155A /* AccountPVPStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPStandings.swift; sourceTree = "<group>"; };
-		1984C2EC21E7BBB300C9155A /* AccountToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountToken.swift; sourceTree = "<group>"; };
-		1984C2ED21E7BBB300C9155A /* AccountBankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBankItem.swift; sourceTree = "<group>"; };
-		1984C2EE21E7BBB300C9155A /* AccountCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCat.swift; sourceTree = "<group>"; };
-		1984C2EF21E7BBB300C9155A /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		1984C2F021E7BBB300C9155A /* AccountFinisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountFinisher.swift; sourceTree = "<group>"; };
-		1984C2F121E7BBB300C9155A /* AccountMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMaterial.swift; sourceTree = "<group>"; };
-		1984C2F221E7BBB300C9155A /* AccountMastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMastery.swift; sourceTree = "<group>"; };
-		1984C2F421E7BBB300C9155A /* PVPSeasonLeaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPSeasonLeaderboard.swift; sourceTree = "<group>"; };
-		1984C2F521E7BBB300C9155A /* PVPSeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPSeason.swift; sourceTree = "<group>"; };
-		1984C2F621E7BBB300C9155A /* PVPRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPRank.swift; sourceTree = "<group>"; };
-		1984C2F821E7BBB300C9155A /* DetailedMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedMap.swift; sourceTree = "<group>"; };
-		1984C2F921E7BBB300C9155A /* Continent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
-		1984C2FA21E7BBB300C9155A /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
-		1984C2FB21E7BBB300C9155A /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
-		1984C2FC21E7BBB300C9155A /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
-		1984C2FD21E7BBB300C9155A /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		1984C2FE21E7BBB300C9155A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		1984C2FF21E7BBB300C9155A /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
-		1984C30121E7BBB300C9155A /* Specialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specialization.swift; sourceTree = "<group>"; };
-		1984C30221E7BBB300C9155A /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
-		1984C30321E7BBB300C9155A /* Legend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
-		1984C30421E7BBB300C9155A /* Trait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
-		1984C30521E7BBB300C9155A /* Profession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
-		1984C30621E7BBB300C9155A /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
-		1984C30721E7BBB300C9155A /* Mastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mastery.swift; sourceTree = "<group>"; };
-		1984C30821E7BBB300C9155A /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		1984C30921E7BBB300C9155A /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
-		1984C30B21E7BBB300C9155A /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		1984C30C21E7BBB300C9155A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		1984C30D21E7BBB300C9155A /* PVPAmulet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPAmulet.swift; sourceTree = "<group>"; };
-		1984C30E21E7BBB300C9155A /* ItemStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStats.swift; sourceTree = "<group>"; };
-		1984C30F21E7BBB300C9155A /* Skin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
-		1984C31021E7BBB300C9155A /* Finisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
-		1984C31121E7BBB300C9155A /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
-		1984C31321E7BBB300C9155A /* BackstoryQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstoryQuestion.swift; sourceTree = "<group>"; };
-		1984C31421E7BBB300C9155A /* StorySeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySeason.swift; sourceTree = "<group>"; };
-		1984C31521E7BBB300C9155A /* BackstoryAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstoryAnswer.swift; sourceTree = "<group>"; };
-		1984C31621E7BBB300C9155A /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		1984C31821E7BBB300C9155A /* WVWAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWAbility.swift; sourceTree = "<group>"; };
-		1984C31921E7BBB300C9155A /* WVWMatchScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchScore.swift; sourceTree = "<group>"; };
-		1984C31A21E7BBB300C9155A /* WVWMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatch.swift; sourceTree = "<group>"; };
-		1984C31B21E7BBB300C9155A /* WVWMatchStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchStats.swift; sourceTree = "<group>"; };
-		1984C31C21E7BBB300C9155A /* WVWUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWUpgrade.swift; sourceTree = "<group>"; };
-		1984C31D21E7BBB300C9155A /* WVWObjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWObjective.swift; sourceTree = "<group>"; };
-		1984C31E21E7BBB300C9155A /* WVWRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWRank.swift; sourceTree = "<group>"; };
-		1984C31F21E7BBB300C9155A /* WVWMatchOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchOverview.swift; sourceTree = "<group>"; };
-		1984C32121E7BBB300C9155A /* GuildDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildDetails.swift; sourceTree = "<group>"; };
-		1984C32221E7BBB300C9155A /* GuildEmblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildEmblem.swift; sourceTree = "<group>"; };
-		1984C32321E7BBB300C9155A /* GuildStash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildStash.swift; sourceTree = "<group>"; };
-		1984C32421E7BBB300C9155A /* Permissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
-		1984C32521E7BBB300C9155A /* GuildLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildLog.swift; sourceTree = "<group>"; };
-		1984C32621E7BBB300C9155A /* GuildMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildMember.swift; sourceTree = "<group>"; };
-		1984C32721E7BBB300C9155A /* GuildUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildUpgrade.swift; sourceTree = "<group>"; };
-		1984C32821E7BBB300C9155A /* GuildRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildRank.swift; sourceTree = "<group>"; };
-		1984C32921E7BBB300C9155A /* GuildTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTreasury.swift; sourceTree = "<group>"; };
-		1984C32A21E7BBB300C9155A /* GuildTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTeam.swift; sourceTree = "<group>"; };
-		1984C32B21E7BBB300C9155A /* GW2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
-		1984C39821E7BBC400C9155A /* TradingPostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostTests.swift; sourceTree = "<group>"; };
-		1984C39921E7BBC400C9155A /* GuildTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTests.swift; sourceTree = "<group>"; };
-		1984C39A21E7BBC400C9155A /* GameMechanicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsTests.swift; sourceTree = "<group>"; };
-		1984C39B21E7BBC400C9155A /* WVWTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWTests.swift; sourceTree = "<group>"; };
-		1984C39C21E7BBC500C9155A /* AuthenticatedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedTests.swift; sourceTree = "<group>"; };
-		1984C39D21E7BBC500C9155A /* GuildAuthenticatedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildAuthenticatedTests.swift; sourceTree = "<group>"; };
-		1984C39E21E7BBC500C9155A /* AchievementsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
-		1984C39F21E7BBC500C9155A /* StoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTests.swift; sourceTree = "<group>"; };
-		1984C3A021E7BBC500C9155A /* ItemsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTests.swift; sourceTree = "<group>"; };
-		1984C3A121E7BBC500C9155A /* MiscTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
-		1984C3A221E7BBC500C9155A /* MapInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoTests.swift; sourceTree = "<group>"; };
-		1984C3A321E7BBC500C9155A /* PVPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPTests.swift; sourceTree = "<group>"; };
-		1984C3B021E7BC4500C9155A /* GenericAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GenericAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19F5592B21E80A8A007F570D /* GW2APITestVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2APITestVariables.swift; sourceTree = "<group>"; };
-		894EDB1ACAC05A9A9F529DBB /* Pods-GW2API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2API.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2API/Pods-GW2API.debug.xcconfig"; sourceTree = "<group>"; };
-		9F4152AD79F2F2AD6001D733 /* Pods-GW2APITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2APITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2APITests/Pods-GW2APITests.release.xcconfig"; sourceTree = "<group>"; };
-		B6637D657F28E7CEA194E434 /* Pods_GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3737B0A44435860D571FEFD /* Pods-GW2API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2API.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2API/Pods-GW2API.release.xcconfig"; sourceTree = "<group>"; };
+		19878486249EE2CF00162778 /* GW2API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19878489249EE2CF00162778 /* GW2API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW2API.h; sourceTree = "<group>"; };
+		1987848A249EE2CF00162778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1987848F249EE2CF00162778 /* GW2APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19878496249EE2CF00162778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		198784A1249EE31000162778 /* String+regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+regex.swift"; sourceTree = "<group>"; };
+		198784A3249EE31000162778 /* ItemsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsClient.swift; sourceTree = "<group>"; };
+		198784A4249EE31000162778 /* StoryClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryClient.swift; sourceTree = "<group>"; };
+		198784A5249EE31000162778 /* AuthenticatedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedClient.swift; sourceTree = "<group>"; };
+		198784A6249EE31000162778 /* PVPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPClient.swift; sourceTree = "<group>"; };
+		198784A7249EE31000162778 /* GuildClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildClient.swift; sourceTree = "<group>"; };
+		198784A8249EE31000162778 /* GW2APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2APIClient.swift; sourceTree = "<group>"; };
+		198784A9249EE31000162778 /* MapInfoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoClient.swift; sourceTree = "<group>"; };
+		198784AA249EE31000162778 /* MiscClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscClient.swift; sourceTree = "<group>"; };
+		198784AB249EE31000162778 /* AchievementsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsClient.swift; sourceTree = "<group>"; };
+		198784AC249EE31000162778 /* GameMechanicsClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsClient.swift; sourceTree = "<group>"; };
+		198784AD249EE31000162778 /* TradingPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostClient.swift; sourceTree = "<group>"; };
+		198784AE249EE31000162778 /* WVWClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWClient.swift; sourceTree = "<group>"; };
+		198784B0249EE31000162778 /* GW2ClientLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2ClientLanguage.swift; sourceTree = "<group>"; };
+		198784B1249EE31000162778 /* APIUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtil.swift; sourceTree = "<group>"; };
+		198784B3249EE31000162778 /* StoryRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryRequests.swift; sourceTree = "<group>"; };
+		198784B4249EE31000162778 /* TradingPostRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostRequests.swift; sourceTree = "<group>"; };
+		198784B5249EE31000162778 /* WVWRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWRequests.swift; sourceTree = "<group>"; };
+		198784B6249EE31000162778 /* ItemsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsRequests.swift; sourceTree = "<group>"; };
+		198784B7249EE31000162778 /* MiscRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscRequests.swift; sourceTree = "<group>"; };
+		198784B8249EE31000162778 /* GuildRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildRequests.swift; sourceTree = "<group>"; };
+		198784B9249EE31000162778 /* MapInfoRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoRequests.swift; sourceTree = "<group>"; };
+		198784BA249EE31000162778 /* PVPRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPRequests.swift; sourceTree = "<group>"; };
+		198784BC249EE31000162778 /* GameMechanicsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsRequests.swift; sourceTree = "<group>"; };
+		198784BD249EE31000162778 /* AchievementsRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsRequests.swift; sourceTree = "<group>"; };
+		198784C0249EE31000162778 /* Raid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
+		198784C1249EE31000162778 /* Dungeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
+		198784C2249EE31000162778 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		198784C3249EE31000162778 /* Mount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mount.swift; sourceTree = "<group>"; };
+		198784C4249EE31000162778 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		198784C5249EE31000162778 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		198784C6249EE31000162778 /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		198784C7249EE31000162778 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		198784C8249EE31000162778 /* Minipet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minipet.swift; sourceTree = "<group>"; };
+		198784C9249EE31000162778 /* Quaggan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quaggan.swift; sourceTree = "<group>"; };
+		198784CA249EE31000162778 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		198784CC249EE31000162778 /* AchievementCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCategory.swift; sourceTree = "<group>"; };
+		198784CD249EE31000162778 /* DailyAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyAchievement.swift; sourceTree = "<group>"; };
+		198784CE249EE31000162778 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		198784CF249EE31000162778 /* AchievementGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementGroup.swift; sourceTree = "<group>"; };
+		198784D1249EE31000162778 /* CommercePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommercePrice.swift; sourceTree = "<group>"; };
+		198784D2249EE31000162778 /* CommerceDelivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceDelivery.swift; sourceTree = "<group>"; };
+		198784D3249EE31000162778 /* CommerceListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceListing.swift; sourceTree = "<group>"; };
+		198784D4249EE31000162778 /* CommerceExchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceExchange.swift; sourceTree = "<group>"; };
+		198784D6249EE31000162778 /* AccountPVPStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPStats.swift; sourceTree = "<group>"; };
+		198784D7249EE31000162778 /* AccountMasteryPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMasteryPoints.swift; sourceTree = "<group>"; };
+		198784D8249EE31000162778 /* AccountPVPGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPGame.swift; sourceTree = "<group>"; };
+		198784D9249EE31000162778 /* AccountInventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInventoryItem.swift; sourceTree = "<group>"; };
+		198784DA249EE31000162778 /* AccountCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCharacter.swift; sourceTree = "<group>"; };
+		198784DB249EE31000162778 /* AccountTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTransaction.swift; sourceTree = "<group>"; };
+		198784DC249EE31000162778 /* AccountAchievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAchievement.swift; sourceTree = "<group>"; };
+		198784DD249EE31000162778 /* AccountWalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountWalletItem.swift; sourceTree = "<group>"; };
+		198784DE249EE31000162778 /* AccountPVPStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPVPStandings.swift; sourceTree = "<group>"; };
+		198784DF249EE31000162778 /* AccountToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountToken.swift; sourceTree = "<group>"; };
+		198784E0249EE31000162778 /* AccountBankItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBankItem.swift; sourceTree = "<group>"; };
+		198784E1249EE31000162778 /* AccountCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCat.swift; sourceTree = "<group>"; };
+		198784E2249EE31000162778 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		198784E3249EE31000162778 /* AccountFinisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountFinisher.swift; sourceTree = "<group>"; };
+		198784E4249EE31000162778 /* AccountMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMaterial.swift; sourceTree = "<group>"; };
+		198784E5249EE31000162778 /* AccountMastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMastery.swift; sourceTree = "<group>"; };
+		198784E7249EE31000162778 /* PVPSeasonLeaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPSeasonLeaderboard.swift; sourceTree = "<group>"; };
+		198784E8249EE31000162778 /* PVPSeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPSeason.swift; sourceTree = "<group>"; };
+		198784E9249EE31000162778 /* PVPRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPRank.swift; sourceTree = "<group>"; };
+		198784EB249EE31000162778 /* DetailedMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedMap.swift; sourceTree = "<group>"; };
+		198784EC249EE31000162778 /* Continent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
+		198784ED249EE31000162778 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		198784EE249EE31000162778 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		198784EF249EE31000162778 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		198784F0249EE31000162778 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		198784F1249EE31000162778 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		198784F2249EE31000162778 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		198784F4249EE31000162778 /* Specialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specialization.swift; sourceTree = "<group>"; };
+		198784F5249EE31000162778 /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		198784F6249EE31000162778 /* Legend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
+		198784F7249EE31000162778 /* Trait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
+		198784F8249EE31000162778 /* Profession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profession.swift; sourceTree = "<group>"; };
+		198784F9249EE31000162778 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		198784FA249EE31000162778 /* Mastery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mastery.swift; sourceTree = "<group>"; };
+		198784FB249EE31000162778 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		198784FC249EE31000162778 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		198784FE249EE31000162778 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		198784FF249EE31000162778 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		19878500249EE31000162778 /* PVPAmulet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPAmulet.swift; sourceTree = "<group>"; };
+		19878501249EE31000162778 /* ItemStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStats.swift; sourceTree = "<group>"; };
+		19878502249EE31000162778 /* Skin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
+		19878503249EE31000162778 /* Finisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finisher.swift; sourceTree = "<group>"; };
+		19878504249EE31000162778 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		19878506249EE31000162778 /* BackstoryQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstoryQuestion.swift; sourceTree = "<group>"; };
+		19878507249EE31000162778 /* StorySeason.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySeason.swift; sourceTree = "<group>"; };
+		19878508249EE31000162778 /* BackstoryAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstoryAnswer.swift; sourceTree = "<group>"; };
+		19878509249EE31000162778 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		1987850B249EE31100162778 /* WVWAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWAbility.swift; sourceTree = "<group>"; };
+		1987850C249EE31100162778 /* WVWMatchScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchScore.swift; sourceTree = "<group>"; };
+		1987850D249EE31100162778 /* WVWMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatch.swift; sourceTree = "<group>"; };
+		1987850E249EE31100162778 /* WVWMatchStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchStats.swift; sourceTree = "<group>"; };
+		1987850F249EE31100162778 /* WVWUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWUpgrade.swift; sourceTree = "<group>"; };
+		19878510249EE31100162778 /* WVWObjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWObjective.swift; sourceTree = "<group>"; };
+		19878511249EE31100162778 /* WVWRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWRank.swift; sourceTree = "<group>"; };
+		19878512249EE31100162778 /* WVWMatchOverview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWMatchOverview.swift; sourceTree = "<group>"; };
+		19878514249EE31100162778 /* GuildDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildDetails.swift; sourceTree = "<group>"; };
+		19878515249EE31100162778 /* GuildEmblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildEmblem.swift; sourceTree = "<group>"; };
+		19878516249EE31100162778 /* GuildStash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildStash.swift; sourceTree = "<group>"; };
+		19878517249EE31100162778 /* Permissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
+		19878518249EE31100162778 /* GuildLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildLog.swift; sourceTree = "<group>"; };
+		19878519249EE31100162778 /* GuildMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildMember.swift; sourceTree = "<group>"; };
+		1987851A249EE31100162778 /* GuildUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildUpgrade.swift; sourceTree = "<group>"; };
+		1987851B249EE31100162778 /* GuildRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildRank.swift; sourceTree = "<group>"; };
+		1987851C249EE31100162778 /* GuildTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTreasury.swift; sourceTree = "<group>"; };
+		1987851D249EE31100162778 /* GuildTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTeam.swift; sourceTree = "<group>"; };
+		1987851E249EE31100162778 /* GW2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2Client.swift; sourceTree = "<group>"; };
+		1987858F249EE32F00162778 /* GameMechanicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMechanicsTests.swift; sourceTree = "<group>"; };
+		19878590249EE32F00162778 /* WVWTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVWTests.swift; sourceTree = "<group>"; };
+		19878591249EE32F00162778 /* PVPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVPTests.swift; sourceTree = "<group>"; };
+		19878592249EE32F00162778 /* ItemsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTests.swift; sourceTree = "<group>"; };
+		19878593249EE32F00162778 /* TradingPostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingPostTests.swift; sourceTree = "<group>"; };
+		19878594249EE32F00162778 /* MiscTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscTests.swift; sourceTree = "<group>"; };
+		19878595249EE32F00162778 /* StoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTests.swift; sourceTree = "<group>"; };
+		19878596249EE32F00162778 /* GuildAuthenticatedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildAuthenticatedTests.swift; sourceTree = "<group>"; };
+		19878597249EE32F00162778 /* GW2APITestVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GW2APITestVariables.swift; sourceTree = "<group>"; };
+		19878598249EE32F00162778 /* AuthenticatedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedTests.swift; sourceTree = "<group>"; };
+		19878599249EE32F00162778 /* MapInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfoTests.swift; sourceTree = "<group>"; };
+		1987859A249EE32F00162778 /* AchievementsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsTests.swift; sourceTree = "<group>"; };
+		1987859C249EE32F00162778 /* GuildTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildTests.swift; sourceTree = "<group>"; };
+		198785AE24A0505100162778 /* AccountRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequests.swift; sourceTree = "<group>"; };
+		198785B224A050E000162778 /* CharacterRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequests.swift; sourceTree = "<group>"; };
+		198785D224A05E3E00162778 /* GW2ClientVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GW2ClientVersion.swift; sourceTree = "<group>"; };
+		198785DF24A07B7D00162778 /* test_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1984C29321E7BBA000C9155A /* Frameworks */ = {
+		19878483249EE2CF00162778 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1984C3B121E7BC4500C9155A /* GenericAPIClient.framework in Frameworks */,
-				DEF4120A02AEDD31D7B82178 /* Pods_GW2API.framework in Frameworks */,
+				198785AD249EE37C00162778 /* APIClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1984C29C21E7BBA000C9155A /* Frameworks */ = {
+		1987848C249EE2CF00162778 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1984C2A021E7BBA000C9155A /* GW2API.framework in Frameworks */,
-				633DE8EC3FED855D76882323 /* Pods_GW2APITests.framework in Frameworks */,
+				19878490249EE2CF00162778 /* GW2API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1984C28C21E7BBA000C9155A = {
+		1987847C249EE2CF00162778 = {
 			isa = PBXGroup;
 			children = (
-				1984C29821E7BBA000C9155A /* GW2API */,
-				1984C2A321E7BBA000C9155A /* GW2APITests */,
-				1984C29721E7BBA000C9155A /* Products */,
-				5AEAA7F7BC6853D85318E9E7 /* Pods */,
-				2DD3E2119BAEE0A328BE6A18 /* Frameworks */,
+				19878488249EE2CF00162778 /* Source */,
+				19878493249EE2CF00162778 /* Tests */,
+				19878487249EE2CF00162778 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1984C29721E7BBA000C9155A /* Products */ = {
+		19878487249EE2CF00162778 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1984C29621E7BBA000C9155A /* GW2API.framework */,
-				1984C29F21E7BBA000C9155A /* GW2APITests.xctest */,
+				19878486249EE2CF00162778 /* GW2API.framework */,
+				1987848F249EE2CF00162778 /* GW2APITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1984C29821E7BBA000C9155A /* GW2API */ = {
+		19878488249EE2CF00162778 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2B321E7BBB300C9155A /* Endpoints */,
-				1984C32B21E7BBB300C9155A /* GW2Client.swift */,
-				1984C2CC21E7BBB300C9155A /* JSON Models */,
-				1984C2B021E7BBB300C9155A /* Util */,
-				1984C29921E7BBA000C9155A /* GW2API.h */,
-				1984C29A21E7BBA000C9155A /* Info.plist */,
+				1987848A249EE2CF00162778 /* Info.plist */,
+				19878489249EE2CF00162778 /* GW2API.h */,
+				1987851E249EE31100162778 /* GW2Client.swift */,
+				198784A2249EE31000162778 /* Clients */,
+				198784B2249EE31000162778 /* Requests */,
+				198784A0249EE31000162778 /* Extensions */,
+				198784BE249EE31000162778 /* JSON Models */,
+				198784AF249EE31000162778 /* Util */,
 			);
-			path = GW2API;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		1984C2A321E7BBA000C9155A /* GW2APITests */ = {
+		19878493249EE2CF00162778 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				19F5592B21E80A8A007F570D /* GW2APITestVariables.swift */,
-				1984C39E21E7BBC500C9155A /* AchievementsTests.swift */,
-				1984C39C21E7BBC500C9155A /* AuthenticatedTests.swift */,
-				1984C39A21E7BBC400C9155A /* GameMechanicsTests.swift */,
-				1984C39D21E7BBC500C9155A /* GuildAuthenticatedTests.swift */,
-				1984C39921E7BBC400C9155A /* GuildTests.swift */,
-				1984C3A021E7BBC500C9155A /* ItemsTests.swift */,
-				1984C3A221E7BBC500C9155A /* MapInfoTests.swift */,
-				1984C3A121E7BBC500C9155A /* MiscTests.swift */,
-				1984C3A321E7BBC500C9155A /* PVPTests.swift */,
-				1984C39F21E7BBC500C9155A /* StoryTests.swift */,
-				1984C39821E7BBC400C9155A /* TradingPostTests.swift */,
-				1984C39B21E7BBC400C9155A /* WVWTests.swift */,
-				1984C2A621E7BBA000C9155A /* Info.plist */,
+				198785DF24A07B7D00162778 /* test_data.json */,
+				19878597249EE32F00162778 /* GW2APITestVariables.swift */,
+				1987859A249EE32F00162778 /* AchievementsTests.swift */,
+				19878598249EE32F00162778 /* AuthenticatedTests.swift */,
+				1987858F249EE32F00162778 /* GameMechanicsTests.swift */,
+				1987859C249EE32F00162778 /* GuildTests.swift */,
+				19878596249EE32F00162778 /* GuildAuthenticatedTests.swift */,
+				19878592249EE32F00162778 /* ItemsTests.swift */,
+				19878599249EE32F00162778 /* MapInfoTests.swift */,
+				19878594249EE32F00162778 /* MiscTests.swift */,
+				19878591249EE32F00162778 /* PVPTests.swift */,
+				19878595249EE32F00162778 /* StoryTests.swift */,
+				19878593249EE32F00162778 /* TradingPostTests.swift */,
+				19878590249EE32F00162778 /* WVWTests.swift */,
+				19878496249EE2CF00162778 /* Info.plist */,
 			);
-			path = GW2APITests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		1984C2B021E7BBB300C9155A /* Util */ = {
+		198784A0249EE31000162778 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2B121E7BBB300C9155A /* GW2APIClient.swift */,
-				1984C2B221E7BBB300C9155A /* APIUtil.swift */,
-				194E0D1321E7E5710037D6C7 /* GW2ClientLanguage.swift */,
+				198784A1249EE31000162778 /* String+regex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		198784A2249EE31000162778 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				198784A3249EE31000162778 /* ItemsClient.swift */,
+				198784A4249EE31000162778 /* StoryClient.swift */,
+				198784A5249EE31000162778 /* AuthenticatedClient.swift */,
+				198784A6249EE31000162778 /* PVPClient.swift */,
+				198784A7249EE31000162778 /* GuildClient.swift */,
+				198784A8249EE31000162778 /* GW2APIClient.swift */,
+				198784A9249EE31000162778 /* MapInfoClient.swift */,
+				198784AA249EE31000162778 /* MiscClient.swift */,
+				198784AB249EE31000162778 /* AchievementsClient.swift */,
+				198784AC249EE31000162778 /* GameMechanicsClient.swift */,
+				198784AD249EE31000162778 /* TradingPostClient.swift */,
+				198784AE249EE31000162778 /* WVWClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		198784AF249EE31000162778 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				198784B0249EE31000162778 /* GW2ClientLanguage.swift */,
+				198785D224A05E3E00162778 /* GW2ClientVersion.swift */,
+				198784B1249EE31000162778 /* APIUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		1984C2B321E7BBB300C9155A /* Endpoints */ = {
+		198784B2249EE31000162778 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2B421E7BBB300C9155A /* endpoints */,
-				1984C2C021E7BBB300C9155A /* client */,
+				198785AE24A0505100162778 /* AccountRequests.swift */,
+				198784BD249EE31000162778 /* AchievementsRequests.swift */,
+				198785B224A050E000162778 /* CharacterRequests.swift */,
+				198784B8249EE31000162778 /* GuildRequests.swift */,
+				198784B6249EE31000162778 /* ItemsRequests.swift */,
+				198784B3249EE31000162778 /* StoryRequests.swift */,
+				198784B4249EE31000162778 /* TradingPostRequests.swift */,
+				198784B5249EE31000162778 /* WVWRequests.swift */,
+				198784B7249EE31000162778 /* MiscRequests.swift */,
+				198784B9249EE31000162778 /* MapInfoRequests.swift */,
+				198784BA249EE31000162778 /* PVPRequests.swift */,
+				198784BC249EE31000162778 /* GameMechanicsRequests.swift */,
 			);
-			path = Endpoints;
+			path = Requests;
 			sourceTree = "<group>";
 		};
-		1984C2B421E7BBB300C9155A /* endpoints */ = {
+		198784BE249EE31000162778 /* JSON Models */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2B521E7BBB300C9155A /* StoryEP.swift */,
-				1984C2B621E7BBB300C9155A /* TradingPostEP.swift */,
-				1984C2B721E7BBB300C9155A /* WVWEP.swift */,
-				1984C2B821E7BBB300C9155A /* ItemsEP.swift */,
-				1984C2B921E7BBB300C9155A /* MiscEP.swift */,
-				1984C2BA21E7BBB300C9155A /* GuildEP.swift */,
-				1984C2BB21E7BBB300C9155A /* MapInfoEP.swift */,
-				1984C2BC21E7BBB300C9155A /* PVPEP.swift */,
-				1984C2BD21E7BBB300C9155A /* AuthenticatedEP.swift */,
-				1984C2BE21E7BBB300C9155A /* GameMechanicsEP.swift */,
-				1984C2BF21E7BBB300C9155A /* AchievementsEP.swift */,
-			);
-			path = endpoints;
-			sourceTree = "<group>";
-		};
-		1984C2C021E7BBB300C9155A /* client */ = {
-			isa = PBXGroup;
-			children = (
-				1984C2C121E7BBB300C9155A /* ItemsClient.swift */,
-				1984C2C221E7BBB300C9155A /* StoryClient.swift */,
-				1984C2C321E7BBB300C9155A /* AuthenticatedClient.swift */,
-				1984C2C421E7BBB300C9155A /* PVPClient.swift */,
-				1984C2C521E7BBB300C9155A /* GuildClient.swift */,
-				1984C2C621E7BBB300C9155A /* MapInfoClient.swift */,
-				1984C2C721E7BBB300C9155A /* MiscClient.swift */,
-				1984C2C821E7BBB300C9155A /* AchievementsClient.swift */,
-				1984C2C921E7BBB300C9155A /* GameMechanicsClient.swift */,
-				1984C2CA21E7BBB300C9155A /* TradingPostClient.swift */,
-				1984C2CB21E7BBB300C9155A /* WVWClient.swift */,
-			);
-			path = client;
-			sourceTree = "<group>";
-		};
-		1984C2CC21E7BBB300C9155A /* JSON Models */ = {
-			isa = PBXGroup;
-			children = (
-				1984C2CD21E7BBB300C9155A /* Misc */,
-				1984C2D821E7BBB300C9155A /* Achievements */,
-				1984C2DD21E7BBB300C9155A /* Trading Post */,
-				1984C2E221E7BBB300C9155A /* Authenticated */,
-				1984C2F321E7BBB300C9155A /* Structured PVP */,
-				1984C2F721E7BBB300C9155A /* Map Information */,
-				1984C30021E7BBB300C9155A /* Game Mechanics */,
-				1984C30A21E7BBB300C9155A /* Items */,
-				1984C31221E7BBB300C9155A /* Story */,
-				1984C31721E7BBB300C9155A /* World vs. World */,
-				1984C32021E7BBB300C9155A /* Guild */,
+				198784BF249EE31000162778 /* Misc */,
+				198784CB249EE31000162778 /* Achievements */,
+				198784D0249EE31000162778 /* Trading Post */,
+				198784D5249EE31000162778 /* Authenticated */,
+				198784E6249EE31000162778 /* Structured PVP */,
+				198784EA249EE31000162778 /* Map Information */,
+				198784F3249EE31000162778 /* Game Mechanics */,
+				198784FD249EE31000162778 /* Items */,
+				19878505249EE31000162778 /* Story */,
+				1987850A249EE31100162778 /* World vs. World */,
+				19878513249EE31100162778 /* Guild */,
 			);
 			path = "JSON Models";
 			sourceTree = "<group>";
 		};
-		1984C2CD21E7BBB300C9155A /* Misc */ = {
+		198784BF249EE31000162778 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2CE21E7BBB300C9155A /* Raid.swift */,
-				1984C2CF21E7BBB300C9155A /* Dungeon.swift */,
-				1984C2D021E7BBB300C9155A /* Currency.swift */,
-				1984C2D121E7BBB300C9155A /* Title.swift */,
-				1984C2D221E7BBB300C9155A /* File.swift */,
-				1984C2D321E7BBB300C9155A /* Build.swift */,
-				1984C2D421E7BBB300C9155A /* World.swift */,
-				1984C2D521E7BBB300C9155A /* Minipet.swift */,
-				1984C2D621E7BBB300C9155A /* Quaggan.swift */,
-				1984C2D721E7BBB300C9155A /* Color.swift */,
-				194E0D1521E7EBD60037D6C7 /* Mount.swift */,
+				198784C0249EE31000162778 /* Raid.swift */,
+				198784C1249EE31000162778 /* Dungeon.swift */,
+				198784C2249EE31000162778 /* Currency.swift */,
+				198784C3249EE31000162778 /* Mount.swift */,
+				198784C4249EE31000162778 /* Title.swift */,
+				198784C5249EE31000162778 /* File.swift */,
+				198784C6249EE31000162778 /* Build.swift */,
+				198784C7249EE31000162778 /* World.swift */,
+				198784C8249EE31000162778 /* Minipet.swift */,
+				198784C9249EE31000162778 /* Quaggan.swift */,
+				198784CA249EE31000162778 /* Color.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
 		};
-		1984C2D821E7BBB300C9155A /* Achievements */ = {
+		198784CB249EE31000162778 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2D921E7BBB300C9155A /* AchievementCategory.swift */,
-				1984C2DA21E7BBB300C9155A /* DailyAchievement.swift */,
-				1984C2DB21E7BBB300C9155A /* Achievement.swift */,
-				1984C2DC21E7BBB300C9155A /* AchievementGroup.swift */,
+				198784CC249EE31000162778 /* AchievementCategory.swift */,
+				198784CD249EE31000162778 /* DailyAchievement.swift */,
+				198784CE249EE31000162778 /* Achievement.swift */,
+				198784CF249EE31000162778 /* AchievementGroup.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
 		};
-		1984C2DD21E7BBB300C9155A /* Trading Post */ = {
+		198784D0249EE31000162778 /* Trading Post */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2DE21E7BBB300C9155A /* CommercePrice.swift */,
-				1984C2DF21E7BBB300C9155A /* CommerceDelivery.swift */,
-				1984C2E021E7BBB300C9155A /* CommerceListing.swift */,
-				1984C2E121E7BBB300C9155A /* CommerceExchange.swift */,
+				198784D1249EE31000162778 /* CommercePrice.swift */,
+				198784D2249EE31000162778 /* CommerceDelivery.swift */,
+				198784D3249EE31000162778 /* CommerceListing.swift */,
+				198784D4249EE31000162778 /* CommerceExchange.swift */,
 			);
 			path = "Trading Post";
 			sourceTree = "<group>";
 		};
-		1984C2E221E7BBB300C9155A /* Authenticated */ = {
+		198784D5249EE31000162778 /* Authenticated */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2E321E7BBB300C9155A /* AccountPVPStats.swift */,
-				1984C2E421E7BBB300C9155A /* AccountMasteryPoints.swift */,
-				1984C2E521E7BBB300C9155A /* AccountPVPGame.swift */,
-				1984C2E621E7BBB300C9155A /* AccountInventoryItem.swift */,
-				1984C2E721E7BBB300C9155A /* AccountCharacter.swift */,
-				1984C2E821E7BBB300C9155A /* AccountTransaction.swift */,
-				1984C2E921E7BBB300C9155A /* AccountAchievement.swift */,
-				1984C2EA21E7BBB300C9155A /* AccountWalletItem.swift */,
-				1984C2EB21E7BBB300C9155A /* AccountPVPStandings.swift */,
-				1984C2EC21E7BBB300C9155A /* AccountToken.swift */,
-				1984C2ED21E7BBB300C9155A /* AccountBankItem.swift */,
-				1984C2EE21E7BBB300C9155A /* AccountCat.swift */,
-				1984C2EF21E7BBB300C9155A /* Account.swift */,
-				1984C2F021E7BBB300C9155A /* AccountFinisher.swift */,
-				1984C2F121E7BBB300C9155A /* AccountMaterial.swift */,
-				1984C2F221E7BBB300C9155A /* AccountMastery.swift */,
+				198784D6249EE31000162778 /* AccountPVPStats.swift */,
+				198784D7249EE31000162778 /* AccountMasteryPoints.swift */,
+				198784D8249EE31000162778 /* AccountPVPGame.swift */,
+				198784D9249EE31000162778 /* AccountInventoryItem.swift */,
+				198784DA249EE31000162778 /* AccountCharacter.swift */,
+				198784DB249EE31000162778 /* AccountTransaction.swift */,
+				198784DC249EE31000162778 /* AccountAchievement.swift */,
+				198784DD249EE31000162778 /* AccountWalletItem.swift */,
+				198784DE249EE31000162778 /* AccountPVPStandings.swift */,
+				198784DF249EE31000162778 /* AccountToken.swift */,
+				198784E0249EE31000162778 /* AccountBankItem.swift */,
+				198784E1249EE31000162778 /* AccountCat.swift */,
+				198784E2249EE31000162778 /* Account.swift */,
+				198784E3249EE31000162778 /* AccountFinisher.swift */,
+				198784E4249EE31000162778 /* AccountMaterial.swift */,
+				198784E5249EE31000162778 /* AccountMastery.swift */,
 			);
 			path = Authenticated;
 			sourceTree = "<group>";
 		};
-		1984C2F321E7BBB300C9155A /* Structured PVP */ = {
+		198784E6249EE31000162778 /* Structured PVP */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2F421E7BBB300C9155A /* PVPSeasonLeaderboard.swift */,
-				1984C2F521E7BBB300C9155A /* PVPSeason.swift */,
-				1984C2F621E7BBB300C9155A /* PVPRank.swift */,
+				198784E7249EE31000162778 /* PVPSeasonLeaderboard.swift */,
+				198784E8249EE31000162778 /* PVPSeason.swift */,
+				198784E9249EE31000162778 /* PVPRank.swift */,
 			);
 			path = "Structured PVP";
 			sourceTree = "<group>";
 		};
-		1984C2F721E7BBB300C9155A /* Map Information */ = {
+		198784EA249EE31000162778 /* Map Information */ = {
 			isa = PBXGroup;
 			children = (
-				1984C2F821E7BBB300C9155A /* DetailedMap.swift */,
-				1984C2F921E7BBB300C9155A /* Continent.swift */,
-				1984C2FA21E7BBB300C9155A /* Region.swift */,
-				1984C2FB21E7BBB300C9155A /* Sector.swift */,
-				1984C2FC21E7BBB300C9155A /* POI.swift */,
-				1984C2FD21E7BBB300C9155A /* Map.swift */,
-				1984C2FE21E7BBB300C9155A /* Task.swift */,
-				1984C2FF21E7BBB300C9155A /* Floor.swift */,
+				198784EB249EE31000162778 /* DetailedMap.swift */,
+				198784EC249EE31000162778 /* Continent.swift */,
+				198784ED249EE31000162778 /* Region.swift */,
+				198784EE249EE31000162778 /* Sector.swift */,
+				198784EF249EE31000162778 /* POI.swift */,
+				198784F0249EE31000162778 /* Map.swift */,
+				198784F1249EE31000162778 /* Task.swift */,
+				198784F2249EE31000162778 /* Floor.swift */,
 			);
 			path = "Map Information";
 			sourceTree = "<group>";
 		};
-		1984C30021E7BBB300C9155A /* Game Mechanics */ = {
+		198784F3249EE31000162778 /* Game Mechanics */ = {
 			isa = PBXGroup;
 			children = (
-				1984C30121E7BBB300C9155A /* Specialization.swift */,
-				1984C30221E7BBB300C9155A /* Race.swift */,
-				1984C30321E7BBB300C9155A /* Legend.swift */,
-				1984C30421E7BBB300C9155A /* Trait.swift */,
-				1984C30521E7BBB300C9155A /* Profession.swift */,
-				1984C30621E7BBB300C9155A /* Outfit.swift */,
-				1984C30721E7BBB300C9155A /* Mastery.swift */,
-				1984C30821E7BBB300C9155A /* Pet.swift */,
-				1984C30921E7BBB300C9155A /* Skill.swift */,
+				198784F4249EE31000162778 /* Specialization.swift */,
+				198784F5249EE31000162778 /* Race.swift */,
+				198784F6249EE31000162778 /* Legend.swift */,
+				198784F7249EE31000162778 /* Trait.swift */,
+				198784F8249EE31000162778 /* Profession.swift */,
+				198784F9249EE31000162778 /* Outfit.swift */,
+				198784FA249EE31000162778 /* Mastery.swift */,
+				198784FB249EE31000162778 /* Pet.swift */,
+				198784FC249EE31000162778 /* Skill.swift */,
 			);
 			path = "Game Mechanics";
 			sourceTree = "<group>";
 		};
-		1984C30A21E7BBB300C9155A /* Items */ = {
+		198784FD249EE31000162778 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				1984C30B21E7BBB300C9155A /* Recipe.swift */,
-				1984C30C21E7BBB300C9155A /* Item.swift */,
-				1984C30D21E7BBB300C9155A /* PVPAmulet.swift */,
-				1984C30E21E7BBB300C9155A /* ItemStats.swift */,
-				1984C30F21E7BBB300C9155A /* Skin.swift */,
-				1984C31021E7BBB300C9155A /* Finisher.swift */,
-				1984C31121E7BBB300C9155A /* Material.swift */,
+				198784FE249EE31000162778 /* Recipe.swift */,
+				198784FF249EE31000162778 /* Item.swift */,
+				19878500249EE31000162778 /* PVPAmulet.swift */,
+				19878501249EE31000162778 /* ItemStats.swift */,
+				19878502249EE31000162778 /* Skin.swift */,
+				19878503249EE31000162778 /* Finisher.swift */,
+				19878504249EE31000162778 /* Material.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
 		};
-		1984C31221E7BBB300C9155A /* Story */ = {
+		19878505249EE31000162778 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				1984C31321E7BBB300C9155A /* BackstoryQuestion.swift */,
-				1984C31421E7BBB300C9155A /* StorySeason.swift */,
-				1984C31521E7BBB300C9155A /* BackstoryAnswer.swift */,
-				1984C31621E7BBB300C9155A /* Story.swift */,
+				19878506249EE31000162778 /* BackstoryQuestion.swift */,
+				19878507249EE31000162778 /* StorySeason.swift */,
+				19878508249EE31000162778 /* BackstoryAnswer.swift */,
+				19878509249EE31000162778 /* Story.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
 		};
-		1984C31721E7BBB300C9155A /* World vs. World */ = {
+		1987850A249EE31100162778 /* World vs. World */ = {
 			isa = PBXGroup;
 			children = (
-				1984C31821E7BBB300C9155A /* WVWAbility.swift */,
-				1984C31921E7BBB300C9155A /* WVWMatchScore.swift */,
-				1984C31A21E7BBB300C9155A /* WVWMatch.swift */,
-				1984C31B21E7BBB300C9155A /* WVWMatchStats.swift */,
-				1984C31C21E7BBB300C9155A /* WVWUpgrade.swift */,
-				1984C31D21E7BBB300C9155A /* WVWObjective.swift */,
-				1984C31E21E7BBB300C9155A /* WVWRank.swift */,
-				1984C31F21E7BBB300C9155A /* WVWMatchOverview.swift */,
+				1987850B249EE31100162778 /* WVWAbility.swift */,
+				1987850C249EE31100162778 /* WVWMatchScore.swift */,
+				1987850D249EE31100162778 /* WVWMatch.swift */,
+				1987850E249EE31100162778 /* WVWMatchStats.swift */,
+				1987850F249EE31100162778 /* WVWUpgrade.swift */,
+				19878510249EE31100162778 /* WVWObjective.swift */,
+				19878511249EE31100162778 /* WVWRank.swift */,
+				19878512249EE31100162778 /* WVWMatchOverview.swift */,
 			);
 			path = "World vs. World";
 			sourceTree = "<group>";
 		};
-		1984C32021E7BBB300C9155A /* Guild */ = {
+		19878513249EE31100162778 /* Guild */ = {
 			isa = PBXGroup;
 			children = (
-				1984C32121E7BBB300C9155A /* GuildDetails.swift */,
-				1984C32221E7BBB300C9155A /* GuildEmblem.swift */,
-				1984C32321E7BBB300C9155A /* GuildStash.swift */,
-				1984C32421E7BBB300C9155A /* Permissions.swift */,
-				1984C32521E7BBB300C9155A /* GuildLog.swift */,
-				1984C32621E7BBB300C9155A /* GuildMember.swift */,
-				1984C32721E7BBB300C9155A /* GuildUpgrade.swift */,
-				1984C32821E7BBB300C9155A /* GuildRank.swift */,
-				1984C32921E7BBB300C9155A /* GuildTreasury.swift */,
-				1984C32A21E7BBB300C9155A /* GuildTeam.swift */,
+				19878514249EE31100162778 /* GuildDetails.swift */,
+				19878515249EE31100162778 /* GuildEmblem.swift */,
+				19878516249EE31100162778 /* GuildStash.swift */,
+				19878517249EE31100162778 /* Permissions.swift */,
+				19878518249EE31100162778 /* GuildLog.swift */,
+				19878519249EE31100162778 /* GuildMember.swift */,
+				1987851A249EE31100162778 /* GuildUpgrade.swift */,
+				1987851B249EE31100162778 /* GuildRank.swift */,
+				1987851C249EE31100162778 /* GuildTreasury.swift */,
+				1987851D249EE31100162778 /* GuildTeam.swift */,
 			);
 			path = Guild;
-			sourceTree = "<group>";
-		};
-		2DD3E2119BAEE0A328BE6A18 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1984C3B021E7BC4500C9155A /* GenericAPIClient.framework */,
-				B6637D657F28E7CEA194E434 /* Pods_GW2API.framework */,
-				0FCB8CE190133CA679A1759F /* Pods_GW2APITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5AEAA7F7BC6853D85318E9E7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				894EDB1ACAC05A9A9F529DBB /* Pods-GW2API.debug.xcconfig */,
-				E3737B0A44435860D571FEFD /* Pods-GW2API.release.xcconfig */,
-				16A8D7BE7478334F87A8EE88 /* Pods-GW2APITests.debug.xcconfig */,
-				9F4152AD79F2F2AD6001D733 /* Pods-GW2APITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1984C29121E7BBA000C9155A /* Headers */ = {
+		19878481249EE2CF00162778 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1984C2A721E7BBA000C9155A /* GW2API.h in Headers */,
+				19878497249EE2CF00162778 /* GW2API.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1984C29521E7BBA000C9155A /* GW2API */ = {
+		19878485249EE2CF00162778 /* GW2API */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1984C2AA21E7BBA000C9155A /* Build configuration list for PBXNativeTarget "GW2API" */;
+			buildConfigurationList = 1987849A249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2API" */;
 			buildPhases = (
-				E465273133C6FC5388F6724C /* [CP] Check Pods Manifest.lock */,
-				1984C29121E7BBA000C9155A /* Headers */,
-				1984C29221E7BBA000C9155A /* Sources */,
-				1984C29321E7BBA000C9155A /* Frameworks */,
-				1984C29421E7BBA000C9155A /* Resources */,
+				19878481249EE2CF00162778 /* Headers */,
+				19878482249EE2CF00162778 /* Sources */,
+				19878483249EE2CF00162778 /* Frameworks */,
+				19878484249EE2CF00162778 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GW2API;
+			packageProductDependencies = (
+				198785AC249EE37C00162778 /* APIClient */,
+			);
 			productName = GW2API;
-			productReference = 1984C29621E7BBA000C9155A /* GW2API.framework */;
+			productReference = 19878486249EE2CF00162778 /* GW2API.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1984C29E21E7BBA000C9155A /* GW2APITests */ = {
+		1987848E249EE2CF00162778 /* GW2APITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1984C2AD21E7BBA000C9155A /* Build configuration list for PBXNativeTarget "GW2APITests" */;
+			buildConfigurationList = 1987849D249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2APITests" */;
 			buildPhases = (
-				DAFEDC410E6E1FF8D8045FB8 /* [CP] Check Pods Manifest.lock */,
-				1984C29B21E7BBA000C9155A /* Sources */,
-				1984C29C21E7BBA000C9155A /* Frameworks */,
-				1984C29D21E7BBA000C9155A /* Resources */,
-				E144559BB2C51D79BA351861 /* [CP] Embed Pods Frameworks */,
+				1987848B249EE2CF00162778 /* Sources */,
+				1987848C249EE2CF00162778 /* Frameworks */,
+				1987848D249EE2CF00162778 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1984C2A221E7BBA000C9155A /* PBXTargetDependency */,
+				19878492249EE2CF00162778 /* PBXTargetDependency */,
 			);
 			name = GW2APITests;
 			productName = GW2APITests;
-			productReference = 1984C29F21E7BBA000C9155A /* GW2APITests.xctest */;
+			productReference = 1987848F249EE2CF00162778 /* GW2APITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1984C28D21E7BBA000C9155A /* Project object */ = {
+		1987847D249EE2CF00162778 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Jonathan Bailey";
 				TargetAttributes = {
-					1984C29521E7BBA000C9155A = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+					19878485249EE2CF00162778 = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
-					1984C29E21E7BBA000C9155A = {
-						CreatedOnToolsVersion = 10.1;
+					1987848E249EE2CF00162778 = {
+						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
-			buildConfigurationList = 1984C29021E7BBA000C9155A /* Build configuration list for PBXProject "GW2API" */;
+			buildConfigurationList = 19878480249EE2CF00162778 /* Build configuration list for PBXProject "GW2API" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 1984C28C21E7BBA000C9155A;
-			productRefGroup = 1984C29721E7BBA000C9155A /* Products */;
+			mainGroup = 1987847C249EE2CF00162778;
+			packageReferences = (
+				198785AB249EE37C00162778 /* XCRemoteSwiftPackageReference "APIClient" */,
+			);
+			productRefGroup = 19878487249EE2CF00162778 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1984C29521E7BBA000C9155A /* GW2API */,
-				1984C29E21E7BBA000C9155A /* GW2APITests */,
+				19878485249EE2CF00162778 /* GW2API */,
+				1987848E249EE2CF00162778 /* GW2APITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1984C29421E7BBA000C9155A /* Resources */ = {
+		19878484249EE2CF00162778 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1984C29D21E7BBA000C9155A /* Resources */ = {
+		1987848D249EE2CF00162778 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198785E024A07B7D00162778 /* test_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		DAFEDC410E6E1FF8D8045FB8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GW2APITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E144559BB2C51D79BA351861 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GW2APITests/Pods-GW2APITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GenericAPIClient/GenericAPIClient.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GenericAPIClient.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GW2APITests/Pods-GW2APITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E465273133C6FC5388F6724C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GW2API-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		1984C29221E7BBA000C9155A /* Sources */ = {
+		19878482249EE2CF00162778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1984C37C21E7BBB300C9155A /* PVPAmulet.swift in Sources */,
-				1984C36121E7BBB300C9155A /* AccountCat.swift in Sources */,
-				1984C38E21E7BBB300C9155A /* GuildEmblem.swift in Sources */,
-				1984C38321E7BBB300C9155A /* BackstoryAnswer.swift in Sources */,
-				1984C33E21E7BBB300C9155A /* MapInfoClient.swift in Sources */,
-				1984C33C21E7BBB300C9155A /* PVPClient.swift in Sources */,
-				1984C34921E7BBB300C9155A /* Build.swift in Sources */,
-				1984C35921E7BBB300C9155A /* AccountInventoryItem.swift in Sources */,
-				1984C36A21E7BBB300C9155A /* Continent.swift in Sources */,
-				194E0D1421E7E5710037D6C7 /* GW2ClientLanguage.swift in Sources */,
-				1984C36C21E7BBB300C9155A /* Sector.swift in Sources */,
-				1984C34E21E7BBB300C9155A /* AchievementCategory.swift in Sources */,
-				1984C35721E7BBB300C9155A /* AccountMasteryPoints.swift in Sources */,
-				1984C38021E7BBB300C9155A /* Material.swift in Sources */,
-				1984C35E21E7BBB300C9155A /* AccountPVPStandings.swift in Sources */,
-				1984C33F21E7BBB300C9155A /* MiscClient.swift in Sources */,
-				1984C33A21E7BBB300C9155A /* StoryClient.swift in Sources */,
-				1984C38821E7BBB300C9155A /* WVWMatchStats.swift in Sources */,
-				1984C36B21E7BBB300C9155A /* Region.swift in Sources */,
-				1984C38C21E7BBB300C9155A /* WVWMatchOverview.swift in Sources */,
-				1984C38221E7BBB300C9155A /* StorySeason.swift in Sources */,
-				1984C37521E7BBB300C9155A /* Profession.swift in Sources */,
-				1984C32E21E7BBB300C9155A /* StoryEP.swift in Sources */,
-				1984C34A21E7BBB300C9155A /* World.swift in Sources */,
-				1984C34821E7BBB300C9155A /* File.swift in Sources */,
-				1984C35D21E7BBB300C9155A /* AccountWalletItem.swift in Sources */,
-				1984C39221E7BBB300C9155A /* GuildMember.swift in Sources */,
-				1984C39321E7BBB300C9155A /* GuildUpgrade.swift in Sources */,
-				1984C39021E7BBB300C9155A /* Permissions.swift in Sources */,
-				1984C37221E7BBB300C9155A /* Race.swift in Sources */,
-				1984C38B21E7BBB300C9155A /* WVWRank.swift in Sources */,
-				1984C39521E7BBB300C9155A /* GuildTreasury.swift in Sources */,
-				1984C35121E7BBB300C9155A /* AchievementGroup.swift in Sources */,
-				1984C37B21E7BBB300C9155A /* Item.swift in Sources */,
-				1984C38421E7BBB300C9155A /* Story.swift in Sources */,
-				1984C38721E7BBB300C9155A /* WVWMatch.swift in Sources */,
-				1984C35021E7BBB300C9155A /* Achievement.swift in Sources */,
-				1984C37821E7BBB300C9155A /* Pet.swift in Sources */,
-				1984C34321E7BBB300C9155A /* WVWClient.swift in Sources */,
-				1984C33121E7BBB300C9155A /* ItemsEP.swift in Sources */,
-				1984C37D21E7BBB300C9155A /* ItemStats.swift in Sources */,
-				1984C35521E7BBB300C9155A /* CommerceExchange.swift in Sources */,
-				1984C34121E7BBB300C9155A /* GameMechanicsClient.swift in Sources */,
-				1984C33321E7BBB300C9155A /* GuildEP.swift in Sources */,
-				1984C37921E7BBB300C9155A /* Skill.swift in Sources */,
-				1984C37021E7BBB300C9155A /* Floor.swift in Sources */,
-				1984C39721E7BBB300C9155A /* GW2Client.swift in Sources */,
-				1984C35821E7BBB300C9155A /* AccountPVPGame.swift in Sources */,
-				1984C34621E7BBB300C9155A /* Currency.swift in Sources */,
-				1984C36021E7BBB300C9155A /* AccountBankItem.swift in Sources */,
-				1984C35621E7BBB300C9155A /* AccountPVPStats.swift in Sources */,
-				1984C36721E7BBB300C9155A /* PVPSeason.swift in Sources */,
-				1984C35421E7BBB300C9155A /* CommerceListing.swift in Sources */,
-				1984C33921E7BBB300C9155A /* ItemsClient.swift in Sources */,
-				1984C36821E7BBB300C9155A /* PVPRank.swift in Sources */,
-				1984C36F21E7BBB300C9155A /* Task.swift in Sources */,
-				1984C34C21E7BBB300C9155A /* Quaggan.swift in Sources */,
-				1984C36921E7BBB300C9155A /* DetailedMap.swift in Sources */,
-				1984C37621E7BBB300C9155A /* Outfit.swift in Sources */,
-				1984C33421E7BBB300C9155A /* MapInfoEP.swift in Sources */,
-				1984C33B21E7BBB300C9155A /* AuthenticatedClient.swift in Sources */,
-				1984C33D21E7BBB300C9155A /* GuildClient.swift in Sources */,
-				1984C34421E7BBB300C9155A /* Raid.swift in Sources */,
-				1984C32D21E7BBB300C9155A /* APIUtil.swift in Sources */,
-				1984C35F21E7BBB300C9155A /* AccountToken.swift in Sources */,
-				1984C36421E7BBB300C9155A /* AccountMaterial.swift in Sources */,
-				1984C36521E7BBB300C9155A /* AccountMastery.swift in Sources */,
-				1984C35221E7BBB300C9155A /* CommercePrice.swift in Sources */,
-				1984C39421E7BBB300C9155A /* GuildRank.swift in Sources */,
-				1984C37F21E7BBB300C9155A /* Finisher.swift in Sources */,
-				1984C37321E7BBB300C9155A /* Legend.swift in Sources */,
-				1984C34721E7BBB300C9155A /* Title.swift in Sources */,
-				1984C35A21E7BBB300C9155A /* AccountCharacter.swift in Sources */,
-				1984C39621E7BBB300C9155A /* GuildTeam.swift in Sources */,
-				1984C34D21E7BBB300C9155A /* Color.swift in Sources */,
-				1984C37121E7BBB300C9155A /* Specialization.swift in Sources */,
-				1984C37721E7BBB300C9155A /* Mastery.swift in Sources */,
-				1984C36D21E7BBB300C9155A /* POI.swift in Sources */,
-				1984C33521E7BBB300C9155A /* PVPEP.swift in Sources */,
-				1984C32F21E7BBB300C9155A /* TradingPostEP.swift in Sources */,
-				1984C38121E7BBB300C9155A /* BackstoryQuestion.swift in Sources */,
-				1984C33221E7BBB300C9155A /* MiscEP.swift in Sources */,
-				1984C34021E7BBB300C9155A /* AchievementsClient.swift in Sources */,
-				1984C38F21E7BBB300C9155A /* GuildStash.swift in Sources */,
-				1984C33021E7BBB300C9155A /* WVWEP.swift in Sources */,
-				1984C35B21E7BBB300C9155A /* AccountTransaction.swift in Sources */,
-				1984C34221E7BBB300C9155A /* TradingPostClient.swift in Sources */,
-				1984C38521E7BBB300C9155A /* WVWAbility.swift in Sources */,
-				1984C36221E7BBB300C9155A /* Account.swift in Sources */,
-				1984C35C21E7BBB300C9155A /* AccountAchievement.swift in Sources */,
-				1984C37E21E7BBB300C9155A /* Skin.swift in Sources */,
-				194E0D1621E7EBD60037D6C7 /* Mount.swift in Sources */,
-				1984C39121E7BBB300C9155A /* GuildLog.swift in Sources */,
-				1984C35321E7BBB300C9155A /* CommerceDelivery.swift in Sources */,
-				1984C34F21E7BBB300C9155A /* DailyAchievement.swift in Sources */,
-				1984C33821E7BBB300C9155A /* AchievementsEP.swift in Sources */,
-				1984C37A21E7BBB300C9155A /* Recipe.swift in Sources */,
-				1984C32C21E7BBB300C9155A /* GW2APIClient.swift in Sources */,
-				1984C38621E7BBB300C9155A /* WVWMatchScore.swift in Sources */,
-				1984C36621E7BBB300C9155A /* PVPSeasonLeaderboard.swift in Sources */,
-				1984C36E21E7BBB300C9155A /* Map.swift in Sources */,
-				1984C33721E7BBB300C9155A /* GameMechanicsEP.swift in Sources */,
-				1984C37421E7BBB300C9155A /* Trait.swift in Sources */,
-				1984C34521E7BBB300C9155A /* Dungeon.swift in Sources */,
-				1984C38D21E7BBB300C9155A /* GuildDetails.swift in Sources */,
-				1984C36321E7BBB300C9155A /* AccountFinisher.swift in Sources */,
-				1984C38921E7BBB300C9155A /* WVWUpgrade.swift in Sources */,
-				1984C34B21E7BBB300C9155A /* Minipet.swift in Sources */,
-				1984C33621E7BBB300C9155A /* AuthenticatedEP.swift in Sources */,
-				1984C38A21E7BBB300C9155A /* WVWObjective.swift in Sources */,
+				19878566249EE31100162778 /* Floor.swift in Sources */,
+				19878554249EE31100162778 /* AccountPVPStandings.swift in Sources */,
+				1987858C249EE31100162778 /* GuildTeam.swift in Sources */,
+				19878549249EE31100162778 /* CommerceDelivery.swift in Sources */,
+				19878553249EE31100162778 /* AccountWalletItem.swift in Sources */,
+				19878577249EE31100162778 /* BackstoryQuestion.swift in Sources */,
+				1987854A249EE31100162778 /* CommerceListing.swift in Sources */,
+				19878561249EE31100162778 /* Region.swift in Sources */,
+				1987852A249EE31100162778 /* TradingPostClient.swift in Sources */,
+				198785B324A050E000162778 /* CharacterRequests.swift in Sources */,
+				1987853C249EE31100162778 /* Mount.swift in Sources */,
+				19878576249EE31100162778 /* Material.swift in Sources */,
+				19878557249EE31100162778 /* AccountCat.swift in Sources */,
+				1987858A249EE31100162778 /* GuildRank.swift in Sources */,
+				19878570249EE31100162778 /* Recipe.swift in Sources */,
+				19878571249EE31100162778 /* Item.swift in Sources */,
+				1987858D249EE31100162778 /* GW2Client.swift in Sources */,
+				19878548249EE31100162778 /* CommercePrice.swift in Sources */,
+				19878528249EE31100162778 /* AchievementsClient.swift in Sources */,
+				19878579249EE31100162778 /* BackstoryAnswer.swift in Sources */,
+				19878564249EE31100162778 /* Map.swift in Sources */,
+				1987857C249EE31100162778 /* WVWMatchScore.swift in Sources */,
+				19878558249EE31100162778 /* Account.swift in Sources */,
+				19878556249EE31100162778 /* AccountBankItem.swift in Sources */,
+				19878521249EE31100162778 /* StoryClient.swift in Sources */,
+				19878525249EE31100162778 /* GW2APIClient.swift in Sources */,
+				1987853F249EE31100162778 /* Build.swift in Sources */,
+				1987853E249EE31100162778 /* File.swift in Sources */,
+				1987857D249EE31100162778 /* WVWMatch.swift in Sources */,
+				19878523249EE31100162778 /* PVPClient.swift in Sources */,
+				1987855D249EE31100162778 /* PVPSeason.swift in Sources */,
+				19878578249EE31100162778 /* StorySeason.swift in Sources */,
+				1987855A249EE31100162778 /* AccountMaterial.swift in Sources */,
+				1987853B249EE31100162778 /* Currency.swift in Sources */,
+				1987854F249EE31100162778 /* AccountInventoryItem.swift in Sources */,
+				19878527249EE31100162778 /* MiscClient.swift in Sources */,
+				19878586249EE31100162778 /* Permissions.swift in Sources */,
+				198785D324A05E3E00162778 /* GW2ClientVersion.swift in Sources */,
+				19878543249EE31100162778 /* Color.swift in Sources */,
+				1987854D249EE31100162778 /* AccountMasteryPoints.swift in Sources */,
+				1987852D249EE31100162778 /* APIUtil.swift in Sources */,
+				19878583249EE31100162778 /* GuildDetails.swift in Sources */,
+				19878575249EE31100162778 /* Finisher.swift in Sources */,
+				19878535249EE31100162778 /* PVPRequests.swift in Sources */,
+				1987852B249EE31100162778 /* WVWClient.swift in Sources */,
+				19878560249EE31100162778 /* Continent.swift in Sources */,
+				19878541249EE31100162778 /* Minipet.swift in Sources */,
+				19878569249EE31100162778 /* Legend.swift in Sources */,
+				1987856C249EE31100162778 /* Outfit.swift in Sources */,
+				19878551249EE31100162778 /* AccountTransaction.swift in Sources */,
+				19878559249EE31100162778 /* AccountFinisher.swift in Sources */,
+				19878524249EE31100162778 /* GuildClient.swift in Sources */,
+				19878550249EE31100162778 /* AccountCharacter.swift in Sources */,
+				19878567249EE31100162778 /* Specialization.swift in Sources */,
+				19878529249EE31100162778 /* GameMechanicsClient.swift in Sources */,
+				19878580249EE31100162778 /* WVWObjective.swift in Sources */,
+				1987856F249EE31100162778 /* Skill.swift in Sources */,
+				19878531249EE31100162778 /* ItemsRequests.swift in Sources */,
+				19878568249EE31100162778 /* Race.swift in Sources */,
+				1987853A249EE31100162778 /* Dungeon.swift in Sources */,
+				19878582249EE31100162778 /* WVWMatchOverview.swift in Sources */,
+				19878534249EE31100162778 /* MapInfoRequests.swift in Sources */,
+				19878563249EE31100162778 /* POI.swift in Sources */,
+				1987855F249EE31100162778 /* DetailedMap.swift in Sources */,
+				19878589249EE31100162778 /* GuildUpgrade.swift in Sources */,
+				1987856E249EE31100162778 /* Pet.swift in Sources */,
+				1987858B249EE31100162778 /* GuildTreasury.swift in Sources */,
+				19878540249EE31100162778 /* World.swift in Sources */,
+				19878562249EE31100162778 /* Sector.swift in Sources */,
+				1987855B249EE31100162778 /* AccountMastery.swift in Sources */,
+				19878547249EE31100162778 /* AchievementGroup.swift in Sources */,
+				19878542249EE31100162778 /* Quaggan.swift in Sources */,
+				19878573249EE31100162778 /* ItemStats.swift in Sources */,
+				1987851F249EE31100162778 /* String+regex.swift in Sources */,
+				19878544249EE31100162778 /* AchievementCategory.swift in Sources */,
+				1987857F249EE31100162778 /* WVWUpgrade.swift in Sources */,
+				19878532249EE31100162778 /* MiscRequests.swift in Sources */,
+				1987856B249EE31100162778 /* Profession.swift in Sources */,
+				1987855E249EE31100162778 /* PVPRank.swift in Sources */,
+				19878522249EE31100162778 /* AuthenticatedClient.swift in Sources */,
+				19878572249EE31100162778 /* PVPAmulet.swift in Sources */,
+				19878588249EE31100162778 /* GuildMember.swift in Sources */,
+				19878587249EE31100162778 /* GuildLog.swift in Sources */,
+				19878520249EE31100162778 /* ItemsClient.swift in Sources */,
+				19878537249EE31100162778 /* GameMechanicsRequests.swift in Sources */,
+				19878546249EE31100162778 /* Achievement.swift in Sources */,
+				19878574249EE31100162778 /* Skin.swift in Sources */,
+				1987854B249EE31100162778 /* CommerceExchange.swift in Sources */,
+				19878526249EE31100162778 /* MapInfoClient.swift in Sources */,
+				1987852E249EE31100162778 /* StoryRequests.swift in Sources */,
+				19878555249EE31100162778 /* AccountToken.swift in Sources */,
+				19878585249EE31100162778 /* GuildStash.swift in Sources */,
+				1987857E249EE31100162778 /* WVWMatchStats.swift in Sources */,
+				1987857B249EE31100162778 /* WVWAbility.swift in Sources */,
+				19878533249EE31100162778 /* GuildRequests.swift in Sources */,
+				1987855C249EE31100162778 /* PVPSeasonLeaderboard.swift in Sources */,
+				19878565249EE31100162778 /* Task.swift in Sources */,
+				1987857A249EE31100162778 /* Story.swift in Sources */,
+				19878545249EE31100162778 /* DailyAchievement.swift in Sources */,
+				19878538249EE31100162778 /* AchievementsRequests.swift in Sources */,
+				1987852F249EE31100162778 /* TradingPostRequests.swift in Sources */,
+				1987856D249EE31100162778 /* Mastery.swift in Sources */,
+				19878539249EE31100162778 /* Raid.swift in Sources */,
+				1987852C249EE31100162778 /* GW2ClientLanguage.swift in Sources */,
+				1987856A249EE31100162778 /* Trait.swift in Sources */,
+				19878584249EE31100162778 /* GuildEmblem.swift in Sources */,
+				198785AF24A0505100162778 /* AccountRequests.swift in Sources */,
+				19878581249EE31100162778 /* WVWRank.swift in Sources */,
+				1987854E249EE31100162778 /* AccountPVPGame.swift in Sources */,
+				19878530249EE31100162778 /* WVWRequests.swift in Sources */,
+				19878552249EE31100162778 /* AccountAchievement.swift in Sources */,
+				1987854C249EE31100162778 /* AccountPVPStats.swift in Sources */,
+				1987853D249EE31100162778 /* Title.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1984C29B21E7BBA000C9155A /* Sources */ = {
+		1987848B249EE2CF00162778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1984C3A921E7BBC500C9155A /* GuildAuthenticatedTests.swift in Sources */,
-				1984C3AB21E7BBC500C9155A /* StoryTests.swift in Sources */,
-				1984C3AF21E7BBC500C9155A /* PVPTests.swift in Sources */,
-				1984C3AA21E7BBC500C9155A /* AchievementsTests.swift in Sources */,
-				1984C3A521E7BBC500C9155A /* GuildTests.swift in Sources */,
-				1984C3A421E7BBC500C9155A /* TradingPostTests.swift in Sources */,
-				1984C3AC21E7BBC500C9155A /* ItemsTests.swift in Sources */,
-				1984C3A821E7BBC500C9155A /* AuthenticatedTests.swift in Sources */,
-				1984C3A621E7BBC500C9155A /* GameMechanicsTests.swift in Sources */,
-				19F5592C21E80A8A007F570D /* GW2APITestVariables.swift in Sources */,
-				1984C3AD21E7BBC500C9155A /* MiscTests.swift in Sources */,
-				1984C3AE21E7BBC500C9155A /* MapInfoTests.swift in Sources */,
-				1984C3A721E7BBC500C9155A /* WVWTests.swift in Sources */,
+				198785A1249EE32F00162778 /* TradingPostTests.swift in Sources */,
+				198785A2249EE32F00162778 /* MiscTests.swift in Sources */,
+				198785A0249EE32F00162778 /* ItemsTests.swift in Sources */,
+				198785A4249EE32F00162778 /* GuildAuthenticatedTests.swift in Sources */,
+				198785A3249EE32F00162778 /* StoryTests.swift in Sources */,
+				1987859E249EE32F00162778 /* WVWTests.swift in Sources */,
+				1987859F249EE32F00162778 /* PVPTests.swift in Sources */,
+				198785A6249EE32F00162778 /* AuthenticatedTests.swift in Sources */,
+				198785A5249EE32F00162778 /* GW2APITestVariables.swift in Sources */,
+				198785A8249EE32F00162778 /* AchievementsTests.swift in Sources */,
+				198785AA249EE32F00162778 /* GuildTests.swift in Sources */,
+				1987859D249EE32F00162778 /* GameMechanicsTests.swift in Sources */,
+				198785A7249EE32F00162778 /* MapInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1984C2A221E7BBA000C9155A /* PBXTargetDependency */ = {
+		19878492249EE2CF00162778 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1984C29521E7BBA000C9155A /* GW2API */;
-			targetProxy = 1984C2A121E7BBA000C9155A /* PBXContainerItemProxy */;
+			target = 19878485249EE2CF00162778 /* GW2API */;
+			targetProxy = 19878491249EE2CF00162778 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1984C2A821E7BBA000C9155A /* Debug */ = {
+		19878498249EE2CF00162778 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -961,7 +890,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -981,7 +909,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -993,7 +921,7 @@
 			};
 			name = Debug;
 		};
-		1984C2A921E7BBA000C9155A /* Release */ = {
+		19878499249EE2CF00162778 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1025,7 +953,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1039,7 +966,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1051,97 +978,91 @@
 			};
 			name = Release;
 		};
-		1984C2AB21E7BBA000C9155A /* Debug */ = {
+		1987849B249EE2CF00162778 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 894EDB1ACAC05A9A9F529DBB /* Pods-GW2API.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 49J6GMFE89;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = GW2API/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhendryk.GW2API;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2API;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1984C2AC21E7BBA000C9155A /* Release */ = {
+		1987849C249EE2CF00162778 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3737B0A44435860D571FEFD /* Pods-GW2API.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 49J6GMFE89;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = GW2API/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhendryk.GW2API;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2API;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		1984C2AE21E7BBA000C9155A /* Debug */ = {
+		1987849E249EE2CF00162778 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16A8D7BE7478334F87A8EE88 /* Pods-GW2APITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49J6GMFE89;
-				INFOPLIST_FILE = GW2APITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhendryk.GW2APITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2APITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1984C2AF21E7BBA000C9155A /* Release */ = {
+		1987849F249EE2CF00162778 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F4152AD79F2F2AD6001D733 /* Pods-GW2APITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49J6GMFE89;
-				INFOPLIST_FILE = GW2APITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhendryk.GW2APITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhendryk.GW2APITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1149,34 +1070,53 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1984C29021E7BBA000C9155A /* Build configuration list for PBXProject "GW2API" */ = {
+		19878480249EE2CF00162778 /* Build configuration list for PBXProject "GW2API" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1984C2A821E7BBA000C9155A /* Debug */,
-				1984C2A921E7BBA000C9155A /* Release */,
+				19878498249EE2CF00162778 /* Debug */,
+				19878499249EE2CF00162778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1984C2AA21E7BBA000C9155A /* Build configuration list for PBXNativeTarget "GW2API" */ = {
+		1987849A249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2API" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1984C2AB21E7BBA000C9155A /* Debug */,
-				1984C2AC21E7BBA000C9155A /* Release */,
+				1987849B249EE2CF00162778 /* Debug */,
+				1987849C249EE2CF00162778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1984C2AD21E7BBA000C9155A /* Build configuration list for PBXNativeTarget "GW2APITests" */ = {
+		1987849D249EE2CF00162778 /* Build configuration list for PBXNativeTarget "GW2APITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1984C2AE21E7BBA000C9155A /* Debug */,
-				1984C2AF21E7BBA000C9155A /* Release */,
+				1987849E249EE2CF00162778 /* Debug */,
+				1987849F249EE2CF00162778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		198785AB249EE37C00162778 /* XCRemoteSwiftPackageReference "APIClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Zhendryk/APIClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		198785AC249EE37C00162778 /* APIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 198785AB249EE37C00162778 /* XCRemoteSwiftPackageReference "APIClient" */;
+			productName = APIClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1984C28D21E7BBA000C9155A /* Project object */;
+	rootObject = 1987847D249EE2CF00162778 /* Project object */;
 }

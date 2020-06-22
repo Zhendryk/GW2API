@@ -2,8 +2,8 @@
 //  TradingPostTests.swift
 //  GW2APITests
 //
-//  Created by Zhendryk on 7/15/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 7/15/18.
+//  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
 import XCTest

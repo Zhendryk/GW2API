@@ -2,11 +2,11 @@
 //  GuildClient.swift
 //  GW2API
 //
-//  Created by Zhendryk on 7/7/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 7/7/18.
+//  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import GenericAPIClient
+import APIClient
 
 /// The guild endpoint client: api.guildwars2.com/v2/guild...
 public class GuildClient : Client {
@@ -56,9 +56,9 @@ public class GuildClient : Client {
     ///   - guildName: The name of the guild you are searching for
     ///   - completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
     public func search(guildName: String, _ completion: @escaping RequestCallback<[String]>) {
-        self.client.send(request: SearchGuild(name: guildName)) { result in
+        self.client.send(request: SearchGuild(name: guildName), completion: { result in
             completion(result)
-        }
+        })
     }
     
     /// The guild id endpoint client: api.guildwars2.com/v2/guild/:id
@@ -68,9 +68,9 @@ public class GuildClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<GuildDetails?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<GuildDetails>) {
-            self.client.send(request: GetGuildID(id: id)) { result in
+            self.client.send(request: GetGuildID(id: id), completion: { result in
                 completion(result)
-            }
+            })
         }
     }
     
@@ -90,9 +90,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[Int]>) {
-                self.client.send(request: GetGuildEmblemForegroundIDs()) { result in
+                self.client.send(request: GetGuildEmblemForegroundIDs(), completion: { result in
                     completion(result)
-                }
+                })
             }
             
             /// Returns the emblem foreground associated with the given id
@@ -101,9 +101,9 @@ public class GuildClient : Client {
             ///   - id: The ID of the foreground
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
             public func get(id: Int, _ completion: @escaping RequestCallback<GuildEmblem>) {
-                self.client.send(request: GetGuildEmblemForeground(id: id)) { result in
+                self.client.send(request: GetGuildEmblemForeground(id: id), completion: { result in
                     completion(result)
-                }
+                })
             }
             
             /// Returns the list of emblem foregrounds associated with the given ids
@@ -112,9 +112,9 @@ public class GuildClient : Client {
             ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
             public func get(ids: [Int], _ completion: @escaping RequestCallback<[GuildEmblem]>) {
-                self.client.send(request: GetGuildEmblemForegrounds(ids: ids)) { result in
+                self.client.send(request: GetGuildEmblemForegrounds(ids: ids), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -125,9 +125,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[Int]>) {
-                self.client.send(request: GetGuildEmblemBackgroundIDs()) { result in
+                self.client.send(request: GetGuildEmblemBackgroundIDs(), completion: { result in
                     completion(result)
-                }
+                })
             }
             
             /// Returns the emblem background associated with the given id
@@ -136,9 +136,9 @@ public class GuildClient : Client {
             ///   - id: The ID of the background
             ///   - completion: Callback function to handle the data returned from the API (Result<GuildEmblem?, APIError>)
             public func get(id: Int, _ completion: @escaping RequestCallback<GuildEmblem>) {
-                self.client.send(request: GetGuildEmblemBackground(id: id)) { result in
+                self.client.send(request: GetGuildEmblemBackground(id: id), completion: { result in
                     completion(result)
-                }
+                })
             }
             
             /// Returns the list of emblem backgrounds associated with the given ids
@@ -147,9 +147,9 @@ public class GuildClient : Client {
             ///   - ids: The ids of the backgrounds "id1, id2, id3... etc"
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildEmblem]?, APIError>)
             public func get(ids: [Int], _ completion: @escaping RequestCallback<[GuildEmblem]>) {
-                self.client.send(request: GetGuildEmblemBackgrounds(ids: ids)) { result in
+                self.client.send(request: GetGuildEmblemBackgrounds(ids: ids), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
     }
@@ -161,9 +161,9 @@ public class GuildClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[String]>) {
-            self.client.send(request: GetGuildPermissionIDs()) { result in
+            self.client.send(request: GetGuildPermissionIDs(), completion: { result in
                 completion(result)
-            }
+            })
         }
         
         /// Returns more detailed info on the guild permission associated with the given id
@@ -172,9 +172,9 @@ public class GuildClient : Client {
         ///   - id: The id of the permission, URLQueryItem(name: "id", value: "permissionID")
         ///   - completion: Callback function to handle the data returned from the API (Result<Permissions?, APIError>)
         public func get(id: String, _ completion: @escaping RequestCallback<Permissions>) {
-            self.client.send(request: GetGuildPermission(id: id, lang: lang)) { result in
+            self.client.send(request: GetGuildPermission(id: id, lang: lang), completion: { result in
                 completion(result)
-            }
+            })
         }
         
         /// Returns more detailed info on multiple guild permissions associated with the given ids
@@ -183,9 +183,9 @@ public class GuildClient : Client {
         ///   - ids: The ids of the guild permissions "id1, id2, id3... etc"
         ///   - completion: Callback function to handle the data returned from the API (Result<[Permissions]?, APIError>)
         public func get(ids: [String], _ completion: @escaping RequestCallback<[Permissions]>) {
-            self.client.send(request: GetGuildPermissions(ids: ids, lang: lang)) { result in
+            self.client.send(request: GetGuildPermissions(ids: ids, lang: lang), completion: { result in
                 completion(result)
-            }
+            })
         }
     }
     
@@ -196,9 +196,9 @@ public class GuildClient : Client {
         ///
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
-            self.client.send(request: GetGuildUpgradeIDs()) { result in
+            self.client.send(request: GetGuildUpgradeIDs(), completion: { result in
                 completion(result)
-            }
+            })
         }
         
         /// Returns more detailed info on the guild upgrade specified by the given id
@@ -207,9 +207,9 @@ public class GuildClient : Client {
         ///   - id: The id of the guild upgrade
         ///   - completion: Callback function to handle the data returned from the API (Result<GuildUpgrade?, APIError>)
         public func get(id: Int, _ completion: @escaping RequestCallback<GuildUpgrade>) {
-            self.client.send(request: GetGuildUpgrade(id: id, lang: lang)) { result in
+            self.client.send(request: GetGuildUpgrade(id: id, lang: lang), completion: { result in
                 completion(result)
-            }
+            })
         }
         
         /// Returns more detailed info on multiple guild upgrades specified by the given ids
@@ -218,9 +218,9 @@ public class GuildClient : Client {
         ///   - ids: The ids of the guild upgrades, URLQueryItem(name: "ids", value: "id1, id2, id3... etc)"
         ///   - completion: Callback function to handle the data returned from the API (Result<[GuildUpgrade]?, APIError>)
         public func get(ids: [Int], _ completion: @escaping RequestCallback<[GuildUpgrade]>) {
-            self.client.send(request: GetGuildUpgrades(ids: ids, lang: lang)) { result in
+            self.client.send(request: GetGuildUpgrades(ids: ids, lang: lang), completion: { result in
                 completion(result)
-            }
+            })
         }
     }
     
@@ -284,9 +284,9 @@ public class GuildClient : Client {
             ///   - since: Event ID where you would like the log to start from
             ///   - completion: Callback function to handle the data returned from the API (Result<[GuildLog]?, APIError>)
             public func get(since: Int?, _ completion: @escaping RequestCallback<[GuildLog]>) {
-                self.client.send(request: GetGuildLog(since: since, guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetGuildLog(guildID: self.guildID ?? "", since: since, access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -297,9 +297,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildMember]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[GuildMember]>) {
-                self.client.send(request: GetGuildMembers(guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetGuildMembers(guildID: self.guildID ?? "", access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -310,9 +310,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildRank]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[GuildRank]>) {
-                self.client.send(request: GetGuildRanks(guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetGuildRanks(guildID: self.guildID ?? "", access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -323,9 +323,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildStash]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[GuildStash]>) {
-                self.client.send(request: GetGuildStash(guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetGuildStash(guildID: self.guildID ?? "", access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -336,9 +336,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildTreasury]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[GuildTreasury]>) {
-                self.client.send(request: GetGuildTreasury(guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetGuildTreasury(guildID: self.guildID ?? "", access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -349,9 +349,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[GuildTeam]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[GuildTeam]>) {
-                self.client.send(request: GetGuildTeams(guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetGuildTeams(guildID: self.guildID ?? "", access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
         
@@ -362,9 +362,9 @@ public class GuildClient : Client {
             ///
             /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
             public func get(_ completion: @escaping RequestCallback<[Int]>) {
-                self.client.send(request: GetMyGuildUpgrades(guildID: self.guildID, access_token: self.apiKey)) { result in
+                self.client.send(request: GetMyGuildUpgrades(guildID: self.guildID ?? "", access_token: self.apiKey), completion: { result in
                     completion(result)
-                }
+                })
             }
         }
     }

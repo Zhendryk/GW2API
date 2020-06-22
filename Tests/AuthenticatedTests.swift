@@ -2,19 +2,29 @@
 //  GW2APITests.swift
 //  GW2APITests
 //
-//  Created by Zhendryk on 6/30/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 6/30/18.
+//  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
 import XCTest
 @testable import GW2API
 
 class AuthenticatedTests: XCTestCase {
+
+    func getTestData(for language: GW2ClientLanguage = .english) -> (String, GW2ClientLanguage) {
+        guard let pathString = Bundle(for: type(of: self)).path(forResource: "test_data", ofType: "json") else { fatalError("test_data.json not found") }
+        guard let jsonString = try? String(contentsOfFile: pathString, encoding: .utf8) else { fatalError("Unable to convert test_data.json to String") }
+        guard let jsonData = jsonString.data(using: .utf8) else { fatalError("Unable to convert test_data.json to Data") }
+        guard let jsonDictionary = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:String] else { fatalError("Unable to convert test_data.json to JSON dictionary") }
+        guard let testAPIKey = jsonDictionary["API_KEY"] else { fatalError("API_KEY field not present in test_data.json") }
+        return (testAPIKey, language)
+    }
     
     override func setUp() {
         super.setUp()
-        GW2Client.instance.setAPIKey(key: testingAPIKey)
-        GW2Client.instance.setLanguage(lang: testingLanguage)
+        let (testAPIKey, testLanguage) = getTestData()
+        GW2Client.instance.setAPIKey(key: testAPIKey)
+        GW2Client.instance.setLanguage(lang: testLanguage)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -339,7 +349,7 @@ class AuthenticatedTests: XCTestCase {
     }
     
     func testAuthCharactersSpecific() {
-        let expectation = self.expectation(description: "Querying gw2api/authenticated/characters/zhendryk")
+        let expectation = self.expectation(description: "Querying gw2api/authenticated/characters/Jonathan Bailey")
         GW2Client.instance.authenticated.account.characters.get(characterName: "Forster Varre") { result in
             switch result {
             case .success(_):

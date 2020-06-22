@@ -2,8 +2,8 @@
 //  Mount.swift
 //  GW2API
 //
-//  Created by Zhendryk on 1/10/19.
-//  Copyright © 2019 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 1/10/19.
+//  Copyright © 2019 Jonathan Bailey. All rights reserved.
 //
 
 import Foundation

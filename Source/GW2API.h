@@ -2,11 +2,11 @@
 //  GW2API.h
 //  GW2API
 //
-//  Created by Zhendryk on 1/10/19.
-//  Copyright © 2019 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 6/20/20.
+//  Copyright © 2020 Jonathan Bailey. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for GW2API.
 FOUNDATION_EXPORT double GW2APIVersionNumber;

@@ -2,19 +2,30 @@
 //  GuildAuthenticatedTests.swift
 //  GW2APITests
 //
-//  Created by Zhendryk on 7/8/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 7/8/18.
+//  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
 import XCTest
 @testable import GW2API
 class GuildAuthenticatedTests: XCTestCase {
-    
+
+    func getTestData(for language: GW2ClientLanguage = .english) -> (String, String, GW2ClientLanguage) {
+        guard let pathString = Bundle(for: type(of: self)).path(forResource: "test_data", ofType: "json") else { fatalError("test_data.json not found") }
+        guard let jsonString = try? String(contentsOfFile: pathString, encoding: .utf8) else { fatalError("Unable to convert test_data.json to String") }
+        guard let jsonData = jsonString.data(using: .utf8) else { fatalError("Unable to convert test_data.json to Data") }
+        guard let jsonDictionary = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:String] else { fatalError("Unable to convert test_data.json to JSON dictionary") }
+        guard let testAPIKey = jsonDictionary["API_KEY"] else { fatalError("API_KEY field not present in test_data.json") }
+        guard let testGuildID = jsonDictionary["GUILD_ID"] else { fatalError("GUILD_ID field not present in test_data.json") }
+        return (testAPIKey, testGuildID, language)
+    }
+
     override func setUp() {
         super.setUp()
-        GW2Client.instance.setAPIKey(key: testingAPIKey)
-        GW2Client.instance.setGuildID(id: testingGuildID)
-        GW2Client.instance.setLanguage(lang: testingLanguage)
+        let (testAPIKey, testGuildID, lang) = getTestData()
+        GW2Client.instance.setAPIKey(key: testAPIKey)
+        GW2Client.instance.setGuildID(id: testGuildID)
+        GW2Client.instance.setLanguage(lang: lang)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

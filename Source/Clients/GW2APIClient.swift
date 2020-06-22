@@ -2,35 +2,37 @@
 //  GW2APIClient.swift
 //  GW2API
 //
-//  Created by Zhendryk on 7/2/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 7/2/18.
+//  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-import GenericAPIClient
+import APIClient
 
 /// The protocol for all endpoint clients to conform to
 protocol GW2APIClient {
-    var baseURL: String { get }
     var apiKey: String? { get set }
     var guildID: String? { get set }
     var lang: String { get set }
+    var version: String { get } // TODO: Make this settable when v1 is implemented
     var client: APIClient { get }
 }
 
 /// The base class for all endpoint clients
 public class Client : GW2APIClient {
     
-    var baseURL: String { return "https://api.guildwars2.com/v2" }
-    
     var apiKey: String?
     
     var guildID: String?
     
-    var lang: String = "en"
-    
-    var client: APIClient = APIClient("https://api.guildwars2.com/v2")
+    var lang: String = GW2ClientLanguage.english.rawValue
 
-    init() {}
+    var version: String = GW2ClientVersion.v2.rawValue
+    
+    var client: APIClient = APIClient("api.guildwars2.com")
+
+    init() {
+        self.client.setPath("/\(self.version)")
+    }
 
     /// Takes a valid API key as a string and sets it to this client (synced between all if set from GW2Client.instance)
     ///
@@ -52,4 +54,6 @@ public class Client : GW2APIClient {
     func setLanguage(_ language: String) {
         self.lang = language
     }
+
+    // TODO: Implement setVersion when v1 api is implemented
 }

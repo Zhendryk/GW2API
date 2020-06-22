@@ -2,8 +2,8 @@
 //  GW2Client.swift
 //  GW2API
 //
-//  Created by Zhendryk on 6/30/18.
-//  Copyright © 2018 Zhendryk. All rights reserved.
+//  Created by Jonathan Bailey on 6/30/18.
+//  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
 /// Main client of the framework, implemented as a singleton.
@@ -68,24 +68,19 @@ public class GW2Client {
     /// Takes a string argument and sets the GuildWars 2 Client's language setting
     ///
     /// - Parameter lang: Any of the following supported language strings: en, es, de, fr, ko, zh
-    @discardableResult
-    public func setLanguage(lang: GW2ClientLanguage) -> Bool {
-        if APIUtil.isValidLanguage(lang.rawValue) {
-            self.lang = lang
-            self.achievements.setLanguage(lang.rawValue)
-            self.authenticated.setLanguage(lang.rawValue)
-            self.gameMechanics.setLanguage(lang.rawValue)
-            self.guild.setLanguage(lang.rawValue)
-            self.items.setLanguage(lang.rawValue)
-            self.mapinfo.setLanguage(lang.rawValue)
-            self.misc.setLanguage(lang.rawValue)
-            self.story.setLanguage(lang.rawValue)
-            self.pvp.setLanguage(lang.rawValue)
-            self.tradingPost.setLanguage(lang.rawValue)
-            self.wvw.setLanguage(lang.rawValue)
-            return true
-        }
-        return false
+    public func setLanguage(lang: GW2ClientLanguage) {
+        self.lang = lang
+        self.achievements.setLanguage(lang.rawValue)
+        self.authenticated.setLanguage(lang.rawValue)
+        self.gameMechanics.setLanguage(lang.rawValue)
+        self.guild.setLanguage(lang.rawValue)
+        self.items.setLanguage(lang.rawValue)
+        self.mapinfo.setLanguage(lang.rawValue)
+        self.misc.setLanguage(lang.rawValue)
+        self.story.setLanguage(lang.rawValue)
+        self.pvp.setLanguage(lang.rawValue)
+        self.tradingPost.setLanguage(lang.rawValue)
+        self.wvw.setLanguage(lang.rawValue)
     }
     
     /// Returns the currently set API key for the client
