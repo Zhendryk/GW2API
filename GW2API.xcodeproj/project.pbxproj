@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		19954DB824A155CD00AFFEA1 /* AccountBuildStorageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DB524A1547D00AFFEA1 /* AccountBuildStorageTemplate.swift */; };
+		19954DBA24A158F200AFFEA1 /* AccountLuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DB924A158F200AFFEA1 /* AccountLuck.swift */; };
 		OBJ_183 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_158 /* APIClient.swift */; };
 		OBJ_184 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_159 /* APIClientError.swift */; };
 		OBJ_185 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_160 /* APIRequest.swift */; };
@@ -198,6 +200,9 @@
 
 /* Begin PBXFileReference section */
 		198785E524A082B800162778 /* guildwars2banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guildwars2banner.jpg; sourceTree = "<group>"; };
+		19954DB524A1547D00AFFEA1 /* AccountBuildStorageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBuildStorageTemplate.swift; sourceTree = "<group>"; };
+		19954DB724A1551500AFFEA1 /* test_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_data.json; sourceTree = "<group>"; };
+		19954DB924A158F200AFFEA1 /* AccountLuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLuck.swift; sourceTree = "<group>"; };
 		"APIClient::APIClient::Product" /* APIClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GW2API::GW2API::Product" /* GW2API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GW2API::GW2APITests::Product" /* GW2APITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -463,6 +468,7 @@
 		OBJ_139 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				19954DB724A1551500AFFEA1 /* test_data.json */,
 				OBJ_140 /* README.md */,
 				OBJ_141 /* Info.plist */,
 				OBJ_142 /* AchievementsTests.swift */,
@@ -587,6 +593,7 @@
 				OBJ_33 /* Account.swift */,
 				OBJ_34 /* AccountAchievement.swift */,
 				OBJ_35 /* AccountBankItem.swift */,
+				19954DB524A1547D00AFFEA1 /* AccountBuildStorageTemplate.swift */,
 				OBJ_36 /* AccountCat.swift */,
 				OBJ_37 /* AccountCharacter.swift */,
 				OBJ_38 /* AccountFinisher.swift */,
@@ -600,6 +607,7 @@
 				OBJ_46 /* AccountToken.swift */,
 				OBJ_47 /* AccountTransaction.swift */,
 				OBJ_48 /* AccountWalletItem.swift */,
+				19954DB924A158F200AFFEA1 /* AccountLuck.swift */,
 			);
 			path = Authenticated;
 			sourceTree = "<group>";
@@ -620,7 +628,7 @@
 			path = "Game Mechanics";
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				198785E524A082B800162778 /* guildwars2banner.jpg */,
@@ -632,7 +640,6 @@
 				OBJ_176 /* LICENSE */,
 				OBJ_177 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_59 /* Guild */ = {
@@ -824,7 +831,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_172 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -882,6 +889,7 @@
 				OBJ_215 /* StoryClient.swift in Sources */,
 				OBJ_216 /* TradingPostClient.swift in Sources */,
 				OBJ_217 /* WVWClient.swift in Sources */,
+				19954DBA24A158F200AFFEA1 /* AccountLuck.swift in Sources */,
 				OBJ_218 /* String+regex.swift in Sources */,
 				OBJ_219 /* GW2Client.swift in Sources */,
 				OBJ_220 /* Achievement.swift in Sources */,
@@ -950,6 +958,7 @@
 				OBJ_283 /* Title.swift in Sources */,
 				OBJ_284 /* World.swift in Sources */,
 				OBJ_285 /* BackstoryAnswer.swift in Sources */,
+				19954DB824A155CD00AFFEA1 /* AccountBuildStorageTemplate.swift in Sources */,
 				OBJ_286 /* BackstoryQuestion.swift in Sources */,
 				OBJ_287 /* Story.swift in Sources */,
 				OBJ_288 /* StorySeason.swift in Sources */,

@@ -39,9 +39,45 @@ class GetAccountBank: GetRequest<[AccountBankItem?]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/buildstorage
+class GetAccountBuildStorageTemplateIDs: GetRequest<[Int]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/buildstorage", urlQueryParameters: urlQP)
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/dailycrafting
+class GetAccountBuildStorageTemplate: GetRequest<BuildStorageTemplate> {
+    init(id: Int, access_token: String?) {
+        var urlQP: [URLQueryItem] = [URLQueryItem(name: "id", value: HTTPParameter.int(id).description)]
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/buildstorage", urlQueryParameters: urlQP)
+    }
+}
+
+class GetAccountBuildStorageTemplates: GetRequest<[BuildStorageTemplate]> {
+    init(ids: [Int], access_token: String?) {
+        var urlQP: [URLQueryItem] = [URLQueryItem(name: "ids", value: HTTPParameter.intArr(ids).description)]
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/buildstorage", urlQueryParameters: urlQP)
+    }
+}
+
+class GetAccountDailyCrafting: GetRequest<[String]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/dailycrafting", urlQueryParameters: urlQP)
+    }
+}
 
 class GetAccountDungeons: GetRequest<[String]> {
     init(access_token: String?) {
@@ -63,7 +99,15 @@ class GetAccountDyes: GetRequest<[Int]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/emotes
+class GetAccountEmotes: GetRequest<[String]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/emotes", urlQueryParameters: urlQP)
+    }
+}
 
 class GetAccountFinishers: GetRequest<[AccountFinisher]> {
     init(access_token: String?) {
@@ -115,7 +159,15 @@ class GetAccountInventory: GetRequest<[AccountInventoryItem]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/luck
+class GetAccountLuck: GetRequest<[AccountLuck]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/luck", urlQueryParameters: urlQP)
+    }
+}
 
 class GetAccountMailCarriers: GetRequest<[Int]> {
     init(access_token: String?) {
@@ -127,7 +179,15 @@ class GetAccountMailCarriers: GetRequest<[Int]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/mapchests
+class GetAccountMapChests: GetRequest<[String]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/mapchests", urlQueryParameters: urlQP)
+    }
+}
 
 class GetAccountMasteries: GetRequest<[AccountMastery]> {
     init(access_token: String?) {
@@ -169,11 +229,35 @@ class GetAccountMinis: GetRequest<[Int]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/mounts/skins
+class GetAccountMountSkins: GetRequest<[Int]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/mounts/skins", urlQueryParameters: urlQP)
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/mounts/types
+class GetAccountMountTypes: GetRequest<[String]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/mounts/types", urlQueryParameters: urlQP)
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/novelties
+class GetAccountNovelties: GetRequest<[Int]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/novelties", urlQueryParameters: urlQP)
+    }
+}
 
 class GetAccountOutfits: GetRequest<[Int]> {
     init(access_token: String?) {
@@ -245,7 +329,15 @@ class GetAccountWallet: GetRequest<[AccountWalletItem]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/account/worldbosses
+class GetAccountWorldBosses: GetRequest<[String]> {
+    init(access_token: String?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        super.init(resource: "/account/worldbosses", urlQueryParameters: urlQP)
+    }
+}
 
 class GetAccountCurrentBuyTransactions: GetRequest<[AccountTransaction]> {
     init(access_token: String?, id: Int? = nil, item_id: Int? = nil, price: Int? = nil, quantity: Int? = nil, created: String? = nil, purchased: String? = nil) {

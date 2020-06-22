@@ -29,12 +29,21 @@ public class AuthenticatedClient : Client {
         
         /// The account bank endpoint: information about the contents of an account's bank
         public let bank: AccountBankClient = AccountBankClient()
+
+        /// The account buildstorage endpoint: information about the build storage templates associated with your account
+        public let buildstorage: AccountBuildStorageClient = AccountBuildStorageClient()
+
+        /// The account dailycrafting endpoint: information about the daily time-gated recipes your account has crafted today
+        public let dailycrafting: AccountDailyCraftingClient = AccountDailyCraftingClient()
         
         /// The account dungeons endpoint: information about the current daily cleared dungeons of an account
         public let dungeons: AccountDungeonsClient = AccountDungeonsClient()
         
         /// The account dyes endpoint: information about the dyes unlocked by an account
         public let dyes: AccountDyesClient = AccountDyesClient()
+
+        /// The account emotes endpoint: information about the emotes unlocked by an account
+        public let emotes: AccountEmotesClient = AccountEmotesClient()
         
         /// The account finishers endpoint: information about the finishers unlocked by an account
         public let finishers: AccountFinishersCient = AccountFinishersCient()
@@ -47,9 +56,15 @@ public class AuthenticatedClient : Client {
         
         /// The account inventory endpoint: information about the shared inventory slots of an account
         public let inventory: AccountInventoryClient = AccountInventoryClient()
+
+        /// The account luck endpoint: information about how much luck your account has consumed
+        public let luck: AccountLuckClient = AccountLuckClient()
         
         /// The account mail carriers endpoint: information about the mail carriers unlocked by an account
         public let mailcarriers: AccountMailCarriersClient = AccountMailCarriersClient()
+
+        /// The account mapchests endpoint: information about the world map chests opened by this account today
+        public let mapchests: AccountMapChestsClient = AccountMapChestsClient()
         
         /// The account masteries endpoint: information about the masteries unlocked by an account
         public let masteries: AccountMasteriesClient = AccountMasteriesClient()
@@ -59,6 +74,12 @@ public class AuthenticatedClient : Client {
         
         /// The account minis endpoint: information about the minipets unlocked by an account
         public let minis: AccountMinisClient = AccountMinisClient()
+
+        /// The account mounts endpoint: information about the mounts unlocked by an account
+        public let mounts: AccountMountsClient = AccountMountsClient()
+
+        /// The account novelties endpoint: information about the novelties unlocked by an account
+        public let novelties: AccountNoveltiesClient = AccountNoveltiesClient()
         
         /// The account outfits endpoint: information about the outfits unlocked by an account
         public let outfits: AccountOutfitsClient = AccountOutfitsClient()
@@ -80,6 +101,9 @@ public class AuthenticatedClient : Client {
         
         /// The account wallet endpoint: information about the wealth / contents of an account's wallet
         public let wallet: AccountWalletClient = AccountWalletClient()
+
+        /// The account worldbosses endpoint: information about the world bosses defeated by this account today
+        public let worldbosses: AccountWorldBossesClient = AccountWorldBossesClient()
         
         /// The account characters endpoint: information about an account's characters
         public let characters: AccountCharacterClient = AccountCharacterClient()
@@ -157,9 +181,53 @@ public class AuthenticatedClient : Client {
         /// Returns information about the bank associated with an API key
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API (Result<[AccountBankItem]?, APIError>)
+        ///   - completion: Callback function to handle the data returned from the API (Result<[AccountBankItem?]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[AccountBankItem?]>) {
             self.client.send(request: GetAccountBank(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+
+    /// The account build storage template client: api.guildwars2.com/v2/account/buildstorage (Needs API key)
+    public class AccountBuildStorageClient: Client {
+
+
+        /// Returns the IDs of all the build storage templates available to the account associated with an API key
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+            self.client.send(request: GetAccountBuildStorageTemplateIDs(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the details of the build storage template associated with the given ID on the account associated with an API key.
+        /// - Parameter id: The ID of the build storage template.
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<BuildStorageTemplate?, APIError>)
+        public func get(id: Int, _ completion: @escaping RequestCallback<BuildStorageTemplate>) {
+            self.client.send(request: GetAccountBuildStorageTemplate(id: id, access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the details of the build storage templates associated with the given IDs on the account associated with an API key.
+        /// - Parameter ids: The IDs of the build storage templates.
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[BuildStorageTemplate]?, APIError>)
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[BuildStorageTemplate]>) {
+            self.client.send(request: GetAccountBuildStorageTemplates(ids: ids, access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The account dailycrafting endpoint client: api.guildwars2.com/v2/account/dailycrafting (Needs API key)
+    public class AccountDailyCraftingClient : Client {
+
+        /// Returns a list of names of the time-gated recipes your account has already crafted today
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetAccountDailyCrafting(access_token: self.apiKey), completion: { result in
                 completion(result)
             })
         }
@@ -188,6 +256,18 @@ public class AuthenticatedClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
             self.client.send(request: GetAccountDyes(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The account emotes endpoint client: api.guildwars2.com/v2/account/emotes (Needs API key)
+    public class AccountEmotesClient : Client {
+
+        /// Returns the list of names of emotes your account has unlocked
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetAccountEmotes(access_token: self.apiKey), completion: { result in
                 completion(result)
             })
         }
@@ -279,6 +359,18 @@ public class AuthenticatedClient : Client {
             })
         }
     }
+
+    /// The account luck endpoint client: api.guildwars2.com/v2/account/luck (Needs API key)
+    public class AccountLuckClient : Client {
+
+        /// Returns the types of luck and the amount of each type consumed by this account
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[AccountLuck]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[AccountLuck]>) {
+            self.client.send(request: GetAccountLuck(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
     
     /// The account mail carriers endpoint client: api.guildwars2.com/v2/account/mailcarriers (Needs API key)
     public class AccountMailCarriersClient: Client {
@@ -286,9 +378,21 @@ public class AuthenticatedClient : Client {
         
         /// Returns information about the mail carriers unlocked on this account
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
             self.client.send(request: GetAccountMailCarriers(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The account mapchests endpoint client: api.guildwars2.com/v2/account/mapchests (Needs API key)
+    public class AccountMapChestsClient : Client {
+
+        /// Returns the names of the maps from which this account has opened map chests in today
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetAccountMapChests(access_token: self.apiKey), completion: { result in
                 completion(result)
             })
         }
@@ -356,6 +460,52 @@ public class AuthenticatedClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[Int]>) {
             self.client.send(request: GetAccountMinis(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The account mounts endpoint client: api.guildwars2.com/v2/account/mounts (Needs API key)
+    public class AccountMountsClient : Client {
+
+        /// The account mounts skins endpoint: information about the mount skins unlocked by an account
+        public let skins: AccountMountsSkinsClient = AccountMountsSkinsClient()
+
+        /// The account mount types endpoint: information about the mount types unlocked by an account
+        public let types: AccountMountsTypesClient = AccountMountsTypesClient()
+
+        /// The account mounts skins endpoint client: api.guildwars2.com/v2/account/mounts/skins (Needs API key)
+        public class AccountMountsSkinsClient: Client {
+
+            /// Returns the IDs of the mount skins unlocked by this account, resolvable against /v2/mounts/skins
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
+            public func get(_ completion: @escaping RequestCallback<[Int]>) {
+                self.client.send(request: GetAccountMountSkins(access_token: self.apiKey), completion: { result in
+                    completion(result)
+                })
+            }
+        }
+
+        /// The account mounts types endpoint client: api.guildwars2.com/v2/account/mounts/types (Needs API key)
+        public class AccountMountsTypesClient: Client {
+
+            /// Returns the names of the mount types unlocked by this account, comparable against /v2/mounts/types
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+            public func get(_ completion: @escaping RequestCallback<[String]>) {
+                self.client.send(request: GetAccountMountTypes(access_token: self.apiKey), completion: { result in
+                    completion(result)
+                })
+            }
+        }
+    }
+
+    /// The account novelties endpoint client: api.guildwars2.com/v2/account/novelties (Needs API key)
+    public class AccountNoveltiesClient : Client {
+
+        /// Returns the IDs of the novelties unlocked by this account, resolvable against /v2/novelties
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+            self.client.send(request: GetAccountNovelties(access_token: self.apiKey), completion: { result in
                 completion(result)
             })
         }
@@ -454,6 +604,18 @@ public class AuthenticatedClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[AccountWalletItem]?, APIError>)
         public func get(_ completion: @escaping RequestCallback<[AccountWalletItem]>) {
             self.client.send(request: GetAccountWallet(access_token: self.apiKey), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The account world bosses endpoint client: api.guildwars2.com/v2/account/worldbosses (Needs API key)
+    public class AccountWorldBossesClient : Client {
+
+        /// Returns the names of the world bosses defeated by this account today, comparable against /v2/worldbosses
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetAccountWorldBosses(access_token: self.apiKey), completion: { result in
                 completion(result)
             })
         }
