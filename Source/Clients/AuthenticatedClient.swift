@@ -127,16 +127,23 @@ public class AuthenticatedClient : Client {
             self.apiKey = key
             self.achievements.setAPIKey(key)
             self.bank.setAPIKey(key)
+            self.buildstorage.setAPIKey(key)
+            self.dailycrafting.setAPIKey(key)
             self.dungeons.setAPIKey(key)
             self.dyes.setAPIKey(key)
+            self.emotes.setAPIKey(key)
             self.finishers.setAPIKey(key)
             self.gliders.setAPIKey(key)
             self.home.setAPIKey(key)
             self.inventory.setAPIKey(key)
+            self.luck.setAPIKey(key)
             self.mailcarriers.setAPIKey(key)
+            self.mapchests.setAPIKey(key)
             self.masteries.setAPIKey(key)
             self.materials.setAPIKey(key)
             self.minis.setAPIKey(key)
+            self.mounts.setAPIKey(key)
+            self.novelties.setAPIKey(key)
             self.outfits.setAPIKey(key)
             self.pvpHeroes.setAPIKey(key)
             self.raids.setAPIKey(key)
@@ -144,6 +151,7 @@ public class AuthenticatedClient : Client {
             self.skins.setAPIKey(key)
             self.titles.setAPIKey(key)
             self.wallet.setAPIKey(key)
+            self.worldbosses.setAPIKey(key)
             self.characters.setAPIKey(key)
             self.transactions.setAPIKey(key)
             self.pvp.setAPIKey(key)
@@ -473,6 +481,11 @@ public class AuthenticatedClient : Client {
 
         /// The account mount types endpoint: information about the mount types unlocked by an account
         public let types: AccountMountsTypesClient = AccountMountsTypesClient()
+
+        override func setAPIKey(_ key: String) {
+            self.skins.setAPIKey(key)
+            self.types.setAPIKey(key)
+        }
 
         /// The account mounts skins endpoint client: api.guildwars2.com/v2/account/mounts/skins (Needs API key)
         public class AccountMountsSkinsClient: Client {

@@ -19,30 +19,51 @@ public class MiscClient : Client {
     
     /// The currencies endpoint: information about wallet currencies
     public let currencies: CurrenciesClient = CurrenciesClient()
+
+    /// The dailycrafting endpoint: information about the daily time-gated crafting recipes
+    public let dailycrafting: DailyCraftingClient = DailyCraftingClient()
     
     /// The dungeons endpont: information about dungeons and their associated paths
     public let dungeons: DungeonsClient = DungeonsClient()
+
+    /// The emotes endpoint: information about the available emotes
+    public let emotes: EmotesClient = EmotesClient()
     
     /// The files endpoint: commonly requested assets
     public let files: FilesClient = FilesClient()
     
     /// The quaggans endpoint: quaggan icons
     public let quaggans: QuaggansClient = QuaggansClient()
+
+    /// The mapchests endpoint: information about the map chests available
+    public let mapchests: MapChestsClient = MapChestsClient()
     
     /// The minis endpoint: information about minipets
     public let minis: MinisClient = MinisClient()
     
     /// The mounts endpoint: information about mounts
     public let mounts: MountsClient = MountsClient()
+
+    /// The novelties endpoint: information about novelties
+    public let novelties: NoveltiesClient = NoveltiesClient()
+
+    /// The quests endpoint: information about quests
+    public let quests: QuestsClient = QuestsClient()
     
     /// The raids endpoint: information about each raid and its associated events
     public let raids: RaidsClient = RaidsClient()
+
+    /// The createsubtokens endpoint: for creating additional API subtokens
+    public let subtokens: SubtokensClient = SubtokensClient()
     
     /// The titles endpoint: information about titles
     public let titles: TitlesClient = TitlesClient()
     
     /// The worlds endpoint: information about world names
     public let worlds: WorldsClient = WorldsClient()
+
+    /// The worldbosses endpoint: information about world bosses
+    public let worldbosses: WorldBossesClient = WorldBossesClient()
     
     /// Sets the language of every sub endpoint
     ///
@@ -52,15 +73,23 @@ public class MiscClient : Client {
         self.build.setLanguage(language)
         self.colors.setLanguage(language)
         self.currencies.setLanguage(language)
+        self.dailycrafting.setLanguage(language)
         self.dungeons.setLanguage(language)
+        self.emotes.setLanguage(language)
         self.files.setLanguage(language)
         self.quaggans.setLanguage(language)
+        self.mapchests.setLanguage(language)
         self.minis.setLanguage(language)
-        self.raids.setLanguage(language)
-        self.titles.setLanguage(language)
-        self.worlds.setLanguage(language)
+        self.mounts.setLanguage(language)
         self.mounts.skins.setLanguage(language)
         self.mounts.types.setLanguage(language)
+        self.novelties.setLanguage(language)
+        self.quests.setLanguage(language)
+        self.raids.setLanguage(language)
+        self.subtokens.setLanguage(language)
+        self.titles.setLanguage(language)
+        self.worlds.setLanguage(language)
+        self.worldbosses.setLanguage(language)
     }
     
     
@@ -170,6 +199,18 @@ public class MiscClient : Client {
             })
         }
     }
+
+    /// The daily crafting endpoint client: api.guildwars2.com/v2/dailycrafting
+    public class DailyCraftingClient : Client {
+
+        /// Returns information about time-gated recipes that can be crafted in-game.
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetDailyCrafting(), completion: { result in
+                completion(result)
+            })
+        }
+    }
     
     /// The dungeons endpoint client: api.guildwars2.com/v2/dungeons
     public class DungeonsClient : Client {
@@ -213,6 +254,36 @@ public class MiscClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[Dungeon]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Dungeon]>) {
             self.client.send(request: GetDungeons(ids: nil, page: page, page_size: page_size), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The emotes endpoint client: api.guildwars2.com/v2/emotes
+    public class EmotesClient : Client {
+
+        /// Returns the names of all available emotes
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetEmoteIDs(), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the emote associated by the given id
+        /// - Parameter id: The id of the emote
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Emote?, APIError>)
+        public func get(id: String, _ completion: @escaping RequestCallback<Emote>) {
+            self.client.send(request: GetEmote(id: id), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the list of emotes corresponding to the given list of ids
+        /// - Parameter ids: The ids of the emotes
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Emote]?, APIError>)
+        public func get(ids: [String], _ completion: @escaping RequestCallback<[Emote]>) {
+            self.client.send(request: GetEmotes(ids: ids), completion: { result in
                 completion(result)
             })
         }
@@ -307,6 +378,18 @@ public class MiscClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[Quaggan]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Quaggan]>) {
             self.client.send(request: GetQuaggans(ids: nil, page: page, page_size: page_size), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The mapchests endpoint client: api.guildwars2.com/v2/mapchests
+    public class MapChestsClient : Client {
+
+        /// Returns the ids of the Hero's Choice Chests that can be be acquired once a day in-game.
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetMapChests(), completion: { result in
                 completion(result)
             })
         }
@@ -471,6 +554,86 @@ public class MiscClient : Client {
             }
         }
     }
+
+    /// The novelties endpoint client: api.guildwars2.com/v2/novelties
+    public class NoveltiesClient : Client {
+
+        /// Returns the ids of the novelties that are available in the game
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+            self.client.send(request: GetNoveltyIDs(), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the novelty associated with the given id
+        /// - Parameter id: The id of the novelty
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Novelty?, APIError>)
+        public func get(id: Int, _ completion: @escaping RequestCallback<Novelty>) {
+            self.client.send(request: GetNovelty(id: id, lang: self.lang), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the novelties associated with the given ids
+        /// - Parameter ids: The ids of the novelties
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Novelty]?, APIError>)
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Novelty]>) {
+            self.client.send(request: GetNovelties(ids: ids, lang: self.lang, page: nil, page_size: nil), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns paginated data about the novelties available in the game
+        /// - Parameter page: The page to retrieve
+        /// - Parameter page_size: The maximum page size
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Novelty]?, APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Novelty]>) {
+            self.client.send(request: GetNovelties(ids: nil, lang: self.lang, page: page, page_size: page_size), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The quests endpoint client: api.guildwars2.com/v2/quests
+    public class QuestsClient : Client {
+
+        /// Returns the ids of all quests in the game
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+            self.client.send(request: GetQuestIDs(), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the quest associated with the given id
+        /// - Parameter id: The id of the quest
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Quest?, APIError>)
+        public func get(id: Int, _ completion: @escaping RequestCallback<Quest>) {
+            self.client.send(request: GetQuest(id: id, lang: self.lang), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns the quests associated with the given ids
+        /// - Parameter ids: The ids of the quests
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Quest]?, APIError>)
+        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Quest]>) {
+            self.client.send(request: GetQuests(ids: ids, lang: self.lang, page: nil, page_size: nil), completion: { result in
+                completion(result)
+            })
+        }
+
+        /// Returns paginated data of quests in the game
+        /// - Parameter page: The page of quest data to get
+        /// - Parameter page_size: The maximum page size
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Quest]?, APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Quest]>) {
+            self.client.send(request: GetQuests(ids: nil, lang: self.lang, page: page, page_size: page_size), completion: { result in
+                completion(result)
+            })
+        }
+    }
     
     /// The raids endpoint client: api.guildwars2.com/v2/raids
     public class RaidsClient : Client {
@@ -514,6 +677,22 @@ public class MiscClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[Raid]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Raid]>) {
             self.client.send(request: GetRaids(ids: nil, page: page, page_size: page_size), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The create subtokens endpoint client: api.guildwars2.com/v2/createsubtokens
+    public class SubtokensClient : Client {
+
+        /// Creates a Subtoken; essentially an API key with a more limited set of permissions, which can be used as a substitute for them.
+        /// - Parameter access_token: The access token to create a subtoken from
+        /// - Parameter expire: An ISO-8601 datetime specifing when the generated Subtoken will expire.
+        /// - Parameter permissions: A comma separated list of permissions to inherit (v2/tokeninfo may be queried for a list of avaiable choices to use for a given API key).
+        /// - Parameter urls: A comma separated list of Endpoints that will be accessible using this Subtoken.
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Subtoken?, APIError>)
+        public func create(access_token: String?, expire: String?, permissions: [String]?, urls: [String]?, _ completion: @escaping RequestCallback<Subtoken>) {
+            self.client.send(request: CreateSubtoken(access_token: access_token, expire: expire, permissions: permissions, urls: urls), completion: { result in
                 completion(result)
             })
         }
@@ -608,6 +787,18 @@ public class MiscClient : Client {
         ///   - completion: Callback function to handle the data returned from the API (Result<[World]?, APIError>)
         public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[World]>) {
             self.client.send(request: GetWorlds(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
+                completion(result)
+            })
+        }
+    }
+
+    /// The world bosses endpoint client: api.guildwars2.com/v2/worldbosses
+    public class WorldBossesClient : Client {
+
+        /// Returns a list of all world bosses in the game
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
+        public func get(_ completion: @escaping RequestCallback<[String]>) {
+            self.client.send(request: GetWorldBosses(), completion: { result in
                 completion(result)
             })
         }

@@ -417,16 +417,128 @@ class GetMountSkins: GetRequest<[MountSkin]> {
     }
 }
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/createsubtoken
+class CreateSubtoken: GetRequest<Subtoken> {
+    init(access_token: String?, expire: String?, permissions: [String]?, urls: [String]?) {
+        var urlQP: [URLQueryItem] = []
+        if let access_token = access_token {
+            urlQP.append(URLQueryItem(name: "access_token", value: HTTPParameter.string(access_token).description))
+        }
+        if let expire = expire {
+            urlQP.append(URLQueryItem(name: "expire", value: HTTPParameter.string(expire).description))
+        }
+        if let permissions = permissions {
+            urlQP.append(URLQueryItem(name: "permissions", value: HTTPParameter.stringArr(permissions).description))
+        }
+        if let urls = urls {
+            urlQP.append(URLQueryItem(name: "urls", value: HTTPParameter.stringArr(urls).description))
+        }
+        super.init(resource: "/createsubtoken", urlQueryParameters: urlQP)
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/dailycrafting
+class GetDailyCrafting: GetRequest<[String]> {
+    init() {
+        super.init(resource: "/dailycrafting")
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/emotes
+class GetEmoteIDs: GetRequest<[String]> {
+    init() {
+        super.init(resource: "/emotes")
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/mapchests
+class GetEmote: GetRequest<Emote> {
+    init(id: String) {
+        super.init(resource: "/emotes", urlQueryParameters: [URLQueryItem(name: "id", value: HTTPParameter.string(id).description)])
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/novelties
+class GetEmotes: GetRequest<[Emote]> {
+    init(ids: [String]) {
+        super.init(resource: "/emotes", urlQueryParameters: [URLQueryItem(name: "ids", value: HTTPParameter.stringArr(ids).description)])
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/quests
+class GetMapChests: GetRequest<[String]> {
+    init() {
+        super.init(resource: "/mapchests")
+    }
+}
 
-// TODO: https://wiki.guildwars2.com/wiki/API:2/worldbosses
+
+class GetNoveltyIDs: GetRequest<[Int]> {
+    init() {
+        super.init(resource: "/novelties")
+    }
+}
+
+class GetNovelty: GetRequest<Novelty> {
+    init(id: Int, lang: String?) {
+        var urlQP: [URLQueryItem] = [URLQueryItem(name: "id", value: HTTPParameter.int(id).description)]
+        if let lang = lang {
+            urlQP.append(URLQueryItem(name: "lang", value: HTTPParameter.string(lang).description))
+        }
+        super.init(resource: "/novelties", urlQueryParameters: urlQP)
+    }
+}
+
+class GetNovelties: GetRequest<[Novelty]> {
+    init(ids: [Int]?, lang: String?, page: Int?, page_size: Int?) {
+        var urlQP: [URLQueryItem] = []
+        if let ids = ids {
+            urlQP.append(URLQueryItem(name: "ids", value: HTTPParameter.intArr(ids).description))
+        }
+        if let lang = lang {
+            urlQP.append(URLQueryItem(name: "lang", value: HTTPParameter.string(lang).description))
+        }
+        if let page = page {
+            urlQP.append(URLQueryItem(name: "page", value: HTTPParameter.int(page).description))
+        }
+        if let page_size = page_size {
+            urlQP.append(URLQueryItem(name: "page_size", value: HTTPParameter.int(page_size).description))
+        }
+        super.init(resource: "/novelties", urlQueryParameters: urlQP)
+    }
+}
+
+class GetQuestIDs: GetRequest<[Int]> {
+    init() {
+        super.init(resource: "/quests")
+    }
+}
+
+class GetQuest: GetRequest<Quest> {
+    init(id: Int, lang: String?) {
+        var urlQP: [URLQueryItem] = [URLQueryItem(name: "id", value: HTTPParameter.int(id).description)]
+        if let lang = lang {
+            urlQP.append(URLQueryItem(name: "lang", value: HTTPParameter.string(lang).description))
+        }
+        super.init(resource: "/quests", urlQueryParameters: urlQP)
+    }
+}
+
+class GetQuests: GetRequest<[Quest]> {
+    init(ids: [Int]?, lang: String?, page: Int?, page_size: Int?) {
+        var urlQP: [URLQueryItem] = []
+        if let ids = ids {
+            urlQP.append(URLQueryItem(name: "ids", value: HTTPParameter.intArr(ids).description))
+        }
+        if let lang = lang {
+            urlQP.append(URLQueryItem(name: "lang", value: HTTPParameter.string(lang).description))
+        }
+        if let page = page {
+            urlQP.append(URLQueryItem(name: "page", value: HTTPParameter.int(page).description))
+        }
+        if let page_size = page_size {
+            urlQP.append(URLQueryItem(name: "page_size", value: HTTPParameter.int(page_size).description))
+        }
+        super.init(resource: "/quests", urlQueryParameters: urlQP)
+    }
+}
+
+class GetWorldBosses: GetRequest<[String]> {
+    init() {
+        super.init(resource: "/worldbosses")
+    }
+}

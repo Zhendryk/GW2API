@@ -23,6 +23,10 @@
 /* Begin PBXBuildFile section */
 		19954DB824A155CD00AFFEA1 /* AccountBuildStorageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DB524A1547D00AFFEA1 /* AccountBuildStorageTemplate.swift */; };
 		19954DBA24A158F200AFFEA1 /* AccountLuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DB924A158F200AFFEA1 /* AccountLuck.swift */; };
+		19954DBC24A165A600AFFEA1 /* Emote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DBB24A165A600AFFEA1 /* Emote.swift */; };
+		19954DBE24A16AAD00AFFEA1 /* Novelty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DBD24A16AAD00AFFEA1 /* Novelty.swift */; };
+		19954DC024A16E2F00AFFEA1 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DBF24A16E2F00AFFEA1 /* Quest.swift */; };
+		19954DC224A170DA00AFFEA1 /* Subtoken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19954DC124A170DA00AFFEA1 /* Subtoken.swift */; };
 		OBJ_183 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_158 /* APIClient.swift */; };
 		OBJ_184 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_159 /* APIClientError.swift */; };
 		OBJ_185 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_160 /* APIRequest.swift */; };
@@ -203,6 +207,10 @@
 		19954DB524A1547D00AFFEA1 /* AccountBuildStorageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBuildStorageTemplate.swift; sourceTree = "<group>"; };
 		19954DB724A1551500AFFEA1 /* test_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_data.json; sourceTree = "<group>"; };
 		19954DB924A158F200AFFEA1 /* AccountLuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLuck.swift; sourceTree = "<group>"; };
+		19954DBB24A165A600AFFEA1 /* Emote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emote.swift; sourceTree = "<group>"; };
+		19954DBD24A16AAD00AFFEA1 /* Novelty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novelty.swift; sourceTree = "<group>"; };
+		19954DBF24A16E2F00AFFEA1 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		19954DC124A170DA00AFFEA1 /* Subtoken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtoken.swift; sourceTree = "<group>"; };
 		"APIClient::APIClient::Product" /* APIClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GW2API::GW2API::Product" /* GW2API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GW2API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GW2API::GW2APITests::Product" /* GW2APITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GW2APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -718,6 +726,10 @@
 				OBJ_96 /* Raid.swift */,
 				OBJ_97 /* Title.swift */,
 				OBJ_98 /* World.swift */,
+				19954DBB24A165A600AFFEA1 /* Emote.swift */,
+				19954DBD24A16AAD00AFFEA1 /* Novelty.swift */,
+				19954DBF24A16E2F00AFFEA1 /* Quest.swift */,
+				19954DC124A170DA00AFFEA1 /* Subtoken.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -893,6 +905,7 @@
 				OBJ_218 /* String+regex.swift in Sources */,
 				OBJ_219 /* GW2Client.swift in Sources */,
 				OBJ_220 /* Achievement.swift in Sources */,
+				19954DBC24A165A600AFFEA1 /* Emote.swift in Sources */,
 				OBJ_221 /* AchievementCategory.swift in Sources */,
 				OBJ_222 /* AchievementGroup.swift in Sources */,
 				OBJ_223 /* DailyAchievement.swift in Sources */,
@@ -930,6 +943,7 @@
 				OBJ_255 /* GuildTeam.swift in Sources */,
 				OBJ_256 /* GuildTreasury.swift in Sources */,
 				OBJ_257 /* GuildUpgrade.swift in Sources */,
+				19954DC024A16E2F00AFFEA1 /* Quest.swift in Sources */,
 				OBJ_258 /* Permissions.swift in Sources */,
 				OBJ_259 /* Finisher.swift in Sources */,
 				OBJ_260 /* Item.swift in Sources */,
@@ -941,6 +955,7 @@
 				OBJ_266 /* Continent.swift in Sources */,
 				OBJ_267 /* DetailedMap.swift in Sources */,
 				OBJ_268 /* Floor.swift in Sources */,
+				19954DBE24A16AAD00AFFEA1 /* Novelty.swift in Sources */,
 				OBJ_269 /* Map.swift in Sources */,
 				OBJ_270 /* POI.swift in Sources */,
 				OBJ_271 /* Region.swift in Sources */,
@@ -972,6 +987,7 @@
 				OBJ_296 /* WVWAbility.swift in Sources */,
 				OBJ_297 /* WVWMatch.swift in Sources */,
 				OBJ_298 /* WVWMatchOverview.swift in Sources */,
+				19954DC224A170DA00AFFEA1 /* Subtoken.swift in Sources */,
 				OBJ_299 /* WVWMatchScore.swift in Sources */,
 				OBJ_300 /* WVWMatchStats.swift in Sources */,
 				OBJ_301 /* WVWObjective.swift in Sources */,
