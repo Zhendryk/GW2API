@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountInventoryItem: Decodable {
+public struct AccountInventoryItem: Decodable, Identifiable {
     public let id: Int
     public let count: Int
     public let binding: String?

@@ -8,15 +8,15 @@
 
 //raids
 //lang, id, ids
-public struct Raid : Decodable {
+public struct Raid : Decodable, Identifiable {
     public let id: String
     public let wings: [RaidWing]
     
-    public struct RaidWing : Decodable {
+    public struct RaidWing : Decodable, Identifiable {
         public let id: String
         public let events: [RaidEvent]
         
-        public struct RaidEvent : Decodable {
+        public struct RaidEvent : Decodable, Identifiable {
             public let id: String
             public let type: String
         }

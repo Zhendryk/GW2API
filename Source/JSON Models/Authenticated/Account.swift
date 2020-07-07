@@ -8,7 +8,7 @@
 
 //account
 //access_token
-public struct Account: Decodable {
+public struct Account: Decodable, Identifiable {
     public let id: String
     public let age: Int
     public let name: String

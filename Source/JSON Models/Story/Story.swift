@@ -8,7 +8,7 @@
 
 //stories
 //lang, page, page_size, id, ids
-public struct Story : Decodable {
+public struct Story : Decodable, Identifiable {
     public let id: Int
     public let season: String
     public let name: String

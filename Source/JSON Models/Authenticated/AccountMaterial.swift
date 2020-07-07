@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountMaterial: Decodable {
+public struct AccountMaterial: Decodable, Identifiable {
     public let id: Int
     public let category: Int
     public let count: Int

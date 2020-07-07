@@ -6,23 +6,23 @@
 //
 
 public struct BuildStorageTemplate: Decodable {
-    let name: String
-    let profession: String
-    let specializations: [BuildStorageTemplateSpecialization]
-    let skills: BuildStorageTemplateSkills
-    let aquatic_skills: BuildStorageTemplateSkills
-    let legends: [Int]?
-    let aquatic_legends: [Int]?
+    public let name: String
+    public let profession: String
+    public let specializations: [BuildStorageTemplateSpecialization]
+    public let skills: BuildStorageTemplateSkills
+    public let aquatic_skills: BuildStorageTemplateSkills
+    public let legends: [Int]?
+    public let aquatic_legends: [Int]?
     
 
-    public struct BuildStorageTemplateSpecialization: Decodable {
-        let id: Int
-        let traits: [Int]
+    public struct BuildStorageTemplateSpecialization: Decodable, Identifiable {
+        public let id: Int
+        public let traits: [Int]
     }
 
     public struct BuildStorageTemplateSkills: Decodable {
-        let heal: Int?
-        let utilities: [Int?]
-        let elite: Int?
+        public let heal: Int?
+        public let utilities: [Int?]
+        public let elite: Int?
     }
 }

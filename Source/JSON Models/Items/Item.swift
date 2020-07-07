@@ -8,7 +8,7 @@
 
 //items
 //lang, id, ids
-public struct Item : Decodable {
+public struct Item : Decodable, Identifiable {
     public let id: Int
     public let chat_link: String
     public let name: String

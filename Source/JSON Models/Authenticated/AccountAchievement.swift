@@ -8,7 +8,7 @@
 
 //account/achievements
 //access_token
-public struct AccountAchievement: Decodable {
+public struct AccountAchievement: Decodable, Identifiable {
     public let id: Int
     public let current: Int?
     public let max: Int?

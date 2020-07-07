@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountPVPGame: Decodable {
+public struct AccountPVPGame: Decodable, Identifiable {
     public let id: String
     public let map_id: Int
     public let started: String

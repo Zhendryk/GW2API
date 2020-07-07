@@ -7,7 +7,7 @@
 //
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>
-public struct Map : Decodable {
+public struct Map : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let min_level: Int

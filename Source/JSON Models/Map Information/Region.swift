@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct Region : Decodable {
+public struct Region : Decodable, Identifiable {
     public let name: String
     public let label_coord: [Int]
     public let continent_rect: [[Int]]

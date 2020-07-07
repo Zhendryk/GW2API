@@ -15,7 +15,7 @@ public struct DailyAchievement: Decodable {
     public let fractals: [Daily]
     public let special: [Daily]
     
-    public struct Daily: Decodable {
+    public struct Daily: Decodable, Identifiable {
         public let id: Int
         public let level: DailyLevel
         public let required_access: [String]

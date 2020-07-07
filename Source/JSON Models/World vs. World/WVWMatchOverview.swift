@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct WVWMatchOverview : Decodable {
+public struct WVWMatchOverview : Decodable, Identifiable {
     public let id: String
     public let worlds: [String:Int]
     public let all_worlds: [String:[Int]]

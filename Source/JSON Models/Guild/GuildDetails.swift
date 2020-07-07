@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct GuildDetails: Decodable {
+public struct GuildDetails: Decodable, Identifiable {
     public let level: Int?
     public let motd: String?
     public let influence: Int?
@@ -24,12 +24,12 @@ public struct emblem: Decodable {
     public let foreground: foreground
 }
 
-public struct background: Decodable {
+public struct background: Decodable, Identifiable {
     public let id: Int
     public let colors: [Int]
 }
 
-public struct foreground: Decodable {
+public struct foreground: Decodable, Identifiable {
     public let id: Int
     public let colors: [Int]
 }

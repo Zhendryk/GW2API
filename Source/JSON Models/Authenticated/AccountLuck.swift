@@ -5,7 +5,7 @@
 //  Created by Jonathan Bailey on 6/22/20.
 //
 
-public struct AccountLuck: Decodable {
-    let id: String
-    let value: Int
+public struct AccountLuck: Decodable, Identifiable {
+    public let id: String
+    public let value: Int
 }

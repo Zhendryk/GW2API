@@ -447,7 +447,7 @@ class AuthenticatedTests: XCTestCase {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
         GW2Client.instance.authenticated.account.pvp.games.get() { result in
             switch result {
-            case .success(let data):
+            case .success(let (_, data)):
                 GW2Client.instance.authenticated.account.pvp.games.get(id: data.first!) { game in
                     switch game {
                     case .success(_):
@@ -471,7 +471,7 @@ class AuthenticatedTests: XCTestCase {
         let expectation = self.expectation(description: "Querying gw2api/authenticated/pvp/games")
         GW2Client.instance.authenticated.account.pvp.games.get() { result in
             switch result {
-            case .success(let data):
+            case .success(let (_, data)):
                 GW2Client.instance.authenticated.account.pvp.games.get(ids: data) { game in
                     switch game {
                     case .success(_):

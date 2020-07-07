@@ -8,7 +8,7 @@
 
 //finishers
 //lang, page, page_size, id, ids
-public struct Finisher : Decodable {
+public struct Finisher : Decodable, Identifiable {
     public let id: Int
     public let unlock_details: String
     public let unlock_items: [Int]?

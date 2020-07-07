@@ -8,7 +8,7 @@
 
 //pvp/ranks
 //lang, ids
-public struct PVPRank : Decodable {
+public struct PVPRank : Decodable, Identifiable {
     public let id: Int
     public let finisher_id: Int
     public let name: String

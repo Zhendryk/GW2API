@@ -8,7 +8,7 @@
 
 //recipes
 //id, ids
-public struct Recipe : Decodable {
+public struct Recipe : Decodable, Identifiable {
     public let id: Int
     public let type: String
     public let output_item_id: Int

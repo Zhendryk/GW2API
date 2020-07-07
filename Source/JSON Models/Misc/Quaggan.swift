@@ -8,7 +8,7 @@
 
 //quaggans
 //id, ids
-public struct Quaggan : Decodable {
+public struct Quaggan : Decodable, Identifiable {
     public let id: String
     public let url: String
 }

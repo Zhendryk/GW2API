@@ -98,8 +98,8 @@ public class MiscClient : Client {
         
         /// Returns the current build ID of the game
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Build?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<Build>){
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, Build), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<Build>){
             self.client.send(request: GetBuild(), completion: { result in
                 completion(result)
             })
@@ -111,8 +111,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all color ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetColorIDs(), completion: { result in
                 completion(result)
             })
@@ -122,8 +122,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the color you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Color?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Color>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Color), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Color>) {
             self.client.send(request: GetColor(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -133,8 +133,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the color(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Color]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Color]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Color]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Color]>) {
             self.client.send(request: GetColors(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -145,8 +145,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Color]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Color]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Color]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Color]>) {
             self.client.send(request: GetColors(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -158,8 +158,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all currency ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetCurrencyIDs(), completion: { result in
                 completion(result)
             })
@@ -169,8 +169,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the currency you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Currency?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Currency>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Currency), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Currency>) {
             self.client.send(request: GetCurrency(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -180,8 +180,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the currency(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Currency]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Currency]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Currency]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Currency]>) {
             self.client.send(request: GetCurrencies(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -192,8 +192,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Currency]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Currency]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Currency]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Currency]>) {
             self.client.send(request: GetCurrencies(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -204,8 +204,8 @@ public class MiscClient : Client {
     public class DailyCraftingClient : Client {
 
         /// Returns information about time-gated recipes that can be crafted in-game.
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetDailyCrafting(), completion: { result in
                 completion(result)
             })
@@ -217,8 +217,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all dungeon ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetDungeonIDs(), completion: { result in
                 completion(result)
             })
@@ -228,8 +228,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the dungeon you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Dungeon?, APIError>)
-        public func get(id: String, _ completion: @escaping RequestCallback<Dungeon>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Dungeon), APIError>)
+        public func get(id: String, _ completion: @escaping APIRequestCallback<Dungeon>) {
             self.client.send(request: GetDungeon(id: id), completion: { result in
                 completion(result)
             })
@@ -239,8 +239,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the dungeon(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Dungeon]?, APIError>)
-        public func get(ids: [String], _ completion: @escaping RequestCallback<[Dungeon]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Dungeon]), APIError>)
+        public func get(ids: [String], _ completion: @escaping APIRequestCallback<[Dungeon]>) {
             self.client.send(request: GetDungeons(ids: ids, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -251,8 +251,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Dungeon]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Dungeon]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Dungeon]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Dungeon]>) {
             self.client.send(request: GetDungeons(ids: nil, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -263,8 +263,8 @@ public class MiscClient : Client {
     public class EmotesClient : Client {
 
         /// Returns the names of all available emotes
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetEmoteIDs(), completion: { result in
                 completion(result)
             })
@@ -272,8 +272,8 @@ public class MiscClient : Client {
 
         /// Returns the emote associated by the given id
         /// - Parameter id: The id of the emote
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Emote?, APIError>)
-        public func get(id: String, _ completion: @escaping RequestCallback<Emote>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, Emote), APIError>)
+        public func get(id: String, _ completion: @escaping APIRequestCallback<Emote>) {
             self.client.send(request: GetEmote(id: id), completion: { result in
                 completion(result)
             })
@@ -281,8 +281,8 @@ public class MiscClient : Client {
 
         /// Returns the list of emotes corresponding to the given list of ids
         /// - Parameter ids: The ids of the emotes
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Emote]?, APIError>)
-        public func get(ids: [String], _ completion: @escaping RequestCallback<[Emote]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Emote]), APIError>)
+        public func get(ids: [String], _ completion: @escaping APIRequestCallback<[Emote]>) {
             self.client.send(request: GetEmotes(ids: ids), completion: { result in
                 completion(result)
             })
@@ -294,8 +294,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all file ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetFileIDs(), completion: { result in
                 completion(result)
             })
@@ -305,8 +305,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the file you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<File?, APIError>)
-        public func get(id: String, _ completion: @escaping RequestCallback<File>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, File), APIError>)
+        public func get(id: String, _ completion: @escaping APIRequestCallback<File>) {
             self.client.send(request: GetFile(id: id), completion: { result in
                 completion(result)
             })
@@ -316,8 +316,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the file(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[File]?, APIError>)
-        public func get(ids: [String], _ completion: @escaping RequestCallback<[File]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [File]), APIError>)
+        public func get(ids: [String], _ completion: @escaping APIRequestCallback<[File]>) {
             self.client.send(request: GetFiles(ids: ids, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -328,8 +328,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[File]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[File]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [File]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[File]>) {
             self.client.send(request: GetFiles(ids: nil, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -341,8 +341,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all quaggan ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetQuagganIDs(), completion: { result in
                 completion(result)
             })
@@ -352,8 +352,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the quaggan you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Quaggan?, APIError>)
-        public func get(id: String, _ completion: @escaping RequestCallback<Quaggan>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Quaggan), APIError>)
+        public func get(id: String, _ completion: @escaping APIRequestCallback<Quaggan>) {
             self.client.send(request: GetQuaggan(id: id), completion: { result in
                 completion(result)
             })
@@ -363,8 +363,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the quaggan(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Quaggan]?, APIError>)
-        public func get(ids: [String], _ completion: @escaping RequestCallback<[Quaggan]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Quaggan]), APIError>)
+        public func get(ids: [String], _ completion: @escaping APIRequestCallback<[Quaggan]>) {
             self.client.send(request: GetQuaggans(ids: ids, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -375,8 +375,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Quaggan]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Quaggan]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Quaggan]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Quaggan]>) {
             self.client.send(request: GetQuaggans(ids: nil, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -387,8 +387,8 @@ public class MiscClient : Client {
     public class MapChestsClient : Client {
 
         /// Returns the ids of the Hero's Choice Chests that can be be acquired once a day in-game.
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetMapChests(), completion: { result in
                 completion(result)
             })
@@ -400,8 +400,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all minipet ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetMiniIDs(), completion: { result in
                 completion(result)
             })
@@ -411,8 +411,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the minipet you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Minipet?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Minipet>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Minipet), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Minipet>) {
             self.client.send(request: GetMini(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -422,8 +422,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the minipet(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Minipet]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Minipet]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Minipet]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Minipet]>) {
             self.client.send(request: GetMinis(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -434,8 +434,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Minipet]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Minipet]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Minipet]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Minipet]>) {
             self.client.send(request: GetMinis(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -453,8 +453,8 @@ public class MiscClient : Client {
         
         /// Returns a list of the /mounts subendpoints
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetMounts(), completion: { result in
                 completion(result)
             })
@@ -465,8 +465,8 @@ public class MiscClient : Client {
             
             /// Returns a list of all mount type ids
             ///
-            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-            public func get(_ completion: @escaping RequestCallback<[String]>) {
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+            public func get(_ completion: @escaping APIRequestCallback<[String]>) {
                 self.client.send(request: GetMountTypeIDs(), completion: { result in
                     completion(result)
                 })
@@ -476,8 +476,8 @@ public class MiscClient : Client {
             ///
             /// - Parameters:
             ///   - id: The ID of the mount type you are searching for
-            ///   - completion: Callback function to handle the data returned from the API (Result<MountType?, APIError>)
-            public func get(id: String, _ completion: @escaping RequestCallback<MountType>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, MountType), APIError>)
+            public func get(id: String, _ completion: @escaping APIRequestCallback<MountType>) {
                 self.client.send(request: GetMountType(id: id, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -487,8 +487,8 @@ public class MiscClient : Client {
             ///
             /// - Parameters:
             ///   - ids: The id(s) of the mount type(s) you are searching for
-            ///   - completion: Callback function to handle the data returned from the API (Result<[MountType]?, APIError>)
-            public func get(ids: [String], _ completion: @escaping RequestCallback<[MountType]>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [MountType]), APIError>)
+            public func get(ids: [String], _ completion: @escaping APIRequestCallback<[MountType]>) {
                 self.client.send(request: GetMountTypes(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -499,8 +499,8 @@ public class MiscClient : Client {
             /// - Parameters:
             ///   - page: The page number of paginated information
             ///   - page_size: The number of entries to restrict this page to
-            ///   - completion: Callback function to handle the data returned from the API (Result<[MountType]?, APIError>)
-            public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[MountType]>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [MountType]), APIError>)
+            public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[MountType]>) {
                 self.client.send(request: GetMountTypes(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -512,8 +512,8 @@ public class MiscClient : Client {
             
             /// Returns a list of all mount skin ids
             ///
-            /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-            public func get(_ completion: @escaping RequestCallback<[Int]>) {
+            /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+            public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
                 self.client.send(request: GetMountSkinIDs(), completion: { result in
                     completion(result)
                 })
@@ -523,8 +523,8 @@ public class MiscClient : Client {
             ///
             /// - Parameters:
             ///   - id: The ID of the mount skin you are searching for
-            ///   - completion: Callback function to handle the data returned from the API (Result<MountSkin?, APIError>)
-            public func get(id: Int, _ completion: @escaping RequestCallback<MountSkin>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, MountSkin), APIError>)
+            public func get(id: Int, _ completion: @escaping APIRequestCallback<MountSkin>) {
                 self.client.send(request: GetMountSkin(id: id, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -534,8 +534,8 @@ public class MiscClient : Client {
             ///
             /// - Parameters:
             ///   - ids: The id(s) of the mount skin(s) you are searching for
-            ///   - completion: Callback function to handle the data returned from the API (Result<[MountSkin]?, APIError>)
-            public func get(ids: [Int], _ completion: @escaping RequestCallback<[MountSkin]>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [MountSkin]), APIError>)
+            public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[MountSkin]>) {
                 self.client.send(request: GetMountSkins(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -546,8 +546,8 @@ public class MiscClient : Client {
             /// - Parameters:
             ///   - page: The page number of paginated information
             ///   - page_size: The number of entries to restrict this page to
-            ///   - completion: Callback function to handle the data returned from the API (Result<[MountSkin]?, APIError>)
-            public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[MountSkin]>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [MountSkin]), APIError>)
+            public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[MountSkin]>) {
                 self.client.send(request: GetMountSkins(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -559,8 +559,8 @@ public class MiscClient : Client {
     public class NoveltiesClient : Client {
 
         /// Returns the ids of the novelties that are available in the game
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetNoveltyIDs(), completion: { result in
                 completion(result)
             })
@@ -568,8 +568,8 @@ public class MiscClient : Client {
 
         /// Returns the novelty associated with the given id
         /// - Parameter id: The id of the novelty
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Novelty?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Novelty>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, Novelty), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Novelty>) {
             self.client.send(request: GetNovelty(id: id, lang: self.lang), completion: { result in
                 completion(result)
             })
@@ -577,8 +577,8 @@ public class MiscClient : Client {
 
         /// Returns the novelties associated with the given ids
         /// - Parameter ids: The ids of the novelties
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Novelty]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Novelty]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Novelty]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Novelty]>) {
             self.client.send(request: GetNovelties(ids: ids, lang: self.lang, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -587,8 +587,8 @@ public class MiscClient : Client {
         /// Returns paginated data about the novelties available in the game
         /// - Parameter page: The page to retrieve
         /// - Parameter page_size: The maximum page size
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Novelty]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Novelty]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Novelty]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Novelty]>) {
             self.client.send(request: GetNovelties(ids: nil, lang: self.lang, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -599,8 +599,8 @@ public class MiscClient : Client {
     public class QuestsClient : Client {
 
         /// Returns the ids of all quests in the game
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetQuestIDs(), completion: { result in
                 completion(result)
             })
@@ -608,8 +608,8 @@ public class MiscClient : Client {
 
         /// Returns the quest associated with the given id
         /// - Parameter id: The id of the quest
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<Quest?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Quest>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, Quest), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Quest>) {
             self.client.send(request: GetQuest(id: id, lang: self.lang), completion: { result in
                 completion(result)
             })
@@ -617,8 +617,8 @@ public class MiscClient : Client {
 
         /// Returns the quests associated with the given ids
         /// - Parameter ids: The ids of the quests
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Quest]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Quest]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Quest]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Quest]>) {
             self.client.send(request: GetQuests(ids: ids, lang: self.lang, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -627,8 +627,8 @@ public class MiscClient : Client {
         /// Returns paginated data of quests in the game
         /// - Parameter page: The page of quest data to get
         /// - Parameter page_size: The maximum page size
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Quest]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Quest]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Quest]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Quest]>) {
             self.client.send(request: GetQuests(ids: nil, lang: self.lang, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -640,8 +640,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all raid ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetRaidIDs(), completion: { result in
                 completion(result)
             })
@@ -651,8 +651,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the raid you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Raid?, APIError>)
-        public func get(id: String, _ completion: @escaping RequestCallback<Raid>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Raid), APIError>)
+        public func get(id: String, _ completion: @escaping APIRequestCallback<Raid>) {
             self.client.send(request: GetRaid(id: id), completion: { result in
                 completion(result)
             })
@@ -662,8 +662,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the raid(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Raid]?, APIError>)
-        public func get(ids: [String], _ completion: @escaping RequestCallback<[Raid]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Raid]), APIError>)
+        public func get(ids: [String], _ completion: @escaping APIRequestCallback<[Raid]>) {
             self.client.send(request: GetRaids(ids: ids, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -674,8 +674,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Raid]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Raid]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Raid]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Raid]>) {
             self.client.send(request: GetRaids(ids: nil, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -691,7 +691,7 @@ public class MiscClient : Client {
         /// - Parameter permissions: A comma separated list of permissions to inherit (v2/tokeninfo may be queried for a list of avaiable choices to use for a given API key).
         /// - Parameter urls: A comma separated list of Endpoints that will be accessible using this Subtoken.
         /// - Parameter completion: Callback function to handle the data returned from the API (Result<Subtoken?, APIError>)
-        public func create(access_token: String?, expire: String?, permissions: [String]?, urls: [String]?, _ completion: @escaping RequestCallback<Subtoken>) {
+        public func create(access_token: String?, expire: String?, permissions: [String]?, urls: [String]?, _ completion: @escaping APIRequestCallback<Subtoken>) {
             self.client.send(request: CreateSubtoken(access_token: access_token, expire: expire, permissions: permissions, urls: urls), completion: { result in
                 completion(result)
             })
@@ -703,8 +703,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all title ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetTitleIDs(), completion: { result in
                 completion(result)
             })
@@ -714,8 +714,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the title you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Title?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Title>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Title), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Title>) {
             self.client.send(request: GetTitle(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -725,8 +725,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the title(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Title]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Title]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Title]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Title]>) {
             self.client.send(request: GetTitles(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -737,8 +737,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Title]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Title]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Title]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Title]>) {
             self.client.send(request: GetTitles(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -750,8 +750,8 @@ public class MiscClient : Client {
         
         /// Returns a list of all world ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetWorldIDs(), completion: { result in
                 completion(result)
             })
@@ -761,8 +761,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the world you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<World?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<World>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, World), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<World>) {
             self.client.send(request: GetWorld(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -772,8 +772,8 @@ public class MiscClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The id(s) of the world(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[World]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[World]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [World]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[World]>) {
             self.client.send(request: GetWorlds(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -784,8 +784,8 @@ public class MiscClient : Client {
         /// - Parameters:
         ///   - page: The page number of paginated information
         ///   - page_size: The number of entries to restrict this page to
-        ///   - completion: Callback function to handle the data returned from the API (Result<[World]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[World]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [World]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[World]>) {
             self.client.send(request: GetWorlds(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -796,8 +796,8 @@ public class MiscClient : Client {
     public class WorldBossesClient : Client {
 
         /// Returns a list of all world bosses in the game
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[String]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetWorldBosses(), completion: { result in
                 completion(result)
             })

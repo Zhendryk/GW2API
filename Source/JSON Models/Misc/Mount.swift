@@ -8,28 +8,28 @@
 
 import Foundation
 
-public struct MountSkin: Decodable {
-    let id: Int
-    let name: String
-    let icon: String
-    let mount: String
-    let dye_slots: [DyeSlot]
+public struct MountSkin: Decodable, Identifiable {
+    public let id: Int
+    public let name: String
+    public let icon: String
+    public let mount: String
+    public let dye_slots: [DyeSlot]
     
     public struct DyeSlot: Decodable {
-        let color_id: Int
-        let material: String
+        public let color_id: Int
+        public let material: String
     }
 }
 
-public struct MountType: Decodable {
-    let id: String
-    let name: String
-    let default_skin: Int
-    let skins: [Int]
-    let skills: [MountSkill]
+public struct MountType: Decodable, Identifiable {
+    public let id: String
+    public let name: String
+    public let default_skin: Int
+    public let skins: [Int]
+    public let skills: [MountSkill]
     
-    public struct MountSkill: Decodable {
-        let id: Int
-        let slot: String
+    public struct MountSkill: Decodable, Identifiable {
+        public let id: Int
+        public let slot: String
     }
 }

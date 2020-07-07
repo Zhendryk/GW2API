@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountMastery: Decodable {
+public struct AccountMastery: Decodable, Identifiable {
     public let id: Int
     public let level: Int
 }

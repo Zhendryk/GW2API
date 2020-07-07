@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountWalletItem : Decodable {
+public struct AccountWalletItem : Decodable, Identifiable {
     public let id: Int
     public let value: Int
 }

@@ -41,8 +41,8 @@ public class MapInfoClient : Client {
         
         /// Returns a list of all continent ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetContinentIDs(), completion: { result in
                 completion(result)
             })
@@ -52,8 +52,8 @@ public class MapInfoClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the continent you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Continent?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Continent>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Continent), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Continent>) {
             self.client.send(request: GetContinent(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -63,8 +63,8 @@ public class MapInfoClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The IDs of the continents you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Continent]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Continent]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Continent]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Continent]>) {
             self.client.send(request: GetContinents(ids: ids, lang: lang), completion: { result in
                 completion(result)
             })
@@ -88,8 +88,8 @@ public class MapInfoClient : Client {
             ///
             /// - Parameters:
             ///   - continentID: The ID of the continent you are searching for floors
-            ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-            public func get(continentID: Int, _ completion: @escaping RequestCallback<[Int]>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+            public func get(continentID: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
                 self.client.send(request: GetFloorIDsForContinent(continentID: continentID), completion: { result in
                     completion(result)
                 })
@@ -100,8 +100,8 @@ public class MapInfoClient : Client {
             /// - Parameters:
             ///   - continentID: The ID of the continent you are searching in
             ///   - floorID: The ID of the floor in the continent
-            ///   - completion: Callback function to handle the data returned from the API (Result<Floor?, APIError>)
-            public func get(continentID: Int, floorID: Int, _ completion: @escaping RequestCallback<Floor>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Floor), APIError>)
+            public func get(continentID: Int, floorID: Int, _ completion: @escaping APIRequestCallback<Floor>) {
                 self.client.send(request: GetFloorInContinent(continentID: continentID, floorID: floorID, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -112,8 +112,8 @@ public class MapInfoClient : Client {
             /// - Parameters:
             ///   - continentID: The ID of the continent you are searching in
             ///   - floorIDs: The id(s) of the floor(s) in the continent
-            ///   - completion: Callback function to handle the data returned from the API (Result<[Floor]?, APIError>)
-            public func get(continentID: Int, floorIDs: [Int], _ completion: @escaping RequestCallback<[Floor]>) {
+            ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Floor]), APIError>)
+            public func get(continentID: Int, floorIDs: [Int], _ completion: @escaping APIRequestCallback<[Floor]>) {
                 self.client.send(request: GetFloorsInContinent(continentID: continentID, floorIDs: floorIDs, lang: lang), completion: { result in
                     completion(result)
                 })
@@ -138,8 +138,8 @@ public class MapInfoClient : Client {
                 /// - Parameters:
                 ///   - continentID: The ID of the continent you are searching in
                 ///   - floorID: The ID of the floor within the continent you are searching in
-                ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-                public func get(continentID: Int, floorID: Int, _ completion: @escaping RequestCallback<[Int]>) {
+                ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+                public func get(continentID: Int, floorID: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
                     self.client.send(request: GetRegionIDsInFloorInContinent(continentID: continentID, floorID: floorID), completion: { result in
                         completion(result)
                     })
@@ -151,8 +151,8 @@ public class MapInfoClient : Client {
                 ///   - continentID: The ID of the continent you are searching in
                 ///   - floorID: The ID of the floor within the continent you are searching in
                 ///   - regionID: The ID of the region you are searching for
-                ///   - completion: Callback function to handle the data returned from the API (Result<Region?, APIError>)
-                public func get(continentID: Int, floorID: Int, regionID: Int, _ completion: @escaping RequestCallback<Region>) {
+                ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Region), APIError>)
+                public func get(continentID: Int, floorID: Int, regionID: Int, _ completion: @escaping APIRequestCallback<Region>) {
                     self.client.send(request: GetRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, lang: lang), completion: { result in
                         completion(result)
                     })
@@ -164,8 +164,8 @@ public class MapInfoClient : Client {
                 ///   - continentID: The ID of the continent you are searching in
                 ///   - floorID: The ID of the floor within the continent you are searching in
                 ///   - regionIDs: The ID(s) of the region(s) you are searching for
-                ///   - completion: Callback function to handle the data returned from the API (Result<[Region]?, APIError>)
-                public func get(continentID: Int, floorID: Int, regionIDs: [Int], _ completion: @escaping RequestCallback<[Region]>) {
+                ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Region]), APIError>)
+                public func get(continentID: Int, floorID: Int, regionIDs: [Int], _ completion: @escaping APIRequestCallback<[Region]>) {
                     self.client.send(request: GetRegionsInFloorInContinent(continentID: continentID, floorID: floorID, regionIDs: regionIDs, lang: lang), completion: { result in
                         completion(result)
                     })
@@ -200,8 +200,8 @@ public class MapInfoClient : Client {
                     ///   - continentID: The ID of the continent you are searching in
                     ///   - floorID: The ID of the floor within the continent you are searching in
                     ///   - regionID: The ID of the region within the floor within the continent you are searching in
-                    ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-                    public func get(continentID: Int, floorID: Int, regionID: Int, _ completion: @escaping RequestCallback<[Int]>) {
+                    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+                    public func get(continentID: Int, floorID: Int, regionID: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
                         self.client.send(request: GetMapIDsInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID), completion: { result in
                             completion(result)
                         })
@@ -214,8 +214,8 @@ public class MapInfoClient : Client {
                     ///   - floorID: The ID of the floor within the continent you are searching in
                     ///   - regionID: The ID of the region within the floor within the continent you are searching in
                     ///   - mapID: The ID of the map you are searching for
-                    ///   - completion: Callback function to handle the data returned from the API (Result<DetailedMap?, APIError>)
-                    public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping RequestCallback<DetailedMap>) {
+                    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, DetailedMap), APIError>)
+                    public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping APIRequestCallback<DetailedMap>) {
                         self.client.send(request: GetMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, lang: lang), completion: { result in
                             completion(result)
                         })
@@ -228,8 +228,8 @@ public class MapInfoClient : Client {
                     ///   - floorID: The ID of the floor within the continent you are searching in
                     ///   - regionID: The ID of the region within the floor within the continent you are searching in
                     ///   - mapIDs: The ID of the map you are searching for
-                    ///   - completion: Callback function to handle the data returned from the API (Result<[DetailedMap]?, APIError>)
-                    public func get(continentID: Int, floorID: Int, regionID: Int, mapIDs: [Int], _ completion: @escaping RequestCallback<[DetailedMap]>) {
+                    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [DetailedMap]), APIError>)
+                    public func get(continentID: Int, floorID: Int, regionID: Int, mapIDs: [Int], _ completion: @escaping APIRequestCallback<[DetailedMap]>) {
                         self.client.send(request: GetMapsInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapIDs: mapIDs, lang: lang), completion: { result in
                             completion(result)
                         })
@@ -246,8 +246,8 @@ public class MapInfoClient : Client {
                         ///   - floorID: The ID of the floor within the continent you are searching in
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
-                        ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping RequestCallback<[Int]>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
                             self.client.send(request: GetSectorIDsInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), completion: { result in
                                 completion(result)
                             })
@@ -261,8 +261,8 @@ public class MapInfoClient : Client {
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - sectorID: The ID of the sector you are searching for
-                        ///   - completion: Callback function to handle the data returned from the API (Result<Sector?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorID: Int, _ completion: @escaping RequestCallback<Sector>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Sector), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorID: Int, _ completion: @escaping APIRequestCallback<Sector>) {
                             self.client.send(request: GetSectorInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, sectorID: sectorID, lang: lang), completion: { result in
                                 completion(result)
                             })
@@ -276,8 +276,8 @@ public class MapInfoClient : Client {
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - sectorIDs: The ID(s) of the sector(s) you are searching for
-                        ///   - completion: Callback function to handle the data returned from the API (Result<[Sector]?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorIDs: [Int], _ completion: @escaping RequestCallback<[Sector]>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Sector]), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, sectorIDs: [Int], _ completion: @escaping APIRequestCallback<[Sector]>) {
                             self.client.send(request: GetSectorsInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, sectorIDs: sectorIDs, lang: lang), completion: { result in
                                 completion(result)
                             })
@@ -293,8 +293,8 @@ public class MapInfoClient : Client {
                         ///   - floorID: The ID of the floor within the continent you are searching in
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
-                        ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping RequestCallback<[Int]>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
                             self.client.send(request: GetPOIIDsInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), completion: { result in
                                 completion(result)
                             })
@@ -308,8 +308,8 @@ public class MapInfoClient : Client {
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - poiID: The ID of the poi you are searching for
-                        ///   - completion: Callback function to handle the data returned from the API (Result<POI?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiID: Int, _ completion: @escaping RequestCallback<POI>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, POI), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiID: Int, _ completion: @escaping APIRequestCallback<POI>) {
                             self.client.send(request: GetPOIInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, poiID: poiID, lang: lang), completion: { result in
                                 completion(result)
                             })
@@ -323,8 +323,8 @@ public class MapInfoClient : Client {
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - poiIDs: The ID(s) of the poi(s) you are searching for
-                        ///   - completion: Callback function to handle the data returned from the API (Result<[POI]?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiIDs: [Int], _ completion: @escaping RequestCallback<[POI]>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [POI]), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, poiIDs: [Int], _ completion: @escaping APIRequestCallback<[POI]>) {
                             self.client.send(request: GetPOIsInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, poiIDs: poiIDs, lang: lang), completion: { result in
                                 completion(result)
                             })
@@ -340,8 +340,8 @@ public class MapInfoClient : Client {
                         ///   - floorID: The ID of the floor within the continent you are searching in
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
-                        ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping RequestCallback<[Int]>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
                             self.client.send(request: GetTaskIDsInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID), completion: { result in
                                 completion(result)
                             })
@@ -355,8 +355,8 @@ public class MapInfoClient : Client {
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - taskID: The ID of the task you are searching for
-                        ///   - completion: Callback function to handle the data returned from the API (Result<Task?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskID: Int, _ completion: @escaping RequestCallback<Task>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Task), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskID: Int, _ completion: @escaping APIRequestCallback<Task>) {
                             self.client.send(request: GetTaskInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, taskID: taskID, lang: lang), completion: { result in
                                 completion(result)
                             })
@@ -370,8 +370,8 @@ public class MapInfoClient : Client {
                         ///   - regionID: The ID of the region within the floor within the continent you are searching in
                         ///   - mapID: The ID of the map within the region within the floor within the continent you are searching in
                         ///   - taskIDs: The ID(s) of the task(s) you are searching for
-                        ///   - completion: Callback function to handle the data returned from the API (Result<[Task]?, APIError>)
-                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskIDs: [Int], _ completion: @escaping RequestCallback<[Task]>) {
+                        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Task]), APIError>)
+                        public func get(continentID: Int, floorID: Int, regionID: Int, mapID: Int, taskIDs: [Int], _ completion: @escaping APIRequestCallback<[Task]>) {
                             self.client.send(request: GetTasksInMapInRegionInFloorInContinent(continentID: continentID, floorID: floorID, regionID: regionID, mapID: mapID, taskIDs: taskIDs, lang: lang), completion: { result in
                                 completion(result)
                             })
@@ -387,8 +387,8 @@ public class MapInfoClient : Client {
         
         /// Returns a list of all simple map ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetSimpleMapIDs(), completion: { result in
                 completion(result)
             })
@@ -398,8 +398,8 @@ public class MapInfoClient : Client {
         ///
         /// - Parameters:
         ///   - mapID: The ID of the map corresponding to the given id
-        ///   - completion: Callback function to handle the data returned from the API (Result<Map?, APIError>)
-        public func get(mapID: Int, _ completion: @escaping RequestCallback<Map>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Map), APIError>)
+        public func get(mapID: Int, _ completion: @escaping APIRequestCallback<Map>) {
             self.client.send(request: GetSimpleMap(id: mapID, lang: lang), completion: { result in
                 completion(result)
             })
@@ -409,8 +409,8 @@ public class MapInfoClient : Client {
         ///
         /// - Parameters:
         ///   - mapIDs: The ID(s) of the map(s) you are searching for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Map]?, APIError>)
-        public func get(mapIDs: [Int], _ completion: @escaping RequestCallback<[Map]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Map]), APIError>)
+        public func get(mapIDs: [Int], _ completion: @escaping APIRequestCallback<[Map]>) {
             self.client.send(request: GetSimpleMaps(ids: mapIDs, lang: lang), completion: { result in
                 completion(result)
             })

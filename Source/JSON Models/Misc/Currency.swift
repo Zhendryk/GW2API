@@ -8,7 +8,7 @@
 
 //currencies
 //lang, id, ids
-public struct Currency : Decodable {
+public struct Currency : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let description: String

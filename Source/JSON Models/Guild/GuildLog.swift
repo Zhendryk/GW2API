@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct GuildLog: Decodable {
+public struct GuildLog: Decodable, Identifiable {
     public let id: Int
     public let time: String
     public let user: String

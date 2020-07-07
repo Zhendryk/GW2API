@@ -44,8 +44,8 @@ public class ItemsClient : Client {
     
     /// Returns a list of all item ids
     ///
-    /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-    public func get(_ completion: @escaping RequestCallback<[Int]>) {
+    /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+    public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
         self.client.send(request: GetItemIDs(), completion: { result in
             completion(result)
         })
@@ -55,8 +55,8 @@ public class ItemsClient : Client {
     ///
     /// - Parameters:
     ///   - id: The ID of the item you are looking for
-    ///   - completion: Callback function to handle the data returned from the API (Result<Item?, APIError>)
-    public func get(id: Int, _ completion: @escaping RequestCallback<Item>) {
+    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Item), APIError>)
+    public func get(id: Int, _ completion: @escaping APIRequestCallback<Item>) {
         self.client.send(request: GetItem(id: id, lang: lang), completion: { result in
             completion(result)
         })
@@ -66,8 +66,8 @@ public class ItemsClient : Client {
     ///
     /// - Parameters:
     ///   - ids: The ID(s) of the item(s) you are looking for
-    ///   - completion: Callback function to handle the data returned from the API (Result<[Item]?, APIError>)
-    public func get(ids: [Int], _ completion: @escaping RequestCallback<[Item]>) {
+    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Item]), APIError>)
+    public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Item]>) {
         self.client.send(request: GetItems(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
             completion(result)
         })
@@ -78,20 +78,30 @@ public class ItemsClient : Client {
     /// - Parameters:
     ///   - page: The page number of data you wish to recieve
     ///   - page_size: The number of entries you wish to see on this page
-    ///   - completion: Callback function to handle the data returned from the API (Result<[Item]?, APIError>)
-    public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Item]>) {
+    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Item]), APIError>)
+    public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Item]>) {
         self.client.send(request: GetItems(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
             completion(result)
         })
     }
+
+
+    /// Returns all of the items in the game
+    /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Item]), APIError>)
+    public func getAll(_ completion: @escaping APIRequestCallback<[Item]>) {
+        self.client.send(request: GetItems(lang: lang, getAll: true), completion: { result in
+            completion(result)
+        })
+    }
+    
     
     /// The finishers endpoint client: api.guildwars2.com/v2/finishers
     public class FinishersClient : Client {
         
         /// Returns a list of all finisher ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetFinisherIDs(), completion: { result in
                 completion(result)
             })
@@ -101,8 +111,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the finisher you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Finisher?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Finisher>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Finisher), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Finisher>) {
             self.client.send(request: GetFinisher(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -112,8 +122,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The ID(s) of the finisher(s) you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Finisher]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Finisher]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Finisher]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Finisher]>) {
             self.client.send(request: GetFinishers(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -124,8 +134,8 @@ public class ItemsClient : Client {
         /// - Parameters:
         ///   - page: The page number of data you wish to recieve
         ///   - page_size: The number of entries you wish to see on this page
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Finisher]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Finisher]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Finisher]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Finisher]>) {
             self.client.send(request: GetFinishers(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -137,8 +147,8 @@ public class ItemsClient : Client {
         
         /// Returns a list of all itemstats ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetItemStatsIDs(), completion: { result in
                 completion(result)
             })
@@ -148,8 +158,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the itemstat you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Itemstats?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<ItemStats>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Itemstats), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<ItemStats>) {
             self.client.send(request: GetItemStats(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -159,8 +169,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The ID(s) of the itemstat(s) you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[ItemStats]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[ItemStats]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [ItemStats]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[ItemStats]>) {
             self.client.send(request: GetItemsStats(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -171,8 +181,8 @@ public class ItemsClient : Client {
         /// - Parameters:
         ///   - page: The page number of data you wish to recieve
         ///   - page_size: The number of entries you wish to see on this page
-        ///   - completion: Callback function to handle the data returned from the API (Result<[ItemStats]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[ItemStats]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [ItemStats]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[ItemStats]>) {
             self.client.send(request: GetItemsStats(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -184,8 +194,8 @@ public class ItemsClient : Client {
         
         /// Returns a list of all material ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetMaterialIDs(), completion: { result in
                 completion(result)
             })
@@ -195,8 +205,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the material you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Material?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Material>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Material), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Material>) {
             self.client.send(request: GetMaterial(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -206,8 +216,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The ID(s) of the material(s) you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Material]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Material]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Material]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Material]>) {
             self.client.send(request: GetMaterials(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -218,8 +228,8 @@ public class ItemsClient : Client {
         /// - Parameters:
         ///   - page: The page number of data you wish to recieve
         ///   - page_size: The number of entries you wish to see on this page
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Material]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Material]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Material]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Material]>) {
             self.client.send(request: GetMaterials(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -231,8 +241,8 @@ public class ItemsClient : Client {
         
         /// Returns a list of all pvp amulet ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetPVPAmuletIDs(), completion: { result in
                 completion(result)
             })
@@ -242,8 +252,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the pvp amulet you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[PVPAmulet]?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<PVPAmulet>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, PVPAmulet), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<PVPAmulet>) {
             self.client.send(request: GetPVPAmulet(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -253,8 +263,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The ID(s) of the pvp amulet(s) you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[PVPAmulet]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[PVPAmulet]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [PVPAmulet]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[PVPAmulet]>) {
             self.client.send(request: GetPVPAmulets(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -265,8 +275,8 @@ public class ItemsClient : Client {
         /// - Parameters:
         ///   - page: The page number of data you wish to recieve
         ///   - page_size: The number of entries you wish to see on this page
-        ///   - completion: Callback function to handle the data returned from the API (Result<[PVPAmulet]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[PVPAmulet]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [PVPAmulet]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[PVPAmulet]>) {
             self.client.send(request: GetPVPAmulets(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })
@@ -278,8 +288,8 @@ public class ItemsClient : Client {
         
         /// Returns a list of all recipe ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetRecipeIDs(), completion: { result in
                 completion(result)
             })
@@ -289,8 +299,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the recipe you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Recipe?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Recipe>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Recipe), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Recipe>) {
             self.client.send(request: GetRecipe(id: id), completion: { result in
                 completion(result)
             })
@@ -300,8 +310,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The ID(s) of the recipe(s) you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Recipe]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Recipe]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Recipe]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Recipe]>) {
             self.client.send(request: GetRecipes(ids: ids, page: nil, page_size: nil), completion: { result in
                 completion(result)
             })
@@ -312,8 +322,8 @@ public class ItemsClient : Client {
         /// - Parameters:
         ///   - page: The page number of data you wish to recieve
         ///   - page_size: The number of entries you wish to see on this page
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Recipe]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Recipe]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Recipe]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Recipe]>) {
             self.client.send(request: GetRecipes(ids: nil, page: page, page_size: page_size), completion: { result in
                 completion(result)
             })
@@ -323,8 +333,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - input: The item id of the input ingredient
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func search(input: Int, _ completion: @escaping RequestCallback<[Int]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func search(input: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: SearchRecipes(input: input, output: nil), completion: { result in
                 completion(result)
             })
@@ -334,8 +344,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - output: The item id of the item that will be produced by the recipes
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func search(output: Int, _ completion: @escaping RequestCallback<[Int]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func search(output: Int, _ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: SearchRecipes(input: nil, output: output), completion: { result in
                 completion(result)
             })
@@ -347,8 +357,8 @@ public class ItemsClient : Client {
         
         /// Returns a list of all skin ids
         ///
-        /// - Parameter completion: Callback function to handle the data returned from the API (Result<[Int]?, APIError>)
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        /// - Parameter completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetSkinIDs(), completion: { result in
                 completion(result)
             })
@@ -358,8 +368,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - id: The ID of the skin you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<Skin?, APIError>)
-        public func get(id: Int, _ completion: @escaping RequestCallback<Skin>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Skin), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<Skin>) {
             self.client.send(request: GetSkin(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -369,8 +379,8 @@ public class ItemsClient : Client {
         ///
         /// - Parameters:
         ///   - ids: The ID(s) of the skin(s) you are looking for
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Skin]?, APIError>)
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[Skin]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Skin]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Skin]>) {
             self.client.send(request: GetSkins(ids: ids, page: nil, page_size: nil, lang: lang), completion: { result in
                 completion(result)
             })
@@ -381,8 +391,8 @@ public class ItemsClient : Client {
         /// - Parameters:
         ///   - page: The page number of data you wish to recieve
         ///   - page_size: The number of entries you wish to see on this page
-        ///   - completion: Callback function to handle the data returned from the API (Result<[Skin]?, APIError>)
-        public func get(page: Int, page_size: Int, _ completion: @escaping RequestCallback<[Skin]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Skin]), APIError>)
+        public func get(page: Int, page_size: Int, _ completion: @escaping APIRequestCallback<[Skin]>) {
             self.client.send(request: GetSkins(ids: nil, page: page, page_size: page_size, lang: lang), completion: { result in
                 completion(result)
             })

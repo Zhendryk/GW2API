@@ -8,7 +8,7 @@
 
 //commerce/listings
 //id, ids
-public struct CommerceListing: Decodable {
+public struct CommerceListing: Decodable, Identifiable {
     public let id: Int
     public let buys: [CommerceTransaction]
     public let sells: [CommerceTransaction]

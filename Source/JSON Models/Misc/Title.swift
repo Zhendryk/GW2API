@@ -8,7 +8,7 @@
 
 //titles
 //lang, page, page_size, id, ids
-public struct Title : Decodable {
+public struct Title : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let achievement: Int

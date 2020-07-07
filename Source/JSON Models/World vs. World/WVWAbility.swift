@@ -8,7 +8,7 @@
 
 //wvw/abilities
 //lang, ids
-public struct WVWAbility : Decodable {
+public struct WVWAbility : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let description: String

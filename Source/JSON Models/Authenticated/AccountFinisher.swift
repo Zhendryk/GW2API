@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountFinisher: Decodable {
+public struct AccountFinisher: Decodable, Identifiable {
     public let id: Int
     public let permanent: Bool
     public let quantity: Int?

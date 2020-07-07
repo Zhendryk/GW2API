@@ -8,7 +8,7 @@
 
 //skins
 //lang, id, ids
-public struct Skin : Decodable {
+public struct Skin : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let type: String

@@ -11,7 +11,7 @@ public typealias Leather = DyeMaterial
 public typealias Metal = DyeMaterial
 public typealias Fur = DyeMaterial
 
-public struct Color: Decodable {
+public struct Color: Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let base_rgb: [Int]

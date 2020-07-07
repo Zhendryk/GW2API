@@ -8,7 +8,7 @@
 
 //achievements
 //lang, id, ids
-public struct Achievement: Decodable {
+public struct Achievement: Decodable, Identifiable {
     public let id: Int
     public let icon: String?
     public let name: String

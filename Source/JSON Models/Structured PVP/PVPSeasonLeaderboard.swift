@@ -8,7 +8,7 @@
 
 //pvp/seasons/leaderboards
 //lang
-public struct PVPSeasonLeaderboard : Decodable {
+public struct PVPSeasonLeaderboard : Decodable, Identifiable {
     public let name: String
     public let rank: Int
     public let id: String?
@@ -17,7 +17,7 @@ public struct PVPSeasonLeaderboard : Decodable {
     public let date: String
     public let scores: [pvpSeasonLeaderboardScore]
     
-    public struct pvpSeasonLeaderboardScore : Decodable {
+    public struct pvpSeasonLeaderboardScore : Decodable, Identifiable {
         public let id: String
         public let value: Int
     }

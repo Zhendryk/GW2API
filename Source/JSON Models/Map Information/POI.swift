@@ -7,7 +7,7 @@
 //
 
 //continents/<continent_id>/floors/<floor_id>/regions/<region_id>/maps/<map_id>/pois/<poi_id>
-public struct POI : Decodable {
+public struct POI : Decodable, Identifiable {
     public let name: String?
     public let type: String
     public let floor: Int

@@ -9,11 +9,11 @@
 import Foundation
 
 public struct CommerceDelivery : Decodable {
-    let coins: Int
-    let items: [DeliveredItem]
+    public let coins: Int
+    public let items: [DeliveredItem]
 
-    public struct DeliveredItem: Decodable {
-        let id: Int
-        let count: Int
+    public struct DeliveredItem: Decodable, Identifiable {
+        public let id: Int
+        public let count: Int
     }
 }

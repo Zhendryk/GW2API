@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct WVWMatchScore : Decodable {
+public struct WVWMatchScore : Decodable, Identifiable {
     public let id: String
     public let scores: [String:Int]
     public let victory_points: [String:Int]

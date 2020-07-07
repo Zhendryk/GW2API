@@ -14,7 +14,7 @@ public struct GuildStash: Decodable {
     public let inventory: [inventoryItem?]
 }
 
-public struct inventoryItem: Decodable {
+public struct inventoryItem: Decodable, Identifiable {
     public let id: Int
     public let count: Int
 }

@@ -8,7 +8,7 @@
 
 //races
 //id, ids
-public struct Race: Decodable {
+public struct Race: Decodable, Identifiable {
     public let id: String
     public let skills: [Int]
 }

@@ -8,7 +8,7 @@
 
 //pvp/amulets
 //lang, page, page_size, id, ids
-public struct PVPAmulet: Decodable {
+public struct PVPAmulet: Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let icon: String

@@ -8,7 +8,7 @@
 
 //wvw/upgrades
 //lang
-public struct WVWUpgrade : Decodable {
+public struct WVWUpgrade : Decodable, Identifiable {
     public let id: Int
     public let tiers: [WVWUpgradeTier]
     

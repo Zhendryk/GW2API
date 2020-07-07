@@ -8,7 +8,7 @@
 
 //minis
 //lang, id, ids
-public struct Minipet : Decodable {
+public struct Minipet : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let unlock: String?

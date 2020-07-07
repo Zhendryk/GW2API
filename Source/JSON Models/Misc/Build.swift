@@ -7,6 +7,6 @@
 //
 
 //build
-public struct Build: Decodable {
+public struct Build: Decodable, Identifiable {
     public let id: Int
 }

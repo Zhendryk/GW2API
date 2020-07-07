@@ -5,15 +5,15 @@
 //  Created by Jonathan Bailey on 6/22/20.
 //
 
-public struct Quest: Decodable {
-    let id: Int
-    let name: String
-    let level: Int
-    let story: String
-    let goals: [QuestGoal]
+public struct Quest: Decodable, Identifiable {
+    public let id: Int
+    public let name: String
+    public let level: Int
+    public let story: String
+    public let goals: [QuestGoal]
 
     public struct QuestGoal: Decodable {
-        let active: String
-        let complete: String
+        public let active: String
+        public let complete: String
     }
 }

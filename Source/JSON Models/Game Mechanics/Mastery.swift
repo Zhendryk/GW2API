@@ -8,7 +8,7 @@
 
 //masteries
 //lang, id, ids
-public struct Mastery: Decodable {
+public struct Mastery: Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let requirement: String

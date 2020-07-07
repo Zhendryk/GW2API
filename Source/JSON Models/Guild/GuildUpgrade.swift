@@ -7,7 +7,7 @@
 //
 
 //lang, id, ids
-public struct GuildUpgrade: Decodable {
+public struct GuildUpgrade: Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let description: String

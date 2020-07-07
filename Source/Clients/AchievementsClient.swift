@@ -34,9 +34,8 @@ public class AchievementsClient: Client {
     /// Returns a list of all achievement ids
     ///
     /// - Parameters:
-    ///   - endpoint: Endpoint to request, default = EAchievements.achievements
-    ///   - completion: Callback function to handle the data returned from the API
-    public func get(_ completion: @escaping RequestCallback<[Int]>) {
+    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+    public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
         self.client.send(request: GetAchievementIDs(), completion: { result in
             completion(result)
         })
@@ -46,8 +45,8 @@ public class AchievementsClient: Client {
     ///
     /// - Parameters:
     ///   - id: The id of the desired achievement
-    ///   - completion: Callback function to handle the data returned from the API
-    public func get(id: Int, _ completion: @escaping RequestCallback<Achievement>) {
+    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, Achievement), APIError>)
+    public func get(id: Int, _ completion: @escaping APIRequestCallback<Achievement>) {
         self.client.send(request: GetAchievement(id: id), completion: { result in
             completion(result)
         })
@@ -57,8 +56,8 @@ public class AchievementsClient: Client {
     ///
     /// - Parameters:
     ///   - ids: The ids of the desired achievements "id1, id2, id3... etc"
-    ///   - completion: Callback function to handle the data returned from the API
-    public func get(ids: [Int], _ completion: @escaping RequestCallback<[Achievement]>) {
+    ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Achievement]), APIError>)
+    public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[Achievement]>) {
         self.client.send(request: GetAchievements(ids: ids), completion: { result in
             completion(result)
         })
@@ -68,7 +67,7 @@ public class AchievementsClient: Client {
     /// The daily achievements endpoint client: api.guildwars2.com/v2/achievements/daily
     public class DailyAchievementClient : Client {
         
-        public func get(_ completion: @escaping RequestCallback<DailyAchievement>) {
+        public func get(_ completion: @escaping APIRequestCallback<DailyAchievement>) {
             self.client.send(request: GetDailyAchievements(), completion: { result in
                 completion(result)
             })
@@ -81,8 +80,8 @@ public class AchievementsClient: Client {
         /// Returns information about the next daily achievements
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(_ completion: @escaping RequestCallback<DailyAchievement>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, DailyAchievement), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<DailyAchievement>) {
             self.client.send(request: GetDailyTomorrowAchievements(), completion: { result in
                 completion(result)
             })
@@ -95,8 +94,8 @@ public class AchievementsClient: Client {
         /// Returns a list of all achievement category ids
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(_ completion: @escaping RequestCallback<[Int]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [Int]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[Int]>) {
             self.client.send(request: GetAchievementCategoryIDs(), completion: { result in
                 completion(result)
             })
@@ -106,8 +105,8 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - id: The id of the desired achievement category
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(id: Int, _ completion: @escaping RequestCallback<AchievementCategory>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, AchievementCategory), APIError>)
+        public func get(id: Int, _ completion: @escaping APIRequestCallback<AchievementCategory>) {
             self.client.send(request: GetAchievementCategory(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -117,8 +116,8 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - ids: The ids of the desired achievement categories "id1, id2, id3... etc"
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(ids: [Int], _ completion: @escaping RequestCallback<[AchievementCategory]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [AchievementCategory]), APIError>)
+        public func get(ids: [Int], _ completion: @escaping APIRequestCallback<[AchievementCategory]>) {
             self.client.send(request: GetAchievementCategories(ids: ids, lang: lang), completion: { result in
                 completion(result)
             })
@@ -131,8 +130,8 @@ public class AchievementsClient: Client {
         /// Returns a list of all achievement group ids
         ///
         /// - Parameters:
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(_ completion: @escaping RequestCallback<[String]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [String]), APIError>)
+        public func get(_ completion: @escaping APIRequestCallback<[String]>) {
             self.client.send(request: GetAchievementGroupIDs(), completion: { result in
                 completion(result)
             })
@@ -142,8 +141,8 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - id: The id of the desired achievement group
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(id: String, _ completion: @escaping RequestCallback<AchievementGroup>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, AchievementGroup), APIError>)
+        public func get(id: String, _ completion: @escaping APIRequestCallback<AchievementGroup>) {
             self.client.send(request: GetAchievementGroup(id: id, lang: lang), completion: { result in
                 completion(result)
             })
@@ -154,8 +153,8 @@ public class AchievementsClient: Client {
         ///
         /// - Parameters:
         ///   - ids: The ids of the desired achievement groups "id1, id2, id3... etc"
-        ///   - completion: Callback function to handle the data returned from the API
-        public func get(ids: [String], _ completion: @escaping RequestCallback<[AchievementGroup]>) {
+        ///   - completion: Callback function to handle the data returned from the API (Result<(URLResponse, [AchievementGroup]), APIError>)
+        public func get(ids: [String], _ completion: @escaping APIRequestCallback<[AchievementGroup]>) {
             self.client.send(request: GetAchievementGroups(ids: ids, lang: lang), completion: { result in
                 completion(result)
             })

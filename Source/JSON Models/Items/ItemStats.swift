@@ -8,7 +8,7 @@
 
 //itemstats
 //lang, id, ids
-public struct ItemStats : Decodable {
+public struct ItemStats : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let attributes: [ItemStatsAttribute]

@@ -8,7 +8,7 @@
 
 //professions
 //lang, page, page_size, id, ids
-public struct Profession: Decodable {
+public struct Profession: Decodable, Identifiable {
     public let id: String
     public let name: String
     public let icon: String
@@ -17,7 +17,7 @@ public struct Profession: Decodable {
     public let training: [TrainingDetails]
     public let weapons: [String:ProfessionWeapon]
     
-    public struct TrainingDetails: Decodable {
+    public struct TrainingDetails: Decodable, Identifiable {
         public let id: Int
         public let category: String
         public let name: String
@@ -36,7 +36,7 @@ public struct Profession: Decodable {
         public let skills: [WeaponSkill]
         public let flags: [String]
         
-        public struct WeaponSkill: Decodable {
+        public struct WeaponSkill: Decodable, Identifiable {
             public let id: Int
             public let slot: String
             public let offhand: String?

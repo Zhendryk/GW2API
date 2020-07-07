@@ -29,9 +29,12 @@ class GetItem: GetRequest<Item> {
 }
 
 class GetItems: GetRequest<[Item]> {
-    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil) {
+    init(ids: [Int]? = nil, page: Int? = nil, page_size: Int? = nil, lang: String? = nil, getAll: Bool? = false) {
         var urlQP: [URLQueryItem] = []
-        if let ids = ids {
+        if let getAll = getAll {
+            urlQP.append(URLQueryItem(name: "ids", value: HTTPParameter.string("all").description))
+        }
+        else if let ids = ids {
             urlQP.append(URLQueryItem(name: "ids", value: HTTPParameter.intArr(ids).description))
         }
         if let page = page {

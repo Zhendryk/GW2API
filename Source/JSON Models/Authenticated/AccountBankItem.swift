@@ -8,7 +8,7 @@
 
 //account/bank
 //access_token
-public struct AccountBankItem: Decodable {
+public struct AccountBankItem: Decodable, Identifiable {
     public let id: Int
     public let count: Int
     public let skin: Int?

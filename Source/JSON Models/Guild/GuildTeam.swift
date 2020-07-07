@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct GuildTeam: Decodable {
+public struct GuildTeam: Decodable, Identifiable {
     public let id: Int
     public let members: [Member]
     public let name: String
@@ -21,7 +21,7 @@ public struct GuildTeam: Decodable {
         public let role: String
     }
     
-    public struct Game: Decodable {
+    public struct Game: Decodable, Identifiable {
         public let id: String
         public let map_id: Int
         public let started: String
@@ -34,7 +34,7 @@ public struct GuildTeam: Decodable {
         public let season: String?
     }
     
-    public struct Season: Decodable {
+    public struct Season: Decodable, Identifiable {
         public let id: String
         public let wins: Int
         public let losses: Int

@@ -8,7 +8,7 @@
 
 //pvp/seasons
 //lang
-public struct PVPSeason : Decodable {
+public struct PVPSeason : Decodable, Identifiable {
     public let id: String
     public let name: String
     public let start: String
@@ -42,7 +42,7 @@ public struct PVPSeason : Decodable {
             }
         }
         
-        public struct PVPLeaderboardScoring : Decodable {
+        public struct PVPLeaderboardScoring : Decodable, Identifiable {
             public let id: String
             public let type: String
             public let description: String

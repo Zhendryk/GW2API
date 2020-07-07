@@ -8,7 +8,7 @@
 
 //files
 //id, ids
-public struct File : Decodable {
+public struct File : Decodable, Identifiable {
     public let id: String
     public let icon: String
 }

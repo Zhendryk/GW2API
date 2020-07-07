@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountTransaction: Decodable {
+public struct AccountTransaction: Decodable, Identifiable {
     public let id: Int
     public let item_id: Int
     public let price: Int

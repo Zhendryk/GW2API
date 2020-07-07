@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct AccountToken: Decodable {
+public struct AccountToken: Decodable, Identifiable {
     public let id: String
     public let name: String
     public let permissions: [String]

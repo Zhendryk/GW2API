@@ -36,7 +36,7 @@ public struct AccountCharacter: Decodable {
         public let active: Bool
     }
     
-    public struct AccountWVWAbility: Decodable {
+    public struct AccountWVWAbility: Decodable, Identifiable {
         public let id: Int
         public let rank: Int
     }
@@ -46,7 +46,7 @@ public struct AccountCharacter: Decodable {
         public let pvp: [Specialization?]
         public let wvw: [Specialization?]
         
-        public struct Specialization: Decodable {
+        public struct Specialization: Decodable, Identifiable {
             public let id: Int
             public let traits: [Int?]
         }
@@ -65,7 +65,7 @@ public struct AccountCharacter: Decodable {
         }
     }
     
-    public struct EquipmentItem: Decodable {
+    public struct EquipmentItem: Decodable, Identifiable {
         public let id: Int
         public let slot: String
         public let infusions: [Int]?
@@ -78,7 +78,7 @@ public struct AccountCharacter: Decodable {
         public let dyes: [Int?]?
     }
     
-    public struct CharacterInventoryItem: Decodable {
+    public struct CharacterInventoryItem: Decodable, Identifiable {
         public let id: Int
         public let count: Int
         public let infusions: [Int]?
@@ -89,7 +89,7 @@ public struct AccountCharacter: Decodable {
         public let bound_to: String?
     }
     
-    public struct EquipmentStats: Decodable {
+    public struct EquipmentStats: Decodable, Identifiable {
         public let id: Int
         public let attributes: EquipmentAttributes
         
@@ -106,7 +106,7 @@ public struct AccountCharacter: Decodable {
         }
     }
     
-    public struct Bag: Decodable {
+    public struct Bag: Decodable, Identifiable {
         public let id: Int
         public let size: Int
         public let inventory: [CharacterInventoryItem?]
@@ -118,7 +118,7 @@ public struct AccountCharacter: Decodable {
         public let sigils: [Int?]?
     }
     
-    public struct TrainedSkill: Decodable {
+    public struct TrainedSkill: Decodable, Identifiable {
         public let id: Int
         public let spent: Int
         public let done: Bool

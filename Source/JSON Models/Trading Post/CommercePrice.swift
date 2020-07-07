@@ -8,7 +8,7 @@
 
 //commerce/prices
 //id, ids
-public struct CommercePrice: Decodable {
+public struct CommercePrice: Decodable, Identifiable {
     public let id: Int
     public let whitelisted: Bool
     public let buys: CommercePriceTransaction

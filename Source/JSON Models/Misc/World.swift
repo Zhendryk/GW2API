@@ -8,7 +8,7 @@
 
 //worlds
 //lang, id, ids
-public struct World : Decodable {
+public struct World : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let population: String

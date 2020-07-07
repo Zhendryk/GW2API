@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct DetailedMap : Decodable {
+public struct DetailedMap : Decodable, Identifiable {
     public let name: String
     public let min_level: Int
     public let max_level: Int
@@ -22,19 +22,19 @@ public struct DetailedMap : Decodable {
     public let mastery_points: [MapMasteryPoint]
     public let skill_challenges: [MapSkillChallenge]
     
-    public struct MapMasteryPoint : Decodable {
+    public struct MapMasteryPoint : Decodable, Identifiable {
         public let coord: [Float]
         public let id: Int
         public let region: String
         
     }
     
-    public struct MapSkillChallenge : Decodable {
+    public struct MapSkillChallenge : Decodable, Identifiable {
         public let coord: [Float]
         public let id: String
     }
     
-    public struct MapAdventure : Decodable {
+    public struct MapAdventure : Decodable, Identifiable {
         public let coord: [Float]
         public let name: String
         public let id: String

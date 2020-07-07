@@ -8,7 +8,7 @@
 
 //traits
 //lang, id, ids
-public struct Trait : Decodable {
+public struct Trait : Decodable, Identifiable {
     public let id: Int
     public let name: String
     public let icon: String
@@ -34,7 +34,7 @@ public struct Trait : Decodable {
         public let overrides: Int?
     }
     
-    public struct TraitSkill : Decodable {
+    public struct TraitSkill : Decodable, Identifiable {
         public let id: Int
         public let name: String
         public let description: String

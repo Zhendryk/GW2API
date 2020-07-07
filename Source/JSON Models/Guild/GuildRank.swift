@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jonathan Bailey. All rights reserved.
 //
 
-public struct GuildRank: Decodable {
+public struct GuildRank: Decodable, Identifiable {
     public let id: String
     public let order: Int
     public let permissions: [String]
