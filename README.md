@@ -27,7 +27,7 @@ To print these settings, use the `.settings()` method like so:
 ```swift
 GW2Client.instance.[ENDPOINT HERE].[SUB-ENDPOINT HERE].get() { result in
     switch result {
-        case .success(let data)
+        case .success(let (response, data))
             // Do what you want with the data here
         case .failure(let error):
             // Put your error handling here
@@ -39,7 +39,7 @@ GW2Client.instance.[ENDPOINT HERE].[SUB-ENDPOINT HERE].get() { result in
 ```swift
 GW2Client.instance.achievements.daily.get() { result in
     switch result {
-        case .success(let data):
+        case .success(let (response, data)):
             // Do what you want with the data here
         case .failure(let error):
             // Put your error handling here
@@ -54,7 +54,7 @@ GW2Client.instance.achievements.daily.get() { result in
 ```swift
 GW2Client.instance.authenticated.account.pvp.games.get() { result in
     switch result {
-        case .success(let data):
+        case .success(let (response, data)):
             // Do what you want with the data here
         case .failure(let error):
             // Put your error handling here
@@ -70,7 +70,7 @@ GW2Client.instance.authenticated.account.pvp.games.get() { result in
 ```swift
 GW2Client.instance.guild.authenticated.members.get() { result in
     switch result {
-        case .success(let data):
+        case .success(let (response, data)):
             // Do what you want with the data here
         case .failure(let error):
             // Put your error handling here
@@ -89,7 +89,7 @@ Then to access this data, simply pass in the id or ids as a parameter to the `.g
 ```swift
 GW2Client.instance.items.finishers.get(id: 1 OR ids: [1, 2, 3] etc.) { result in
     switch result {
-        case .success(let data):
+        case .success(let (response, data)):
             // Do what you want with the data here
         case .failure(let error):
             // Put your error handling here
