@@ -1,7 +1,8 @@
 <div align="center">
 <img width="120%" src="guildwars2banner.jpg">
 </div>
-___
+
+---
 
 # GW2API
 
